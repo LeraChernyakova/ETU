@@ -1,0 +1,226 @@
+HChief
+GuiHub
+235,73
+true
+5
+eth0|0|Chief-TO-HChief|100.0|#|false
+eth1|0|HChief-TO-R-C-M|100.0|#|false
+eth2|0|R-S-C-TO-HChief|100.0|#|false
+eth3|0|null|100.00|#|false
+eth4|0|null|100.00|#|false
+#config
+#endconfig
+#data
+#enddata
+Service
+GuiPC
+419,241
+true
+2
+cua0|1|null|100.00
+eth0|0|HService-TO-Service|100.0|70:46:48:9F:3A:C2|true
+#config
+hostname Service
+interface eth0 mac-address 51:5B:9B:2C:4F:5F
+interface eth0 ip address 172.168.0.76 0.0.0.0
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+Chief
+GuiPC
+236,4
+true
+2
+cua0|1|null|100.00
+eth0|0|Chief-TO-HChief|100.0|7F:93:84:78:80:8A|true
+#config
+hostname Chief
+interface eth0 mac-address 1E:B0:41:B7:5B:BE
+interface eth0 ip address 172.168.128.5 0.0.0.0
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+Manager3
+GuiPC
+153,256
+true
+2
+cua0|1|null|100.00
+eth0|0|HManagers-TO-Manager3|100.0|14:1C:96:1F:8B:C6|true
+#config
+hostname Manager3
+interface eth0 mac-address 3D:2C:9A:51:56:C1
+interface eth0 ip address 172.168.1.13 0.0.0.0
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+Manager2
+GuiPC
+61,246
+true
+2
+cua0|1|null|100.00
+eth0|0|HManagers-TO-Manager2|100.0|A8:26:48:6A:37:B8|true
+#config
+hostname Manager2
+interface eth0 mac-address 52:87:C4:37:47:9B
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+HService
+GuiHub
+335,161
+true
+5
+eth0|0|R-M-S-TO-HService|100.0|#|false
+eth1|0|HService-TO-R-S-C|100.0|#|false
+eth2|0|HService-TO-Service|100.0|#|false
+eth3|0|null|100.00|#|false
+eth4|0|null|100.00|#|false
+#config
+#endconfig
+#data
+#enddata
+Manager1
+GuiPC
+56,159
+true
+2
+cua0|1|null|100.00
+eth0|0|HManagers-TO-Manager1|100.0|21:A9:AF:C3:35:C7|true
+#config
+hostname Manager1
+interface eth0 mac-address 30:2F:7A:29:16:87
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+R-S-C
+GuiRouter
+334,73
+true
+4
+cua0|1|null|100.00
+eth0|0|HService-TO-R-S-C|100.0|B6:4F:B0:3B:12:15|true
+eth1|0|R-S-C-TO-HChief|100.0|32:26:A0:51:B3:74|true
+ser0|4|null|100.00|400000
+#config
+hostname R-S-C
+no interface ser0 shutdown
+interface eth1 mac-address C7:C7:C7:51:26:A7
+interface eth1 ip address 172.168.128.0 0.0.0.0
+no interface eth1 shutdown
+interface eth0 mac-address 8C:3C:33:5D:17:C7
+interface eth0 ip address 172.168.0.64 0.0.0.0
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+R-M-S
+GuiRouter
+239,160
+true
+4
+cua0|1|null|100.00
+eth0|0|HManagers-TO-R-M-S|100.0|C4:57:94:67:C5:5B|true
+eth1|0|R-M-S-TO-HService|100.0|96:64:C4:98:41:5C|true
+ser0|4|null|100.00|400000
+#config
+hostname R-M-S
+no interface ser0 shutdown
+interface eth1 mac-address BD:3F:14:5B:8E:64
+interface eth1 ip address 172.168.0.64 0.0.0.0
+no interface eth1 shutdown
+interface eth0 mac-address B0:1A:2C:75:75:81
+interface eth0 ip address 172.168.1.0 0.0.0.0
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+R-C-M
+GuiRouter
+152,73
+true
+4
+cua0|1|null|100.00
+eth0|0|HChief-TO-R-C-M|100.0|B6:C1:90:32:5C:4E|true
+eth1|0|R-C-M-TO-HManagers|100.0|BC:66:AC:44:47:21|true
+ser0|4|null|100.00|400000
+#config
+hostname R-C-M
+no interface ser0 shutdown
+interface eth1 mac-address 28:8B:62:80:49:65
+interface eth1 ip address 172.168.1.0 0.0.0.0
+no interface eth1 shutdown
+interface eth0 mac-address 98:2D:3D:A5:98:6B
+interface eth0 ip address 172.168.128.0 0.0.0.0
+no interface eth0 shutdown
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+HManagers
+GuiHub
+153,159
+true
+5
+eth0|0|R-C-M-TO-HManagers|100.0|#|false
+eth1|0|HManagers-TO-R-M-S|100.0|#|false
+eth2|0|HManagers-TO-Manager1|100.0|#|false
+eth3|0|HManagers-TO-Manager2|100.0|#|false
+eth4|0|HManagers-TO-Manager3|100.0|#|false
+#config
+#endconfig
+#data
+#enddata

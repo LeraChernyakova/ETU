@@ -1,0 +1,125 @@
+Hacker
+GuiPC
+84,142
+1
+eth0|Hacker-TO-Connector|172.198.99.252|null|null|27:93:BE:7E:89:39|100.0
+0
+H3_OFFICE2
+GuiHub
+438,86
+5
+eth0|H3_OFFICE2-TO-H2_OFFICE2|||
+eth1|H3_OFFICE2-TO-OFFICE2 pc4|||
+eth2|H3_OFFICE2-TO-OFFICE2 pc5|||
+eth3|H4_OFFICE2-TO-H3_OFFICE2|||
+eth4|null|||
+0
+R2
+GuiRouter
+165,209
+2
+eth0|H_OFFICE2-TO-R2|121.192.0.2|null|null|90:B1:66:AC:2D:4E|100.0
+eth1|R2-TO-Connector|172.198.99.253|null|null|54:14:84:9B:B4:8B|100.0
+0
+R1
+GuiRouter
+19,77
+2
+eth0|R1-TO-Connector|172.198.99.254|null|null|C5:6B:93:6D:17:63|100.0
+eth1|H_OFFICE2-TO-R1|121.192.0.1|null|null|78:24:9B:BC:65:60|100.0
+0
+Connector
+GuiHub
+20,209
+5
+eth0|R1-TO-Connector|||
+eth1|R2-TO-Connector|||
+eth2|Connector-TO-Boss_R|||
+eth3|Hacker-TO-Connector|||
+eth4|null|||
+0
+OFFICE2 pc7
+GuiPC
+504,8
+1
+eth0|H4_OFFICE2-TO-OFFICE2 pc7|null|0.0.0.0|null|BF:4B:71:52:43:2F|100.0
+0
+H4_OFFICE2
+GuiHub
+367,25
+5
+eth0|H4_OFFICE2-TO-H2_OFFICE2|||
+eth1|H4_OFFICE2-TO-H3_OFFICE2|||
+eth2|H4_OFFICE2-TO-OFFICE2 pc7|||
+eth3|null|||
+eth4|null|||
+0
+OFFICE2 pc6
+GuiPC
+328,313
+1
+eth0|H2_OFFICE2-TO-OFFICE2 pc6|null|0.0.0.0|null|6B:6F:B4:24:96:5F|100.0
+0
+OFFICE2 pc5
+GuiPC
+574,164
+1
+eth0|H3_OFFICE2-TO-OFFICE2 pc5|null|0.0.0.0|null|23:27:25:5F:4C:12|100.0
+0
+OFFICE2 pc4
+GuiPC
+606,75
+1
+eth0|H3_OFFICE2-TO-OFFICE2 pc4|null|0.0.0.0|null|51:4A:6C:6C:C0:29|100.0
+0
+OFFICE2 pc3
+GuiPC
+435,226
+1
+eth0|H2_OFFICE2-TO-OFFICE2 pc3|null|0.0.0.0|null|99:53:96:6E:30:2A|100.0
+0
+H_OFFICE2
+GuiHub
+167,77
+5
+eth0|OFFICE2 pc1-TO-H_OFFICE2|||
+eth1|OFFICE2 pc2-TO-H_OFFICE2|||
+eth2|H_OFFICE2-TO-R2|||
+eth3|H_OFFICE2-TO-H2_OFFICE2|||
+eth4|H_OFFICE2-TO-R1|||
+0
+OFFICE2 pc2
+GuiPC
+265,75
+1
+eth0|OFFICE2 pc2-TO-H_OFFICE2|121.199.253.250|null|null|21:B2:90:82:B0:4B|100.0
+0
+H2_OFFICE2
+GuiHub
+296,184
+5
+eth0|H_OFFICE2-TO-H2_OFFICE2|||
+eth1|H3_OFFICE2-TO-H2_OFFICE2|||
+eth2|H2_OFFICE2-TO-OFFICE2 pc3|||
+eth3|H2_OFFICE2-TO-OFFICE2 pc6|||
+eth4|H4_OFFICE2-TO-H2_OFFICE2|||
+0
+Boss_R
+GuiRouter
+17,330
+2
+eth0|Connector-TO-Boss_R|172.198.99.251|null|null|21:39:B0:5C:66:AE|100.0
+eth1|Boss_R-TO-Boss|10.2.0.2|null|null|76:61:C4:52:27:C7|100.0
+0
+OFFICE2 pc1
+GuiPC
+166,12
+1
+eth0|OFFICE2 pc1-TO-H_OFFICE2|121.199.253.254|null|null|9A:56:A9:98:8D:28|100.0
+0
+Boss
+GuiPC
+152,281
+1
+eth0|Boss_R-TO-Boss|10.2.0.1|null|null|59:2E:51:9B:40:C4|100.0
+0

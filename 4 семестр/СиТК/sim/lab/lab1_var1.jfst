@@ -1,0 +1,123 @@
+HUB4
+GuiHub
+537,31
+5
+eth0|HUB3-TO-HUB4|||
+eth1|HUB2-TO-HUB4|||
+eth2|HUB4-TO-Admin|||
+eth3|null|||
+eth4|null|||
+0
+HUB3
+GuiHub
+376,26
+5
+eth0|HUB3-TO-HUB1|||
+eth1|HUB3-TO-HUB4|||
+eth2|null|||
+eth3|null|||
+eth4|null|||
+0
+HUB2
+GuiHub
+422,113
+5
+eth0|HUB1-TO-HUB2|||
+eth1|HUB2-TO-OFFICE2 pc4|||
+eth2|HUB2-TO-HUB4|||
+eth3|null|||
+eth4|null|||
+0
+Connector
+GuiHub
+20,209
+5
+eth0|R1-TO-Connector|||
+eth1|R2-TO-Connector|||
+eth2|Connector-TO-Boss_R|||
+eth3|Hacker-TO-Connector|||
+eth4|null|||
+0
+HUB1
+GuiHub
+293,223
+5
+eth0|H_OFFICE2-TO-HUB1|||
+eth1|HUB1-TO-OFFICE2 pc3|||
+eth2|HUB1-TO-HUB2|||
+eth3|HUB3-TO-HUB1|||
+eth4|null|||
+0
+Boss_R
+GuiRouter
+17,330
+2
+eth0|Connector-TO-Boss_R|117.168.0.10|null|null|21:39:B0:5C:66:AE|100.0
+eth1|Boss_R-TO-Boss|64.2.0.2|null|null|76:61:C4:52:27:C7|100.0
+0
+Hacker
+GuiPC
+225,307
+1
+eth0|Hacker-TO-Connector|117.168.0.5|null|null|27:93:BE:7E:89:39|100.0
+0
+Admin
+GuiPC
+671,54
+1
+eth0|HUB4-TO-Admin|null|0.0.0.0|null|7A:3E:9B:A1:45:C0|100.0
+0
+OFFICE2 pc4
+GuiPC
+570,146
+1
+eth0|HUB2-TO-OFFICE2 pc4|null|0.0.0.0|null|62:15:B5:AC:42:C3|100.0
+0
+OFFICE2 pc3
+GuiPC
+471,235
+1
+eth0|HUB1-TO-OFFICE2 pc3|null|0.0.0.0|null|65:5F:67:B9:39:22|100.0
+0
+R2
+GuiRouter
+165,209
+2
+eth0|H_OFFICE2-TO-R2|156.32.127.253|null|null|90:B1:66:AC:2D:4E|100.0
+eth1|R2-TO-Connector|117.168.0.1|255.240.128.0|null|54:14:84:9B:B4:8B|100.0
+0
+OFFICE2 pc2
+GuiPC
+265,75
+1
+eth0|OFFICE2 pc2-TO-H_OFFICE2|156.32.0.2|null|null|21:B2:90:82:B0:4B|100.0
+0
+R1
+GuiRouter
+19,77
+2
+eth0|R1-TO-Connector|117.168.0.2|null|null|C5:6B:93:6D:17:63|100.0
+eth1|H_OFFICE2-TO-R1|156.32.127.254|null|null|78:24:9B:BC:65:60|100.0
+0
+OFFICE2 pc1
+GuiPC
+166,12
+1
+eth0|OFFICE2 pc1-TO-H_OFFICE2|156.32.0.1|null|null4|9A:56:A9:98:8D:28|100.0
+0
+H_OFFICE2
+GuiHub
+167,77
+5
+eth0|OFFICE2 pc1-TO-H_OFFICE2|||
+eth1|OFFICE2 pc2-TO-H_OFFICE2|||
+eth2|H_OFFICE2-TO-R2|||
+eth3|H_OFFICE2-TO-HUB1|||
+eth4|H_OFFICE2-TO-R1|||
+0
+Boss
+GuiPC
+96,353
+1
+eth0|Boss_R-TO-Boss|64.2.0.1|null|null|59:2E:51:9B:40:C4|100.0
+0
