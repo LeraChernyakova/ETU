@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/shaders">
+        <file>figure.vs</file>
+        <file>figure.fs</file>
+        <file>axes.fs</file>
+        <file>axes.vs</file>
+    </qresource>
+</RCC>
