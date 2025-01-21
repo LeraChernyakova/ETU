@@ -1,0 +1,5 @@
+#define TEXT_OTPUT "\033[40;97m"
+#define NORMAL "\033[0m"
+#define SUCCESS "\033[40;32m"
+#define DUNGER "\033[107;31m"
+#define TEXT_INPUT "\033[40;94m"
