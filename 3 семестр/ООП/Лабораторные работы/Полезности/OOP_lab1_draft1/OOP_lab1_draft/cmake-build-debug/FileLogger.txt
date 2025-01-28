@@ -1,0 +1,39 @@
+Game started
+You entered invalid field height!
+Player position changed. Player position: (0, 1)
+Player position changed. Player position: (0, 2)
+Player position changed. Player position: (1, 2)
+Money event is active
+Player's points changed. Now there are 115 points.
+Player's points changed. Now there are 120 points.
+Player position changed. Player position: (2, 2)
+Player position changed. Player position: (3, 2)
+Player position changed. Player position: (5, 2)
+Player position changed. Player position: (5, 1)
+Player position changed. Player position: (6, 1)
+Player position changed. Player position: (7, 1)
+Food event is active
+Player's health changed. Now there are 4 health.
+Player's points changed. Now there are 130 points.
+Player's points changed. Now there are 135 points.
+Exit is open now.
+Player position changed. Player position: (7, 0)
+Player position changed. Player position: (8, 0)
+Money event is active
+Player's points changed. Now there are 150 points.
+Player's points changed. Now there are 155 points.
+Player position changed. Player position: (9, 0)
+Player position changed. Player position: (10, 0)
+Player position changed. Player position: (11, 0)
+Player position changed. Player position: (11, 1)
+Player position changed. Player position: (11, 2)
+Player position changed. Player position: (11, 3)
+Player position changed. Player position: (11, 4)
+Player position changed. Player position: (11, 5)
+Player position changed. Player position: (11, 6)
+Player position changed. Player position: (11, 7)
+Player position changed. Player position: (11, 8)
+Player position changed. Player position: (11, 9)
+Exit event is active
+Player won!
+Game ended

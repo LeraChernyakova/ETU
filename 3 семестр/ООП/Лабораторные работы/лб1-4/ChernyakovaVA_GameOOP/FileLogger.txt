@@ -1,0 +1,19 @@
+[game_state]Game started.
+[game_state]You entered invalid field height!
+[field_state]Player position changed. Player position: (1, 0).
+[field_state]Player position changed. Player position: (2, 0).
+[event_state]Clan event is active.
+[player_state]Player's health changed. Now there are 5 health.
+[player_state]Player's food changed. Now there are 2 food.
+[player_state]Player's score changed. Now there are 6 score.
+[field_state]Player position changed. Player position: (2, 1).
+[field_state]Player position changed. Player position: (2, 2).
+[field_state]You tried to step on barrier!
+[field_state]Player position changed. Player position: (2, 1).
+[field_state]Player position changed. Player position: (3, 1).
+[field_state]Player position changed. Player position: (4, 1).
+[event_state]Hungry event is active.
+[player_state]Player's food changed. Now there are 0 food.
+[player_state]Player's score changed. Now there are 2 score.
+[player_state]Player lost!
+[game_state]Game ended.

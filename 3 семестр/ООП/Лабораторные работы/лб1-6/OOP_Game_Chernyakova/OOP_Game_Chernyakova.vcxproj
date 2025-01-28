@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{79a0262b-416c-4658-8c08-add76e5dc903}</ProjectGuid>
+    <RootNamespace>OOPGameChernyakova</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Applications.h" />
+    <ClInclude Include="Bomb.h" />
+    <ClInclude Include="BombEventObserver.h" />
+    <ClInclude Include="Cell.h" />
+    <ClInclude Include="CellChanger.h" />
+    <ClInclude Include="CellRegister.h" />
+    <ClInclude Include="Concepts.h" />
+    <ClInclude Include="ConsoleLogger.h" />
+    <ClInclude Include="ControllerObserver.h" />
+    <ClInclude Include="ControlScheme.h" />
+    <ClInclude Include="DoorEvent.h" />
+    <ClInclude Include="DoorEventObserver.h" />
+    <ClInclude Include="EllipseGenerator.h" />
+    <ClInclude Include="EventObserverPool.h" />
+    <ClInclude Include="Field.h" />
+    <ClInclude Include="FieldFacade.h" />
+    <ClInclude Include="FieldGenerator.h" />
+    <ClInclude Include="FieldObserver.h" />
+    <ClInclude Include="FieldRegister.h" />
+    <ClInclude Include="FieldScheme.h" />
+    <ClInclude Include="FileLogger.h" />
+    <ClInclude Include="FileReader.h" />
+    <ClInclude Include="FrameGenerator.h" />
+    <ClInclude Include="GameController.h" />
+    <ClInclude Include="GameInfo.h" />
+    <ClInclude Include="GameObserver.h" />
+    <ClInclude Include="IBombEventObserver.h" />
+    <ClInclude Include="IController.h" />
+    <ClInclude Include="IControllerObserver.h" />
+    <ClInclude Include="IDoorEventObserver.h" />
+    <ClInclude Include="IEvent.h" />
+    <ClInclude Include="IEventObserver.h" />
+    <ClInclude Include="IFieldControllerEvent.h" />
+    <ClInclude Include="IFieldGenerator.h" />
+    <ClInclude Include="IFieldObserver.h" />
+    <ClInclude Include="IFieldPlayerEvent.h" />
+    <ClInclude Include="IInputMediator.h" />
+    <ClInclude Include="IKeyEventObserver.h" />
+    <ClInclude Include="ILogger.h" />
+    <ClInclude Include="IMapEventObserver.h" />
+    <ClInclude Include="InputMediator.h" />
+    <ClInclude Include="InputMessage.h" />
+    <ClInclude Include="InputReader.h" />
+    <ClInclude Include="IPlayerEvent.h" />
+    <ClInclude Include="IPlayerObserver.h" />
+    <ClInclude Include="ITeleportEventObserver.h" />
+    <ClInclude Include="IWaterEventObserver.h" />
+    <ClInclude Include="KeyboardReader.h" />
+    <ClInclude Include="KeyEvent.h" />
+    <ClInclude Include="KeyEventObserver.h" />
+    <ClInclude Include="LevelBuilder.h" />
+    <ClInclude Include="LevelGenerator.h" />
+    <ClInclude Include="LineGenerator.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="LogInit.h" />
+    <ClInclude Include="MapChange.h" />
+    <ClInclude Include="MapEventObserver.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerController.h" />
+    <ClInclude Include="PlayerFacade.h" />
+    <ClInclude Include="PlayerObserver.h" />
+    <ClInclude Include="PlusGenerator.h" />
+    <ClInclude Include="PointGenerator.h" />
+    <ClInclude Include="PrintField.h" />
+    <ClInclude Include="Random.h" />
+    <ClInclude Include="RandomGenerator.h" />
+    <ClInclude Include="SaveController.h" />
+    <ClInclude Include="SaveGame.h" />
+    <ClInclude Include="Teleport.h" />
+    <ClInclude Include="TeleportEventObserver.h" />
+    <ClInclude Include="Water.h" />
+    <ClInclude Include="WaterEventObserver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Applications.cpp" />
+    <ClCompile Include="Bomb.cpp" />
+    <ClCompile Include="BombEventObserver.cpp" />
+    <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="CellRegister.cpp" />
+    <ClCompile Include="ConsoleLogger.cpp" />
+    <ClCompile Include="ControllerObserver.cpp" />
+    <ClCompile Include="DoorEvent.cpp" />
+    <ClCompile Include="DoorEventObserver.cpp" />
+    <ClCompile Include="EventObserverPool.cpp" />
+    <ClCompile Include="Field.cpp" />
+    <ClCompile Include="FieldFacade.cpp" />
+    <ClCompile Include="FieldObserver.cpp" />
+    <ClCompile Include="FieldRegister.cpp" />
+    <ClCompile Include="FieldScheme.cpp" />
+    <ClCompile Include="FileLogger.cpp" />
+    <ClCompile Include="FileReader.cpp" />
+    <ClCompile Include="GameController.cpp" />
+    <ClCompile Include="GameInfo.cpp" />
+    <ClCompile Include="GameObserver.cpp" />
+    <ClCompile Include="IFieldPlayerEvent.cpp" />
+    <ClCompile Include="InputMediator.cpp" />
+    <ClCompile Include="InputReader.cpp" />
+    <ClCompile Include="IPlayerEvent.cpp" />
+    <ClCompile Include="KeyboardReader.cpp" />
+    <ClCompile Include="KeyEvent.cpp" />
+    <ClCompile Include="KeyEventObserver.cpp" />
+    <ClCompile Include="LevelBuilder.cpp" />
+    <ClCompile Include="LevelGenerator.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="LogInit.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MapChange.cpp" />
+    <ClCompile Include="IFieldControllerEvent.cpp" />
+    <ClCompile Include="MapEventObserver.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerController.cpp" />
+    <ClCompile Include="PlayerFacade.cpp" />
+    <ClCompile Include="PlayerObserver.cpp" />
+    <ClCompile Include="PrintField.cpp" />
+    <ClCompile Include="SaveController.cpp" />
+    <ClCompile Include="SaveGame.cpp" />
+    <ClCompile Include="Teleport.cpp" />
+    <ClCompile Include="TeleportEventObserver.cpp" />
+    <ClCompile Include="Water.cpp" />
+    <ClCompile Include="WaterEventObserver.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

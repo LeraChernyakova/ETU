@@ -1,0 +1,3 @@
+[ERROR] Command too long.
+[ERROR] Default controls enable!
+[STATUS] Game is ON.

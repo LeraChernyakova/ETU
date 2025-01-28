@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{FB90256E-708F-49CE-AA9F-32157E5A918A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="cmake-build-debug\cmakefiles\3.20.2\compileridcxx\CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="cmake-build-debug\cmakefiles\3.20.2\compileridc\CMakeCCompilerId.c" />
+    <ClCompile Include="CommandReader.cpp" />
+    <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="events\BadEvents.cpp" />
+    <ClCompile Include="events\Enemy.cpp" />
+    <ClCompile Include="events\Exit.cpp" />
+    <ClCompile Include="events\Food.cpp" />
+    <ClCompile Include="events\GoodEvents.cpp" />
+    <ClCompile Include="events\Money.cpp" />
+    <ClCompile Include="events\Trap.cpp" />
+    <ClCompile Include="factory\EnemyFactory.cpp" />
+    <ClCompile Include="factory\ExitFactory.cpp" />
+    <ClCompile Include="factory\FoodFactory.cpp" />
+    <ClCompile Include="factory\MoneyFactory.cpp" />
+    <ClCompile Include="factory\TrapFactory.cpp" />
+    <ClCompile Include="log\ConsoleLogger.cpp" />
+    <ClCompile Include="log\FileLogger.cpp" />
+    <ClCompile Include="log\Log.cpp" />
+    <ClCompile Include="log\Message.cpp" />
+    <ClCompile Include="log\observers\EventObserver.cpp" />
+    <ClCompile Include="log\observers\FieldObserver.cpp" />
+    <ClCompile Include="log\observers\GameObserver.cpp" />
+    <ClCompile Include="log\observers\PlayerObserver.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="objects\Cell.cpp" />
+    <ClCompile Include="objects\Field.cpp" />
+    <ClCompile Include="objects\Player.cpp" />
+    <ClCompile Include="view\PrintCell.cpp" />
+    <ClCompile Include="view\PrintField.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="CommandReader.h" />
+    <ClInclude Include="Controller.h" />
+    <ClInclude Include="Direction.h" />
+    <ClInclude Include="events\BadEvents.h" />
+    <ClInclude Include="events\Enemy.h" />
+    <ClInclude Include="events\Event.h" />
+    <ClInclude Include="events\Exit.h" />
+    <ClInclude Include="events\Food.h" />
+    <ClInclude Include="events\GoodEvents.h" />
+    <ClInclude Include="events\Money.h" />
+    <ClInclude Include="events\Trap.h" />
+    <ClInclude Include="factory\EnemyFactory.h" />
+    <ClInclude Include="factory\ExitFactory.h" />
+    <ClInclude Include="factory\Factory.h" />
+    <ClInclude Include="factory\FoodFactory.h" />
+    <ClInclude Include="factory\MoneyFactory.h" />
+    <ClInclude Include="factory\TrapFactory.h" />
+    <ClInclude Include="log\ConsoleLogger.h" />
+    <ClInclude Include="log\FileLogger.h" />
+    <ClInclude Include="log\ILogger.h" />
+    <ClInclude Include="log\Level.h" />
+    <ClInclude Include="log\Log.h" />
+    <ClInclude Include="log\Message.h" />
+    <ClInclude Include="log\observers\EventObserver.h" />
+    <ClInclude Include="log\observers\FieldObserver.h" />
+    <ClInclude Include="log\observers\GameObserver.h" />
+    <ClInclude Include="log\observers\IEventObserver.h" />
+    <ClInclude Include="log\observers\IFieldObserver.h" />
+    <ClInclude Include="log\observers\IGameObserver.h" />
+    <ClInclude Include="log\observers\IPlayerObserver.h" />
+    <ClInclude Include="log\observers\PlayerObserver.h" />
+    <ClInclude Include="objects\Cell.h" />
+    <ClInclude Include="objects\Field.h" />
+    <ClInclude Include="objects\Player.h" />
+    <ClInclude Include="view\PrintCell.h" />
+    <ClInclude Include="view\PrintField.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cmake-build-debug\cmakefiles\3.20.2\CMakeDetermineCompilerABI_C.bin" />
+    <None Include="cmake-build-debug\cmakefiles\3.20.2\CMakeDetermineCompilerABI_CXX.bin" />
+    <None Include="cmake-build-debug\cmakefiles\oop_lab1.dir\CXX.includecache" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

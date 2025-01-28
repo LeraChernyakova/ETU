@@ -1,0 +1,6 @@
+[ERROR] CFG File isn't open!
+[ERROR] Default controls set!
+[STATUS] Game is started.
+[GameOBJECT] The playing field is generated.
+[STATUS] The player has closed the game.
+[STATUS] Game over.

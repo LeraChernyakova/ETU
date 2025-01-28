@@ -1,0 +1,6 @@
+UP: s
+DOWN: w
+LEFT: d
+RIGHT: a
+EXIT: e
+MENU: m

@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/OOP_lab1.dir/Application.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/CommandReader.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Controller.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Events/BadEvents.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Events/Enemy.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Events/Exit.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Events/Food.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Events/GoodEvents.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Events/Money.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Events/Trap.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Factory/EnemyFactory.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Factory/ExitFactory.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Factory/FoodFactory.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Factory/MoneyFactory.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Factory/TrapFactory.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Log/ConsoleLogger.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Log/FileLogger.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Log/Log.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Log/Message.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Log/Observers/EventObserver.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Log/Observers/FieldObserver.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Log/Observers/GameObserver.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Log/Observers/PlayerObserver.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Objects/Cell.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Objects/Field.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/Objects/Player.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/View/PrintCell.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/View/PrintField.cpp.obj"
+  "CMakeFiles/OOP_lab1.dir/main.cpp.obj"
+  "OOP_lab1.exe"
+  "OOP_lab1.exe.manifest"
+  "OOP_lab1.pdb"
+  "libOOP_lab1.dll.a"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/OOP_lab1.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

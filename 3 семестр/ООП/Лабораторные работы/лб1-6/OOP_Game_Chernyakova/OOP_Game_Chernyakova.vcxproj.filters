@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\Cell">
+      <UniqueIdentifier>{e0cdb4c1-b5ff-464b-87b2-c8c6dcf4f731}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Events">
+      <UniqueIdentifier>{a337bbc0-3aa7-4b9f-b4bf-40f76d4c034a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Field">
+      <UniqueIdentifier>{8a8bac9a-1b37-447a-9728-1c617a763f58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Field\Generator">
+      <UniqueIdentifier>{6318a2d5-22a9-4524-8841-b1fd4658c4bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Input">
+      <UniqueIdentifier>{38a85e86-2f26-4c17-856d-ead76a5d0cc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Logging">
+      <UniqueIdentifier>{36ca1d3b-29c5-4423-834f-5b7c347649d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Player">
+      <UniqueIdentifier>{6872a3f5-ae03-446e-8241-33b394541292}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Observers">
+      <UniqueIdentifier>{6a06fce7-e72e-4c92-998b-771b2a929b70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Save">
+      <UniqueIdentifier>{a3542d31-6731-479b-886c-03d79bf86c33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Graphics">
+      <UniqueIdentifier>{4c3c7a04-4e10-4bf9-919e-4d5a59bf88eb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cell.h">
+      <Filter>Исходные файлы\Cell</Filter>
+    </ClInclude>
+    <ClInclude Include="Water.h">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Teleport.h">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="MapChange.h">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyEvent.h">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlayerEvent.h">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="IFieldPlayerEvent.h">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="IFieldControllerEvent.h">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="IEvent.h">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="DoorEvent.h">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Bomb.h">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomGenerator.h">
+      <Filter>Исходные файлы\Field\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>Исходные файлы\Field\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="PointGenerator.h">
+      <Filter>Исходные файлы\Field\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="PlusGenerator.h">
+      <Filter>Исходные файлы\Field\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="LineGenerator.h">
+      <Filter>Исходные файлы\Field\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelGenerator.h">
+      <Filter>Исходные файлы\Field\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelBuilder.h">
+      <Filter>Исходные файлы\Field\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="IFieldGenerator.h">
+      <Filter>Исходные файлы\Field\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameGenerator.h">
+      <Filter>Исходные файлы\Field\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldScheme.h">
+      <Filter>Исходные файлы\Field\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldGenerator.h">
+      <Filter>Исходные файлы\Field\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="EllipseGenerator.h">
+      <Filter>Исходные файлы\Field\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="Concepts.h">
+      <Filter>Исходные файлы\Field\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="CellChanger.h">
+      <Filter>Исходные файлы\Field\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="IFieldObserver.h">
+      <Filter>Исходные файлы\Field</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldObserver.h">
+      <Filter>Исходные файлы\Field</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldFacade.h">
+      <Filter>Исходные файлы\Field</Filter>
+    </ClInclude>
+    <ClInclude Include="Field.h">
+      <Filter>Исходные файлы\Field</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardReader.h">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="InputReader.h">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="InputMessage.h">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="InputMediator.h">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="IInputMediator.h">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="IController.h">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlScheme.h">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Исходные файлы\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="ILogger.h">
+      <Filter>Исходные файлы\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="FileLogger.h">
+      <Filter>Исходные файлы\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleLogger.h">
+      <Filter>Исходные файлы\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerObserver.h">
+      <Filter>Исходные файлы\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerFacade.h">
+      <Filter>Исходные файлы\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerController.h">
+      <Filter>Исходные файлы\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Исходные файлы\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlayerObserver.h">
+      <Filter>Исходные файлы\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="IControllerObserver.h">
+      <Filter>Исходные файлы\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="ControllerObserver.h">
+      <Filter>Исходные файлы\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Applications.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="WaterEventObserver.h">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="TeleportEventObserver.h">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="MapEventObserver.h">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyEventObserver.h">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="IWaterEventObserver.h">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="ITeleportEventObserver.h">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="IMapEventObserver.h">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="IKeyEventObserver.h">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="IEventObserver.h">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="IDoorEventObserver.h">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="IBombEventObserver.h">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObserver.h">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="EventObserverPool.h">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="DoorEventObserver.h">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="BombEventObserver.h">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameInfo.h">
+      <Filter>Исходные файлы\Save</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveGame.h">
+      <Filter>Исходные файлы\Save</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveController.h">
+      <Filter>Исходные файлы\Save</Filter>
+    </ClInclude>
+    <ClInclude Include="GameController.h">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="LogInit.h">
+      <Filter>Исходные файлы\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="FileReader.h">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="CellRegister.h">
+      <Filter>Исходные файлы\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldRegister.h">
+      <Filter>Исходные файлы\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintField.h">
+      <Filter>Исходные файлы\Graphics</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Cell.cpp">
+      <Filter>Исходные файлы\Cell</Filter>
+    </ClCompile>
+    <ClCompile Include="Water.cpp">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="Teleport.cpp">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="MapChange.cpp">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyEvent.cpp">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="IPlayerEvent.cpp">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="IFieldPlayerEvent.cpp">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="IFieldControllerEvent.cpp">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="DoorEvent.cpp">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="Bomb.cpp">
+      <Filter>Исходные файлы\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelGenerator.cpp">
+      <Filter>Исходные файлы\Field\Generator</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelBuilder.cpp">
+      <Filter>Исходные файлы\Field\Generator</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldScheme.cpp">
+      <Filter>Исходные файлы\Field\Generator</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldObserver.cpp">
+      <Filter>Исходные файлы\Field</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldFacade.cpp">
+      <Filter>Исходные файлы\Field</Filter>
+    </ClCompile>
+    <ClCompile Include="Field.cpp">
+      <Filter>Исходные файлы\Field</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardReader.cpp">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="InputReader.cpp">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="InputMediator.cpp">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Исходные файлы\Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="FileLogger.cpp">
+      <Filter>Исходные файлы\Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleLogger.cpp">
+      <Filter>Исходные файлы\Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerObserver.cpp">
+      <Filter>Исходные файлы\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerFacade.cpp">
+      <Filter>Исходные файлы\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerController.cpp">
+      <Filter>Исходные файлы\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Исходные файлы\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="ControllerObserver.cpp">
+      <Filter>Исходные файлы\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Applications.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="WaterEventObserver.cpp">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClCompile>
+    <ClCompile Include="TeleportEventObserver.cpp">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClCompile>
+    <ClCompile Include="MapEventObserver.cpp">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyEventObserver.cpp">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObserver.cpp">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClCompile>
+    <ClCompile Include="EventObserverPool.cpp">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClCompile>
+    <ClCompile Include="DoorEventObserver.cpp">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClCompile>
+    <ClCompile Include="BombEventObserver.cpp">
+      <Filter>Исходные файлы\Observers</Filter>
+    </ClCompile>
+    <ClCompile Include="GameInfo.cpp">
+      <Filter>Исходные файлы\Save</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveGame.cpp">
+      <Filter>Исходные файлы\Save</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveController.cpp">
+      <Filter>Исходные файлы\Save</Filter>
+    </ClCompile>
+    <ClCompile Include="GameController.cpp">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="LogInit.cpp">
+      <Filter>Исходные файлы\Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="FileReader.cpp">
+      <Filter>Исходные файлы\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="CellRegister.cpp">
+      <Filter>Исходные файлы\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldRegister.cpp">
+      <Filter>Исходные файлы\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="PrintField.cpp">
+      <Filter>Исходные файлы\Graphics</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
