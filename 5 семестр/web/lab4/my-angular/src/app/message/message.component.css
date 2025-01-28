@@ -1,0 +1,111 @@
+* {
+  font-family: 'Verdana', system-ui;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+mat-toolbar {
+  background-color: #003B69;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+mat-toolbar h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.arrow-back {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  margin: 20px;
+}
+
+.chat {
+  border: 2px solid #003B69;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sender-name {
+  font-weight: bold;
+}
+
+.message-date {
+  color: #888;
+}
+
+.chat-content {
+  margin-top: 10px;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.sender {
+  font-weight: bold;
+}
+
+.message-date {
+  color: grey;
+  font-size: 12px;
+}
+
+.message-text {
+  margin-top: 5px;
+  word-wrap: break-word;
+}
+
+.chat mat-form-field {
+  width: 98%;
+  margin-left: 5px;
+}
+
+.chat button {
+  margin-left: 5px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #5baeec;
+  color: #fff;
+}
+
+mat-form-field mat-error {
+  color: darkred;
+  text-align: left;
+  padding-top: 3px;
+}

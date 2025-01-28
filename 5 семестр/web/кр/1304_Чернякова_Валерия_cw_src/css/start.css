@@ -1,0 +1,58 @@
+* {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.main {
+    background-color: rgb(66, 108, 80);
+}
+
+.title {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.input {
+    background-color: #ffffff;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 33%;
+    height: 30%;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.label {
+    font-size: 15px;
+    padding-top: 6%;
+    padding-left: 5%;
+}
+
+#player {
+    position: relative;
+    width: 85%;
+    padding: 3%;
+    font-size: 10px;
+    color: #212529;
+    background-color: #ffffff;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    margin-left: 5%;
+}
+
+.start_button {
+    display: block;
+    margin: 0 auto;
+    background-color: rgba(111, 183, 130, 0.84);
+    width: 100px;
+    height: 30px;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+}

@@ -1,0 +1,32 @@
+<mat-toolbar>
+  <h1>Мои диалоги</h1>
+  <nav>
+    <ul>
+      <li *ngIf="this.user.role === 'Администратор'">
+        <a mat-button [href]="'http://localhost:3000'" target="_blank">Админ</a>
+      </li>
+      <li><a mat-button [routerLink]="'/user'">Моя страница</a></li>
+      <li><a mat-button [routerLink]="'/news'">Новости</a></li>
+      <li><a mat-button [routerLink]="'/friends'">Друзья</a></li>
+      <li><a mat-button [routerLink]="'/chats'">Чаты</a></li>
+      <li><a mat-button [routerLink]="'/login'">Выход</a></li>
+    </ul>
+  </nav>
+</mat-toolbar>
+
+<main>
+  <div class="start-chat">
+    <button mat-raised-button (click)="openAddChatDialog()">Начать диалог</button>
+  </div>
+  <mat-card class="chats-card" *ngFor="let chat of chats">
+    <mat-card-header>
+      <div class="avatar">
+        <img [src]="chat.img" alt="Переписка">
+      </div>
+      <mat-card-title>{{ chat.FIO }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="openCommunication(chat._id, chat.FIO)">Открыть диалог</button>
+    </mat-card-actions>
+  </mat-card>
+</main>

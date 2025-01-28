@@ -1,0 +1,26 @@
+<body>
+<div class="login-page">
+  <div class="form">
+    <form class="login-form" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+      <h1>Вход</h1>
+      <mat-form-field>
+        <input matInput type="email" name="email" formControlName="email" placeholder="Почта" autocomplete="off">
+        <mat-error *ngIf="submitted && loginForm.get('email')!.hasError('email')">Введена некорректная почта.</mat-error>
+        <mat-error *ngIf="submitted && loginForm.get('email')!.hasError('required')">Данное поле обязательное.</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [type]="hide ? 'password' : 'text'" name="password" formControlName="password" placeholder="Пароль" autocomplete="new-password">
+        <mat-icon matSuffix (click)="hide = !hide">{{ hide ? 'visibility' : 'visibility_off' }}</mat-icon>
+        <mat-error *ngIf="submitted && loginForm.get('password')!.hasError('required')">Данное поле обязательное.</mat-error>
+      </mat-form-field>
+      <div class="user-actions">
+        <button mat-raised-button class="entrance" type="submit">Войти</button>
+        <p class="message">Еще не зарегистрированы?
+          <a [routerLink]="'/register'">Создать аккаунт</a>
+        </p>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Ninja</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/game.css" />
+</head>
+<body>
+    <canvas id="canvasId" width="512" height="512"></canvas>
+    <div class="game-info">
+        <p id="playerId">Игрок: </p>
+        <p id="levelId">Уровень: </p>
+        <p id="healthId">Здоровье: </p>
+        <p id="coinId">Монеты: </p>
+        <p id="chestId">Ключ от сундука: </p>
+        <p id="doorId">Ключ от подземелья: </p>
+        <br>
+        <p>Управление:</p>
+        <p>w - назад</p>
+        <p>s - вперед</p>
+        <p>a - влево</p>
+        <p>d - вправо</p>
+        <p>e - ножницы</p>
+        <p>q - кирка</p>
+        <p>space - сюрикены</p>
+    </div>
+    <div id="dialogBox" class="dialog-box">
+        <p id="dialogText">Это диалоговое окно</p>
+        <button id="playAgain" onclick="closeDialog()">Попробовать снова</button>
+    </div>
+<script src="/utils/level1.js" type="module"></script>
+<script>
+    document.body.style.zoom = "120%";
+    function closeDialog() {
+        const dialogBox = document.getElementById('dialogBox');
+        dialogBox.style.display = 'none';
+        location.reload();
+    }
+</script>
+</body>

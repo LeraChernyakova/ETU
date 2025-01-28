@@ -1,0 +1,36 @@
+<body>
+<div class="register-page">
+  <div class="form">
+    <form class="register-form" (ngSubmit)="onSubmit()" [formGroup]="userForm">
+      <h1>Регистрация</h1>
+      <mat-form-field>
+        <input matInput type="email" name="email" formControlName="email" placeholder="Почта">
+        <mat-error *ngIf="userForm.get('email')?.hasError('email')">Введена некорректная почта.</mat-error>
+        <mat-error *ngIf="userForm.get('email')?.hasError('required')">Данное поле обязательное.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="password" name="password" formControlName="password" placeholder="Пароль">
+        <mat-error *ngIf="userForm.get('password')?.hasError('required')">Данное поле обязательное.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" name="FIO" formControlName="FIO" placeholder="ФИО">
+        <mat-error *ngIf="userForm.get('FIO')?.hasError('required')">Данное поле обязательное.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" type="text" name="birth" formControlName="birth" [max]="maxDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="userForm.get('birth')?.hasError('required')">Данное поле обязательное.</mat-error>
+      </mat-form-field>
+
+      <div class="user-actions">
+        <button mat-raised-button class="entrance" type="submit">Создать аккаунт</button>
+        <p class="message"> Уже зарегистрированы? <a [routerLink]="'/login'">Войти</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+</body>

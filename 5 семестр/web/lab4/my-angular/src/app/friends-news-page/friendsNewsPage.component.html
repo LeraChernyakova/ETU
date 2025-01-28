@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+  <h1>Новости друзей</h1>
+  <nav>
+    <ul>
+      <li *ngIf="this.user.role === 'Администратор'">
+        <a mat-button [href]="'http://localhost:3000'" target="_blank">Админ</a>
+      </li>
+      <li><a mat-button [routerLink]="'/user'">Моя страница</a></li>
+      <li><a mat-button [routerLink]="'/news'">Новости</a></li>
+      <li><a mat-button [routerLink]="'/friends'">Друзья</a></li>
+      <li><a mat-button [routerLink]="'/chats'">Чаты</a></li>
+      <li><a mat-button [routerLink]="'/login'">Выход</a></li>
+    </ul>
+  </nav>
+</mat-toolbar>
+
+<main>
+  <ng-container *ngFor="let friend of news">
+    <mat-card class="news-item">
+      <mat-card-content>
+        <div class="news-header">
+          <div class="user-name">{{friend.FIO}}</div>
+          <div class="news-date">{{friend.date}} в {{friend.time}}</div>
+        </div>
+        <div class="news-content">
+          {{friend.text}}
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</main>

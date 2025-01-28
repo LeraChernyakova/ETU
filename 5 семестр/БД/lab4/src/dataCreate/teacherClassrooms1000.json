@@ -1,0 +1,4002 @@
+[
+  {
+    "TeacherId": 431,
+    "ClassroomNumber": 145
+  },
+  {
+    "TeacherId": 536,
+    "ClassroomNumber": 763
+  },
+  {
+    "TeacherId": 620,
+    "ClassroomNumber": 864
+  },
+  {
+    "TeacherId": 931,
+    "ClassroomNumber": 493
+  },
+  {
+    "TeacherId": 965,
+    "ClassroomNumber": 709
+  },
+  {
+    "TeacherId": 46,
+    "ClassroomNumber": 603
+  },
+  {
+    "TeacherId": 453,
+    "ClassroomNumber": 243
+  },
+  {
+    "TeacherId": 390,
+    "ClassroomNumber": 417
+  },
+  {
+    "TeacherId": 200,
+    "ClassroomNumber": 998
+  },
+  {
+    "TeacherId": 535,
+    "ClassroomNumber": 304
+  },
+  {
+    "TeacherId": 542,
+    "ClassroomNumber": 657
+  },
+  {
+    "TeacherId": 288,
+    "ClassroomNumber": 958
+  },
+  {
+    "TeacherId": 943,
+    "ClassroomNumber": 950
+  },
+  {
+    "TeacherId": 165,
+    "ClassroomNumber": 746
+  },
+  {
+    "TeacherId": 345,
+    "ClassroomNumber": 559
+  },
+  {
+    "TeacherId": 101,
+    "ClassroomNumber": 386
+  },
+  {
+    "TeacherId": 911,
+    "ClassroomNumber": 270
+  },
+  {
+    "TeacherId": 25,
+    "ClassroomNumber": 135
+  },
+  {
+    "TeacherId": 114,
+    "ClassroomNumber": 606
+  },
+  {
+    "TeacherId": 644,
+    "ClassroomNumber": 303
+  },
+  {
+    "TeacherId": 539,
+    "ClassroomNumber": 96
+  },
+  {
+    "TeacherId": 825,
+    "ClassroomNumber": 878
+  },
+  {
+    "TeacherId": 981,
+    "ClassroomNumber": 130
+  },
+  {
+    "TeacherId": 282,
+    "ClassroomNumber": 425
+  },
+  {
+    "TeacherId": 545,
+    "ClassroomNumber": 79
+  },
+  {
+    "TeacherId": 783,
+    "ClassroomNumber": 751
+  },
+  {
+    "TeacherId": 127,
+    "ClassroomNumber": 837
+  },
+  {
+    "TeacherId": 427,
+    "ClassroomNumber": 501
+  },
+  {
+    "TeacherId": 494,
+    "ClassroomNumber": 774
+  },
+  {
+    "TeacherId": 226,
+    "ClassroomNumber": 781
+  },
+  {
+    "TeacherId": 451,
+    "ClassroomNumber": 275
+  },
+  {
+    "TeacherId": 584,
+    "ClassroomNumber": 745
+  },
+  {
+    "TeacherId": 13,
+    "ClassroomNumber": 717
+  },
+  {
+    "TeacherId": 151,
+    "ClassroomNumber": 146
+  },
+  {
+    "TeacherId": 882,
+    "ClassroomNumber": 517
+  },
+  {
+    "TeacherId": 202,
+    "ClassroomNumber": 785
+  },
+  {
+    "TeacherId": 814,
+    "ClassroomNumber": 61
+  },
+  {
+    "TeacherId": 210,
+    "ClassroomNumber": 284
+  },
+  {
+    "TeacherId": 769,
+    "ClassroomNumber": 45
+  },
+  {
+    "TeacherId": 203,
+    "ClassroomNumber": 534
+  },
+  {
+    "TeacherId": 637,
+    "ClassroomNumber": 287
+  },
+  {
+    "TeacherId": 950,
+    "ClassroomNumber": 668
+  },
+  {
+    "TeacherId": 399,
+    "ClassroomNumber": 32
+  },
+  {
+    "TeacherId": 18,
+    "ClassroomNumber": 561
+  },
+  {
+    "TeacherId": 997,
+    "ClassroomNumber": 834
+  },
+  {
+    "TeacherId": 238,
+    "ClassroomNumber": 721
+  },
+  {
+    "TeacherId": 47,
+    "ClassroomNumber": 95
+  },
+  {
+    "TeacherId": 652,
+    "ClassroomNumber": 553
+  },
+  {
+    "TeacherId": 1000,
+    "ClassroomNumber": 416
+  },
+  {
+    "TeacherId": 242,
+    "ClassroomNumber": 674
+  },
+  {
+    "TeacherId": 375,
+    "ClassroomNumber": 306
+  },
+  {
+    "TeacherId": 83,
+    "ClassroomNumber": 58
+  },
+  {
+    "TeacherId": 968,
+    "ClassroomNumber": 588
+  },
+  {
+    "TeacherId": 964,
+    "ClassroomNumber": 198
+  },
+  {
+    "TeacherId": 347,
+    "ClassroomNumber": 866
+  },
+  {
+    "TeacherId": 560,
+    "ClassroomNumber": 201
+  },
+  {
+    "TeacherId": 974,
+    "ClassroomNumber": 800
+  },
+  {
+    "TeacherId": 123,
+    "ClassroomNumber": 428
+  },
+  {
+    "TeacherId": 647,
+    "ClassroomNumber": 122
+  },
+  {
+    "TeacherId": 574,
+    "ClassroomNumber": 110
+  },
+  {
+    "TeacherId": 110,
+    "ClassroomNumber": 564
+  },
+  {
+    "TeacherId": 565,
+    "ClassroomNumber": 98
+  },
+  {
+    "TeacherId": 889,
+    "ClassroomNumber": 49
+  },
+  {
+    "TeacherId": 795,
+    "ClassroomNumber": 342
+  },
+  {
+    "TeacherId": 744,
+    "ClassroomNumber": 614
+  },
+  {
+    "TeacherId": 495,
+    "ClassroomNumber": 725
+  },
+  {
+    "TeacherId": 88,
+    "ClassroomNumber": 213
+  },
+  {
+    "TeacherId": 893,
+    "ClassroomNumber": 126
+  },
+  {
+    "TeacherId": 410,
+    "ClassroomNumber": 767
+  },
+  {
+    "TeacherId": 966,
+    "ClassroomNumber": 702
+  },
+  {
+    "TeacherId": 154,
+    "ClassroomNumber": 331
+  },
+  {
+    "TeacherId": 868,
+    "ClassroomNumber": 227
+  },
+  {
+    "TeacherId": 37,
+    "ClassroomNumber": 504
+  },
+  {
+    "TeacherId": 978,
+    "ClassroomNumber": 320
+  },
+  {
+    "TeacherId": 232,
+    "ClassroomNumber": 693
+  },
+  {
+    "TeacherId": 116,
+    "ClassroomNumber": 913
+  },
+  {
+    "TeacherId": 835,
+    "ClassroomNumber": 254
+  },
+  {
+    "TeacherId": 27,
+    "ClassroomNumber": 23
+  },
+  {
+    "TeacherId": 913,
+    "ClassroomNumber": 271
+  },
+  {
+    "TeacherId": 467,
+    "ClassroomNumber": 393
+  },
+  {
+    "TeacherId": 822,
+    "ClassroomNumber": 894
+  },
+  {
+    "TeacherId": 5,
+    "ClassroomNumber": 830
+  },
+  {
+    "TeacherId": 958,
+    "ClassroomNumber": 620
+  },
+  {
+    "TeacherId": 26,
+    "ClassroomNumber": 256
+  },
+  {
+    "TeacherId": 363,
+    "ClassroomNumber": 914
+  },
+  {
+    "TeacherId": 166,
+    "ClassroomNumber": 818
+  },
+  {
+    "TeacherId": 704,
+    "ClassroomNumber": 162
+  },
+  {
+    "TeacherId": 302,
+    "ClassroomNumber": 670
+  },
+  {
+    "TeacherId": 241,
+    "ClassroomNumber": 835
+  },
+  {
+    "TeacherId": 619,
+    "ClassroomNumber": 473
+  },
+  {
+    "TeacherId": 708,
+    "ClassroomNumber": 423
+  },
+  {
+    "TeacherId": 486,
+    "ClassroomNumber": 766
+  },
+  {
+    "TeacherId": 182,
+    "ClassroomNumber": 610
+  },
+  {
+    "TeacherId": 650,
+    "ClassroomNumber": 570
+  },
+  {
+    "TeacherId": 774,
+    "ClassroomNumber": 696
+  },
+  {
+    "TeacherId": 781,
+    "ClassroomNumber": 895
+  },
+  {
+    "TeacherId": 194,
+    "ClassroomNumber": 968
+  },
+  {
+    "TeacherId": 616,
+    "ClassroomNumber": 685
+  },
+  {
+    "TeacherId": 370,
+    "ClassroomNumber": 853
+  },
+  {
+    "TeacherId": 970,
+    "ClassroomNumber": 681
+  },
+  {
+    "TeacherId": 562,
+    "ClassroomNumber": 592
+  },
+  {
+    "TeacherId": 445,
+    "ClassroomNumber": 208
+  },
+  {
+    "TeacherId": 100,
+    "ClassroomNumber": 332
+  },
+  {
+    "TeacherId": 802,
+    "ClassroomNumber": 510
+  },
+  {
+    "TeacherId": 572,
+    "ClassroomNumber": 521
+  },
+  {
+    "TeacherId": 260,
+    "ClassroomNumber": 194
+  },
+  {
+    "TeacherId": 530,
+    "ClassroomNumber": 617
+  },
+  {
+    "TeacherId": 342,
+    "ClassroomNumber": 228
+  },
+  {
+    "TeacherId": 760,
+    "ClassroomNumber": 986
+  },
+  {
+    "TeacherId": 576,
+    "ClassroomNumber": 867
+  },
+  {
+    "TeacherId": 810,
+    "ClassroomNumber": 639
+  },
+  {
+    "TeacherId": 706,
+    "ClassroomNumber": 821
+  },
+  {
+    "TeacherId": 742,
+    "ClassroomNumber": 438
+  },
+  {
+    "TeacherId": 639,
+    "ClassroomNumber": 238
+  },
+  {
+    "TeacherId": 595,
+    "ClassroomNumber": 786
+  },
+  {
+    "TeacherId": 371,
+    "ClassroomNumber": 469
+  },
+  {
+    "TeacherId": 11,
+    "ClassroomNumber": 134
+  },
+  {
+    "TeacherId": 819,
+    "ClassroomNumber": 426
+  },
+  {
+    "TeacherId": 452,
+    "ClassroomNumber": 799
+  },
+  {
+    "TeacherId": 550,
+    "ClassroomNumber": 826
+  },
+  {
+    "TeacherId": 287,
+    "ClassroomNumber": 994
+  },
+  {
+    "TeacherId": 364,
+    "ClassroomNumber": 771
+  },
+  {
+    "TeacherId": 362,
+    "ClassroomNumber": 836
+  },
+  {
+    "TeacherId": 361,
+    "ClassroomNumber": 463
+  },
+  {
+    "TeacherId": 490,
+    "ClassroomNumber": 232
+  },
+  {
+    "TeacherId": 493,
+    "ClassroomNumber": 838
+  },
+  {
+    "TeacherId": 992,
+    "ClassroomNumber": 334
+  },
+  {
+    "TeacherId": 262,
+    "ClassroomNumber": 474
+  },
+  {
+    "TeacherId": 45,
+    "ClassroomNumber": 819
+  },
+  {
+    "TeacherId": 630,
+    "ClassroomNumber": 11
+  },
+  {
+    "TeacherId": 418,
+    "ClassroomNumber": 635
+  },
+  {
+    "TeacherId": 20,
+    "ClassroomNumber": 344
+  },
+  {
+    "TeacherId": 12,
+    "ClassroomNumber": 291
+  },
+  {
+    "TeacherId": 877,
+    "ClassroomNumber": 618
+  },
+  {
+    "TeacherId": 641,
+    "ClassroomNumber": 568
+  },
+  {
+    "TeacherId": 667,
+    "ClassroomNumber": 931
+  },
+  {
+    "TeacherId": 857,
+    "ClassroomNumber": 491
+  },
+  {
+    "TeacherId": 798,
+    "ClassroomNumber": 356
+  },
+  {
+    "TeacherId": 937,
+    "ClassroomNumber": 278
+  },
+  {
+    "TeacherId": 915,
+    "ClassroomNumber": 377
+  },
+  {
+    "TeacherId": 219,
+    "ClassroomNumber": 707
+  },
+  {
+    "TeacherId": 483,
+    "ClassroomNumber": 310
+  },
+  {
+    "TeacherId": 766,
+    "ClassroomNumber": 250
+  },
+  {
+    "TeacherId": 215,
+    "ClassroomNumber": 336
+  },
+  {
+    "TeacherId": 392,
+    "ClassroomNumber": 628
+  },
+  {
+    "TeacherId": 326,
+    "ClassroomNumber": 211
+  },
+  {
+    "TeacherId": 383,
+    "ClassroomNumber": 810
+  },
+  {
+    "TeacherId": 733,
+    "ClassroomNumber": 3
+  },
+  {
+    "TeacherId": 933,
+    "ClassroomNumber": 57
+  },
+  {
+    "TeacherId": 55,
+    "ClassroomNumber": 694
+  },
+  {
+    "TeacherId": 767,
+    "ClassroomNumber": 563
+  },
+  {
+    "TeacherId": 421,
+    "ClassroomNumber": 349
+  },
+  {
+    "TeacherId": 555,
+    "ClassroomNumber": 398
+  },
+  {
+    "TeacherId": 863,
+    "ClassroomNumber": 374
+  },
+  {
+    "TeacherId": 167,
+    "ClassroomNumber": 15
+  },
+  {
+    "TeacherId": 77,
+    "ClassroomNumber": 382
+  },
+  {
+    "TeacherId": 184,
+    "ClassroomNumber": 248
+  },
+  {
+    "TeacherId": 280,
+    "ClassroomNumber": 257
+  },
+  {
+    "TeacherId": 62,
+    "ClassroomNumber": 593
+  },
+  {
+    "TeacherId": 474,
+    "ClassroomNumber": 100
+  },
+  {
+    "TeacherId": 961,
+    "ClassroomNumber": 552
+  },
+  {
+    "TeacherId": 89,
+    "ClassroomNumber": 434
+  },
+  {
+    "TeacherId": 846,
+    "ClassroomNumber": 759
+  },
+  {
+    "TeacherId": 675,
+    "ClassroomNumber": 865
+  },
+  {
+    "TeacherId": 157,
+    "ClassroomNumber": 530
+  },
+  {
+    "TeacherId": 470,
+    "ClassroomNumber": 128
+  },
+  {
+    "TeacherId": 638,
+    "ClassroomNumber": 750
+  },
+  {
+    "TeacherId": 888,
+    "ClassroomNumber": 175
+  },
+  {
+    "TeacherId": 463,
+    "ClassroomNumber": 845
+  },
+  {
+    "TeacherId": 834,
+    "ClassroomNumber": 255
+  },
+  {
+    "TeacherId": 458,
+    "ClassroomNumber": 898
+  },
+  {
+    "TeacherId": 217,
+    "ClassroomNumber": 753
+  },
+  {
+    "TeacherId": 456,
+    "ClassroomNumber": 888
+  },
+  {
+    "TeacherId": 236,
+    "ClassroomNumber": 308
+  },
+  {
+    "TeacherId": 149,
+    "ClassroomNumber": 643
+  },
+  {
+    "TeacherId": 42,
+    "ClassroomNumber": 413
+  },
+  {
+    "TeacherId": 709,
+    "ClassroomNumber": 907
+  },
+  {
+    "TeacherId": 4,
+    "ClassroomNumber": 934
+  },
+  {
+    "TeacherId": 143,
+    "ClassroomNumber": 479
+  },
+  {
+    "TeacherId": 208,
+    "ClassroomNumber": 599
+  },
+  {
+    "TeacherId": 82,
+    "ClassroomNumber": 281
+  },
+  {
+    "TeacherId": 548,
+    "ClassroomNumber": 247
+  },
+  {
+    "TeacherId": 993,
+    "ClassroomNumber": 770
+  },
+  {
+    "TeacherId": 34,
+    "ClassroomNumber": 574
+  },
+  {
+    "TeacherId": 8,
+    "ClassroomNumber": 560
+  },
+  {
+    "TeacherId": 801,
+    "ClassroomNumber": 84
+  },
+  {
+    "TeacherId": 9,
+    "ClassroomNumber": 70
+  },
+  {
+    "TeacherId": 532,
+    "ClassroomNumber": 936
+  },
+  {
+    "TeacherId": 942,
+    "ClassroomNumber": 925
+  },
+  {
+    "TeacherId": 673,
+    "ClassroomNumber": 748
+  },
+  {
+    "TeacherId": 859,
+    "ClassroomNumber": 86
+  },
+  {
+    "TeacherId": 923,
+    "ClassroomNumber": 768
+  },
+  {
+    "TeacherId": 724,
+    "ClassroomNumber": 189
+  },
+  {
+    "TeacherId": 164,
+    "ClassroomNumber": 777
+  },
+  {
+    "TeacherId": 1,
+    "ClassroomNumber": 219
+  },
+  {
+    "TeacherId": 867,
+    "ClassroomNumber": 807
+  },
+  {
+    "TeacherId": 343,
+    "ClassroomNumber": 874
+  },
+  {
+    "TeacherId": 977,
+    "ClassroomNumber": 861
+  },
+  {
+    "TeacherId": 900,
+    "ClassroomNumber": 187
+  },
+  {
+    "TeacherId": 229,
+    "ClassroomNumber": 765
+  },
+  {
+    "TeacherId": 264,
+    "ClassroomNumber": 459
+  },
+  {
+    "TeacherId": 976,
+    "ClassroomNumber": 302
+  },
+  {
+    "TeacherId": 573,
+    "ClassroomNumber": 56
+  },
+  {
+    "TeacherId": 890,
+    "ClassroomNumber": 50
+  },
+  {
+    "TeacherId": 664,
+    "ClassroomNumber": 293
+  },
+  {
+    "TeacherId": 615,
+    "ClassroomNumber": 916
+  },
+  {
+    "TeacherId": 554,
+    "ClassroomNumber": 385
+  },
+  {
+    "TeacherId": 629,
+    "ClassroomNumber": 421
+  },
+  {
+    "TeacherId": 449,
+    "ClassroomNumber": 355
+  },
+  {
+    "TeacherId": 480,
+    "ClassroomNumber": 345
+  },
+  {
+    "TeacherId": 401,
+    "ClassroomNumber": 887
+  },
+  {
+    "TeacherId": 274,
+    "ClassroomNumber": 822
+  },
+  {
+    "TeacherId": 935,
+    "ClassroomNumber": 180
+  },
+  {
+    "TeacherId": 912,
+    "ClassroomNumber": 846
+  },
+  {
+    "TeacherId": 406,
+    "ClassroomNumber": 556
+  },
+  {
+    "TeacherId": 248,
+    "ClassroomNumber": 83
+  },
+  {
+    "TeacherId": 400,
+    "ClassroomNumber": 471
+  },
+  {
+    "TeacherId": 422,
+    "ClassroomNumber": 390
+  },
+  {
+    "TeacherId": 939,
+    "ClassroomNumber": 464
+  },
+  {
+    "TeacherId": 23,
+    "ClassroomNumber": 932
+  },
+  {
+    "TeacherId": 633,
+    "ClassroomNumber": 647
+  },
+  {
+    "TeacherId": 195,
+    "ClassroomNumber": 362
+  },
+  {
+    "TeacherId": 63,
+    "ClassroomNumber": 507
+  },
+  {
+    "TeacherId": 696,
+    "ClassroomNumber": 798
+  },
+  {
+    "TeacherId": 246,
+    "ClassroomNumber": 43
+  },
+  {
+    "TeacherId": 354,
+    "ClassroomNumber": 89
+  },
+  {
+    "TeacherId": 305,
+    "ClassroomNumber": 124
+  },
+  {
+    "TeacherId": 524,
+    "ClassroomNumber": 645
+  },
+  {
+    "TeacherId": 617,
+    "ClassroomNumber": 121
+  },
+  {
+    "TeacherId": 54,
+    "ClassroomNumber": 141
+  },
+  {
+    "TeacherId": 317,
+    "ClassroomNumber": 158
+  },
+  {
+    "TeacherId": 259,
+    "ClassroomNumber": 961
+  },
+  {
+    "TeacherId": 284,
+    "ClassroomNumber": 139
+  },
+  {
+    "TeacherId": 468,
+    "ClassroomNumber": 831
+  },
+  {
+    "TeacherId": 748,
+    "ClassroomNumber": 886
+  },
+  {
+    "TeacherId": 551,
+    "ClassroomNumber": 870
+  },
+  {
+    "TeacherId": 811,
+    "ClassroomNumber": 450
+  },
+  {
+    "TeacherId": 409,
+    "ClassroomNumber": 608
+  },
+  {
+    "TeacherId": 909,
+    "ClassroomNumber": 60
+  },
+  {
+    "TeacherId": 15,
+    "ClassroomNumber": 669
+  },
+  {
+    "TeacherId": 910,
+    "ClassroomNumber": 197
+  },
+  {
+    "TeacherId": 140,
+    "ClassroomNumber": 569
+  },
+  {
+    "TeacherId": 674,
+    "ClassroomNumber": 297
+  },
+  {
+    "TeacherId": 393,
+    "ClassroomNumber": 282
+  },
+  {
+    "TeacherId": 146,
+    "ClassroomNumber": 195
+  },
+  {
+    "TeacherId": 982,
+    "ClassroomNumber": 115
+  },
+  {
+    "TeacherId": 799,
+    "ClassroomNumber": 454
+  },
+  {
+    "TeacherId": 444,
+    "ClassroomNumber": 112
+  },
+  {
+    "TeacherId": 807,
+    "ClassroomNumber": 575
+  },
+  {
+    "TeacherId": 670,
+    "ClassroomNumber": 535
+  },
+  {
+    "TeacherId": 81,
+    "ClassroomNumber": 884
+  },
+  {
+    "TeacherId": 969,
+    "ClassroomNumber": 279
+  },
+  {
+    "TeacherId": 700,
+    "ClassroomNumber": 851
+  },
+  {
+    "TeacherId": 651,
+    "ClassroomNumber": 8
+  },
+  {
+    "TeacherId": 579,
+    "ClassroomNumber": 419
+  },
+  {
+    "TeacherId": 196,
+    "ClassroomNumber": 6
+  },
+  {
+    "TeacherId": 957,
+    "ClassroomNumber": 794
+  },
+  {
+    "TeacherId": 871,
+    "ClassroomNumber": 105
+  },
+  {
+    "TeacherId": 934,
+    "ClassroomNumber": 90
+  },
+  {
+    "TeacherId": 129,
+    "ClassroomNumber": 494
+  },
+  {
+    "TeacherId": 836,
+    "ClassroomNumber": 579
+  },
+  {
+    "TeacherId": 315,
+    "ClassroomNumber": 51
+  },
+  {
+    "TeacherId": 764,
+    "ClassroomNumber": 964
+  },
+  {
+    "TeacherId": 269,
+    "ClassroomNumber": 249
+  },
+  {
+    "TeacherId": 152,
+    "ClassroomNumber": 683
+  },
+  {
+    "TeacherId": 292,
+    "ClassroomNumber": 789
+  },
+  {
+    "TeacherId": 908,
+    "ClassroomNumber": 481
+  },
+  {
+    "TeacherId": 330,
+    "ClassroomNumber": 319
+  },
+  {
+    "TeacherId": 204,
+    "ClassroomNumber": 495
+  },
+  {
+    "TeacherId": 687,
+    "ClassroomNumber": 337
+  },
+  {
+    "TeacherId": 828,
+    "ClassroomNumber": 436
+  },
+  {
+    "TeacherId": 477,
+    "ClassroomNumber": 649
+  },
+  {
+    "TeacherId": 446,
+    "ClassroomNumber": 741
+  },
+  {
+    "TeacherId": 319,
+    "ClassroomNumber": 14
+  },
+  {
+    "TeacherId": 185,
+    "ClassroomNumber": 625
+  },
+  {
+    "TeacherId": 6,
+    "ClassroomNumber": 996
+  },
+  {
+    "TeacherId": 902,
+    "ClassroomNumber": 547
+  },
+  {
+    "TeacherId": 120,
+    "ClassroomNumber": 343
+  },
+  {
+    "TeacherId": 481,
+    "ClassroomNumber": 911
+  },
+  {
+    "TeacherId": 501,
+    "ClassroomNumber": 101
+  },
+  {
+    "TeacherId": 960,
+    "ClassroomNumber": 183
+  },
+  {
+    "TeacherId": 419,
+    "ClassroomNumber": 736
+  },
+  {
+    "TeacherId": 289,
+    "ClassroomNumber": 26
+  },
+  {
+    "TeacherId": 78,
+    "ClassroomNumber": 712
+  },
+  {
+    "TeacherId": 757,
+    "ClassroomNumber": 432
+  },
+  {
+    "TeacherId": 568,
+    "ClassroomNumber": 375
+  },
+  {
+    "TeacherId": 338,
+    "ClassroomNumber": 476
+  },
+  {
+    "TeacherId": 945,
+    "ClassroomNumber": 941
+  },
+  {
+    "TeacherId": 513,
+    "ClassroomNumber": 405
+  },
+  {
+    "TeacherId": 436,
+    "ClassroomNumber": 927
+  },
+  {
+    "TeacherId": 155,
+    "ClassroomNumber": 359
+  },
+  {
+    "TeacherId": 525,
+    "ClassroomNumber": 80
+  },
+  {
+    "TeacherId": 618,
+    "ClassroomNumber": 92
+  },
+  {
+    "TeacherId": 917,
+    "ClassroomNumber": 755
+  },
+  {
+    "TeacherId": 613,
+    "ClassroomNumber": 537
+  },
+  {
+    "TeacherId": 625,
+    "ClassroomNumber": 412
+  },
+  {
+    "TeacherId": 505,
+    "ClassroomNumber": 186
+  },
+  {
+    "TeacherId": 962,
+    "ClassroomNumber": 881
+  },
+  {
+    "TeacherId": 66,
+    "ClassroomNumber": 566
+  },
+  {
+    "TeacherId": 848,
+    "ClassroomNumber": 602
+  },
+  {
+    "TeacherId": 948,
+    "ClassroomNumber": 184
+  },
+  {
+    "TeacherId": 671,
+    "ClassroomNumber": 119
+  },
+  {
+    "TeacherId": 864,
+    "ClassroomNumber": 626
+  },
+  {
+    "TeacherId": 585,
+    "ClassroomNumber": 545
+  },
+  {
+    "TeacherId": 293,
+    "ClassroomNumber": 682
+  },
+  {
+    "TeacherId": 907,
+    "ClassroomNumber": 734
+  },
+  {
+    "TeacherId": 796,
+    "ClassroomNumber": 378
+  },
+  {
+    "TeacherId": 138,
+    "ClassroomNumber": 739
+  },
+  {
+    "TeacherId": 496,
+    "ClassroomNumber": 276
+  },
+  {
+    "TeacherId": 559,
+    "ClassroomNumber": 103
+  },
+  {
+    "TeacherId": 734,
+    "ClassroomNumber": 817
+  },
+  {
+    "TeacherId": 180,
+    "ClassroomNumber": 780
+  },
+  {
+    "TeacherId": 596,
+    "ClassroomNumber": 820
+  },
+  {
+    "TeacherId": 521,
+    "ClassroomNumber": 815
+  },
+  {
+    "TeacherId": 682,
+    "ClassroomNumber": 143
+  },
+  {
+    "TeacherId": 177,
+    "ClassroomNumber": 400
+  },
+  {
+    "TeacherId": 990,
+    "ClassroomNumber": 36
+  },
+  {
+    "TeacherId": 786,
+    "ClassroomNumber": 411
+  },
+  {
+    "TeacherId": 643,
+    "ClassroomNumber": 379
+  },
+  {
+    "TeacherId": 611,
+    "ClassroomNumber": 827
+  },
+  {
+    "TeacherId": 2,
+    "ClassroomNumber": 723
+  },
+  {
+    "TeacherId": 972,
+    "ClassroomNumber": 590
+  },
+  {
+    "TeacherId": 3,
+    "ClassroomNumber": 999
+  },
+  {
+    "TeacherId": 528,
+    "ClassroomNumber": 244
+  },
+  {
+    "TeacherId": 455,
+    "ClassroomNumber": 713
+  },
+  {
+    "TeacherId": 41,
+    "ClassroomNumber": 973
+  },
+  {
+    "TeacherId": 189,
+    "ClassroomNumber": 873
+  },
+  {
+    "TeacherId": 809,
+    "ClassroomNumber": 496
+  },
+  {
+    "TeacherId": 32,
+    "ClassroomNumber": 787
+  },
+  {
+    "TeacherId": 684,
+    "ClassroomNumber": 370
+  },
+  {
+    "TeacherId": 94,
+    "ClassroomNumber": 444
+  },
+  {
+    "TeacherId": 193,
+    "ClassroomNumber": 783
+  },
+  {
+    "TeacherId": 956,
+    "ClassroomNumber": 440
+  },
+  {
+    "TeacherId": 186,
+    "ClassroomNumber": 595
+  },
+  {
+    "TeacherId": 348,
+    "ClassroomNumber": 551
+  },
+  {
+    "TeacherId": 793,
+    "ClassroomNumber": 691
+  },
+  {
+    "TeacherId": 107,
+    "ClassroomNumber": 451
+  },
+  {
+    "TeacherId": 598,
+    "ClassroomNumber": 262
+  },
+  {
+    "TeacherId": 64,
+    "ClassroomNumber": 982
+  },
+  {
+    "TeacherId": 886,
+    "ClassroomNumber": 437
+  },
+  {
+    "TeacherId": 885,
+    "ClassroomNumber": 468
+  },
+  {
+    "TeacherId": 475,
+    "ClassroomNumber": 286
+  },
+  {
+    "TeacherId": 693,
+    "ClassroomNumber": 328
+  },
+  {
+    "TeacherId": 925,
+    "ClassroomNumber": 273
+  },
+  {
+    "TeacherId": 996,
+    "ClassroomNumber": 792
+  },
+  {
+    "TeacherId": 266,
+    "ClassroomNumber": 166
+  },
+  {
+    "TeacherId": 817,
+    "ClassroomNumber": 656
+  },
+  {
+    "TeacherId": 701,
+    "ClassroomNumber": 205
+  },
+  {
+    "TeacherId": 768,
+    "ClassroomNumber": 391
+  },
+  {
+    "TeacherId": 353,
+    "ClassroomNumber": 127
+  },
+  {
+    "TeacherId": 866,
+    "ClassroomNumber": 173
+  },
+  {
+    "TeacherId": 614,
+    "ClassroomNumber": 997
+  },
+  {
+    "TeacherId": 583,
+    "ClassroomNumber": 761
+  },
+  {
+    "TeacherId": 492,
+    "ClassroomNumber": 666
+  },
+  {
+    "TeacherId": 975,
+    "ClassroomNumber": 155
+  },
+  {
+    "TeacherId": 602,
+    "ClassroomNumber": 503
+  },
+  {
+    "TeacherId": 927,
+    "ClassroomNumber": 196
+  },
+  {
+    "TeacherId": 503,
+    "ClassroomNumber": 784
+  },
+  {
+    "TeacherId": 680,
+    "ClassroomNumber": 718
+  },
+  {
+    "TeacherId": 735,
+    "ClassroomNumber": 791
+  },
+  {
+    "TeacherId": 628,
+    "ClassroomNumber": 844
+  },
+  {
+    "TeacherId": 124,
+    "ClassroomNumber": 868
+  },
+  {
+    "TeacherId": 276,
+    "ClassroomNumber": 743
+  },
+  {
+    "TeacherId": 951,
+    "ClassroomNumber": 756
+  },
+  {
+    "TeacherId": 623,
+    "ClassroomNumber": 812
+  },
+  {
+    "TeacherId": 527,
+    "ClassroomNumber": 601
+  },
+  {
+    "TeacherId": 790,
+    "ClassroomNumber": 203
+  },
+  {
+    "TeacherId": 932,
+    "ClassroomNumber": 813
+  },
+  {
+    "TeacherId": 646,
+    "ClassroomNumber": 99
+  },
+  {
+    "TeacherId": 782,
+    "ClassroomNumber": 633
+  },
+  {
+    "TeacherId": 335,
+    "ClassroomNumber": 679
+  },
+  {
+    "TeacherId": 188,
+    "ClassroomNumber": 738
+  },
+  {
+    "TeacherId": 301,
+    "ClassroomNumber": 960
+  },
+  {
+    "TeacherId": 447,
+    "ClassroomNumber": 258
+  },
+  {
+    "TeacherId": 897,
+    "ClassroomNumber": 73
+  },
+  {
+    "TeacherId": 755,
+    "ClassroomNumber": 55
+  },
+  {
+    "TeacherId": 482,
+    "ClassroomNumber": 797
+  },
+  {
+    "TeacherId": 346,
+    "ClassroomNumber": 94
+  },
+  {
+    "TeacherId": 876,
+    "ClassroomNumber": 607
+  },
+  {
+    "TeacherId": 187,
+    "ClassroomNumber": 909
+  },
+  {
+    "TeacherId": 858,
+    "ClassroomNumber": 497
+  },
+  {
+    "TeacherId": 201,
+    "ClassroomNumber": 462
+  },
+  {
+    "TeacherId": 967,
+    "ClassroomNumber": 646
+  },
+  {
+    "TeacherId": 233,
+    "ClassroomNumber": 346
+  },
+  {
+    "TeacherId": 668,
+    "ClassroomNumber": 956
+  },
+  {
+    "TeacherId": 68,
+    "ClassroomNumber": 397
+  },
+  {
+    "TeacherId": 303,
+    "ClassroomNumber": 976
+  },
+  {
+    "TeacherId": 636,
+    "ClassroomNumber": 151
+  },
+  {
+    "TeacherId": 986,
+    "ClassroomNumber": 264
+  },
+  {
+    "TeacherId": 622,
+    "ClassroomNumber": 877
+  },
+  {
+    "TeacherId": 316,
+    "ClassroomNumber": 296
+  },
+  {
+    "TeacherId": 300,
+    "ClassroomNumber": 300
+  },
+  {
+    "TeacherId": 79,
+    "ClassroomNumber": 220
+  },
+  {
+    "TeacherId": 899,
+    "ClassroomNumber": 843
+  },
+  {
+    "TeacherId": 509,
+    "ClassroomNumber": 576
+  },
+  {
+    "TeacherId": 980,
+    "ClassroomNumber": 594
+  },
+  {
+    "TeacherId": 377,
+    "ClassroomNumber": 292
+  },
+  {
+    "TeacherId": 770,
+    "ClassroomNumber": 441
+  },
+  {
+    "TeacherId": 510,
+    "ClassroomNumber": 658
+  },
+  {
+    "TeacherId": 365,
+    "ClassroomNumber": 222
+  },
+  {
+    "TeacherId": 158,
+    "ClassroomNumber": 726
+  },
+  {
+    "TeacherId": 489,
+    "ClassroomNumber": 710
+  },
+  {
+    "TeacherId": 261,
+    "ClassroomNumber": 502
+  },
+  {
+    "TeacherId": 139,
+    "ClassroomNumber": 354
+  },
+  {
+    "TeacherId": 851,
+    "ClassroomNumber": 663
+  },
+  {
+    "TeacherId": 747,
+    "ClassroomNumber": 165
+  },
+  {
+    "TeacherId": 820,
+    "ClassroomNumber": 235
+  },
+  {
+    "TeacherId": 312,
+    "ClassroomNumber": 74
+  },
+  {
+    "TeacherId": 759,
+    "ClassroomNumber": 653
+  },
+  {
+    "TeacherId": 531,
+    "ClassroomNumber": 455
+  },
+  {
+    "TeacherId": 441,
+    "ClassroomNumber": 12
+  },
+  {
+    "TeacherId": 51,
+    "ClassroomNumber": 191
+  },
+  {
+    "TeacherId": 386,
+    "ClassroomNumber": 489
+  },
+  {
+    "TeacherId": 112,
+    "ClassroomNumber": 667
+  },
+  {
+    "TeacherId": 775,
+    "ClassroomNumber": 572
+  },
+  {
+    "TeacherId": 679,
+    "ClassroomNumber": 210
+  },
+  {
+    "TeacherId": 711,
+    "ClassroomNumber": 448
+  },
+  {
+    "TeacherId": 472,
+    "ClassroomNumber": 176
+  },
+  {
+    "TeacherId": 827,
+    "ClassroomNumber": 81
+  },
+  {
+    "TeacherId": 141,
+    "ClassroomNumber": 511
+  },
+  {
+    "TeacherId": 380,
+    "ClassroomNumber": 604
+  },
+  {
+    "TeacherId": 514,
+    "ClassroomNumber": 329
+  },
+  {
+    "TeacherId": 404,
+    "ClassroomNumber": 456
+  },
+  {
+    "TeacherId": 471,
+    "ClassroomNumber": 857
+  },
+  {
+    "TeacherId": 919,
+    "ClassroomNumber": 632
+  },
+  {
+    "TeacherId": 299,
+    "ClassroomNumber": 752
+  },
+  {
+    "TeacherId": 788,
+    "ClassroomNumber": 131
+  },
+  {
+    "TeacherId": 621,
+    "ClassroomNumber": 215
+  },
+  {
+    "TeacherId": 104,
+    "ClassroomNumber": 392
+  },
+  {
+    "TeacherId": 374,
+    "ClassroomNumber": 944
+  },
+  {
+    "TeacherId": 599,
+    "ClassroomNumber": 871
+  },
+  {
+    "TeacherId": 53,
+    "ClassroomNumber": 965
+  },
+  {
+    "TeacherId": 898,
+    "ClassroomNumber": 404
+  },
+  {
+    "TeacherId": 43,
+    "ClassroomNumber": 714
+  },
+  {
+    "TeacherId": 520,
+    "ClassroomNumber": 947
+  },
+  {
+    "TeacherId": 549,
+    "ClassroomNumber": 449
+  },
+  {
+    "TeacherId": 331,
+    "ClassroomNumber": 577
+  },
+  {
+    "TeacherId": 378,
+    "ClassroomNumber": 34
+  },
+  {
+    "TeacherId": 327,
+    "ClassroomNumber": 619
+  },
+  {
+    "TeacherId": 773,
+    "ClassroomNumber": 317
+  },
+  {
+    "TeacherId": 228,
+    "ClassroomNumber": 974
+  },
+  {
+    "TeacherId": 30,
+    "ClassroomNumber": 340
+  },
+  {
+    "TeacherId": 132,
+    "ClassroomNumber": 630
+  },
+  {
+    "TeacherId": 17,
+    "ClassroomNumber": 170
+  },
+  {
+    "TeacherId": 944,
+    "ClassroomNumber": 671
+  },
+  {
+    "TeacherId": 791,
+    "ClassroomNumber": 952
+  },
+  {
+    "TeacherId": 752,
+    "ClassroomNumber": 860
+  },
+  {
+    "TeacherId": 743,
+    "ClassroomNumber": 214
+  },
+  {
+    "TeacherId": 695,
+    "ClassroomNumber": 544
+  },
+  {
+    "TeacherId": 940,
+    "ClassroomNumber": 47
+  },
+  {
+    "TeacherId": 896,
+    "ClassroomNumber": 688
+  },
+  {
+    "TeacherId": 99,
+    "ClassroomNumber": 484
+  },
+  {
+    "TeacherId": 677,
+    "ClassroomNumber": 467
+  },
+  {
+    "TeacherId": 423,
+    "ClassroomNumber": 832
+  },
+  {
+    "TeacherId": 838,
+    "ClassroomNumber": 977
+  },
+  {
+    "TeacherId": 40,
+    "ClassroomNumber": 325
+  },
+  {
+    "TeacherId": 826,
+    "ClassroomNumber": 634
+  },
+  {
+    "TeacherId": 159,
+    "ClassroomNumber": 550
+  },
+  {
+    "TeacherId": 130,
+    "ClassroomNumber": 516
+  },
+  {
+    "TeacherId": 372,
+    "ClassroomNumber": 788
+  },
+  {
+    "TeacherId": 92,
+    "ClassroomNumber": 177
+  },
+  {
+    "TeacherId": 725,
+    "ClassroomNumber": 596
+  },
+  {
+    "TeacherId": 220,
+    "ClassroomNumber": 991
+  },
+  {
+    "TeacherId": 253,
+    "ClassroomNumber": 945
+  },
+  {
+    "TeacherId": 689,
+    "ClassroomNumber": 321
+  },
+  {
+    "TeacherId": 39,
+    "ClassroomNumber": 585
+  },
+  {
+    "TeacherId": 153,
+    "ClassroomNumber": 150
+  },
+  {
+    "TeacherId": 778,
+    "ClassroomNumber": 52
+  },
+  {
+    "TeacherId": 881,
+    "ClassroomNumber": 514
+  },
+  {
+    "TeacherId": 296,
+    "ClassroomNumber": 9
+  },
+  {
+    "TeacherId": 394,
+    "ClassroomNumber": 655
+  },
+  {
+    "TeacherId": 702,
+    "ClassroomNumber": 605
+  },
+  {
+    "TeacherId": 448,
+    "ClassroomNumber": 381
+  },
+  {
+    "TeacherId": 416,
+    "ClassroomNumber": 46
+  },
+  {
+    "TeacherId": 358,
+    "ClassroomNumber": 937
+  },
+  {
+    "TeacherId": 586,
+    "ClassroomNumber": 465
+  },
+  {
+    "TeacherId": 669,
+    "ClassroomNumber": 858
+  },
+  {
+    "TeacherId": 273,
+    "ClassroomNumber": 629
+  },
+  {
+    "TeacherId": 76,
+    "ClassroomNumber": 678
+  },
+  {
+    "TeacherId": 543,
+    "ClassroomNumber": 193
+  },
+  {
+    "TeacherId": 403,
+    "ClassroomNumber": 917
+  },
+  {
+    "TeacherId": 905,
+    "ClassroomNumber": 703
+  },
+  {
+    "TeacherId": 147,
+    "ClassroomNumber": 48
+  },
+  {
+    "TeacherId": 313,
+    "ClassroomNumber": 757
+  },
+  {
+    "TeacherId": 115,
+    "ClassroomNumber": 341
+  },
+  {
+    "TeacherId": 60,
+    "ClassroomNumber": 985
+  },
+  {
+    "TeacherId": 761,
+    "ClassroomNumber": 192
+  },
+  {
+    "TeacherId": 464,
+    "ClassroomNumber": 730
+  },
+  {
+    "TeacherId": 994,
+    "ClassroomNumber": 719
+  },
+  {
+    "TeacherId": 336,
+    "ClassroomNumber": 975
+  },
+  {
+    "TeacherId": 995,
+    "ClassroomNumber": 365
+  },
+  {
+    "TeacherId": 224,
+    "ClassroomNumber": 729
+  },
+  {
+    "TeacherId": 869,
+    "ClassroomNumber": 251
+  },
+  {
+    "TeacherId": 86,
+    "ClassroomNumber": 212
+  },
+  {
+    "TeacherId": 134,
+    "ClassroomNumber": 85
+  },
+  {
+    "TeacherId": 234,
+    "ClassroomNumber": 782
+  },
+  {
+    "TeacherId": 339,
+    "ClassroomNumber": 847
+  },
+  {
+    "TeacherId": 148,
+    "ClassroomNumber": 294
+  },
+  {
+    "TeacherId": 198,
+    "ClassroomNumber": 352
+  },
+  {
+    "TeacherId": 199,
+    "ClassroomNumber": 288
+  },
+  {
+    "TeacherId": 865,
+    "ClassroomNumber": 29
+  },
+  {
+    "TeacherId": 119,
+    "ClassroomNumber": 433
+  },
+  {
+    "TeacherId": 924,
+    "ClassroomNumber": 571
+  },
+  {
+    "TeacherId": 635,
+    "ClassroomNumber": 217
+  },
+  {
+    "TeacherId": 181,
+    "ClassroomNumber": 897
+  },
+  {
+    "TeacherId": 663,
+    "ClassroomNumber": 704
+  },
+  {
+    "TeacherId": 170,
+    "ClassroomNumber": 580
+  },
+  {
+    "TeacherId": 686,
+    "ClassroomNumber": 933
+  },
+  {
+    "TeacherId": 777,
+    "ClassroomNumber": 22
+  },
+  {
+    "TeacherId": 272,
+    "ClassroomNumber": 880
+  },
+  {
+    "TeacherId": 749,
+    "ClassroomNumber": 76
+  },
+  {
+    "TeacherId": 771,
+    "ClassroomNumber": 528
+  },
+  {
+    "TeacherId": 606,
+    "ClassroomNumber": 631
+  },
+  {
+    "TeacherId": 478,
+    "ClassroomNumber": 900
+  },
+  {
+    "TeacherId": 580,
+    "ClassroomNumber": 364
+  },
+  {
+    "TeacherId": 485,
+    "ClassroomNumber": 478
+  },
+  {
+    "TeacherId": 442,
+    "ClassroomNumber": 573
+  },
+  {
+    "TeacherId": 553,
+    "ClassroomNumber": 852
+  },
+  {
+    "TeacherId": 413,
+    "ClassroomNumber": 995
+  },
+  {
+    "TeacherId": 308,
+    "ClassroomNumber": 549
+  },
+  {
+    "TeacherId": 738,
+    "ClassroomNumber": 557
+  },
+  {
+    "TeacherId": 533,
+    "ClassroomNumber": 816
+  },
+  {
+    "TeacherId": 914,
+    "ClassroomNumber": 779
+  },
+  {
+    "TeacherId": 24,
+    "ClassroomNumber": 75
+  },
+  {
+    "TeacherId": 357,
+    "ClassroomNumber": 5
+  },
+  {
+    "TeacherId": 270,
+    "ClassroomNumber": 221
+  },
+  {
+    "TeacherId": 833,
+    "ClassroomNumber": 652
+  },
+  {
+    "TeacherId": 28,
+    "ClassroomNumber": 289
+  },
+  {
+    "TeacherId": 223,
+    "ClassroomNumber": 920
+  },
+  {
+    "TeacherId": 649,
+    "ClassroomNumber": 72
+  },
+  {
+    "TeacherId": 250,
+    "ClassroomNumber": 905
+  },
+  {
+    "TeacherId": 360,
+    "ClassroomNumber": 969
+  },
+  {
+    "TeacherId": 412,
+    "ClassroomNumber": 506
+  },
+  {
+    "TeacherId": 461,
+    "ClassroomNumber": 461
+  },
+  {
+    "TeacherId": 381,
+    "ClassroomNumber": 314
+  },
+  {
+    "TeacherId": 928,
+    "ClassroomNumber": 582
+  },
+  {
+    "TeacherId": 874,
+    "ClassroomNumber": 106
+  },
+  {
+    "TeacherId": 571,
+    "ClassroomNumber": 138
+  },
+  {
+    "TeacherId": 192,
+    "ClassroomNumber": 876
+  },
+  {
+    "TeacherId": 659,
+    "ClassroomNumber": 25
+  },
+  {
+    "TeacherId": 85,
+    "ClassroomNumber": 727
+  },
+  {
+    "TeacherId": 162,
+    "ClassroomNumber": 265
+  },
+  {
+    "TeacherId": 106,
+    "ClassroomNumber": 2
+  },
+  {
+    "TeacherId": 570,
+    "ClassroomNumber": 472
+  },
+  {
+    "TeacherId": 985,
+    "ClassroomNumber": 722
+  },
+  {
+    "TeacherId": 407,
+    "ClassroomNumber": 207
+  },
+  {
+    "TeacherId": 963,
+    "ClassroomNumber": 305
+  },
+  {
+    "TeacherId": 263,
+    "ClassroomNumber": 701
+  },
+  {
+    "TeacherId": 741,
+    "ClassroomNumber": 923
+  },
+  {
+    "TeacherId": 131,
+    "ClassroomNumber": 242
+  },
+  {
+    "TeacherId": 290,
+    "ClassroomNumber": 350
+  },
+  {
+    "TeacherId": 839,
+    "ClassroomNumber": 760
+  },
+  {
+    "TeacherId": 252,
+    "ClassroomNumber": 1
+  },
+  {
+    "TeacherId": 67,
+    "ClassroomNumber": 188
+  },
+  {
+    "TeacherId": 230,
+    "ClassroomNumber": 546
+  },
+  {
+    "TeacherId": 880,
+    "ClassroomNumber": 137
+  },
+  {
+    "TeacherId": 765,
+    "ClassroomNumber": 615
+  },
+  {
+    "TeacherId": 762,
+    "ClassroomNumber": 118
+  },
+  {
+    "TeacherId": 740,
+    "ClassroomNumber": 202
+  },
+  {
+    "TeacherId": 591,
+    "ClassroomNumber": 318
+  },
+  {
+    "TeacherId": 507,
+    "ClassroomNumber": 123
+  },
+  {
+    "TeacherId": 794,
+    "ClassroomNumber": 758
+  },
+  {
+    "TeacherId": 286,
+    "ClassroomNumber": 68
+  },
+  {
+    "TeacherId": 205,
+    "ClassroomNumber": 218
+  },
+  {
+    "TeacherId": 227,
+    "ClassroomNumber": 406
+  },
+  {
+    "TeacherId": 557,
+    "ClassroomNumber": 132
+  },
+  {
+    "TeacherId": 121,
+    "ClassroomNumber": 980
+  },
+  {
+    "TeacherId": 469,
+    "ClassroomNumber": 163
+  },
+  {
+    "TeacherId": 612,
+    "ClassroomNumber": 290
+  },
+  {
+    "TeacherId": 75,
+    "ClassroomNumber": 168
+  },
+  {
+    "TeacherId": 197,
+    "ClassroomNumber": 24
+  },
+  {
+    "TeacherId": 703,
+    "ClassroomNumber": 959
+  },
+  {
+    "TeacherId": 239,
+    "ClassroomNumber": 457
+  },
+  {
+    "TeacherId": 879,
+    "ClassroomNumber": 930
+  },
+  {
+    "TeacherId": 440,
+    "ClassroomNumber": 38
+  },
+  {
+    "TeacherId": 150,
+    "ClassroomNumber": 394
+  },
+  {
+    "TeacherId": 105,
+    "ClassroomNumber": 687
+  },
+  {
+    "TeacherId": 597,
+    "ClassroomNumber": 97
+  },
+  {
+    "TeacherId": 50,
+    "ClassroomNumber": 452
+  },
+  {
+    "TeacherId": 918,
+    "ClassroomNumber": 772
+  },
+  {
+    "TeacherId": 648,
+    "ClassroomNumber": 624
+  },
+  {
+    "TeacherId": 243,
+    "ClassroomNumber": 508
+  },
+  {
+    "TeacherId": 225,
+    "ClassroomNumber": 21
+  },
+  {
+    "TeacherId": 462,
+    "ClassroomNumber": 233
+  },
+  {
+    "TeacherId": 926,
+    "ClassroomNumber": 487
+  },
+  {
+    "TeacherId": 14,
+    "ClassroomNumber": 773
+  },
+  {
+    "TeacherId": 405,
+    "ClassroomNumber": 418
+  },
+  {
+    "TeacherId": 384,
+    "ClassroomNumber": 324
+  },
+  {
+    "TeacherId": 887,
+    "ClassroomNumber": 376
+  },
+  {
+    "TeacherId": 737,
+    "ClassroomNumber": 120
+  },
+  {
+    "TeacherId": 367,
+    "ClassroomNumber": 67
+  },
+  {
+    "TeacherId": 721,
+    "ClassroomNumber": 828
+  },
+  {
+    "TeacherId": 294,
+    "ClassroomNumber": 942
+  },
+  {
+    "TeacherId": 285,
+    "ClassroomNumber": 708
+  },
+  {
+    "TeacherId": 884,
+    "ClassroomNumber": 892
+  },
+  {
+    "TeacherId": 255,
+    "ClassroomNumber": 919
+  },
+  {
+    "TeacherId": 385,
+    "ClassroomNumber": 524
+  },
+  {
+    "TeacherId": 916,
+    "ClassroomNumber": 299
+  },
+  {
+    "TeacherId": 552,
+    "ClassroomNumber": 40
+  },
+  {
+    "TeacherId": 459,
+    "ClassroomNumber": 636
+  },
+  {
+    "TeacherId": 268,
+    "ClassroomNumber": 326
+  },
+  {
+    "TeacherId": 36,
+    "ClassroomNumber": 684
+  },
+  {
+    "TeacherId": 350,
+    "ClassroomNumber": 420
+  },
+  {
+    "TeacherId": 432,
+    "ClassroomNumber": 841
+  },
+  {
+    "TeacherId": 502,
+    "ClassroomNumber": 470
+  },
+  {
+    "TeacherId": 903,
+    "ClassroomNumber": 990
+  },
+  {
+    "TeacherId": 417,
+    "ClassroomNumber": 88
+  },
+  {
+    "TeacherId": 460,
+    "ClassroomNumber": 91
+  },
+  {
+    "TeacherId": 653,
+    "ClassroomNumber": 740
+  },
+  {
+    "TeacherId": 222,
+    "ClassroomNumber": 891
+  },
+  {
+    "TeacherId": 281,
+    "ClassroomNumber": 697
+  },
+  {
+    "TeacherId": 19,
+    "ClassroomNumber": 543
+  },
+  {
+    "TeacherId": 861,
+    "ClassroomNumber": 775
+  },
+  {
+    "TeacherId": 845,
+    "ClassroomNumber": 500
+  },
+  {
+    "TeacherId": 582,
+    "ClassroomNumber": 924
+  },
+  {
+    "TeacherId": 295,
+    "ClassroomNumber": 369
+  },
+  {
+    "TeacherId": 351,
+    "ClassroomNumber": 396
+  },
+  {
+    "TeacherId": 605,
+    "ClassroomNumber": 387
+  },
+  {
+    "TeacherId": 558,
+    "ClassroomNumber": 520
+  },
+  {
+    "TeacherId": 875,
+    "ClassroomNumber": 863
+  },
+  {
+    "TeacherId": 135,
+    "ClassroomNumber": 519
+  },
+  {
+    "TeacherId": 694,
+    "ClassroomNumber": 796
+  },
+  {
+    "TeacherId": 849,
+    "ClassroomNumber": 764
+  },
+  {
+    "TeacherId": 395,
+    "ClassroomNumber": 901
+  },
+  {
+    "TeacherId": 430,
+    "ClassroomNumber": 225
+  },
+  {
+    "TeacherId": 921,
+    "ClassroomNumber": 239
+  },
+  {
+    "TeacherId": 97,
+    "ClassroomNumber": 622
+  },
+  {
+    "TeacherId": 941,
+    "ClassroomNumber": 869
+  },
+  {
+    "TeacherId": 298,
+    "ClassroomNumber": 153
+  },
+  {
+    "TeacherId": 947,
+    "ClassroomNumber": 939
+  },
+  {
+    "TeacherId": 920,
+    "ClassroomNumber": 65
+  },
+  {
+    "TeacherId": 484,
+    "ClassroomNumber": 44
+  },
+  {
+    "TeacherId": 973,
+    "ClassroomNumber": 339
+  },
+  {
+    "TeacherId": 231,
+    "ClassroomNumber": 117
+  },
+  {
+    "TeacherId": 142,
+    "ClassroomNumber": 206
+  },
+  {
+    "TeacherId": 128,
+    "ClassroomNumber": 185
+  },
+  {
+    "TeacherId": 310,
+    "ClassroomNumber": 230
+  },
+  {
+    "TeacherId": 609,
+    "ClassroomNumber": 445
+  },
+  {
+    "TeacherId": 578,
+    "ClassroomNumber": 627
+  },
+  {
+    "TeacherId": 499,
+    "ClassroomNumber": 541
+  },
+  {
+    "TeacherId": 118,
+    "ClassroomNumber": 855
+  },
+  {
+    "TeacherId": 729,
+    "ClassroomNumber": 989
+  },
+  {
+    "TeacherId": 728,
+    "ClassroomNumber": 848
+  },
+  {
+    "TeacherId": 44,
+    "ClassroomNumber": 315
+  },
+  {
+    "TeacherId": 271,
+    "ClassroomNumber": 237
+  },
+  {
+    "TeacherId": 952,
+    "ClassroomNumber": 458
+  },
+  {
+    "TeacherId": 240,
+    "ClassroomNumber": 371
+  },
+  {
+    "TeacherId": 712,
+    "ClassroomNumber": 856
+  },
+  {
+    "TeacherId": 29,
+    "ClassroomNumber": 586
+  },
+  {
+    "TeacherId": 488,
+    "ClassroomNumber": 236
+  },
+  {
+    "TeacherId": 325,
+    "ClassroomNumber": 842
+  },
+  {
+    "TeacherId": 221,
+    "ClassroomNumber": 513
+  },
+  {
+    "TeacherId": 322,
+    "ClassroomNumber": 859
+  },
+  {
+    "TeacherId": 870,
+    "ClassroomNumber": 240
+  },
+  {
+    "TeacherId": 176,
+    "ClassroomNumber": 565
+  },
+  {
+    "TeacherId": 656,
+    "ClassroomNumber": 558
+  },
+  {
+    "TeacherId": 901,
+    "ClassroomNumber": 562
+  },
+  {
+    "TeacherId": 705,
+    "ClassroomNumber": 957
+  },
+  {
+    "TeacherId": 376,
+    "ClassroomNumber": 744
+  },
+  {
+    "TeacherId": 540,
+    "ClassroomNumber": 109
+  },
+  {
+    "TeacherId": 265,
+    "ClassroomNumber": 875
+  },
+  {
+    "TeacherId": 789,
+    "ClassroomNumber": 533
+  },
+  {
+    "TeacherId": 479,
+    "ClassroomNumber": 733
+  },
+  {
+    "TeacherId": 439,
+    "ClassroomNumber": 988
+  },
+  {
+    "TeacherId": 473,
+    "ClassroomNumber": 661
+  },
+  {
+    "TeacherId": 842,
+    "ClassroomNumber": 482
+  },
+  {
+    "TeacherId": 49,
+    "ClassroomNumber": 280
+  },
+  {
+    "TeacherId": 183,
+    "ClassroomNumber": 295
+  },
+  {
+    "TeacherId": 500,
+    "ClassroomNumber": 811
+  },
+  {
+    "TeacherId": 608,
+    "ClassroomNumber": 896
+  },
+  {
+    "TeacherId": 491,
+    "ClassroomNumber": 35
+  },
+  {
+    "TeacherId": 59,
+    "ClassroomNumber": 152
+  },
+  {
+    "TeacherId": 497,
+    "ClassroomNumber": 209
+  },
+  {
+    "TeacherId": 936,
+    "ClassroomNumber": 542
+  },
+  {
+    "TeacherId": 137,
+    "ClassroomNumber": 157
+  },
+  {
+    "TeacherId": 369,
+    "ClassroomNumber": 102
+  },
+  {
+    "TeacherId": 878,
+    "ClassroomNumber": 921
+  },
+  {
+    "TeacherId": 487,
+    "ClassroomNumber": 978
+  },
+  {
+    "TeacherId": 640,
+    "ClassroomNumber": 69
+  },
+  {
+    "TeacherId": 211,
+    "ClassroomNumber": 769
+  },
+  {
+    "TeacherId": 544,
+    "ClassroomNumber": 597
+  },
+  {
+    "TeacherId": 847,
+    "ClassroomNumber": 505
+  },
+  {
+    "TeacherId": 408,
+    "ClassroomNumber": 277
+  },
+  {
+    "TeacherId": 569,
+    "ClassroomNumber": 962
+  },
+  {
+    "TeacherId": 860,
+    "ClassroomNumber": 261
+  },
+  {
+    "TeacherId": 69,
+    "ClassroomNumber": 640
+  },
+  {
+    "TeacherId": 103,
+    "ClassroomNumber": 453
+  },
+  {
+    "TeacherId": 577,
+    "ClassroomNumber": 19
+  },
+  {
+    "TeacherId": 567,
+    "ClassroomNumber": 63
+  },
+  {
+    "TeacherId": 547,
+    "ClassroomNumber": 906
+  },
+  {
+    "TeacherId": 349,
+    "ClassroomNumber": 486
+  },
+  {
+    "TeacherId": 52,
+    "ClassroomNumber": 711
+  },
+  {
+    "TeacherId": 610,
+    "ClassroomNumber": 902
+  },
+  {
+    "TeacherId": 855,
+    "ClassroomNumber": 16
+  },
+  {
+    "TeacherId": 688,
+    "ClassroomNumber": 161
+  },
+  {
+    "TeacherId": 61,
+    "ClassroomNumber": 380
+  },
+  {
+    "TeacherId": 922,
+    "ClassroomNumber": 598
+  },
+  {
+    "TeacherId": 892,
+    "ClassroomNumber": 600
+  },
+  {
+    "TeacherId": 601,
+    "ClassroomNumber": 171
+  },
+  {
+    "TeacherId": 175,
+    "ClassroomNumber": 893
+  },
+  {
+    "TeacherId": 906,
+    "ClassroomNumber": 147
+  },
+  {
+    "TeacherId": 57,
+    "ClassroomNumber": 179
+  },
+  {
+    "TeacherId": 627,
+    "ClassroomNumber": 107
+  },
+  {
+    "TeacherId": 776,
+    "ClassroomNumber": 522
+  },
+  {
+    "TeacherId": 214,
+    "ClassroomNumber": 87
+  },
+  {
+    "TeacherId": 31,
+    "ClassroomNumber": 54
+  },
+  {
+    "TeacherId": 581,
+    "ClassroomNumber": 259
+  },
+  {
+    "TeacherId": 831,
+    "ClassroomNumber": 246
+  },
+  {
+    "TeacherId": 566,
+    "ClassroomNumber": 307
+  },
+  {
+    "TeacherId": 519,
+    "ClassroomNumber": 512
+  },
+  {
+    "TeacherId": 465,
+    "ClassroomNumber": 690
+  },
+  {
+    "TeacherId": 750,
+    "ClassroomNumber": 395
+  },
+  {
+    "TeacherId": 373,
+    "ClassroomNumber": 648
+  },
+  {
+    "TeacherId": 56,
+    "ClassroomNumber": 129
+  },
+  {
+    "TeacherId": 297,
+    "ClassroomNumber": 695
+  },
+  {
+    "TeacherId": 173,
+    "ClassroomNumber": 357
+  },
+  {
+    "TeacherId": 160,
+    "ClassroomNumber": 673
+  },
+  {
+    "TeacherId": 763,
+    "ClassroomNumber": 347
+  },
+  {
+    "TeacherId": 278,
+    "ClassroomNumber": 706
+  },
+  {
+    "TeacherId": 716,
+    "ClassroomNumber": 548
+  },
+  {
+    "TeacherId": 930,
+    "ClassroomNumber": 224
+  },
+  {
+    "TeacherId": 779,
+    "ClassroomNumber": 951
+  },
+  {
+    "TeacherId": 340,
+    "ClassroomNumber": 156
+  },
+  {
+    "TeacherId": 518,
+    "ClassroomNumber": 169
+  },
+  {
+    "TeacherId": 872,
+    "ClassroomNumber": 664
+  },
+  {
+    "TeacherId": 949,
+    "ClassroomNumber": 424
+  },
+  {
+    "TeacherId": 754,
+    "ClassroomNumber": 981
+  },
+  {
+    "TeacherId": 133,
+    "ClassroomNumber": 366
+  },
+  {
+    "TeacherId": 678,
+    "ClassroomNumber": 720
+  },
+  {
+    "TeacherId": 174,
+    "ClassroomNumber": 104
+  },
+  {
+    "TeacherId": 736,
+    "ClassroomNumber": 532
+  },
+  {
+    "TeacherId": 592,
+    "ClassroomNumber": 611
+  },
+  {
+    "TeacherId": 517,
+    "ClassroomNumber": 367
+  },
+  {
+    "TeacherId": 756,
+    "ClassroomNumber": 269
+  },
+  {
+    "TeacherId": 593,
+    "ClassroomNumber": 993
+  },
+  {
+    "TeacherId": 71,
+    "ClassroomNumber": 7
+  },
+  {
+    "TeacherId": 929,
+    "ClassroomNumber": 313
+  },
+  {
+    "TeacherId": 329,
+    "ClassroomNumber": 641
+  },
+  {
+    "TeacherId": 546,
+    "ClassroomNumber": 323
+  },
+  {
+    "TeacherId": 856,
+    "ClassroomNumber": 676
+  },
+  {
+    "TeacherId": 398,
+    "ClassroomNumber": 136
+  },
+  {
+    "TeacherId": 697,
+    "ClassroomNumber": 483
+  },
+  {
+    "TeacherId": 657,
+    "ClassroomNumber": 260
+  },
+  {
+    "TeacherId": 424,
+    "ClassroomNumber": 446
+  },
+  {
+    "TeacherId": 844,
+    "ClassroomNumber": 749
+  },
+  {
+    "TeacherId": 249,
+    "ClassroomNumber": 78
+  },
+  {
+    "TeacherId": 645,
+    "ClassroomNumber": 272
+  },
+  {
+    "TeacherId": 626,
+    "ClassroomNumber": 806
+  },
+  {
+    "TeacherId": 631,
+    "ClassroomNumber": 266
+  },
+  {
+    "TeacherId": 304,
+    "ClassroomNumber": 609
+  },
+  {
+    "TeacherId": 731,
+    "ClassroomNumber": 498
+  },
+  {
+    "TeacherId": 537,
+    "ClassroomNumber": 672
+  },
+  {
+    "TeacherId": 654,
+    "ClassroomNumber": 862
+  },
+  {
+    "TeacherId": 466,
+    "ClassroomNumber": 539
+  },
+  {
+    "TeacherId": 707,
+    "ClassroomNumber": 613
+  },
+  {
+    "TeacherId": 74,
+    "ClassroomNumber": 716
+  },
+  {
+    "TeacherId": 334,
+    "ClassroomNumber": 581
+  },
+  {
+    "TeacherId": 983,
+    "ClassroomNumber": 182
+  },
+  {
+    "TeacherId": 745,
+    "ClassroomNumber": 403
+  },
+  {
+    "TeacherId": 895,
+    "ClassroomNumber": 804
+  },
+  {
+    "TeacherId": 87,
+    "ClassroomNumber": 267
+  },
+  {
+    "TeacherId": 730,
+    "ClassroomNumber": 368
+  },
+  {
+    "TeacherId": 10,
+    "ClassroomNumber": 809
+  },
+  {
+    "TeacherId": 797,
+    "ClassroomNumber": 949
+  },
+  {
+    "TeacherId": 504,
+    "ClassroomNumber": 612
+  },
+  {
+    "TeacherId": 341,
+    "ClassroomNumber": 410
+  },
+  {
+    "TeacherId": 526,
+    "ClassroomNumber": 361
+  },
+  {
+    "TeacherId": 209,
+    "ClassroomNumber": 363
+  },
+  {
+    "TeacherId": 840,
+    "ClassroomNumber": 967
+  },
+  {
+    "TeacherId": 772,
+    "ClassroomNumber": 316
+  },
+  {
+    "TeacherId": 163,
+    "ClassroomNumber": 4
+  },
+  {
+    "TeacherId": 16,
+    "ClassroomNumber": 910
+  },
+  {
+    "TeacherId": 443,
+    "ClassroomNumber": 480
+  },
+  {
+    "TeacherId": 959,
+    "ClassroomNumber": 373
+  },
+  {
+    "TeacherId": 190,
+    "ClassroomNumber": 879
+  },
+  {
+    "TeacherId": 873,
+    "ClassroomNumber": 199
+  },
+  {
+    "TeacherId": 632,
+    "ClassroomNumber": 802
+  },
+  {
+    "TeacherId": 642,
+    "ClassroomNumber": 912
+  },
+  {
+    "TeacherId": 515,
+    "ClassroomNumber": 689
+  },
+  {
+    "TeacherId": 22,
+    "ClassroomNumber": 885
+  },
+  {
+    "TeacherId": 113,
+    "ClassroomNumber": 963
+  },
+  {
+    "TeacherId": 144,
+    "ClassroomNumber": 651
+  },
+  {
+    "TeacherId": 715,
+    "ClassroomNumber": 142
+  },
+  {
+    "TeacherId": 894,
+    "ClassroomNumber": 253
+  },
+  {
+    "TeacherId": 216,
+    "ClassroomNumber": 460
+  },
+  {
+    "TeacherId": 80,
+    "ClassroomNumber": 654
+  },
+  {
+    "TeacherId": 332,
+    "ClassroomNumber": 408
+  },
+  {
+    "TeacherId": 337,
+    "ClassroomNumber": 309
+  },
+  {
+    "TeacherId": 723,
+    "ClassroomNumber": 430
+  },
+  {
+    "TeacherId": 666,
+    "ClassroomNumber": 125
+  },
+  {
+    "TeacherId": 145,
+    "ClassroomNumber": 929
+  },
+  {
+    "TeacherId": 841,
+    "ClassroomNumber": 389
+  },
+  {
+    "TeacherId": 853,
+    "ClassroomNumber": 621
+  },
+  {
+    "TeacherId": 607,
+    "ClassroomNumber": 159
+  },
+  {
+    "TeacherId": 665,
+    "ClassroomNumber": 675
+  },
+  {
+    "TeacherId": 389,
+    "ClassroomNumber": 312
+  },
+  {
+    "TeacherId": 698,
+    "ClassroomNumber": 529
+  },
+  {
+    "TeacherId": 415,
+    "ClassroomNumber": 372
+  },
+  {
+    "TeacherId": 690,
+    "ClassroomNumber": 715
+  },
+  {
+    "TeacherId": 529,
+    "ClassroomNumber": 414
+  },
+  {
+    "TeacherId": 90,
+    "ClassroomNumber": 399
+  },
+  {
+    "TeacherId": 511,
+    "ClassroomNumber": 333
+  },
+  {
+    "TeacherId": 588,
+    "ClassroomNumber": 554
+  },
+  {
+    "TeacherId": 98,
+    "ClassroomNumber": 928
+  },
+  {
+    "TeacherId": 727,
+    "ClassroomNumber": 116
+  },
+  {
+    "TeacherId": 73,
+    "ClassroomNumber": 174
+  },
+  {
+    "TeacherId": 954,
+    "ClassroomNumber": 77
+  },
+  {
+    "TeacherId": 323,
+    "ClassroomNumber": 409
+  },
+  {
+    "TeacherId": 991,
+    "ClassroomNumber": 943
+  },
+  {
+    "TeacherId": 800,
+    "ClassroomNumber": 854
+  },
+  {
+    "TeacherId": 589,
+    "ClassroomNumber": 795
+  },
+  {
+    "TeacherId": 713,
+    "ClassroomNumber": 285
+  },
+  {
+    "TeacherId": 437,
+    "ClassroomNumber": 42
+  },
+  {
+    "TeacherId": 953,
+    "ClassroomNumber": 62
+  },
+  {
+    "TeacherId": 172,
+    "ClassroomNumber": 677
+  },
+  {
+    "TeacherId": 122,
+    "ClassroomNumber": 443
+  },
+  {
+    "TeacherId": 366,
+    "ClassroomNumber": 31
+  },
+  {
+    "TeacherId": 368,
+    "ClassroomNumber": 509
+  },
+  {
+    "TeacherId": 267,
+    "ClassroomNumber": 274
+  },
+  {
+    "TeacherId": 685,
+    "ClassroomNumber": 301
+  },
+  {
+    "TeacherId": 672,
+    "ClassroomNumber": 37
+  },
+  {
+    "TeacherId": 169,
+    "ClassroomNumber": 41
+  },
+  {
+    "TeacherId": 658,
+    "ClassroomNumber": 803
+  },
+  {
+    "TeacherId": 161,
+    "ClassroomNumber": 439
+  },
+  {
+    "TeacherId": 699,
+    "ClassroomNumber": 311
+  },
+  {
+    "TeacherId": 691,
+    "ClassroomNumber": 728
+  },
+  {
+    "TeacherId": 93,
+    "ClassroomNumber": 660
+  },
+  {
+    "TeacherId": 720,
+    "ClassroomNumber": 204
+  },
+  {
+    "TeacherId": 590,
+    "ClassroomNumber": 298
+  },
+  {
+    "TeacherId": 321,
+    "ClassroomNumber": 172
+  },
+  {
+    "TeacherId": 989,
+    "ClassroomNumber": 922
+  },
+  {
+    "TeacherId": 692,
+    "ClassroomNumber": 882
+  },
+  {
+    "TeacherId": 318,
+    "ClassroomNumber": 20
+  },
+  {
+    "TeacherId": 541,
+    "ClassroomNumber": 190
+  },
+  {
+    "TeacherId": 126,
+    "ClassroomNumber": 850
+  },
+  {
+    "TeacherId": 979,
+    "ClassroomNumber": 801
+  },
+  {
+    "TeacherId": 498,
+    "ClassroomNumber": 839
+  },
+  {
+    "TeacherId": 726,
+    "ClassroomNumber": 114
+  },
+  {
+    "TeacherId": 428,
+    "ClassroomNumber": 908
+  },
+  {
+    "TeacherId": 414,
+    "ClassroomNumber": 587
+  },
+  {
+    "TeacherId": 604,
+    "ClassroomNumber": 805
+  },
+  {
+    "TeacherId": 808,
+    "ClassroomNumber": 926
+  },
+  {
+    "TeacherId": 402,
+    "ClassroomNumber": 829
+  },
+  {
+    "TeacherId": 739,
+    "ClassroomNumber": 642
+  },
+  {
+    "TeacherId": 206,
+    "ClassroomNumber": 30
+  },
+  {
+    "TeacherId": 804,
+    "ClassroomNumber": 447
+  },
+  {
+    "TeacherId": 275,
+    "ClassroomNumber": 64
+  },
+  {
+    "TeacherId": 634,
+    "ClassroomNumber": 953
+  },
+  {
+    "TeacherId": 662,
+    "ClassroomNumber": 407
+  },
+  {
+    "TeacherId": 821,
+    "ClassroomNumber": 935
+  },
+  {
+    "TeacherId": 237,
+    "ClassroomNumber": 384
+  },
+  {
+    "TeacherId": 984,
+    "ClassroomNumber": 518
+  },
+  {
+    "TeacherId": 171,
+    "ClassroomNumber": 662
+  },
+  {
+    "TeacherId": 388,
+    "ClassroomNumber": 591
+  },
+  {
+    "TeacherId": 998,
+    "ClassroomNumber": 149
+  },
+  {
+    "TeacherId": 95,
+    "ClassroomNumber": 754
+  },
+  {
+    "TeacherId": 843,
+    "ClassroomNumber": 972
+  },
+  {
+    "TeacherId": 72,
+    "ClassroomNumber": 252
+  },
+  {
+    "TeacherId": 35,
+    "ClassroomNumber": 466
+  },
+  {
+    "TeacherId": 258,
+    "ClassroomNumber": 351
+  },
+  {
+    "TeacherId": 714,
+    "ClassroomNumber": 616
+  },
+  {
+    "TeacherId": 356,
+    "ClassroomNumber": 824
+  },
+  {
+    "TeacherId": 320,
+    "ClassroomNumber": 18
+  },
+  {
+    "TeacherId": 70,
+    "ClassroomNumber": 475
+  },
+  {
+    "TeacherId": 805,
+    "ClassroomNumber": 13
+  },
+  {
+    "TeacherId": 218,
+    "ClassroomNumber": 383
+  },
+  {
+    "TeacherId": 732,
+    "ClassroomNumber": 918
+  },
+  {
+    "TeacherId": 291,
+    "ClassroomNumber": 492
+  },
+  {
+    "TeacherId": 683,
+    "ClassroomNumber": 623
+  },
+  {
+    "TeacherId": 328,
+    "ClassroomNumber": 948
+  },
+  {
+    "TeacherId": 306,
+    "ClassroomNumber": 431
+  },
+  {
+    "TeacherId": 207,
+    "ClassroomNumber": 388
+  },
+  {
+    "TeacherId": 719,
+    "ClassroomNumber": 167
+  },
+  {
+    "TeacherId": 988,
+    "ClassroomNumber": 477
+  },
+  {
+    "TeacherId": 508,
+    "ClassroomNumber": 992
+  },
+  {
+    "TeacherId": 117,
+    "ClassroomNumber": 39
+  },
+  {
+    "TeacherId": 352,
+    "ClassroomNumber": 108
+  },
+  {
+    "TeacherId": 556,
+    "ClassroomNumber": 705
+  },
+  {
+    "TeacherId": 277,
+    "ClassroomNumber": 700
+  },
+  {
+    "TeacherId": 946,
+    "ClassroomNumber": 283
+  },
+  {
+    "TeacherId": 803,
+    "ClassroomNumber": 499
+  },
+  {
+    "TeacherId": 245,
+    "ClassroomNumber": 737
+  },
+  {
+    "TeacherId": 324,
+    "ClassroomNumber": 808
+  },
+  {
+    "TeacherId": 96,
+    "ClassroomNumber": 523
+  },
+  {
+    "TeacherId": 396,
+    "ClassroomNumber": 984
+  },
+  {
+    "TeacherId": 91,
+    "ClassroomNumber": 680
+  },
+  {
+    "TeacherId": 575,
+    "ClassroomNumber": 28
+  },
+  {
+    "TeacherId": 387,
+    "ClassroomNumber": 160
+  },
+  {
+    "TeacherId": 179,
+    "ClassroomNumber": 983
+  },
+  {
+    "TeacherId": 279,
+    "ClassroomNumber": 762
+  },
+  {
+    "TeacherId": 999,
+    "ClassroomNumber": 790
+  },
+  {
+    "TeacherId": 600,
+    "ClassroomNumber": 245
+  },
+  {
+    "TeacherId": 971,
+    "ClassroomNumber": 526
+  },
+  {
+    "TeacherId": 254,
+    "ClassroomNumber": 735
+  },
+  {
+    "TeacherId": 561,
+    "ClassroomNumber": 229
+  },
+  {
+    "TeacherId": 753,
+    "ClassroomNumber": 889
+  },
+  {
+    "TeacherId": 758,
+    "ClassroomNumber": 979
+  },
+  {
+    "TeacherId": 624,
+    "ClassroomNumber": 567
+  },
+  {
+    "TeacherId": 247,
+    "ClassroomNumber": 111
+  },
+  {
+    "TeacherId": 108,
+    "ClassroomNumber": 27
+  },
+  {
+    "TeacherId": 681,
+    "ClassroomNumber": 823
+  },
+  {
+    "TeacherId": 178,
+    "ClassroomNumber": 66
+  },
+  {
+    "TeacherId": 938,
+    "ClassroomNumber": 358
+  },
+  {
+    "TeacherId": 784,
+    "ClassroomNumber": 263
+  },
+  {
+    "TeacherId": 717,
+    "ClassroomNumber": 148
+  },
+  {
+    "TeacherId": 314,
+    "ClassroomNumber": 954
+  },
+  {
+    "TeacherId": 425,
+    "ClassroomNumber": 353
+  },
+  {
+    "TeacherId": 359,
+    "ClassroomNumber": 778
+  },
+  {
+    "TeacherId": 136,
+    "ClassroomNumber": 938
+  },
+  {
+    "TeacherId": 904,
+    "ClassroomNumber": 429
+  },
+  {
+    "TeacherId": 450,
+    "ClassroomNumber": 699
+  },
+  {
+    "TeacherId": 257,
+    "ClassroomNumber": 164
+  },
+  {
+    "TeacherId": 102,
+    "ClassroomNumber": 793
+  },
+  {
+    "TeacherId": 256,
+    "ClassroomNumber": 234
+  },
+  {
+    "TeacherId": 21,
+    "ClassroomNumber": 140
+  },
+  {
+    "TeacherId": 806,
+    "ClassroomNumber": 903
+  },
+  {
+    "TeacherId": 420,
+    "ClassroomNumber": 883
+  },
+  {
+    "TeacherId": 457,
+    "ClassroomNumber": 578
+  },
+  {
+    "TeacherId": 815,
+    "ClassroomNumber": 200
+  },
+  {
+    "TeacherId": 538,
+    "ClassroomNumber": 113
+  },
+  {
+    "TeacherId": 38,
+    "ClassroomNumber": 904
+  },
+  {
+    "TeacherId": 813,
+    "ClassroomNumber": 33
+  },
+  {
+    "TeacherId": 516,
+    "ClassroomNumber": 133
+  },
+  {
+    "TeacherId": 603,
+    "ClassroomNumber": 742
+  },
+  {
+    "TeacherId": 168,
+    "ClassroomNumber": 10
+  },
+  {
+    "TeacherId": 785,
+    "ClassroomNumber": 825
+  },
+  {
+    "TeacherId": 244,
+    "ClassroomNumber": 485
+  },
+  {
+    "TeacherId": 7,
+    "ClassroomNumber": 849
+  },
+  {
+    "TeacherId": 787,
+    "ClassroomNumber": 360
+  },
+  {
+    "TeacherId": 379,
+    "ClassroomNumber": 181
+  },
+  {
+    "TeacherId": 212,
+    "ClassroomNumber": 638
+  },
+  {
+    "TeacherId": 235,
+    "ClassroomNumber": 840
+  },
+  {
+    "TeacherId": 829,
+    "ClassroomNumber": 226
+  },
+  {
+    "TeacherId": 397,
+    "ClassroomNumber": 940
+  },
+  {
+    "TeacherId": 850,
+    "ClassroomNumber": 1000
+  },
+  {
+    "TeacherId": 661,
+    "ClassroomNumber": 71
+  },
+  {
+    "TeacherId": 854,
+    "ClassroomNumber": 555
+  },
+  {
+    "TeacherId": 506,
+    "ClassroomNumber": 583
+  },
+  {
+    "TeacherId": 987,
+    "ClassroomNumber": 53
+  },
+  {
+    "TeacherId": 307,
+    "ClassroomNumber": 322
+  },
+  {
+    "TeacherId": 512,
+    "ClassroomNumber": 659
+  },
+  {
+    "TeacherId": 382,
+    "ClassroomNumber": 348
+  },
+  {
+    "TeacherId": 718,
+    "ClassroomNumber": 814
+  },
+  {
+    "TeacherId": 563,
+    "ClassroomNumber": 650
+  },
+  {
+    "TeacherId": 676,
+    "ClassroomNumber": 515
+  },
+  {
+    "TeacherId": 955,
+    "ClassroomNumber": 338
+  },
+  {
+    "TeacherId": 391,
+    "ClassroomNumber": 17
+  },
+  {
+    "TeacherId": 191,
+    "ClassroomNumber": 178
+  },
+  {
+    "TeacherId": 818,
+    "ClassroomNumber": 442
+  },
+  {
+    "TeacherId": 816,
+    "ClassroomNumber": 731
+  },
+  {
+    "TeacherId": 58,
+    "ClassroomNumber": 241
+  },
+  {
+    "TeacherId": 746,
+    "ClassroomNumber": 435
+  },
+  {
+    "TeacherId": 438,
+    "ClassroomNumber": 724
+  },
+  {
+    "TeacherId": 780,
+    "ClassroomNumber": 402
+  },
+  {
+    "TeacherId": 823,
+    "ClassroomNumber": 776
+  },
+  {
+    "TeacherId": 660,
+    "ClassroomNumber": 144
+  },
+  {
+    "TeacherId": 792,
+    "ClassroomNumber": 732
+  },
+  {
+    "TeacherId": 311,
+    "ClassroomNumber": 872
+  },
+  {
+    "TeacherId": 213,
+    "ClassroomNumber": 987
+  },
+  {
+    "TeacherId": 429,
+    "ClassroomNumber": 538
+  },
+  {
+    "TeacherId": 862,
+    "ClassroomNumber": 231
+  },
+  {
+    "TeacherId": 411,
+    "ClassroomNumber": 154
+  },
+  {
+    "TeacherId": 156,
+    "ClassroomNumber": 330
+  },
+  {
+    "TeacherId": 710,
+    "ClassroomNumber": 527
+  },
+  {
+    "TeacherId": 454,
+    "ClassroomNumber": 536
+  },
+  {
+    "TeacherId": 433,
+    "ClassroomNumber": 970
+  },
+  {
+    "TeacherId": 594,
+    "ClassroomNumber": 747
+  },
+  {
+    "TeacherId": 435,
+    "ClassroomNumber": 415
+  },
+  {
+    "TeacherId": 283,
+    "ClassroomNumber": 531
+  },
+  {
+    "TeacherId": 355,
+    "ClassroomNumber": 698
+  },
+  {
+    "TeacherId": 65,
+    "ClassroomNumber": 540
+  },
+  {
+    "TeacherId": 111,
+    "ClassroomNumber": 525
+  },
+  {
+    "TeacherId": 830,
+    "ClassroomNumber": 488
+  },
+  {
+    "TeacherId": 824,
+    "ClassroomNumber": 422
+  },
+  {
+    "TeacherId": 434,
+    "ClassroomNumber": 584
+  },
+  {
+    "TeacherId": 891,
+    "ClassroomNumber": 637
+  },
+  {
+    "TeacherId": 48,
+    "ClassroomNumber": 401
+  },
+  {
+    "TeacherId": 534,
+    "ClassroomNumber": 59
+  },
+  {
+    "TeacherId": 722,
+    "ClassroomNumber": 216
+  },
+  {
+    "TeacherId": 522,
+    "ClassroomNumber": 915
+  },
+  {
+    "TeacherId": 837,
+    "ClassroomNumber": 966
+  },
+  {
+    "TeacherId": 852,
+    "ClassroomNumber": 665
+  },
+  {
+    "TeacherId": 309,
+    "ClassroomNumber": 490
+  },
+  {
+    "TeacherId": 523,
+    "ClassroomNumber": 833
+  },
+  {
+    "TeacherId": 751,
+    "ClassroomNumber": 899
+  },
+  {
+    "TeacherId": 587,
+    "ClassroomNumber": 223
+  },
+  {
+    "TeacherId": 812,
+    "ClassroomNumber": 335
+  },
+  {
+    "TeacherId": 333,
+    "ClassroomNumber": 890
+  },
+  {
+    "TeacherId": 33,
+    "ClassroomNumber": 82
+  },
+  {
+    "TeacherId": 883,
+    "ClassroomNumber": 327
+  },
+  {
+    "TeacherId": 655,
+    "ClassroomNumber": 946
+  },
+  {
+    "TeacherId": 832,
+    "ClassroomNumber": 93
+  },
+  {
+    "TeacherId": 344,
+    "ClassroomNumber": 971
+  },
+  {
+    "TeacherId": 109,
+    "ClassroomNumber": 955
+  },
+  {
+    "TeacherId": 426,
+    "ClassroomNumber": 589
+  },
+  {
+    "TeacherId": 564,
+    "ClassroomNumber": 686
+  },
+  {
+    "TeacherId": 251,
+    "ClassroomNumber": 268
+  },
+  {
+    "TeacherId": 125,
+    "ClassroomNumber": 427
+  },
+  {
+    "TeacherId": 84,
+    "ClassroomNumber": 692
+  },
+  {
+    "TeacherId": 476,
+    "ClassroomNumber": 644
+  }
+]

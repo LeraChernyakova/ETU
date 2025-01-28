@@ -1,0 +1,402 @@
+[
+  {
+    "TeacherId": 38,
+    "SubjectId": 24
+  },
+  {
+    "TeacherId": 36,
+    "SubjectId": 17
+  },
+  {
+    "TeacherId": 27,
+    "SubjectId": 37
+  },
+  {
+    "TeacherId": 30,
+    "SubjectId": 80
+  },
+  {
+    "TeacherId": 4,
+    "SubjectId": 49
+  },
+  {
+    "TeacherId": 13,
+    "SubjectId": 30
+  },
+  {
+    "TeacherId": 34,
+    "SubjectId": 12
+  },
+  {
+    "TeacherId": 68,
+    "SubjectId": 73
+  },
+  {
+    "TeacherId": 64,
+    "SubjectId": 64
+  },
+  {
+    "TeacherId": 25,
+    "SubjectId": 32
+  },
+  {
+    "TeacherId": 24,
+    "SubjectId": 82
+  },
+  {
+    "TeacherId": 55,
+    "SubjectId": 22
+  },
+  {
+    "TeacherId": 53,
+    "SubjectId": 45
+  },
+  {
+    "TeacherId": 58,
+    "SubjectId": 63
+  },
+  {
+    "TeacherId": 58,
+    "SubjectId": 75
+  },
+  {
+    "TeacherId": 32,
+    "SubjectId": 30
+  },
+  {
+    "TeacherId": 59,
+    "SubjectId": 16
+  },
+  {
+    "TeacherId": 79,
+    "SubjectId": 72
+  },
+  {
+    "TeacherId": 16,
+    "SubjectId": 64
+  },
+  {
+    "TeacherId": 54,
+    "SubjectId": 95
+  },
+  {
+    "TeacherId": 67,
+    "SubjectId": 90
+  },
+  {
+    "TeacherId": 63,
+    "SubjectId": 75
+  },
+  {
+    "TeacherId": 74,
+    "SubjectId": 11
+  },
+  {
+    "TeacherId": 42,
+    "SubjectId": 28
+  },
+  {
+    "TeacherId": 45,
+    "SubjectId": 90
+  },
+  {
+    "TeacherId": 16,
+    "SubjectId": 57
+  },
+  {
+    "TeacherId": 36,
+    "SubjectId": 56
+  },
+  {
+    "TeacherId": 61,
+    "SubjectId": 86
+  },
+  {
+    "TeacherId": 43,
+    "SubjectId": 32
+  },
+  {
+    "TeacherId": 66,
+    "SubjectId": 16
+  },
+  {
+    "TeacherId": 48,
+    "SubjectId": 93
+  },
+  {
+    "TeacherId": 97,
+    "SubjectId": 29
+  },
+  {
+    "TeacherId": 69,
+    "SubjectId": 32
+  },
+  {
+    "TeacherId": 37,
+    "SubjectId": 72
+  },
+  {
+    "TeacherId": 69,
+    "SubjectId": 95
+  },
+  {
+    "TeacherId": 24,
+    "SubjectId": 36
+  },
+  {
+    "TeacherId": 69,
+    "SubjectId": 48
+  },
+  {
+    "TeacherId": 35,
+    "SubjectId": 42
+  },
+  {
+    "TeacherId": 3,
+    "SubjectId": 39
+  },
+  {
+    "TeacherId": 74,
+    "SubjectId": 57
+  },
+  {
+    "TeacherId": 96,
+    "SubjectId": 52
+  },
+  {
+    "TeacherId": 15,
+    "SubjectId": 96
+  },
+  {
+    "TeacherId": 85,
+    "SubjectId": 76
+  },
+  {
+    "TeacherId": 48,
+    "SubjectId": 43
+  },
+  {
+    "TeacherId": 33,
+    "SubjectId": 11
+  },
+  {
+    "TeacherId": 34,
+    "SubjectId": 13
+  },
+  {
+    "TeacherId": 47,
+    "SubjectId": 11
+  },
+  {
+    "TeacherId": 49,
+    "SubjectId": 83
+  },
+  {
+    "TeacherId": 33,
+    "SubjectId": 53
+  },
+  {
+    "TeacherId": 17,
+    "SubjectId": 48
+  },
+  {
+    "TeacherId": 42,
+    "SubjectId": 90
+  },
+  {
+    "TeacherId": 66,
+    "SubjectId": 63
+  },
+  {
+    "TeacherId": 83,
+    "SubjectId": 27
+  },
+  {
+    "TeacherId": 76,
+    "SubjectId": 81
+  },
+  {
+    "TeacherId": 21,
+    "SubjectId": 65
+  },
+  {
+    "TeacherId": 54,
+    "SubjectId": 9
+  },
+  {
+    "TeacherId": 33,
+    "SubjectId": 59
+  },
+  {
+    "TeacherId": 96,
+    "SubjectId": 93
+  },
+  {
+    "TeacherId": 89,
+    "SubjectId": 26
+  },
+  {
+    "TeacherId": 40,
+    "SubjectId": 80
+  },
+  {
+    "TeacherId": 24,
+    "SubjectId": 27
+  },
+  {
+    "TeacherId": 80,
+    "SubjectId": 14
+  },
+  {
+    "TeacherId": 52,
+    "SubjectId": 18
+  },
+  {
+    "TeacherId": 28,
+    "SubjectId": 76
+  },
+  {
+    "TeacherId": 100,
+    "SubjectId": 59
+  },
+  {
+    "TeacherId": 8,
+    "SubjectId": 67
+  },
+  {
+    "TeacherId": 52,
+    "SubjectId": 72
+  },
+  {
+    "TeacherId": 67,
+    "SubjectId": 63
+  },
+  {
+    "TeacherId": 5,
+    "SubjectId": 75
+  },
+  {
+    "TeacherId": 89,
+    "SubjectId": 41
+  },
+  {
+    "TeacherId": 21,
+    "SubjectId": 46
+  },
+  {
+    "TeacherId": 53,
+    "SubjectId": 30
+  },
+  {
+    "TeacherId": 43,
+    "SubjectId": 9
+  },
+  {
+    "TeacherId": 82,
+    "SubjectId": 30
+  },
+  {
+    "TeacherId": 36,
+    "SubjectId": 1
+  },
+  {
+    "TeacherId": 96,
+    "SubjectId": 87
+  },
+  {
+    "TeacherId": 94,
+    "SubjectId": 9
+  },
+  {
+    "TeacherId": 25,
+    "SubjectId": 82
+  },
+  {
+    "TeacherId": 74,
+    "SubjectId": 29
+  },
+  {
+    "TeacherId": 9,
+    "SubjectId": 24
+  },
+  {
+    "TeacherId": 75,
+    "SubjectId": 43
+  },
+  {
+    "TeacherId": 24,
+    "SubjectId": 80
+  },
+  {
+    "TeacherId": 8,
+    "SubjectId": 65
+  },
+  {
+    "TeacherId": 30,
+    "SubjectId": 24
+  },
+  {
+    "TeacherId": 39,
+    "SubjectId": 6
+  },
+  {
+    "TeacherId": 96,
+    "SubjectId": 50
+  },
+  {
+    "TeacherId": 21,
+    "SubjectId": 54
+  },
+  {
+    "TeacherId": 1,
+    "SubjectId": 6
+  },
+  {
+    "TeacherId": 65,
+    "SubjectId": 11
+  },
+  {
+    "TeacherId": 28,
+    "SubjectId": 72
+  },
+  {
+    "TeacherId": 50,
+    "SubjectId": 58
+  },
+  {
+    "TeacherId": 95,
+    "SubjectId": 21
+  },
+  {
+    "TeacherId": 24,
+    "SubjectId": 66
+  },
+  {
+    "TeacherId": 77,
+    "SubjectId": 90
+  },
+  {
+    "TeacherId": 12,
+    "SubjectId": 56
+  },
+  {
+    "TeacherId": 84,
+    "SubjectId": 76
+  },
+  {
+    "TeacherId": 59,
+    "SubjectId": 75
+  },
+  {
+    "TeacherId": 10,
+    "SubjectId": 37
+  },
+  {
+    "TeacherId": 71,
+    "SubjectId": 34
+  },
+  {
+    "TeacherId": 24,
+    "SubjectId": 26
+  }
+]

@@ -1,0 +1,120 @@
+<mxfile host="app.diagrams.net" modified="2023-11-21T15:36:19.554Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0" etag="IzlnzHcpazctUCP4HNbD" version="22.1.3" type="device" pages="2">
+  <diagram id="Y0y3cKv-4A2aIMHIa0ki" name="Page-1">
+    <mxGraphModel dx="3170" dy="2300" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-500" y="-360" width="910" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-500" y="-360" width="910" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-500" y="280" width="910" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="85" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-500" y="-360" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="86" value="USED AT:" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-500" y="-360" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="87" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-420" y="-360" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="88" value="AUTHOR: Разработчики АС&lt;br&gt;&quot;Hotel Hospitality Management&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-420" y="-360" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="89" value="DATE: 21.11.2023" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-240" y="-360" width="111" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="90" value="PROJECT: АС &quot;Hotel Hospitality Management&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-420" y="-310" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="91" value="REV:&amp;nbsp; &amp;nbsp;24.11.2023" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-239.5" y="-317.5" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="92" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;fillColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="-140" y="-360" width="25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="93" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-140" y="-335" width="25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="94" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-140" y="-310" width="25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="95" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-140" y="-285" width="25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="96" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-65" y="-360" width="205" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="97" value="WORKING" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-115" y="-360" width="185" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="98" value="DRAFT" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-115" y="-335" width="185" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="99" value="RECOMMENDED" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-115" y="-310" width="185" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="100" value="PUBLICATION" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-115" y="-285" width="185" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="101" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="70" y="-360" width="140" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="102" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="70" y="-335" width="140" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="103" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="70" y="-310" width="140" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="104" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="70" y="-285" width="140" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="105" value="READER" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="70" y="-360" width="60" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="106" value="DATE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="200" y="-362.5" width="60" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="109" value="&lt;span style=&quot;font-size: 21px;&quot;&gt;A0&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="270" y="-360" width="140" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="110" value="CONTEXT:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="270" y="-360" width="75" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="111" value="А4" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=21;fillColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="-500" y="280" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="112" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=21;fillColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="170" y="280" width="240" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="114" value="NODE:" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="-500" y="280" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="115" value="NUMBER" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="170" y="280" width="69" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="116" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=14;fillColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="330" y="360" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="117" value="TITLE:" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="-320" y="280" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="118" value="&lt;span style=&quot;font-size: 22px;&quot;&gt;Функция &quot;Анализ данных о бронированиях и расходных материалах&quot;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="-262.5" y="310" width="370" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="stmdhHgle_sL4HajJBjH" name="Страница — 2">
+    <mxGraphModel dx="1624" dy="840" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

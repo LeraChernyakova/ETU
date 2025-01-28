@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang = "ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/records.css" />
+    <script src="/utils/records.js"></script>
+</head>
+<body class="main" onload="showRecordsTable();">
+    <div class="title">
+        <p>Приключения ниндзя</p>
+    </div>
+    <div id="endGame">
+        <p class="end-text">Вы победили!</p>
+        <p id="endText">Ваш счет: </p>
+        <div class="score-table"></div>
+        <button type="button" class="refresh" onclick="location.href = 'https://localhost/'">Играть заново</button>
+    </div>
+</body>
+</html>

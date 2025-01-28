@@ -1,0 +1,53 @@
+* {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.main {
+    background-color: rgb(66, 108, 80);
+}
+
+.title {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+#endGame {
+    position: fixed;
+    top: 13%;
+    left: 35%;
+    width: 30%;
+    height: 80%;
+    background: white;
+    border: 2px solid;
+    border-radius: 10px;
+    line-height: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+.end-text, #endText {
+    text-align: center;
+}
+
+.score-table {
+    float: left;
+    margin-left: 5%;
+    width: 90%;
+    height: 70%;
+    overflow: auto;
+    border: 2px solid;
+    background-color: white;
+}
+
+button {
+    margin-left: 29%;
+    display: block;
+    background-color: rgba(111, 183, 130, 0.84);
+    width: 200px;
+    height: 35px;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+}

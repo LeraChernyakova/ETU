@@ -1,0 +1,402 @@
+[
+  {
+    "TeacherId": 77,
+    "ClassroomNumber": 13
+  },
+  {
+    "TeacherId": 40,
+    "ClassroomNumber": 84
+  },
+  {
+    "TeacherId": 98,
+    "ClassroomNumber": 15
+  },
+  {
+    "TeacherId": 84,
+    "ClassroomNumber": 19
+  },
+  {
+    "TeacherId": 54,
+    "ClassroomNumber": 94
+  },
+  {
+    "TeacherId": 2,
+    "ClassroomNumber": 26
+  },
+  {
+    "TeacherId": 19,
+    "ClassroomNumber": 90
+  },
+  {
+    "TeacherId": 69,
+    "ClassroomNumber": 57
+  },
+  {
+    "TeacherId": 44,
+    "ClassroomNumber": 30
+  },
+  {
+    "TeacherId": 17,
+    "ClassroomNumber": 85
+  },
+  {
+    "TeacherId": 82,
+    "ClassroomNumber": 31
+  },
+  {
+    "TeacherId": 48,
+    "ClassroomNumber": 82
+  },
+  {
+    "TeacherId": 50,
+    "ClassroomNumber": 92
+  },
+  {
+    "TeacherId": 18,
+    "ClassroomNumber": 50
+  },
+  {
+    "TeacherId": 56,
+    "ClassroomNumber": 47
+  },
+  {
+    "TeacherId": 93,
+    "ClassroomNumber": 10
+  },
+  {
+    "TeacherId": 8,
+    "ClassroomNumber": 98
+  },
+  {
+    "TeacherId": 13,
+    "ClassroomNumber": 5
+  },
+  {
+    "TeacherId": 81,
+    "ClassroomNumber": 18
+  },
+  {
+    "TeacherId": 43,
+    "ClassroomNumber": 1
+  },
+  {
+    "TeacherId": 38,
+    "ClassroomNumber": 48
+  },
+  {
+    "TeacherId": 12,
+    "ClassroomNumber": 41
+  },
+  {
+    "TeacherId": 61,
+    "ClassroomNumber": 25
+  },
+  {
+    "TeacherId": 75,
+    "ClassroomNumber": 81
+  },
+  {
+    "TeacherId": 51,
+    "ClassroomNumber": 20
+  },
+  {
+    "TeacherId": 65,
+    "ClassroomNumber": 52
+  },
+  {
+    "TeacherId": 80,
+    "ClassroomNumber": 77
+  },
+  {
+    "TeacherId": 99,
+    "ClassroomNumber": 67
+  },
+  {
+    "TeacherId": 71,
+    "ClassroomNumber": 54
+  },
+  {
+    "TeacherId": 58,
+    "ClassroomNumber": 2
+  },
+  {
+    "TeacherId": 7,
+    "ClassroomNumber": 17
+  },
+  {
+    "TeacherId": 10,
+    "ClassroomNumber": 62
+  },
+  {
+    "TeacherId": 4,
+    "ClassroomNumber": 60
+  },
+  {
+    "TeacherId": 27,
+    "ClassroomNumber": 100
+  },
+  {
+    "TeacherId": 5,
+    "ClassroomNumber": 12
+  },
+  {
+    "TeacherId": 45,
+    "ClassroomNumber": 46
+  },
+  {
+    "TeacherId": 33,
+    "ClassroomNumber": 59
+  },
+  {
+    "TeacherId": 86,
+    "ClassroomNumber": 14
+  },
+  {
+    "TeacherId": 67,
+    "ClassroomNumber": 75
+  },
+  {
+    "TeacherId": 57,
+    "ClassroomNumber": 68
+  },
+  {
+    "TeacherId": 32,
+    "ClassroomNumber": 96
+  },
+  {
+    "TeacherId": 26,
+    "ClassroomNumber": 79
+  },
+  {
+    "TeacherId": 73,
+    "ClassroomNumber": 66
+  },
+  {
+    "TeacherId": 3,
+    "ClassroomNumber": 4
+  },
+  {
+    "TeacherId": 94,
+    "ClassroomNumber": 24
+  },
+  {
+    "TeacherId": 78,
+    "ClassroomNumber": 32
+  },
+  {
+    "TeacherId": 24,
+    "ClassroomNumber": 27
+  },
+  {
+    "TeacherId": 87,
+    "ClassroomNumber": 89
+  },
+  {
+    "TeacherId": 74,
+    "ClassroomNumber": 8
+  },
+  {
+    "TeacherId": 60,
+    "ClassroomNumber": 55
+  },
+  {
+    "TeacherId": 64,
+    "ClassroomNumber": 7
+  },
+  {
+    "TeacherId": 90,
+    "ClassroomNumber": 38
+  },
+  {
+    "TeacherId": 95,
+    "ClassroomNumber": 80
+  },
+  {
+    "TeacherId": 20,
+    "ClassroomNumber": 42
+  },
+  {
+    "TeacherId": 21,
+    "ClassroomNumber": 73
+  },
+  {
+    "TeacherId": 96,
+    "ClassroomNumber": 44
+  },
+  {
+    "TeacherId": 79,
+    "ClassroomNumber": 51
+  },
+  {
+    "TeacherId": 23,
+    "ClassroomNumber": 9
+  },
+  {
+    "TeacherId": 85,
+    "ClassroomNumber": 34
+  },
+  {
+    "TeacherId": 97,
+    "ClassroomNumber": 16
+  },
+  {
+    "TeacherId": 47,
+    "ClassroomNumber": 76
+  },
+  {
+    "TeacherId": 29,
+    "ClassroomNumber": 56
+  },
+  {
+    "TeacherId": 28,
+    "ClassroomNumber": 28
+  },
+  {
+    "TeacherId": 6,
+    "ClassroomNumber": 93
+  },
+  {
+    "TeacherId": 53,
+    "ClassroomNumber": 58
+  },
+  {
+    "TeacherId": 39,
+    "ClassroomNumber": 3
+  },
+  {
+    "TeacherId": 72,
+    "ClassroomNumber": 45
+  },
+  {
+    "TeacherId": 1,
+    "ClassroomNumber": 40
+  },
+  {
+    "TeacherId": 37,
+    "ClassroomNumber": 86
+  },
+  {
+    "TeacherId": 16,
+    "ClassroomNumber": 33
+  },
+  {
+    "TeacherId": 55,
+    "ClassroomNumber": 72
+  },
+  {
+    "TeacherId": 100,
+    "ClassroomNumber": 74
+  },
+  {
+    "TeacherId": 41,
+    "ClassroomNumber": 70
+  },
+  {
+    "TeacherId": 31,
+    "ClassroomNumber": 71
+  },
+  {
+    "TeacherId": 70,
+    "ClassroomNumber": 21
+  },
+  {
+    "TeacherId": 42,
+    "ClassroomNumber": 11
+  },
+  {
+    "TeacherId": 49,
+    "ClassroomNumber": 22
+  },
+  {
+    "TeacherId": 62,
+    "ClassroomNumber": 87
+  },
+  {
+    "TeacherId": 89,
+    "ClassroomNumber": 88
+  },
+  {
+    "TeacherId": 35,
+    "ClassroomNumber": 97
+  },
+  {
+    "TeacherId": 63,
+    "ClassroomNumber": 49
+  },
+  {
+    "TeacherId": 52,
+    "ClassroomNumber": 65
+  },
+  {
+    "TeacherId": 15,
+    "ClassroomNumber": 83
+  },
+  {
+    "TeacherId": 76,
+    "ClassroomNumber": 35
+  },
+  {
+    "TeacherId": 91,
+    "ClassroomNumber": 43
+  },
+  {
+    "TeacherId": 9,
+    "ClassroomNumber": 69
+  },
+  {
+    "TeacherId": 34,
+    "ClassroomNumber": 37
+  },
+  {
+    "TeacherId": 22,
+    "ClassroomNumber": 63
+  },
+  {
+    "TeacherId": 30,
+    "ClassroomNumber": 64
+  },
+  {
+    "TeacherId": 66,
+    "ClassroomNumber": 39
+  },
+  {
+    "TeacherId": 14,
+    "ClassroomNumber": 36
+  },
+  {
+    "TeacherId": 92,
+    "ClassroomNumber": 61
+  },
+  {
+    "TeacherId": 36,
+    "ClassroomNumber": 23
+  },
+  {
+    "TeacherId": 68,
+    "ClassroomNumber": 91
+  },
+  {
+    "TeacherId": 83,
+    "ClassroomNumber": 78
+  },
+  {
+    "TeacherId": 59,
+    "ClassroomNumber": 95
+  },
+  {
+    "TeacherId": 25,
+    "ClassroomNumber": 53
+  },
+  {
+    "TeacherId": 46,
+    "ClassroomNumber": 29
+  },
+  {
+    "TeacherId": 11,
+    "ClassroomNumber": 6
+  },
+  {
+    "TeacherId": 88,
+    "ClassroomNumber": 99
+  }
+]

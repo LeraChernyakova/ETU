@@ -1,0 +1,65 @@
+<mat-toolbar>
+  <h1>Моя страница</h1>
+  <nav>
+    <ul>
+
+      <li *ngIf="this.user.role === 'Администратор'">
+        <a mat-button [href]="'http://localhost:3000'" target="_blank">Админ</a>
+      </li>
+      <li><a mat-button [routerLink]="'/user'">Моя страница</a></li>
+      <li><a mat-button [routerLink]="'/news'">Новости</a></li>
+      <li><a mat-button [routerLink]="'/friends'">Друзья</a></li>
+      <li><a mat-button [routerLink]="'/chats'">Чаты</a></li>
+      <li><a mat-button [routerLink]="'/login'">Выход</a></li>
+    </ul>
+  </nav>
+</mat-toolbar>
+
+<mat-card class="user-profile">
+  <mat-card-content class="user-info">
+    <img alt="User's Avatar" [src]="user.img">
+  </mat-card-content>
+  <mat-card-content class="user-details">
+    <h2>{{ user.FIO }}</h2>
+    <p>Дата рождения: {{ user.birth }}</p>
+    <p>Почта: {{ user.mail }}</p>
+  </mat-card-content>
+  <mat-card-content>
+    <div class="user-actions">
+      <button mat-raised-button class="edit-photo-button" (click)="editPhoto()">Изменить фото</button>
+      <input type="file" #fileInput (change)="onFileSelected($event)" accept="image/*" style="display: none">
+      <button mat-raised-button class="delete-photo-button" [disabled]="user.img === 'http://localhost:3000/img/delete.jpg'"(click)="deletePhoto()">
+        Удалить фото
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="add-news">
+  <mat-card-content>
+    <h2>Добавить новость</h2>
+    <form (ngSubmit)="addNews()" [formGroup]="addNewsForm">
+      <mat-form-field>
+        <textarea matInput type="text" id="newsText" name="newsText" formControlName="newsText" placeholder="Введите новость" required></textarea>
+        <mat-error *ngIf="submitted && addNewsForm.get('newsText')!.hasError('required')">
+          Заполните поле, чтобы добавить новость!
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button class="add-news-button" type="submit">Добавить</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="user-news">
+  <mat-card-content>
+    <h2>Мои новости</h2>
+    <ng-container *ngFor="let elem of news">
+      <mat-card class="news">
+        <mat-card-content>
+          <p class="news-info">{{ elem.date }} в {{ elem.time }}</p>
+          <p class="news-text">{{ elem.text }}</p>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,42 @@
+<mat-toolbar>
+  <h1>
+    <a mat-button [routerLink]="'/chats'"><</a>
+    Диалог
+  </h1>
+  <nav>
+    <ul>
+      <li *ngIf="this.user.role === 'Администратор'">
+        <a mat-button [href]="'http://localhost:3000'" target="_blank">Админ</a>
+      </li>
+      <li><a mat-button [routerLink]="'/user'">Моя страница</a></li>
+      <li><a mat-button [routerLink]="'/news'">Новости</a></li>
+      <li><a mat-button [routerLink]="'/friends'">Друзья</a></li>
+      <li><a mat-button [routerLink]="'/chats'">Чаты</a></li>
+      <li><a mat-button [routerLink]="'/login'">Выход</a></li>
+    </ul>
+  </nav>
+</mat-toolbar>
+
+<main>
+  <h1>{{userCommunicationFIO}}</h1>
+  <mat-card class="chat">
+    <mat-card-content>
+      <div class="message" *ngFor="let sms of this.message">
+        <div class="sender" *ngIf="sms.From == user.FIO">Вы:</div>
+        <div class="sender" *ngIf="sms.From != user.FIO">{{sms.From}}:</div>
+        <div class="message-date">{{sms.date}}, {{sms.time}}</div>
+        <div class="message-text">{{sms.text}}</div>
+      </div>
+    </mat-card-content>
+    <br>
+    <form (ngSubmit)="sendMessage()" [formGroup]="sendMessageForm">
+      <mat-form-field>
+        <textarea matInput type="text" id="smsText" name="smsText" formControlName="smsText" placeholder="Введите сообщение" required></textarea>
+        <mat-error *ngIf="submitted && sendMessageForm.get('smsText')!.hasError('required')">
+          Для отправки сообщения необходимо заполнить поле.
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button class="send-sms-button" type="submit">Отправить</button>
+    </form>
+  </mat-card>
+</main>

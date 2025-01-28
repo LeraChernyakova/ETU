@@ -1,0 +1,31 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: rgb(66, 108, 80);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    color: black;
+}
+
+.story {
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 75%;
+    background-image: url("book.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#text-container {
+    margin-left: 100px;
+    white-space: pre-line;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}

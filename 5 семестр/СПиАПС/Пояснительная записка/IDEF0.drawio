@@ -1,0 +1,112 @@
+<mxfile host="app.diagrams.net" modified="2023-11-21T12:25:28.364Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0" etag="ZZior6gnErlZJrK696Nz" version="22.1.3" type="device">
+  <diagram id="Y0y3cKv-4A2aIMHIa0ki" name="Page-1">
+    <mxGraphModel dx="1623" dy="1500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-500" y="-360" width="1070" height="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-500" y="-360" width="1070" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-500" y="540" width="1070" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="85" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-500" y="-360" width="110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="86" value="USED AT:" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-500" y="-360" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="87" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-390" y="-360" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="88" value="AUTHOR: Разработчики АС&lt;br&gt;&quot;Hotel Hospitality Management&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-390" y="-360" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="89" value="DATE: 21.11.2023" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-200" y="-360" width="111" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="90" value="PROJECT: АС &quot;Hotel Hospitality Management&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-390" y="-310" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="91" value="REV:&amp;nbsp; &amp;nbsp;24.11.2023" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-200" y="-315" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="92" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;fillColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="-90" y="-360" width="25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="93" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-90" y="-335" width="25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="94" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-90" y="-310" width="25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="95" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-90" y="-285" width="25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="96" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="-65" y="-360" width="205" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="97" value="WORKING" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-65" y="-360" width="205" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="98" value="DRAFT" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-65" y="-335" width="205" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="99" value="RECOMMENDED" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-65" y="-310" width="205" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="100" value="PUBLICATION" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="-65" y="-285" width="205" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="101" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="140" y="-360" width="205" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="102" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="140" y="-335" width="205" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="103" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="140" y="-310" width="205" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="104" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;align=left;" parent="1" vertex="1">
+          <mxGeometry x="140" y="-285" width="205" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="105" value="READER" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="140" y="-360" width="60" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="106" value="DATE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="285" y="-360" width="60" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="109" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;TOP&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="345" y="-360" width="225" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="110" value="CONTEXT:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="345" y="-360" width="75" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="111" value="A-0" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=21;fillColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="-500" y="540" width="240" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="112" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=21;fillColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="330" y="540" width="240" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="114" value="NODE:" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="-500" y="540" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="115" value="NUMBER" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="331" y="540" width="69" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="116" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fontSize=14;fillColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="490" y="620" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="117" value="TITLE:" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="-259" y="540" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="118" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;АС &quot;Hotel Hospitality Management&quot;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="-150" y="540" width="370" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

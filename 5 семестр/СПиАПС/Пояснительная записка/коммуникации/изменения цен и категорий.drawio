@@ -1,0 +1,92 @@
+<mxfile host="app.diagrams.net" modified="2023-12-06T00:41:31.921Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0" etag="2fjO2ozbb3l9Ijug3BFv" version="22.1.5" type="device">
+  <diagram name="Страница — 1" id="4zZFffurlrl-bASGn2sT">
+    <mxGraphModel dx="1009" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-86" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="119.99" y="920" width="660" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-85" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="780" width="660" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="2JCTQVkfjINHfoPqzNRB-1" target="2JCTQVkfjINHfoPqzNRB-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;:RoomController&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="810" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;:PostgresRoomsRepo&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="810" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-12" value="" style="endArrow=open;html=1;rounded=0;strokeWidth=1;jumpSize=6;startSize=4;endSize=3;endFill=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="349.52" y="830" as="sourcePoint" />
+            <mxPoint x="380" y="830" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-17" value="1:changeCategoryPrice()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="340.01" y="800" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-65" value="" style="endArrow=open;html=1;rounded=0;strokeWidth=1;jumpSize=6;startSize=4;endSize=3;endFill=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="670" y="820" as="sourcePoint" />
+            <mxPoint x="710" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-67" value="2:updateRoomPrice()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="590" y="790" width="189.99" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="2JCTQVkfjINHfoPqzNRB-2" target="2JCTQVkfjINHfoPqzNRB-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="825" />
+              <mxPoint x="760" y="855" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="2JCTQVkfjINHfoPqzNRB-78" target="2JCTQVkfjINHfoPqzNRB-79">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-78" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;:RoomController&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="970" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-79" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;:PostgresRoomsRepo&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="970" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-80" value="" style="endArrow=open;html=1;rounded=0;strokeWidth=1;jumpSize=6;startSize=4;endSize=3;endFill=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="349.52" y="990" as="sourcePoint" />
+            <mxPoint x="380" y="990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-81" value="1:changeRoomCategory()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="340.01" y="960" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-82" value="" style="endArrow=open;html=1;rounded=0;strokeWidth=1;jumpSize=6;startSize=4;endSize=3;endFill=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="670" y="980" as="sourcePoint" />
+            <mxPoint x="710" y="980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-83" value="2:changeRoomCategory()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="950" width="189.99" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="2JCTQVkfjINHfoPqzNRB-79" target="2JCTQVkfjINHfoPqzNRB-79">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="985" />
+              <mxPoint x="760" y="1015" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-87" value="Изменение цены" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="790" width="130" as="geometry" />
+        </mxCell>
+        <mxCell id="2JCTQVkfjINHfoPqzNRB-88" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Изменение категории&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="920" width="130" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
