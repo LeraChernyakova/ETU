@@ -1,0 +1,8 @@
+confirm = enter,
+menu_left = leftarrow,
+menu_right = rightarrow,
+menu_up = uparrow,
+menu_down = downarrow,
+end_turn = n,
+save = s,
+load = l

@@ -1,0 +1,142 @@
+[
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/main.cpp.o -c /home/greenjoker/GAME_PROJ/sources/main.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/main.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/cell.cpp.o -c /home/greenjoker/GAME_PROJ/sources/cell.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/cell.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/cellObject.cpp.o -c /home/greenjoker/GAME_PROJ/sources/cellObject.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/cellObject.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/field_view.cpp.o -c /home/greenjoker/GAME_PROJ/sources/field_view.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/field_view.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/field.cpp.o -c /home/greenjoker/GAME_PROJ/sources/field.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/field.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/game.cpp.o -c /home/greenjoker/GAME_PROJ/sources/game.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/game.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/player.cpp.o -c /home/greenjoker/GAME_PROJ/sources/player.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/player.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/enemyBoss.cpp.o -c /home/greenjoker/GAME_PROJ/sources/enemyBoss.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/enemyBoss.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/enemyMove.cpp.o -c /home/greenjoker/GAME_PROJ/sources/enemyMove.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/enemyMove.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/enemyStand.cpp.o -c /home/greenjoker/GAME_PROJ/sources/enemyStand.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/enemyStand.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/objectHeal.cpp.o -c /home/greenjoker/GAME_PROJ/sources/objectHeal.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/objectHeal.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/objectDamage.cpp.o -c /home/greenjoker/GAME_PROJ/sources/objectDamage.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/objectDamage.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/objectRange.cpp.o -c /home/greenjoker/GAME_PROJ/sources/objectRange.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/objectRange.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/cellView.cpp.o -c /home/greenjoker/GAME_PROJ/sources/cellView.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/cellView.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/cellObjectView.cpp.o -c /home/greenjoker/GAME_PROJ/sources/cellObjectView.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/cellObjectView.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/ostreamWrapper.cpp.o -c /home/greenjoker/GAME_PROJ/sources/ostreamWrapper.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/ostreamWrapper.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/fstreamWrapper.cpp.o -c /home/greenjoker/GAME_PROJ/sources/fstreamWrapper.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/fstreamWrapper.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/logger.cpp.o -c /home/greenjoker/GAME_PROJ/sources/logger.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/logger.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/enemy.cpp.o -c /home/greenjoker/GAME_PROJ/sources/enemy.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/enemy.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/binds/bind.cpp.o -c /home/greenjoker/GAME_PROJ/sources/binds/bind.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/binds/bind.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/binds/bindMoveDown.cpp.o -c /home/greenjoker/GAME_PROJ/sources/binds/bindMoveDown.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/binds/bindMoveDown.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/binds/bindPlayer.cpp.o -c /home/greenjoker/GAME_PROJ/sources/binds/bindPlayer.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/binds/bindPlayer.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/inputController.cpp.o -c /home/greenjoker/GAME_PROJ/sources/inputController.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/inputController.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/binds/bindMoveLeft.cpp.o -c /home/greenjoker/GAME_PROJ/sources/binds/bindMoveLeft.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/binds/bindMoveLeft.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/binds/bindMoveRight.cpp.o -c /home/greenjoker/GAME_PROJ/sources/binds/bindMoveRight.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/binds/bindMoveRight.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/binds/bindMoveUp.cpp.o -c /home/greenjoker/GAME_PROJ/sources/binds/bindMoveUp.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/binds/bindMoveUp.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/binds/bindFight.cpp.o -c /home/greenjoker/GAME_PROJ/sources/binds/bindFight.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/binds/bindFight.cpp"
+},
+{
+  "directory": "/home/greenjoker/GAME_PROJ/build",
+  "command": "/usr/bin/c++    -g   -std=gnu++17 -o CMakeFiles/GAME_PROJ.dir/sources/binds/bindExit.cpp.o -c /home/greenjoker/GAME_PROJ/sources/binds/bindExit.cpp",
+  "file": "/home/greenjoker/GAME_PROJ/sources/binds/bindExit.cpp"
+}
+]

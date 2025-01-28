@@ -1,0 +1,248 @@
+EnemyMove is moving:  health: 100 damage: 2 PosX: 7 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 8 PosY: 8
+
+EnemyMove is moving:  health: 100 damage: 2 PosX: 8 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 8 PosY: 9
+
+EnemyMove is moving:  health: 100 damage: 2 PosX: 9 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 8 PosY: 10
+
+EnemyMove is moving:  health: 100 damage: 2 PosX: 10 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 8 PosY: 11
+
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 8 PosY: 12
+
+EnemyMove is moving:  health: 100 damage: 2 PosX: 12 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 9 PosY: 12
+
+EnemyMove is moving:  health: 100 damage: 2 PosX: 13 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 10 PosY: 12
+
+EnemyMove is moving:  health: 100 damage: 2 PosX: 14 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 12
+
+EnemyMove is moving:  health: 100 damage: 2 PosX: 15 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 12 PosY: 12
+
+PlayerMove:  health: 100 damage: 10 PosX: 19 PosY: 20
+EnemyMove is moving:  health: 100 damage: 2 PosX: 16 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 13 PosY: 12
+
+PlayerMove:  health: 100 damage: 10 PosX: 19 PosY: 19
+EnemyMove is moving:  health: 100 damage: 2 PosX: 17 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 12 PosY: 12
+
+PlayerMove:  health: 100 damage: 10 PosX: 18 PosY: 19
+EnemyMove is moving:  health: 100 damage: 2 PosX: 18 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 12
+
+PlayerMove:  health: 100 damage: 10 PosX: 18 PosY: 18
+EnemyMove is moving:  health: 100 damage: 2 PosX: 19 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 10 PosY: 12
+
+PlayerMove:  health: 100 damage: 10 PosX: 18 PosY: 17
+EnemyMove is moving:  health: 100 damage: 2 PosX: 20 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 9 PosY: 12
+
+PlayerMove:  health: 100 damage: 10 PosX: 17 PosY: 17
+EnemyMove is moving:  health: 100 damage: 2 PosX: 20 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 8 PosY: 12
+
+PlayerMove:  health: 100 damage: 10 PosX: 17 PosY: 16
+EnemyMove is moving:  health: 100 damage: 2 PosX: 20 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 9 PosY: 12
+
+PlayerMove:  health: 100 damage: 10 PosX: 16 PosY: 16
+EnemyMove is moving:  health: 100 damage: 2 PosX: 19 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 10 PosY: 12
+
+PlayerMove:  health: 100 damage: 10 PosX: 16 PosY: 15
+EnemyMove is moving:  health: 100 damage: 2 PosX: 18 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 12
+
+PlayerMove:  health: 100 damage: 10 PosX: 15 PosY: 15
+EnemyMove is moving:  health: 100 damage: 2 PosX: 17 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 12 PosY: 12
+
+PlayerMove:  health: 100 damage: 10 PosX: 14 PosY: 15
+EnemyMove is moving:  health: 100 damage: 2 PosX: 16 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 13 PosY: 12
+
+PlayerMove:  health: 100 damage: 10 PosX: 14 PosY: 14
+EnemyMove is moving:  health: 100 damage: 2 PosX: 15 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 12 PosY: 12
+
+PlayerMove:  health: 100 damage: 10 PosX: 14 PosY: 13
+EnemyMove is moving:  health: 100 damage: 2 PosX: 14 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 12
+
+PlayerMove:  health: 100 damage: 10 PosX: 13 PosY: 13
+EnemyMove is moving:  health: 100 damage: 2 PosX: 13 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 10 PosY: 12
+
+PlayerMove:  health: 100 damage: 10 PosX: 13 PosY: 12
+EnemyMove is moving:  health: 100 damage: 2 PosX: 12 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 9 PosY: 12
+
+PlayerMove:  health: 100 damage: 10 PosX: 12 PosY: 12
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 8 PosY: 12
+
+PlayerMove:  health: 100 damage: 10 PosX: 11 PosY: 12
+EnemyMove is moving:  health: 100 damage: 2 PosX: 12 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 8 PosY: 13
+
+PlayerMove:  health: 100 damage: 10 PosX: 10 PosY: 12
+EnemyMove is moving:  health: 100 damage: 2 PosX: 13 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 8 PosY: 14
+
+PlayerMove:  health: 100 damage: 10 PosX: 9 PosY: 12
+EnemyMove is moving:  health: 100 damage: 2 PosX: 14 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 8 PosY: 15
+
+PlayerMove:  health: 100 damage: 10 PosX: 9 PosY: 13
+EnemyMove is moving:  health: 100 damage: 2 PosX: 15 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 8 PosY: 16
+
+PlayerMove:  health: 100 damage: 10 PosX: 9 PosY: 14
+EnemyMove is moving:  health: 100 damage: 2 PosX: 16 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 8 PosY: 17
+
+PlayerMove:  health: 100 damage: 10 PosX: 8 PosY: 14
+EnemyMove is moving:  health: 100 damage: 2 PosX: 15 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 7 PosY: 17
+
+PlayerMove:  health: 100 damage: 10 PosX: 8 PosY: 15
+EnemyMove is moving:  health: 100 damage: 2 PosX: 14 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 6 PosY: 17
+
+PlayerMove:  health: 100 damage: 10 PosX: 8 PosY: 16
+EnemyMove is moving:  health: 100 damage: 2 PosX: 13 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 5 PosY: 17
+
+PlayerMove:  health: 100 damage: 10 PosX: 7 PosY: 16
+EnemyMove is moving:  health: 100 damage: 2 PosX: 12 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 4 PosY: 17
+
+PlayerMove:  health: 100 damage: 10 PosX: 6 PosY: 16
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 4
+EnemyMove is moving:  health: 100 damage: 2 PosX: 3 PosY: 17
+
+PlayerMove:  health: 100 damage: 10 PosX: 6 PosY: 17
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 5
+EnemyMove is moving:  health: 100 damage: 2 PosX: 3 PosY: 18
+
+PlayerMove:  health: 100 damage: 10 PosX: 5 PosY: 17
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 6
+EnemyMove is moving:  health: 100 damage: 2 PosX: 3 PosY: 19
+
+PlayerMove:  health: 100 damage: 10 PosX: 5 PosY: 18
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 7
+EnemyMove is moving:  health: 100 damage: 2 PosX: 3 PosY: 20
+
+PlayerMove:  health: 100 damage: 10 PosX: 4 PosY: 18
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 8
+EnemyMove is moving:  health: 100 damage: 2 PosX: 3 PosY: 20
+
+PlayerMove:  health: 100 damage: 10 PosX: 4 PosY: 19
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 9
+Player took damage from Move:  health: 98 damage: 10 PosX: 4 PosY: 19
+EnemyMove is moving:  health: 100 damage: 2 PosX: 3 PosY: 20
+
+PlayerMove:  health: 98 damage: 10 PosX: 3 PosY: 19
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 8
+Player took damage from Move:  health: 96 damage: 10 PosX: 3 PosY: 19
+EnemyMove is moving:  health: 100 damage: 2 PosX: 3 PosY: 20
+
+Enemy took damage from player:  health: 90 damage: 2 PosX: 3 PosY: 20
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 7
+Player took damage from Move:  health: 94 damage: 10 PosX: 3 PosY: 19
+EnemyMove is moving:  health: 90 damage: 2 PosX: 3 PosY: 20
+
+Enemy took damage from player:  health: 80 damage: 2 PosX: 3 PosY: 20
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 6
+Player took damage from Move:  health: 92 damage: 10 PosX: 3 PosY: 19
+EnemyMove is moving:  health: 80 damage: 2 PosX: 3 PosY: 20
+
+Enemy took damage from player:  health: 70 damage: 2 PosX: 3 PosY: 20
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 5
+Player took damage from Move:  health: 90 damage: 10 PosX: 3 PosY: 19
+EnemyMove is moving:  health: 70 damage: 2 PosX: 3 PosY: 20
+
+Enemy took damage from player:  health: 60 damage: 2 PosX: 3 PosY: 20
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 4
+Player took damage from Move:  health: 88 damage: 10 PosX: 3 PosY: 19
+EnemyMove is moving:  health: 60 damage: 2 PosX: 3 PosY: 20
+
+Enemy took damage from player:  health: 50 damage: 2 PosX: 3 PosY: 20
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 3
+Player took damage from Move:  health: 86 damage: 10 PosX: 3 PosY: 19
+EnemyMove is moving:  health: 50 damage: 2 PosX: 3 PosY: 20
+
+Enemy took damage from player:  health: 40 damage: 2 PosX: 3 PosY: 20
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 2
+Player took damage from Move:  health: 84 damage: 10 PosX: 3 PosY: 19
+EnemyMove is moving:  health: 40 damage: 2 PosX: 3 PosY: 20
+
+Enemy took damage from player:  health: 30 damage: 2 PosX: 3 PosY: 20
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 1
+Player took damage from Move:  health: 82 damage: 10 PosX: 3 PosY: 19
+EnemyMove is moving:  health: 30 damage: 2 PosX: 3 PosY: 20
+
+Enemy took damage from player:  health: 20 damage: 2 PosX: 3 PosY: 20
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 1
+Player took damage from Move:  health: 80 damage: 10 PosX: 3 PosY: 19
+EnemyMove is moving:  health: 20 damage: 2 PosX: 3 PosY: 20
+
+Enemy took damage from player:  health: 10 damage: 2 PosX: 3 PosY: 20
+EnemyMove is moving:  health: 100 damage: 2 PosX: 11 PosY: 2
+Player took damage from Move:  health: 78 damage: 10 PosX: 3 PosY: 19
+EnemyMove is moving:  health: 10 damage: 2 PosX: 3 PosY: 20
+
+Enemy took damage from player:  health: 0 damage: 2 PosX: 3 PosY: 20
+EnemyMove is moving:  health: 100 damage: 2 PosX: 12 PosY: 2
+Player took damage from Move:  health: 76 damage: 10 PosX: 3 PosY: 19
+EnemyMove is moving:  health: 0 damage: 2 PosX: 3 PosY: 20
+
+EnemyMove is moving:  health: 100 damage: 2 PosX: 13 PosY: 2
+
+EnemyMove is moving:  health: 100 damage: 2 PosX: 14 PosY: 2
+
+PlayerMove:  health: 76 damage: 10 PosX: 3 PosY: 18
+EnemyMove is moving:  health: 100 damage: 2 PosX: 15 PosY: 2
+
+PlayerMove:  health: 76 damage: 10 PosX: 3 PosY: 17
+EnemyMove is moving:  health: 100 damage: 2 PosX: 16 PosY: 2
+
+PlayerMove:  health: 76 damage: 10 PosX: 4 PosY: 17
+EnemyMove is moving:  health: 100 damage: 2 PosX: 16 PosY: 2
+
+PlayerMove:  health: 76 damage: 10 PosX: 4 PosY: 16
+EnemyMove is moving:  health: 100 damage: 2 PosX: 16 PosY: 3
+
+PlayerMove:  health: 76 damage: 10 PosX: 5 PosY: 16
+EnemyMove is moving:  health: 100 damage: 2 PosX: 16 PosY: 4
+
+PlayerMove:  health: 76 damage: 10 PosX: 5 PosY: 15
+EnemyMove is moving:  health: 100 damage: 2 PosX: 16 PosY: 5
+
+PlayerMove:  health: 76 damage: 10 PosX: 5 PosY: 14
+EnemyMove is moving:  health: 100 damage: 2 PosX: 16 PosY: 6
+
+PlayerMove:  health: 76 damage: 10 PosX: 5 PosY: 13
+EnemyMove is moving:  health: 100 damage: 2 PosX: 16 PosY: 5
+
+PlayerMove:  health: 76 damage: 10 PosX: 4 PosY: 13
+EnemyMove is moving:  health: 100 damage: 2 PosX: 16 PosY: 4
+
+PlayerMove:  health: 76 damage: 10 PosX: 3 PosY: 13
+EnemyMove is moving:  health: 100 damage: 2 PosX: 16 PosY: 3
+
+PlayerMove:  health: 76 damage: 10 PosX: 2 PosY: 13
+EnemyMove is moving:  health: 100 damage: 2 PosX: 16 PosY: 2
+
+PlayerMove:  health: 76 damage: 10 PosX: 1 PosY: 13
+EnemyMove is moving:  health: 100 damage: 2 PosX: 16 PosY: 2
+
+PlayerMove:  health: 76 damage: 10 PosX: 0 PosY: 13

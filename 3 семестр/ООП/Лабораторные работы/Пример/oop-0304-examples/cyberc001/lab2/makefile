@@ -1,0 +1,55 @@
+GCPP = g++ -std=c++17 -g
+
+
+lab2: main.cpp field.o field_view.o cell.o cell_view.o cell_entrance.o cell_exit.o cell_object.o cell_object_view.o actor.o enemy.o item.o player.o armor_item.o health_item.o weapon_item.o acolyte.o sentinel.o stalkerbot.o action_combat.o action_move.o action_shoot_ballistic.o
+	$(GCPP) $^ -o lab2
+clean:
+	-rm -f *.o
+
+
+field.o: field.cpp field.h
+	$(GCPP) -c $< -o $@
+field_view.o: field_view.cpp field_view.h
+	$(GCPP) -c $< -o $@
+cell.o: cells/cell.cpp cells/cell.h
+	$(GCPP) -c $< -o $@
+cell_view.o: cells/cell_view.cpp cells/cell_view.h
+	$(GCPP) -c $< -o $@
+cell_entrance.o: cells/cell_entrance.cpp cells/cell_entrance.h
+	$(GCPP) -c $< -o $@
+cell_exit.o: cells/cell_exit.cpp cells/cell_exit.h
+	$(GCPP) -c $< -o $@
+cell_object.o: cell_object.cpp cell_object.h
+	$(GCPP) -c $< -o $@
+cell_object_view.o: cell_object_view.cpp cell_object_view.h
+	$(GCPP) -c $< -o $@
+
+actor.o: actors/actor.cpp actors/actor.h
+	$(GCPP) -c $< -o $@
+enemy.o: actors/enemy.cpp actors/enemy.h
+	$(GCPP) -c $< -o $@
+item.o: actors/item.cpp actors/item.h
+	$(GCPP) -c $< -o $@
+player.o: actors/player.cpp actors/player.h
+	$(GCPP) -c $< -o $@
+
+armor_item.o: actors/items/armor_item.cpp actors/items/armor_item.h
+	$(GCPP) -c $< -o $@
+health_item.o: actors/items/health_item.cpp actors/items/health_item.h
+	$(GCPP) -c $< -o $@
+weapon_item.o: actors/items/weapon_item.cpp actors/items/weapon_item.h
+	$(GCPP) -c $< -o $@
+
+acolyte.o: actors/enemies/acolyte.cpp actors/enemies/acolyte.h
+	$(GCPP) -c $< -o $@
+sentinel.o: actors/enemies/sentinel.cpp actors/enemies/sentinel.h
+	$(GCPP) -c $< -o $@
+stalkerbot.o: actors/enemies/stalkerbot.cpp actors/enemies/stalkerbot.h
+	$(GCPP) -c $< -o $@
+
+action_combat.o: actions/action_combat.cpp actions/action_combat.h
+	$(GCPP) -c $< -o $@
+action_move.o: actions/action_move.cpp actions/action_move.h
+	$(GCPP) -c $< -o $@
+action_shoot_ballistic.o: actions/action_shoot_ballistic.cpp actions/action_shoot_ballistic.h
+	$(GCPP) -c $< -o $@
