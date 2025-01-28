@@ -1,0 +1,4930 @@
+          Ассемблер для IBM PC. Программы.                          84
+
+
+          
+          TITLE   EXDWMUL - Умножение двойных слов
+          CODESG  SEGMENT PARA 'Code'
+                  ASSUME  CS:CODESG,DS:CODESG,SS:CODESG
+                  ORG     100H
+          BEGIN:  JMP     SHORT MAIN
+          ; ---------------------------------------------
+          MULTCND DW      3206H           ;Элементы данных
+                  DW      2521H
+          MULTPLR DW      6400H
+                  DW      0A26H
+          PRODUCT DW      0
+                  DW      0
+                  DW      0
+                  DW      0
+          ; ---------------------------------------------
+          MAIN    PROC    NEAR            ;Основная процедура
+                  CALL    E10XMUL         ;Вызвать 1-е умножение
+                  CALL    Z10ZERO         ;Очистить произведение
+                  CALL    F10XMUL         ;Вызвать 2-е умножение
+                  RET
+          MAIN    ENDP
+          ;               Умножение двойного слова на слово:
+          ; -----------------------------------------------
+          E10XMUL PROC
+                  MOV     AX,MULTCND+2    ;Умножить правое слова
+                  MUL     MULTPLR         ;   множимого
+                  MOV     PRODUCT+4,AX    ;Записать произведение
+                  MOV     PRODUCT+2,DX
+          
+                  MOV     AX,MULTCND      ;Умножить левое слово
+                  MUL     MULTPLR         ;   множимого
+                  ADD     PRODUCT+2,AX    ;Сложить с полученным ранее
+                  ADC     PRODUCT,DX
+                  RET
+          E10XMUL ENDP
+          ;               Перемножение двух двойных слов:
+          ; --------------------------------------------
+          F10XMUL PROC
+                  MOV     AX,MULTCND+2    ;Слово-2 множимого
+                  MUL     MULTPLR+2       ;  * слово-2 множителя
+                  MOV     PRODUCT+6,AX    ;Сохранить результат
+                  MOV     PRODUCT+4,DX
+          
+                  MOV     AX,MULTCND+2    ;Слово-2 множимого
+                  MUL     MULTPLR         ;  * слово-1 множителя
+                  ADD     PRODUCT+4,AX    ;Сложить с предыдущим
+                  ADC     PRODUCT+6,DX
+                  ADC     PRODUCT,00      ;Прибавить перенос
+          
+                  MOV     AX,MULTCND      ;Слово-1 множимого
+                  MUL     MULTPLR+2       ;  * слово-2 множителя
+                  ADD     PRODUCT+4,AX    ;Сложить с предыдущим
+
+          
+          Ассемблер для IBM PC. Программы.                          85
+
+
+                  ADC     PRODUCT+6,DX
+                  ADC     PRODUCT,00      ;Прибавить перенос
+                  MOV     AX,MULTCND      ;Слово-1 множимого
+                  MUL     MULTPLR         ;  * слово-1 множителя
+                  ADD     PRODUCT+2,AX    ;Сложить с предыдущим
+                  ADC     PRODUCT,DX
+                  RET
+          F10XMUL ENDP
+          ;               Очистка области результата:
+          ; ----------------------------------------
+          Z10XMUL PROC
+                  MOV     PRODUCT,0000
+                  MOV     PRODUCT+2,0000
+                  MOV     PRODUCT+4,0000
+                  MOV     PRODUCT+6,0000
+                  RET
+          Z10XMUL ENDP
+          
+          CODESG  ENDS
+                  END     BEGIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                          86
+
+
+          
+                  page    60,132
+          TITLE   EXDIV   (COM) Пример операций DIV и IDIV
+          CODESG  SEGMENT PARA 'Code'
+                  ORG     100H
+          BEGIN:  JMP     SHORT MAIN
+          ; ---------------------------------------------
+          BYTE1   DB      80H           ;Data items
+          BYTE2   DB      16H
+          WORD1   DW      2000H
+          WORD2   DW      0010H
+          WORD3   DW      1000H
+          ; ---------------------------------------------
+          MAIN    PROC    NEAR          ;Основная процедура
+                  CALL    D10DIV        ;Вызов подпрограммы DIV
+                  CALL    E10IDIV       ;Вызов подпрограммы IDIV
+          MAIN    ENDP
+          ;               Примеры с командой DIV:
+          ; ---------------------------------------------
+          D10DIV  PROC
+                  MOV     AX,WORD1      ;Слово / байт
+                  DIV     BYTE1         ;  остаток:частное в AH:AL
+                  MOV     AL,BYTE1      ;Байт / байт
+                  SUB     AH,AH         ;  расширить делимое в AH
+                  DIV     BYTE3         ;  остаток:частное в AH:AL
+          
+                  MOV     DX,WORD2      ;Двойное слово / слово
+                  MOV     AX,WORD3      ;  делимое в DX:AX
+                  DIV     WORD1         ;  остаток:частное в DX:AX
+                  MOV     AX,WORD1      ;Слово / слово
+                  SUB     DX,DX         ;  расширить делимое в DX
+                  DIV     WORD3         ;  остаток:частное в DX:AX
+                  RET
+          D10DIV  ENDP
+          ;               Примеры с командой IDIV:
+          ; ---------------------------------------------
+          E10IDIV PROC
+                  MOV     AX,WORD1      ;Слово / байт
+                  IDIV    BYTE1         ;  остаток:частное в AH:AL
+                  MOV     AL,BYTE1      ;Байт / байт
+                  CBW                   ;  расширить делимое в AH
+                  IDIV    BYTE3         ;  остаток:частное в AH:AL
+          
+                  MOV     DX,WORD2      ;Двойное слово / слово
+                  MOV     AX,WORD3      ;  делимое в DX:AX
+                  IDIV    WORD1         ;  остаток:частное в DX:AX
+                  MOV     AX,WORD1      ;Слово / слово
+                  CWD                   ;  расширить делимое в DX
+                  IDIV    WORD3         ;  остаток:частное в DX:AX
+                  RET
+          E10DIV  ENDP
+          
+          CODESG  ENDS
+
+          
+          Ассемблер для IBM PC. Программы.                          87
+
+
+                  END     BEGIN
+          
+          
+          
+          TITLE   ASCADD  (COM) Сложение чисел в ASCII-формате
+          CODESG  SEGMENT PARA 'Code'
+                  ASSUME  CS:CODESG,DS:CODESG,SS:CODESG
+                  ORG     100H
+          BEGIN:  JMP     SHORT MAIN
+          ; -----------------------------------------------
+          ASC1    DB      '578'        ;Элементы данных
+          ASC2    DB      '694'
+          ASC3    DB      '0000'
+          ; -----------------------------------------------
+          MAIN    PROC    NEAR
+                  CLC
+                  LEA     SI,AASC1+2   ;Адреса ASCII-чисел
+                  LEA     DI,AASC2+2
+                  LEA     BX,AASC1+3
+                  MOV     CX,03        ;Выполнить 3 цикла
+          A20:
+                  MOV     AH,00        ;Очистить регистр AH
+                  MOV     AL,[SI]      ;Загрузить ASCII-байт
+                  ADC     AL,[DI]      ;Сложение (с переносом)
+                  AAA                  ;Коррекция для ASCII
+                  MOV     [BX],AL      ;Сохранение суммы
+                  DEC     SI
+                  DEC     DI
+                  DEC     BX
+                  LOOP    A20          ;Циклиться 3 раза
+                  MOV     [BX],AH      ;Сохранить перенос
+                  RET
+          MAIN    ENDP
+          CODESG  ENDS
+                  END     BEGIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                          88
+
+
+          
+          TITLE   ASCMUL  (COM) Умножение ASCII-чисел
+          CODESG  SEGMENT PARA 'Code'
+                  ASSUME  CS:CODESG,DS:CODESG,SS:CODESG
+                  ORG     100H
+          BEGIN:  JMP     MAIN
+          ; ---------------------------------------------
+          MULTCND DB      '3783'          ;Элементы данных
+          MULTPLR DB      '5'
+          PRODUCT DB      5 DUP(0)
+          ; ---------------------------------------------
+          MAIN    PROC    NEAR
+                  MOV     CX,04           ;4 цикла
+                  LEA     SI,MULTCND+3
+                  LEA     DI,PRODUCT+4
+                  AND     MULTPLR,0FH     ;Удалить ASCII-тройку
+          A20:
+                  MOV     AL,[SI]         ;Загрузить ASCII-символ
+                                          ;   (можно LODSB)
+                  AND     AL,OFH          ;Удалить ASCII-тройку
+                  MUL     MULTPLR         ;Умножить
+                  AAM                     ;Коррекция для ASCII
+                  ADD     AL,[DI]         ;Сложить с
+                  AAA                     ;  записанным
+                  MOV     [DI],AL         ;  произведением
+                  DEC     DI
+                  MOV     [DI],AH         ;Записать перенос
+                  DEC     SI
+                  LOOP    A20             ;Циклиться 4 раза
+                  RET
+          MAIN    ENDP
+          CODESG  ENDS
+                  END     BEGIN
+          
+          
+          
+          TITLE   ASCDIV  (COM) Деление ASCII-чисел
+          CODESG  SEGMENT PARA 'Code'
+                  ASSUME  CS:CODESG,DS:CODESG,SS:CODESG
+                  ORG     100H
+          BEGIN:  JMP     SHORT MAIN
+          ; ---------------------------------------------
+          DIVDND  DB      '3698'          ;Элементы данных
+          DIVSOR  DB      '4'
+          QUOTNT  DB      4 DUP(0)
+          ; ---------------------------------------------
+          MAIN    PROC    NEAR
+                  MOV     CX,04           ;4 цикла
+                  SUB     AH,AH           ;Стереть левый байт делимого
+                  AND     DIVSOR,0FH      ;Стереть ASCII 3 в делителе
+                  LEA     SI,DIVDND
+                  LEA     DI,QUOTNT
+          A20:
+
+          
+          Ассемблер для IBM PC. Программы.                          89
+
+
+                  MOV     AL,[SI]         ;Загрузить ASCII байт
+                                          ;  (можно LODSB)
+                  AND     AL,0FH          ;Стереть ASCII тройку
+                  AAD                     ;Коррекция для деления
+                  DIV     DIVSOR          ;Деление
+                  MOV     [DI],AL         ;Сохранить частное
+                  INC     SI
+                  INC     DI
+                  LOOP    A20             ;Циклиться 4 раза
+                  RET
+          MAIN    ENDP
+          CODEGS  ENDS
+                  END     BEGIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                          90
+
+
+          
+          TITLE   SCREMP  (EXE) Ввод времени и расценки,
+                                ;вывод величины оплаты
+          ; ----------------------------------------------------
+          STACKSG SEGMENT PARA STACK 'Stack'
+                  DW      32 DUP(?)
+          STACKSG ENDS
+          ; ----------------------------------------------------
+          DATASG  SEGMENT PARA 'Data'
+          HRSPAR  LABLE   BYTE            ;Список параметров для
+                                          ;   ввода времени:
+          MAXHLEN DB      6               ;---------------------
+          ACTHLEN DB      ?
+          HRSFLD  DB      6 DUP(?)
+          
+          RATEPAR LABLE   BYTE            ;Список параметров для
+                                          ;   ввода расценки:
+          MAXRLEN DB      6               ;---------------------
+          ACTRLEN DB      ?
+          RATEFLN DB      6 DUP(?)
+          
+          MESSG1  DB      'Hours worked? ','$'
+          MESSG2  DB      'Rate of pay? ','$'
+          MESSG3  DB      'Wage = '
+          ASCWAGE DB      10 DUP(30H), 13, 10, '$'
+          ADJUST  DW      ?
+          ASCHRS  DB      0
+          ASCRATE DB      0
+          BINVAL  DW      00
+          BINHRS  DW      00
+          BINRATE DW      00
+          COL     DB      00
+          DECIND  DB      00
+          MULT10  DW      01
+          NODEC   DW      00
+          ROW     DB      00
+          SHIFT   DW      ?
+          TENWD   DW      10
+          DATASG  ENDS
+          ; ----------------------------------------------------
+          CODESG  SEGMENT PARA 'Code'
+          BEGIN   PROC    FAR
+                  ASSUME  CS:CODESG,DS:DATASG,SS:STACKSG,ES:DATASG
+                  PUSH    DS
+                  SUB     AX,AX
+                  PUSH    AX
+                  MOV     AX,DATASG
+                  MOV     DS,AX
+                  MOV     ES,AX
+                  MOV     AX,0600H
+                  CALL    Q10SCR          ;Очистить экран
+                  CALL    Q20CURS         ;Установить курсор
+          A20LOOP:
+
+          
+          Ассемблер для IBM PC. Программы.                          91
+
+
+                  CALL    B10INPT         ;Ввести время и расценку
+                  CMP     ACTHLEN,00      ;Завершить работу?
+                  JE      A30
+                  CALL    D10HOUR         ;Получить двоичное время
+                  CALL    E10RATE         ;Получить двоичную расценку
+                  CALL    F10MULT         ;Расчитать оплату
+                  CALL    G10WAGE         ;Преобразовать в ASCII
+                  CALL    K10DISP         ;Выдать результат на экран
+                  JMP     A20LOOP
+          A30:
+                  MOV     AX,0600H
+                  CALL    Q10SCR          ;Очистить экран
+                  RET                     ;Выйти из программы
+          BEGIN   ENDP
+          ;               Ввод времени и расценки
+          ; ----------------------------------------------------
+          B10INPT PROC
+                  LEA     DX,MESSG1       ;Запрос для ввода времени
+                  MOV     AH,09
+                  INT     21H
+                  LEA     DX,HRSPAR       ;Ввести время
+                  MOV     AH,0AH
+                  INT     21H
+                  CMP     ACTHLEN,00      ;Пустой ввод?
+                  JNE     B20
+                  RET                     ;   да - вернуться A20LOOP
+          B20:
+                  MOV     COL,25          ;Установить столбец
+                  CALL    Q20CURS
+                  LEA     DX,MESSG2       ;Запрос для ввода засценки
+                  MOV     AH,09
+                  INT     21H
+                  LEA     DX,RATEPAR      ;Ввести расценку
+                  MOV     AH,0AH
+                  INT     21H
+                  RET
+          B10INPT ENDP
+          ;               Обработка времени:
+          ;               -----------------
+          D10HOUR PROC
+                  MOV     NODEC,00
+                  MOV     CL,ACTHLEN
+                  SUB     CH,CH
+                  LEA     SI,HRSFLD-1     ;Установить правую позицию
+                  ADD     SI,CX           ;  времени
+                  CALL    M10ASBI         ;Преобразовать в двоичное
+                  MOV     AX,BINVAL
+                  MOV     BINHRS,AX
+                  RET
+          D10HOUR ENDP
+          ;               Обработка расценки:
+          ;               ------------------
+          E10RATE PROC
+
+          
+          Ассемблер для IBM PC. Программы.                          92
+
+
+                  MOV     CL,ACTRLEN
+                  SUB     CH,CH
+                  LEA     SI,RATEFLD-1    ;Установить правую позицию
+                  ADD     SI.CX           ;  расценки
+                  CALL    M10ASBI         ;Преобразовать в двоичное
+                  MOV     AX,BINVAL
+                  MOV     BINRATE,AX
+                  RET
+          E10RATE ENDP
+          ;               Умножение, округление и сдвиг:
+          ;               -----------------------------
+          F10MULT PROC
+                  MOV     CX,05
+                  LEA     DI,ASCWAGE      ;Установить формат оплаты
+                  MOV     AX,3030H        ;  в код ASCII (30)
+                  CLD
+                  REP STOSW
+                  MOV     SHIFT,10
+                  MOV     ADJUST,00
+                  MOV     CX,NODEC
+                  CMP     CL,06           ;Если более 6 десятичных
+                  JA      F40             ;  знаков, то ошибка
+                  DEC     CX
+                  DEC     CX
+                  JLE     F30             ;Обойти, если менее 3 знаков
+                  MOV     NODEC,02
+                  MOV     AX,01
+          F20:
+                  MUL     TENWD           ;Вычислить фактор сдвига
+                  LOOP    F20
+                  MOV     SHIFT,AX
+                  SHR     AX,1            ;Округлить результат
+                  MOV     ADJUST,AX
+          F30:
+                  MOV     AX,BINHRS
+                  MUL     BINRATE         ;Вычислить оплату
+                  ADD     AX,ADJUST       ;Округлить оплату
+                  ADC     DX,00
+                  CMP     DX,SHIFT        ;Результат слишком велик
+                  JB      F50             ;  для команды DIV?
+          F40:
+                  SUB     AX,AX
+                  JMP     F70
+          F50:
+                  CMP     ADJUST,00       ;Сдвиг нее требуется?
+                  JZ      F80
+                  DIV     SHIFT           ;Сдвинуть оплату
+          F70:    SUB     DX,DX           ;Стереть остаток
+          F80:    RET
+          F10MULT ENDP
+          ;               Преобразование в ASCII формат:
+          ;               -----------------------------
+          G10WAGE PROC
+
+          
+          Ассемблер для IBM PC. Программы.                          93
+
+
+                  LEA     SI,ASCWAGE+7    ;Установить дес. точку
+                  MOV     BYTE PTR[SI],'.'
+                  ADD     SI,NODEC        ;Установить правую позицию
+          G30:
+                  CMP     BYTE PTR[SI],'.'
+                  JNE     G35             ;Обойти, если дес.поз.
+                  DEC     SI
+          G35:
+                  CMP     DX,00           ;Если dx:ax < 10,
+                  JNZ     G40
+                  CMP     AX,0010         ;  то операция завершена
+                  JB      G50
+          G40:
+                  DIV     TENWD           ;Остаток - ASCII-цифра
+                  OR      DL,30H
+                  MOV     [SI],DL         ;Записать ASCII символ
+                  DEC     SI
+                  SUB     DX,DX           ;Стереть остаток
+                  JMP     G30
+          G50:
+                  OR      AL,30H          ;Записать последний ASCII
+                  MOV     [SI],AL         ;  символ
+                  RET
+          G10WAGE ENDP
+          ;               Вывод величины оплаты:
+          ;               ---------------------
+          K10DISP PROC
+                  MOV     COL,50          ;Установить столбец
+                  CALL    Q20CURS
+                  MOV     CX,09
+                  LEA     SI,ASCWAGE
+          K20:                            ;Стереть лидирующие нули
+                  CMP     BYTE PTR[SI],30H
+                  JNE     K30             ;  пробелами
+                  MOV     BYTE PTR[SI],20H
+                  INC     SI
+                  LOOP    K20
+          K30:
+                  LEA     DX,MESSG3       ;Вывод на экран
+                  MOV     AH,09
+                  INT     21H
+                  CMP     ROW,20          ;Последняя строка экрана?
+                  JAE     K80
+                  INC     ROW             ;  нет - увеличить строку
+                  JMP     K90
+          K80:
+                  MOV     AX,0601H        ;  да --
+                  CALL    Q10SCR          ;  прокрутить и
+                  MOV     COL,00          ;  установить курсор
+                  CALL    Q20CURS
+          K90:    RET
+          K10DISP ENDP
+          ;               Преобразование ASCII-чисел
+
+          
+          Ассемблер для IBM PC. Программы.                          94
+
+
+          ;               в двоичное представление:
+          ;               --------------------------
+          M10ASBI PROC
+                  MOV     MULT10,0001
+                  MOV     BINVAL,00
+                  MOV     DECIND,00
+                  SUB     BX,BX
+          M20:
+                  MOV     AL,[SI]         ;ASCII-символ
+                  CMP     AL,'.'          ;Обойти, если дес.точка
+                  JNE     M40
+                  MOV     DECIND,01
+                  JMP     M90
+          M40:
+                  AND     AX,000FH
+                  MUL     MULT10          ;Умножить на фактор
+                  ADD     BINVAL,AX       ;Сложить с дв.значением
+                  MOV     AX,MULT10       ;Вучислить следующий
+                  MUL     TENVD           ;  фактор x 10
+                  MOV     MULT10,AX
+                  CMP     DECIND,00       ;Десятичная точка?
+                  JNZ     M90
+                  INC     BX              ;  да -  обойти точку
+          M90:
+                  DEC     SI
+                  LOOP    M20
+                                          ;Конец цикла
+                  CMP     DECIND,00       ;Была дес.точка?
+                  JZ      M100            ;  да --
+                  ADD     NODEC,BX        ;     сложить с итогом
+          M100:   RET
+          M10ASBI ENDP
+          ;               Прокрутка экрана:
+          ;               ----------------
+          Q10SCR  PROC    NEAR            ;AX установлен при вызове
+                  MOV     BH,30           ;Цвет (07 для ч/б)
+                  SUB     CX,CX
+                  MOV     DX,184FH
+                  INT     10H
+                  RET
+          Q10SCR  ENDP
+          ;               Установка курсора:
+          ;               -----------------
+          Q20CURS PROC    NEAR
+                  MOV     AH,02
+                  SUB     BH,BH
+                  MOV     DH,ROW
+                  MOV     DL,COL
+                  INT     10H
+                  RET
+          Q20CURS ENDP
+          
+          CODESG  ENDS
+
+          
+          Ассемблер для IBM PC. Программы.                          95
+
+
+                  END     BEGIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                          96
+
+
+          
+                  page    60,132
+          TITLE   DIRECT  (COM) Прямой табличный доступ
+          CODESG  SEGMENT PARA 'Code'
+                  ASSUME  CS:CODESG,DS:CODESG,ES:CODESG
+                  ORG     100H
+          BEGIN:  JMP     SHORT MAIN
+          ; ------------------------------------------------
+          THREE   DB      3
+          MONIN   DB      '11'
+          ALFMON  DB      '???','$'
+          MONTAB  DB      'JAN','FEB','MAR','APR','MAY','JUN'
+                  DB      'JUL','AUG','SEP','OKT','NOV','DEC'
+          ; ------------------------------------------------
+          MAIN    PROC    NEAR            ;Основная процедура
+                  CALL    C10CONV         ;Получить двоичное значение
+                  CALL    D10LOC          ;Выделить месяц из таблицы
+                  CALL    F10DISP         ;Выдать месяц на экран
+                  RET
+          MAIN    ENDP
+          ;               Перевод ASCII в двоичное представление:
+          ;               --------------------------------------
+          C10CONV PROC
+                  MOV     AH,MONIN        ;Загрузить номер месяца
+                  MOV     AL,MONIN+1
+                  XOR     AX,3030H        ;Удалить ASCII тройки
+                  CMP     AH,00           ;Месяц 01-09?
+                  JZ      C20             ;  да - обойти
+                  SUB     AH,AH           ;  нет - очистить AH,
+                  ADD     AL,10           ;  и перевести в двоичное
+          C20     RET
+          C10CONV ENDP
+          ;               Выделение месяца из таблицы:
+          ;               ---------------------------
+          D10LOC  PROC
+                  LEA     SI,MONTAB
+                  DEC     AL              ;Коррекция для таблицы
+                  MUL     THREE           ;Умножить AL на 3
+                  ADD     SI,AX
+                  MOV     CX,03           ;Трехсимвольная пересылка
+                  CLD
+                  LEA     DI,ALFMON
+                  REP MOVSB               ;Переслать 3 символа
+                  RET
+          D10LOC  ENDP
+          ;               Вывод на экран симв.месяца:
+          ;               --------------------------
+          F10DISP PROC
+                  LEA     DX,ALFMON
+                  MOV     AH,09
+                  INT     21H
+                  RET
+          F10DISP ENDP
+
+          
+          Ассемблер для IBM PC. Программы.                          97
+
+
+          
+          CODESG  ENDS
+                  END     BEGIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                          98
+
+
+          
+                  page    60,132
+          TITLE   TABSRCH (COM) Табличный поиск
+          CODESG  SEGMENT PARA 'Code'
+                  ASSUME  CS:CODESG,DS:CODESG,ES:CODESG
+                  ORG     100H
+          BEGIN:  JMP     SHORT MAIN
+          ; -----------------------------------------------
+          STOKNIN DW      '23'
+          STOKTAB DB      '05','Excavators'
+                  DB      '08','Lifters   '
+                  DB      '09','Presses   '
+                  DB      '12','Valves    '
+                  DB      '23','Processors'
+                  DB      '27','Pumps     '
+          DESCRN  10      DUP(?)
+          ; -----------------------------------------------
+          MAIN    PROC    NEAR
+                  MOV     AX,STOKNIN      ;Загрузить номер элемента
+                  XCHG    AL,AH
+                  MOV     CX,06           ;Число элементов в таблице
+                  LEA     SI,STOKTAB      ;Начальный адрес таблицы
+          A20:
+                  CMP     AX,[SI]         ;Сравнить элементы
+                  JE      A30             ;Если равны - выйти,
+                  ADD     SI,12           ;  нет - следующий элемент
+                  LOOP    A20
+                  CALL    R10ERR          ;Элемент в таблице не найден
+                  RET
+          A30:
+                  MOV     CX,05           ;Длина описания элемента
+                  LEA     DI,DESCRN       ;Адрес описания элемента
+                  INC     SI
+                  INC     SI              ;Выделить описание
+                  REP MOVSW               ;  из таблицы
+                  RET
+          MAIN    ENDP
+          ;
+          R10ERR  PROC
+          ;               <Вывод сообщения об ошибке>
+                  RET
+          R10ERR  ENDP
+          
+          CODESG  ENDS
+                  END     BEGIN
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                          99
+
+
+          
+                  page    60,132
+          TITLE   TABSRCH (COM) Табличный поиск,  использующий CMPSB
+          CODESG  SEGMENT PARA 'Code'
+                  ASSUME  CS:CODESG,DS:CODESG,ES:CODESG
+                  ORG     100H
+          BEGIN:  JMP     SHORT MAIN
+          ; ----------------------------------------------------
+          STOKNIN DW      '123'
+          STOKTAB DB      '035','Excavators'       ;Начало таблицы
+                  DB      '038','Lifters   '
+                  DB      '049','Presses   '
+                  DB      '102','Valves    '
+                  DB      '123','Processors'
+                  DB      '127','Pumps     '
+                  DB      '999', 10 DUP(' ')       ;Конец таблицы
+          DESCRN  10      DUP(?)
+          ; ----------------------------------------------------
+          MAIN    PROC    NEAR
+                  CLD
+                  LEA     SI,STOKTAB     ;Начальный адрес таблицы
+          A20:
+                  MOV     CX,03          ;Сравнивать по 3 байта
+                  LEA     DI,STOKNIN     ;Адрес искомого элемента
+                  REPE CMPSB             ;Сравнение
+                  JE      A30            ;Если равно - выйти,
+                  JA      A40            ;если больше - нет в таблице
+                  ADD     SI,CX          ;Прибавить CX к адресу
+                  JMP     A20            ;Следующий элемент таблицы
+          A30:
+                  MOV     CX,05          ;Пересылать 5 слов
+                  LEA     DI,DESCRN      ;Адрес описания
+                  REP MOVSV              ;Переслать из таблицы
+                  RET
+          A40:
+                  CALL    R10ERR         ;элемент в таблице не найден
+                  RET
+          MAIN    ENDP
+          
+          R10ERR  PROC
+          ;               <Вывод на экран сообщения об ошибке>
+                  RET
+          R10ERR  ENDP
+          
+          CODESG  ENDS
+                  END     BEGIN
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         100
+
+
+          
+                  page    60,132
+          TITLE   XLATE   (COM) Перевод кода ASCII в код EBCDIC
+          CODESG  SEGMENT PARA 'Code'
+                  ASSUME  CS:CODESG,DS:CODESG,ES:CODESG
+                  ORG     100H
+          BEGIN:  JMP     MAIN
+          ; ----------------------------------------------------
+          ASCNO   DB      '-31.5'
+          EBCNO   DB      6 DUP(' ')
+          XLTAB   DB      45 DUP(40H)
+                  DB      60H, 2DH
+                  DB      5CH
+                  DB      0F0H,0F1H,0F2H,0F3H,0F4H
+                  DB      0F5H,0F6H,0F7H,0F8H,0F9H
+                  DB      199 DUP(40H)
+          ; ----------------------------------------------------
+          MAIN    PROC    NEAR           ;Основная процедура
+                  LEA     SI,ASCNO       ;Адрес символов ASCNO
+                  LEA     DI,EBCNO       ;Адрес поля EBCNO
+                  MOV     CX,06          ;Длина
+                  LEA     BX,XLTAB       ;Адрес таблицы
+          A20:
+                  MOV     AL,[SI]        ;Получить ASCII символ
+                  XLAT                   ;Перекодировка
+                  MOV     [DI],AL        ;Записать в поле EBCNO
+                  INC     DI
+                  INC     SI
+                  LOOP    A20            ;Повторить 6 раз
+                  RET
+          MAIN    ENDP
+          CODESG  ENDS
+                  END     BEGIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         101
+
+
+          
+                  page    60,132
+          TITLE   ASCHEX  (COM) Преобразование ASCII в шест.
+          CODESG  SEGMENT PARA 'Code'
+                  ASSUME  CS:CODESG,DS:CODESG,ES:CODESG
+                  ORG     100H
+          BEGIN:  JMP     MAIN
+          ; -----------------------------------------------
+          DISPROW DB      16 DUP('     '), 13
+          HEXSTR  DB      00
+          XLATAB  DB      30H,31H,32H,33H,34H,35H,36H,37H,38H,39H
+                  DB      41H,42H,43H,44H,45H,46H
+          ; -----------------------------------------------
+          MAIN    PROC    NEAR            ;Основная процедура
+                  CALL    Q10CLR          ;Очистить экран
+                  LEA     SI,DISPROW
+          A20LOOP:
+                  CALL    C10HEX          ;Перекодировать
+                  CALL    D10DISP         ;  и вывести на экран
+                  CMP     HEXCTR,0FFH     ;Последнее значение (FF)?
+                  JE      A50             ;  да - завершить
+                  INC     HEXCTR          ; нет - перейти к следующему
+                  JMP     A20LOOP
+          A50:    RET
+          MAIN    ENDP
+          
+          C10HEX  PROC    NEAR            ;Перекодировка в шест.
+                  MOV     AH,00
+                  MOV     AL,HEXCTR       ;Получить шест.пару
+                  SHR     AX,CL           ;Сдвиг правой шест.цифры
+                  LEA     BX,XLATAB       ;Установить адрес таблицы
+                  MOV     CL,04           ;Установить величину сдвига
+                  XLAT                    ;Перекодировка в шест.
+                  MOV     [SI],AL         ;Записать левый символ
+          
+                  MOV     AL,HEXCTR
+                  SHL     AX,CL           ;Сдвиг левой цифры
+                  XLAT
+                  MOV     [SI]+1,AL       ;Перекодировка в шест.
+                  RET                     ;Записать правый символ
+          C10HEX  ENDP
+          
+          D10DISP PROC    NEAR            ;Вывод на экран
+                  MOV     AL,HEXCTR
+                  MOV     [SI]+3,AL
+                  CMP     AL,1AH          ;Символ EOF?
+                  JE      D20             ;  да - обойти
+                  CMP     AL,07H          ;Меньше/равно 08?
+                  JB      D30             ;  да - OK
+                  CMP     AL,10H          ;Больше/равно 0F?
+                  JAE     D30             ;  да - OK
+          D20:
+                  MOV     BYTE PTR [SI]+3,20H
+
+          
+          Ассемблер для IBM PC. Программы.                         102
+
+
+          D30:
+                  ADD     SI,05           ;Следующий элемент в строке
+                  LEA     DI,DISPROW+80
+                  CMP     DI,SI
+                  JNE     D40
+                  MOV     AH,40H          ;Функция вывода на экран
+                  MOV     BX,01           ;Номер устройства
+                  MOV     CX,81           ;Вся строка
+                  LEA     DX,DISPROW
+                  INT     21H
+                  LEA     SI,DISPROW      ;Начальный адрес строки
+          D40:    RET
+          D10DISP ENDP
+          
+          Q10CLR  PROC    NEAR            ;Очистка экрана
+                  MOV     AX,0600H
+                  MOV     BH,03           ;Цвет (07 для ч/б)
+                  MOV     CX,0000
+                  MOV     DX,184FH
+                  INT     10H
+                  RET
+          Q10CLR  ENDP
+          
+          CODESG  ENDS
+                  END     BEGIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         103
+
+
+          
+                  page    60,132
+          TITLE   NMSORT  (EXE) Ввод и сортировка имен
+          ; -----------------------------------------------
+          STACK   SGMENT  PARA STACK 'Stack'
+                  DW      32 DUP(?)
+          STACK   ENDS
+          ; -----------------------------------------------
+          DATASG  SEGMENT PARA 'Data'
+          NAMEPAR LABEL   BYTE            ;Имя списка параметров:
+          MAXNLEN DB      21              ;  макс. длина
+          NAMELEN DB      ?               ;  число введенных символов
+          NAMEFLD DB      21 DUP(' ')     ;  имя
+          
+          CRLF    DB      13, 10, '$'
+          ENDADDR DW      ?
+          MESSG1  DB      'Name?', '$'
+          NAMECTR DB      00
+          NAMETAB DB      30 DUP(20 DUP(' ')) ;Таблица имен
+          NAMESAV DB      20 DUP(?), 13, 10, '$'
+          SWAPPED DB      00
+          DATA    ENDS
+          ; -----------------------------------------------
+          CODESG  SEGMENT PARA 'Code'
+          BEGIN   PROC    FAR
+                  ASSUME CS:CODESG,DS:DATDSG,SS:STACK,ES:DATASG
+                  PUSH    DS
+                  SUB     AX,AX
+                  PUSH    AX
+                  MOV     AX,DATASG
+                  MOV     DS,AX
+                  MOV     ES,AX
+                  CLD
+                  LEA     DI,NAMETAB
+                  CALL    Q10CLR          ;Очистить экран
+                  CALL    Q20CURS         ;Установить курсор
+          A20LOOP:
+                  CALL    B10READ         ;Ввести имя с клавиатуры
+                  CMP     NAMELEN,00      ;Есть ли еще имена?
+                  JZ      A30             ;  нет - идти на сортировку
+                  CMP     NAMECTR,30      ;Введено 30 имен?
+                  JE      A30             ;  да - идти на сортировку
+                  CALL    D10STOR         ;Записать имя в таблицу
+                  JMP     A20LOOP
+          A30:                            ;Конец ввода имен
+                  CALL    Q10CLR          ;Очистить экран
+                  CALL    Q20CURS         ;  и установить курсор
+                  CMP     NAMECTR,01      ;Введено менее 2 имен?
+                  JBE     A40             ;  да - выйти
+                  CALL    G10SORT         ;Сортировать имена
+                  CALL    K10DISP         ;Вывести результат на экран
+          A40:    RET                     ;Завершить программу
+          BEGIN   ENDP
+
+          
+          Ассемблер для IBM PC. Программы.                         104
+
+
+          ;               Ввод имен с клавиатуры?
+          ;               ----------------------
+          B10READ PROC
+                  MOV     AH,09
+                  LEA     DX,MESSG1       ;Вывести текст запроса
+                  INT     21H
+                  MOV     AH,0AH
+                  LEA     DX,NAMEPAR      ;Ввести имя
+                  INT     21H
+                  MOV     AH,09
+                  LEA     DX,CRLF         ;Вывести CRLF
+                  INT     21H
+          
+                  MOV     BH,00           ;Очистить поле после имени
+                  MOV     BL,NAMELEN      ;Получить счетчик символов
+                  MOV     CX,21
+                  SUB     CX,BX           ;Вычислить оставшуюся длину
+          B20:
+                  MOV     NAMEFLD[BX],20H ;Установить символ пробела
+                  INC     BX
+                  LOOP    B20
+                  RET
+          B10READ ENDP
+          ;               Запись имени в таблицу:
+          ;               ----------------------
+          D10STOR PROC
+                  INC     NAMECTR         ;Число имен в таблице
+                  CLD
+                  LES     SI,NAMEFLD
+                  MOV     CX,10
+                  REP MOVSV               ;Переслать имя в таблицу
+                  RET
+          D10STOR ENDP
+          ;               Сортировка имен в таблице:
+          ;               -------------------------
+          G10SORT PROC
+                  SUB     DI,40           ;Установить адреса останова
+                  MOV     ENDADDR,DI
+          G20:
+                  MOV     SWAPPED,00      ;Установить начало
+                  LEA     SI,NAMETAB      ;  таблицы
+          G30:
+                  MOV     CX,20           ;Длина сравнения
+                  MOV     DI,SI
+                  ADD     DI,20           ;Следующее имя для сравнения
+                  MOV     AX,DI
+                  MOV     BX,SI
+                  REPE CMPSB              ;Сравнить имя со следующим
+                  JBE     G40             ;  нет перестановки
+                  CALL    H10XCHG         ;  перестановка
+          G40:
+                  MOV     SI,AX
+                  CMP     SI,ENDADDR      ;Конец таблицы?
+
+          
+          Ассемблер для IBM PC. Программы.                         105
+
+
+                  JBE     G30             ;  нет - продолжить
+                  CMP     SWAPPED,00      ;Есть перестановки?
+                  JNZ     G20             ;  да - продолжить,
+                  RET                     ;  нет - конец сортировки
+          G10SORT ENDP
+          ;               Перестановка элементов таблицы:
+          ;               ------------------------------
+          H10XCHG PROC
+                  MOV     CX,10
+                  LEA     DI,NAMESAV
+                  MOV     SI,BX
+                  REP MOVSW               ;Сохранить меньший элемент
+          
+                  MOV     CX,10
+                  MOV     DI,BX
+                  REP MOVSW               ;Переслать больший элемент
+                                          ;  на место меньшего
+                  MOV     CX,10
+                  LEA     SI,NAMESAV
+                  REP MOVSW               ;Переслать сохраненный
+                                          ;  элемент на место большего
+                  MOV     SWAPPED,01      ;Признак перестановки
+                  RET
+          H10XCHG ENDP
+          ;               Вывод на экран отсортированные имена:
+          ;               ------------------------------------
+          K10DISP PROC
+                  LEA     SI,NAMETAB
+          K20:
+                  LEA     DI,NAMESAV      ;Начальный адрес таблицы
+                  MOV     CX,10
+                  REP MOVSV
+                  MOV     AH,09
+                  LEA     DX,NAMESAV
+                  INT     21H             ;Вывести на экран
+                  DEC     NAMECTR         ;Это последний элемент?
+                  JNZ     K20             ;  нет - повторить цикл,
+                  RET                     ;  да - выйти
+          K10DISP ENDP
+          ;               Очистка экрана:
+          ;               --------------
+          Q10CLR  PROC
+                  MOV     AX,0600H
+                  MOV     BH,61H          ;Цвет (07 для ч/б)
+                  SUB     CX,CX
+                  MOV     DX,184FH
+                  INT     10H
+                  RET
+          Q10CLR  ENDP
+          ;               Установка курсора:
+          ;               -----------------
+          Q20CURS PROC
+                  MOV     AH,02
+
+          
+          Ассемблер для IBM PC. Программы.                         106
+
+
+                  SUB     BH,BH
+                  SUB     DX,DX           ;Установить курсор в 00,00
+                  INT     10H
+                  RET
+          Q20CURS ENDP
+          
+          CODESG  ENDS
+                  END     BEGIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         107
+
+
+          
+                  page    60,132
+          TITLE   FCBCREAT (EXE) Использование FCB для создания файла
+          ;----------------------------------------------------------
+          STACKSG SEGMENT PARA STACK 'Stack'
+                  DW      80 DUP(?)
+          STACKSG ENDS
+          ;----------------------------------------------------------
+          DATASG  SEGMENT PARA 'Data'
+          RECLEN  EQU     32
+          NAMEPAR LABEL   BYTE            ;Список параметров:
+          MAXLEN  DB      RECLEN          ;  макс.длина имени
+          NAMELEN DB      ?               ;  число введенных символов
+          NAMEDTA DB      RECLEN DUP(' ') ;  область передачи (DTA)
+          
+          FCBREC  LABEL   BYTE            ;FCB для дискового файла
+          FCBDRIV DB      04              ;  дисковод D
+          FCBNAME DB      'NAMEFILE'      ;  имя файла
+          FCBEXT  DB      'DAT'           ;  тип файла
+          FCBBLK  DW      0000            ;  номер текущего блока
+          FCBRCSZ DW      ?               ;  размер логической записи
+          FCBFLSZ DD      ?               ;  размер файла (DOS)
+                  DW      ?               ;  дата (DOS)
+                  DT      ?               ;  зарезервировано (DOS)
+          FCBSQRC DB      00              ;  номер текущей записи
+                  DD      ?               ;  относительный номер
+          
+          CRLF    DB      13,10,'$'
+          ERRCDE  DB      00
+          PROMPT  DB      'Name? ','$'
+          ROW     DB      01
+          OPNMSG  DB      '*** Open error ***',  '$'
+          WRTMSG  DB      '*** Write error ***', '$'
+          DATASG  ENDS
+          ; ---------------------------------------------------------
+          CODESG  SEGMENT PARA 'Code'
+          BEGIN   PROC    FAR
+                  ASSUME CS:CODESG,DS:DATASG,SS:STACKSG,ES:DATASG
+                  PUSH    DS
+                  SUB     AX,AX
+                  PUSH    AX
+                  MOV     AX,DATASG
+                  MOV     DS,AX
+                  MOV     ES,AX
+                  MOV     AX,0600H
+                  CALL    Q10SCR          ;Очистить экран
+                  CALL    Q20CURS         ;Установить курсор
+                  CALL    C10OPEN         ;Открыть, установить DTA
+                  CMP     ERRCDE,00       ;Есть место на диске?
+                  JZ      A20LOOP         ;  да - продолжить,
+                  RET                     ;  нет - вернуться в DOS
+          A20LOOP:
+                  CALL    D10PROC
+
+          
+          Ассемблер для IBM PC. Программы.                         108
+
+
+                  CMP     NAMELEN,00      ;Конец ввода?
+                  JNE     A20LOOP         ;  нет - продолжить,
+                  CALL    G10CLSE         ;  да - закрыть файл
+                  RET                     ;  и вернуться в DOS
+          BEGIN   ENDP
+          ;               Открытие дискового файла:
+          ;               ------------------------
+          C10OPEN PROC    NEAR
+                  MOV     AH,16H          ;Функция создания файла
+                  LEA     DX,FCBREC
+                  INT     21H
+                  CMP     AL,00           ;Есть место на диске?
+                  JNZ     C20             ;  нет - ошибка
+          
+                  MOV     FCBRCSZ,RECLEN  ;Размер записи (EQU)
+                  LEA     DX,NAMEDTA      ;Загрузить адрес DTA
+                  MOV     AH,1AH
+                  INT     21AH
+                  RET
+          C20:
+                  LEA     DX,OPNMSG       ;Сообщение об ошибке
+                  CALL    X10ERR
+                  RET
+          C10OPEN ENDP
+          ;               Ввод с клавиатуры:
+          ;               -----------------
+          D10PROC PROC    NEAR
+                  MOV     AH,09           ;Функция вывода на экран
+                  LEA     DX,PROMPT       ;Выдать запрос
+                  INT     21H
+          
+                  MOV     AH,0AH          ;Функция ввода
+                  LEA     DX,NAMEPAR      ;Ввести имя файла
+                  INT     21H
+                  CALL    E10DISP         ;Прокрутка на экране
+          
+                  CMP     NAMELEN,00      ;Имя введено?
+                  JNE     D20             ;  да - продолжить,
+                  RET                     ;  нет - выйти
+          D20:
+                  MOV     BH,00           ;Заменить символ Return
+                  MOV     BL,NAMELEN
+                  MOV     NAMEDTA[BX],' ' ;Записать пробел
+                  CALL    F10WRIT         ;Вызвать
+                                          ;  подпрограмму записи
+                  CLD
+                  LEA     DI,NAMEDTA      ;Очистить
+                  MOV     CX,RECLEN / 2   ;  поле
+                  MOV     AX,2020H        ;  имени
+                  REP STOSW
+                  RET                     ;Выйти
+          D10PROC ENDP
+          ;               Прокрутка и установка курсора:
+
+          
+          Ассемблер для IBM PC. Программы.                         109
+
+
+          ;               -----------------------------
+          E10DISP PROC    NEAR
+                  MOV     AH,09           ;Функция вывода на экран
+                  LEA     DX,CRLF         ;CR/LF
+                  INT     21H             ;Вызов DOS
+                  CMP     ROW,18          ;Последняя строка экрана?
+                  JAE     E20             ;  да - обойти,
+                  INC     ROW             ;  нет - увеличить строку
+                  RET
+          E20:
+                  MOV     AX,0601H        ;Прокрутка на 1 строку
+                  CALL    Q10SCR
+                  CALL    Q20CURS         ;Установить курсор
+                  RET
+          E10DISP ENDP
+          ;               Запись на диск:
+          ;               --------------
+          F10WRIT PROC    NEAR
+                  MOV     AH,15H          ;Функция записи
+                  LEA     DX,FCBREC
+                  INT     21H
+                  CMP     AL,00           ;Запись без ошибок?
+                  JZ      F20             ;  да
+                  LEA     DX,WRTMSG       ;  нет -
+                  CALL    X10ERR          ;  выдать сообщение
+                  MOV     NAMELEN,00
+          F20:    RET
+          F10WRIT ENDP
+          ;               Закрытие дискового файла:
+          ;               ------------------------
+          G10CLSE PROC    NEAR
+                  MOV     NAMEDTA,1AH     ;Установить EOF
+                  CALL    F10WRIT
+                  MOV     AH,10H          ;Функция закрытия
+                  LEA     DX,FCBREC
+                  INT     21H
+                  RET
+          G10CLSE ENDP
+          ;               Прокрутка экрана:
+          ;               ----------------
+          Q10SCR  PROC    NEAR            ;AX уже установлен
+                  MOV     BH,1EH          ;Цвет желтый на синем
+                  MOV     CX,0000
+                  MOV     DX,184FH
+                  INT     10H             ;Прокрутка
+                  RET
+          Q10SCR  ENDP
+          ;               Установка курсора:
+          ;               -----------------
+          Q20CURS PROC    NEAR
+                  MOV     AH,02
+                  MOV     BH,00
+                  MOV     DL,00
+
+          
+          Ассемблер для IBM PC. Программы.                         110
+
+
+                  MOV     DH,ROW          ;Установить курсор
+                  INT     10H
+                  RET
+          Q20CURS ENDP
+          ;               Вывод сообщения об ошибке на диске:
+          ;               ----------------------------------
+          X10ERR  PROC    NEAR
+                  MOV     AH,09           ;DX содержит
+                  INT     21H             ;  адрес сообщения
+                  MOV     ERRCDE,01       ;Установить код ошибки
+                  RET
+          X10ERR  ENDP
+          
+          CODESG  ENDS
+                  END     BEGIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         111
+
+
+          
+          TITLE   FCBREAD (EXE) Чтение записей созданных в CREATDSK
+          ; -------------------------------------------------------
+          STACKSG SEGMENT PARA STACK 'Stack'
+                  DW      80 DUP(?)
+          STACKSG ENDS
+          ;--------------------------------------------------------
+          DATASG  SEGMENT PARA 'Data'
+          FCBREC  LABEL   BYTE            ;FCB для файла
+          FCBDRIV DB      04              ;  дисковод D
+          FCBNAME DB      'NAMEFILE'      ;  имя файла
+          FCBEXT  DB      'DAT'           ;  тип файла
+          FCBBLK  DW      0000            ;  номер текущего блока
+          FCBRCSZ DW      0000            ;  длина логической записи
+                  DD      ?               ;  размер файла (DOS)
+                  DW      ?               ;  дата (DOS)
+                  DT      ?               ;  зарезервировано (DOS)
+          FCBSQRC DB      00              ;  текущий номер записи
+                  DD      ?               ;  относительный номер
+          
+          RECLEN  EQU     32              ;Длина записи
+          NAMEFLD DB      RECLEN DUP(' '), 13, 10, '$'
+          
+          ENDCDE  DB      00
+          OPENMSG DB      '*** Open error ***', '$'
+          READMSG DB      '*** Read error ***', '$'
+          ROW     DB      00
+          DATASG  ENDS
+          ;--------------------------------------------------------
+          CODESG  SEGMENT PARA 'Code'
+          BEGIN   PROC    FAR
+                  ASSUME  CS:CODESG,DS:DATASG,SS:STACKSG,ES:DATASG
+                  PUSH    DS
+                  SUB     AX,AX
+                  PUSH    AX
+                  MOV     AX,DATASG
+                  MOV     DS,AX
+                  MOV     ES,AX
+                  MOV     AX,0600H
+                  CALL    Q10SCR          ;Очистить экран
+                  CALL    Q20CURS         ;Установить курсор
+                  CALL    E10OPEN         ;Открыть файл,
+                                          ;  установить DTA
+                  CMP     ENDCDE,00       ;Открытие без ошибок?
+                  JNZ     A90             ;  нет - завершить
+          A20LOOP:
+                  CALL    F10READ         ;Прочитать запись
+                  CMP     ENDCDE,00       ;Чтение без ошибок?
+                  JNZ     A90             ;  нет - выйти
+                  CALL    G10DISP         ;Выдать имя на экран
+                  JMP     A20LOOP         ;Продолжить
+          A90:    RET                     ;Завершить
+          BEGIN   ENDP
+
+          
+          Ассемблер для IBM PC. Программы.                         112
+
+
+          ;               Открытие файла на диске:
+          ;               -----------------------
+          E10OPEN PROC    NEAR
+                  LEA     X,FCBREC
+                  MOV     AH,0FH          ;Функция открытия
+                  INT     21H
+                  CMP     AL,00           ;Файл найден?
+                  JNZ     E20             ;  нет - ошибка
+          
+                  MOV     FCBRCSZ,RECLEN  ;Длина записи (EQU)
+                  MOV     AH,1AH
+                  LEA     DX,NAMEFLD      ;Адрес DTA
+                  INT     21H
+                  RET
+          E20:
+                  MOV     ENDCDE,01       ;Сообщение об ошибке
+                  LEA     DX,OPENMSG
+                  CALL    X10ERROR
+                  RET
+          E10OPEN ENDP
+          ;               Чтение дисковой записи:
+          ;               ----------------------
+          F10READ PROC    NEAR
+                  MOV     AH,14H          ;Функция чтения
+                  LEA     DX,FCBREC
+                  INT     21H
+                  CMP     NAMEFLD,1AH     ;Считан маркер EOF?
+                  JNE     F20             ;  нет
+                  MOV     ENDCDE,01       ;  да
+                  JMP     F90
+          F20:
+                  CMP     AL,00           ;Чтение без ошибок?
+                  JZ      F90             ;  да - выйти
+                  MOV     ENDCDE,01       ;Нет:
+                  CMP     AL,01           ;Конец файла?
+                  JZ      F90             ;  да - выйти,
+                  LEA     DX,READMSG      ;  нет - значит
+                  CALL    X10ERR          ;        ошибка чтения
+          F90:
+                  RET
+          F10READ ENDP
+          ;               Вывод записи на экран:
+          ;               ---------------------
+          G10DISP PROC    NEAR
+                  MOV     AH,09           ;Функция вывода на экран
+                  LEA     DX,NAMEFLD
+                  INT     21H
+                  CMP     ROW,20          ;Последняя строка экрана?
+                  JAE     G30             ;  нет -
+                  INC     ROW             ;  да - увеличить строку
+                  JMP     G90
+          G30:
+                  MOV     AX,0601H
+
+          
+          Ассемблер для IBM PC. Программы.                         113
+
+
+                  CALL    Q10SCR          ;  прокрутить
+                  CALL    Q20CURS         ;  установить курсор
+          G90:    RET
+          G10DISP ENDP
+          ;               Прокрутка (скроллинг) экрана:
+          ;               ----------------------------
+          Q10SCR  PROC    NEAR            ;AX уже установлен
+                  MOV     BH,1EH          ;Установить цвет
+                  MOV     CX,0000
+                  MOV     DX,184FH        ;Функция прокрутки
+                  INT     10H
+                  RET
+          Q1OSCR  ENDP
+          ;               Установка курсора:
+          ;               -----------------
+          Q20CURS PROC    NEAR
+                  MOV     AH,02
+                  MOV     BH,00
+                  MOV     DH,ROW
+                  MOV     DL,00
+                  INT     10H
+                  RET
+          Q20CURS ENDP
+          ;               Вывод сообщения об ошибке на диске:
+          ;               ----------------------------------
+          X10ERR  PROC    NEAR
+                  MOV     AH,09           ;DX содержит адрес
+                  INT     21H             ;  сообщения
+                  RET
+          X10ERR  ENDP
+          
+          CODESG  ENDS
+                  END     BEGIN
+          
+          
+          
+                  page    60,132
+          TITLE   RANREAD (COM) Прямое чтение записей,
+          ;                        созданных в FCBCREAT
+          CODESG  SEGMENT PARA 'Code'
+                  ASSUME  CS:CODESG,DS:CODESG,SS:CODESG,ES:CODESG
+                  ORG     100H
+          BEGIN:  JMP     MAIN
+          ;-----------------------------------------------------
+          FCBREC  LABEL   BYTE            ;FCB для дискового файла
+          FCBDRIV DB      04              ;  дисковод D
+          FCBNAME DB      'MAMEFILE'      ;  имя файла
+          FCBEXT  DB      'DAT'           ;  тип файла
+          FCBBLK  DW      0000            ;  номер текущего блока
+          FCBRCSZ DW      0000            ;  длина логической записи
+                  DD      ?               ;  размер файла (DOS)
+                  DW      ?               ;  дата (DOS)
+                  DT      ?               ;  зарезервировано (DOS)
+
+          
+          Ассемблер для IBM PC. Программы.                         114
+
+
+                  DB      00              ;  номер текущей записи
+          FCBRNRC DD      000000000       ;  относительный номер
+          
+          RECLEN  EQU     32              ;Длина записи
+          RECDPAR LABEL   BYTE            ;Список параметров:
+          MAXLEN  DB      3               ;
+          ACTLEN  DB      ?               ;
+          RECDNO  DB      3 DUP(' ')      ;
+          
+          NAMEFLD DB      RECLEN DUP(' '),13,10,'$' ;DTA
+          
+          OPENMSG DB      '*** Open error ***',13,10,'$'
+          READMSG DB      '*** Read error ***',13,10,'$'
+          COL     DB      00
+          PROMPT  DB      'Record number? $'
+          ROW     DB      00
+          ENDCDE  DB      00
+          ;-----------------------------------------------------
+          MAIN    PROC    NEAR
+                  CALL    Q10CLR          ;Очистить экран
+                  CALL    Q20CURS         ;Установить курсор
+                  CALL    C10OPEN         ;Открыть файл,
+                                          ;  установить DTA
+                  CMP     ENDCDE,00       ;Открытие без ошибок?
+                  JZ      A20LOOP         ;  да - продолжить,
+                  RET                     ;  нет - завершить
+          A20LOOP:
+                  CALL    D10RECN         ;Получить номер записи
+                  CMP     ACTLEN,00       ;Есть запрос?
+                  JE      A40             ;  нет - выйти
+                  CALL    F10READ         ;Чтение (прямой доступ)
+                  CMP     ENDCDE,00       ;Есть ошибки чтения?
+                  JNZ     A30             ;  да - обойти
+                  CALL    G10DISP         ;Вывести на экран
+          A30:
+                  JMP     A20LOOP
+          A40:    RET                     ;Завершить программу
+          MAIN    ENDP
+          ;               Подпрограмма открытия файла на диске:
+          ;               ------------------------------------
+          C10OPEN PROC    NEAR
+                  MOV     AH,0FH          ;Функция открытия
+                  LEA     DX,FCBREC
+                  INT     21H
+                  CMP     AL,00           ;Открытие нормальное?
+                  JNZ     C20             ;  нет - ошибка
+                  MOV     FCBRCSZ,RECLEN  ;Длина записи (EQU)
+                  MOV     AH,1AH
+                  LEA     DX,NAMEFLD      ;Установить адрес DTA
+                  INT     21H
+                  RET
+          C20:
+                  LEA     DX,OPENMSG
+
+          
+          Ассемблер для IBM PC. Программы.                         115
+
+
+                  CALL    X10ERR
+                  RET
+          C10OPEN ENDP
+          ;               Ввод с клавиатуры номера записи:
+          ;               -------------------------------
+          D10RECN PROC    NEAR
+                  MOV     AH,09H          ;Функция вывода на экран
+                  LEA     DX,PROMPT
+                  INT     21H
+                  MOV     AH,0AH          ;Функция ввода с клавиатуры
+                  LEA     DX,RECDPAR
+                  INT     21H
+                  CMP     ACTLEN,01       ;Проверить длину (0,1,2)
+                  JB      D40             ;Длина 0, завершить
+                  JA      D20
+                  SUB     AH,AH           ;Длина 1
+                  MOV     AL,RECDNO
+                  JMP     D30
+          D20:
+                  MOV     AH,RECDNO       ;Длина 2
+                  MOV     AL,RECDNO+1
+          D30:
+                  AND     AX,0F0FH        ;Удалить ASCII тройки
+                  AAD                     Преобразовать в двоичное
+                  MOV     WORD PTR FCBRNRC,AX
+          D40:
+                  MOV     COL,20
+                  CALL    Q20CURS         ;Установить курсор
+                  RET
+          D10RECN ENDP
+          ;               Чтение дисковой записи:
+          ;               ----------------------
+          F10READ PROC    NEAR
+                  MOV     ENDCDE,00       ;Очистить код завершения
+                  MOV     AH,21H          ;Функция прямого чтения
+                  LEA     DX,FCBREC
+                  INT     21H
+                  CMP     AL,00           ;Чтение без ошибок?
+                  JZ      F20             ;  да - выйти
+                  LEA     DX,READMSG      ;  нет - выдать
+                  CALL    X10ERR          ;  сообщение об ошибке
+          F20:    RET
+          F10READ ENDP
+          ;               Вывод имени на экран:
+          ;               --------------------
+          G10DISP PROC    NEAR
+                  MOV     AH,09           ;Функция вывода на экран
+                  LEA     DX,NAMEFLD
+                  INC     21H
+                  INC     ROW
+                  MOV     COL,00
+                  RET
+          G10DISP ENDP
+
+          
+          Ассемблер для IBM PC. Программы.                         116
+
+
+          ;               Очистка экрана:
+          ;               --------------
+          Q10CLR  PROC    NEAR
+                  MOV     AX,0600H        ;Функция прокрутки
+                  MOV     BH,41H          ;Цвет (07 для ч/б)
+                  MOV     CX,0000
+                  MOV     DX,184FH
+                  INT     10H
+                  RET
+          Q10CLR  ENDP
+          ;               Установка курсора:
+          ;               -----------------
+          Q20CURS PROC    NEAR
+                  MOV     AH,02           ;Функция установки
+                  MOV     BH,00           ;  курсора
+                  MOV     DH,ROW
+                  MOV     DL,COL
+                  INT     10H
+                  RET
+          Q20CURS ENDP
+          ;               Вывод сообщения об ошибке на диске:
+          ;               ----------------------------------
+          X10ERR  PROC    NEAR
+                  MOV     AH,09           ;DX содержит адрес
+                  INT     21H             ;  сообщения
+                  INC     ROW
+                  MOV     ENDCDE,01
+                  RET
+          X10ERR  ENDP
+                  CODESG  ENDS
+                  END     BEGIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         117
+
+
+          
+          TITLE   RANBLOK (COM) Прямое блочное чтение файла
+          CODESG  SEGMENT PARA 'Code'
+                  ASSUME  CS:CODESG,DS:CODESG,SS:CODESG,ES:CODESG
+                  ORG     100H
+          BEGIN:  JMP     MAIN
+          ;----------------------------------------------------
+          FCBREC  LABEL   BYTE            ;FCB для дискового файла
+          FCBDRIV DB      04              ;   дисковод D
+          FCBNAME DB      'NAMEFILE'      ;   имя файла
+          FCBEXT  DB      'DAT'           ;   тип файла
+          FCBBLK  DW      0000            ;   номер текущего блока
+          FCBRCSZ DW      0000            ;   логическая длина записи
+          FCBFLZ  DD      ?               ;   DOS размер файла
+                  DW      ?               ;   DOS дата
+                  DT      ?               ;   DOS зарезервировано
+                  DB      00              ;   номер текущей записи
+          FCBRNRC DD      00000000        ;   относительный номер
+          
+          DSKRECS DB      1024 DUP(?),'$' ;DTA для блока записей
+          
+          ENDCODE DB      00
+          NORECS  DW      25              ;Число записей
+          OPENMSG DB      '*** Open error ***',13,10,'$'
+          READMSG DB      '*** Open error ***',13,10,'$'
+          ROWCTR  DB      00
+          ; ---------------------------------------------------
+          MAIN    PROC    NEAR
+                  CALL    Q10CLR          ;Очистить экран
+                  CALL    Q20CURS         ;Установить курсор
+                  CALL    E10OPEN         ;Открыть файл,
+                                          ;       установить DTA
+                  CMP     ENDCODE,00      ;Успешное открытие?
+                  JNZ     A30             ;       нет - выйти
+                  CALL    F10READ         ;Читать записи
+                  CALL    G10DISP         ;Вывод блока на экран
+          A30:    RET                     ;Завершить программу
+          MAIN    ENDP
+          ;               Открыть дисковый файл:
+          ;               ---------------------
+          E10OPEN PROC    NEAR
+                  MOV     AH,0FH          ;Функция открытия файла
+                  LEA     DX,FCBREC
+                  INT     21H
+                  CMP     AL,00           ;Успешное открытие?
+                  JNZ     A30             ;  нет - ошибка
+          
+                  MOV     FCBRCSZ,0020H   ;Размер записи
+                  MOV     AH,1AH
+                  LEA     DX,DSKRECS      ;Установить адрес DTA
+                  INT     21H
+                  RET
+          E20:
+
+          
+          Ассемблер для IBM PC. Программы.                         118
+
+
+                  LEA     DX,OPENMSG      ;Ошибка открытия файла
+                  CALL    X10ERR
+                  RET
+          E10OPEN ENDP
+          ;               Чтение блока:
+          ;               ------------
+          F10READ PROC    NEAR
+                  MOV     AH,27H          ;Прямое чтение блока
+                  MOV     CX,NORECS       ;Число записей
+                  LEA     DX,FCBREC
+                  INT     21H
+                  MOV     ENDCODE,AL      ;Сохранить код возврата
+                  RET
+          F10READ ENDP
+          ;               Вывод блока на экран:
+          ;               --------------------
+          G10DISP PROC    NEAR
+                  MOV     AH,09           ;Функция вывода на экран
+                  LEA     DX,DSKRECS
+                  INT     21H
+                  RET
+          G10DISP ENDP
+          ;               Подпрограмма очистки экрана:
+          Q10CLR  PROC    NEAR
+                  MOV     AX,0600H        ;Функция скрол
+                  MOV     BH,41H          ;Цвет (07 для ч/б)
+                  MOV     CX,0000
+                  MOV     DX,184FH
+                  INT     10H
+                  RET
+          Q10CLR  ENDP
+          ;               Подпрограмма установки курсора:
+          ;               ------------------------------
+          Q20CURS PROC    NEAR
+                  MOV     AH,02           ;Функция установки курсора
+                  MOV     BH,00
+                  MOV     DH,ROWCTR
+                  MOV     DL,00
+                  INT     10H
+                  INC     ROWCTR
+                  RET
+          Q20CURS ENDP
+          ;               Подпрограмма сообщения об ошибке диска:
+          ;               --------------------------------------
+          X10ERR  PROC    NEAR
+                  MOV     AH,09           ;DX содержит адрес
+                  INT     21H             ;   сообщения
+                  MOV     ENDCODE,01
+                  RET
+          X10ERR  ENDP
+          
+          CODESG  ENDS
+                  END     BEGIN
+
+          
+          Ассемблер для IBM PC. Программы.                         119
+
+
+          
+          TITLE   SELDEL (COM)      Выборочное удаление файлов
+          ;               Предполагается текущий дисковод;
+          ;               Примеры параметров: *.*, *.BAK, и т.д.
+          CODESG  SEGMENT PARA 'Code'
+                  ASSUME  CS:CODESG,DS:CODESG,SS:CODESG
+                  ORG     100H
+          BEGIN   JMP     MAIN
+          ; ----------------------------------------------------------
+          TAB     EQU     09
+          LF      EQU     10
+          CR      EQU     13
+          CRLF    DB      CR,LF,'$'
+          DELMSG  DB      TAB,'Erase','$'
+          ENDMSG  DB      CR,LF,'No more directory entries',CR,LF,'$'
+          ERRMSG  DB      'Write protected disk','$'
+          PROMPT  DB      'y = Erase, N = Keep, Ret = Exit',CR,LF,'$'
+          ; ----------------------------------------------------------
+          MAIN    PROC    NEAR            ;Главная процедура
+                  MOV     AH,11H          ;Найти первый элемент
+                  CALL    D10DISK
+                  CMP     AL,0FFH         ;Если нет элементов,
+                  JE      A90             ;   то выйти
+                  LEA     DX,PROMPT       ;Текст запроса
+                  CALL    B10DISP
+          A20:
+                  LEA     DX,DELMSG       ;Выдать сообщение
+                  CALL    B10DISP         ;   об удалении файла
+                  MOV     CX,11           ;11 символов
+                  MOV     SI,81H          ;Начало имени файла
+          A30:
+                  MOV     DL,[SI]         ;Текущий символ
+                  CALL    C10CHAR         ;   для вывода на экран
+                  INC     SI              ;Следующий символ
+                  LOOP    A30
+                  MOV     DL,'?'
+                  CALL    C10CHAR
+                  MOV     AH,01           ;Получить односимвольный
+                  INT     21H             ;   ответ
+                  CMP     AL,ODH          ;Символ Return?
+                  JE      A90             ;   да - выйти
+                  OR      AL,00100000B    ;Перекодировать
+                                          ;   в прописную букву
+                  CMP     AL,'y'          ;Запрошено удаление?
+                  JNE     A50             ;   нет - обойти,
+                  MOV     AH,13H          ;   да - удалить файл
+                  MOV     DX,80H
+                  INT     21H
+                  CMP     AL,0            ;Успешное удаление?
+                  JZ      A50             ;   да - обойти
+                  LEA     DX,ERRMSG       ;   нет - выдать
+                  CALL    B10DISP         ;         предупреждение
+                  JMP     A90
+
+          
+          Ассемблер для IBM PC. Программы.                         120
+
+
+          A50:
+                  LEA     DX,CRLF         ;Перевести строку на экране
+                  CALL    B10DISP
+                  MOV     AH,12H
+                  CALL    B10DISK         ;Получить следующий элемент
+                  CMP     AL,0FFH         ;Есть еще?
+                  JNE     A20             ;   да - повторить
+          A90:
+                  RET                     ;Выход в DOS
+          MAIN    ENDP
+          ;               Вывод строки на экран;
+          ;               ---------------------
+          B10DISP PROC    NEAR            ;в DX находится адрес
+                  MOV     AH,09           ;               строки
+                  INT     21H
+                  RET
+          B10DISP ENDP
+          ;               Вывод символа на экран;
+          ;               ----------------------
+          C10CHAR PROC    NEAR            ;в DL находится символ
+                  MOV     AH,02
+                  INT     21H
+                  RET
+          C10CHAR ENDP
+          ;               Чтение элемента каталога:
+          ;               ------------------------
+          D10DISK PROC    NEAR
+                  MOV     DX,5CH          ;Установить FCB
+                  INT     21H
+                  CMP     AL,0FFH         ;Есть еще элементы?
+                  JNE     D90
+                  PUSH    AX              ;Сохранить AL
+                  LEA     DX,ENDMSG
+                  CALL    B10DISP
+                  POP     AX              ;Восстановить AL
+          D90:    RET
+          D10DISK ENDP
+          
+          CODESG  ENDS
+                  END     BEGIN
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         121
+
+
+          
+                  page    60,132
+          TTILE   HANCREAT (EXE)   Создание файла на диске
+          ; -----------------------------------------------------
+          STACKSG SEGMENT PARA STACK 'Stack'
+                  DW      80 DUP(?)
+          STACKSG ENDS
+          ; -----------------------------------------------------
+          DATASG  SEGMENT PARA 'Data'
+          NAMEPAR LABEL   BYTE                    ;Список параметров:
+          MAXLEN  DB      30                      ;
+          NAMELEN DB      ?                       ;
+          NAMEREC DB      30 DUP('  '), 0DH, 0AH  ;   введенное имя,
+                                                  ;   CR/LF для записи
+          ERRCDE  DB      00
+          HANDLE  DW      ?
+          PATHNAM DB      'D:\NAMEFILE.DAT',0
+          PROMPT  DB      'Name? '
+          ROW     DB      01
+          OPNMSG  DB      '*** Open error ***', 0DH, 0AH
+          WRTMSG  DB      '*** Write error ***', 0DH, 0AH
+          DATASG  ENDS
+          ; -------------------------------------------------------
+          CODESG  SEGMENT PARA 'Code'
+          BEGIN   PROC    FAR
+                  ASSUME  CS:CODESG,DS:DATASG,SS:STACKSG,ES:DATASG
+                  PUSH    DS
+                  SUB     AX,AX
+                  PUSH    AX
+                  MOV     AX,DATASG
+                  MOV     DS,AX
+                  MOV     ES,AX
+                  MOV     AX,0600H
+                  CALL    Q10SCR          ;Очистка экрана
+                  CALL    Q20CURS         ;Установка курсора
+                  CALL    C10CREA         ;Создание файла,
+                                          ;   установка DTA
+                  CMP     ERRCDE,00       ;Ошибка при создании?
+                  JZ      A20LOOP         ;   да  - продолжить,
+                  RET                     ;   нет - вернуться в DOS
+          A20LOOP:
+                  CALL    D10PROC
+                  CMP     NAMELEN,00      ;Конец ввода?
+                  JNE     A20LOOP         ;   нет - продолжить,
+                  CALL    G10CLSE         ;   да  - закрыть файл
+                  RET                     ;         и выйти в DOS
+          BEGIN   ENDP
+          ;               Создание файла на диске:
+          ;               -----------------------
+          C10CREA PROC    NEAR
+                  MOV     AH,3CH          ;Функция создания файла
+                  MOV     CX,00           ;Нормальный атрибут
+                  LEA     CX,PATHNAM
+
+          
+          Ассемблер для IBM PC. Программы.                         122
+
+
+                  INT     21H
+                  JC      C20             ;Есть ошибка?
+                  MOV     HANDLE,AX       ;   нет - запомнить номер,
+                  RET
+          C20:                            ;   да -
+                  LEA     DX,OPNMSG       ;      выдать сообщение
+                  CALL    X10ERR          ;      об ошибке
+                  RET
+          C10CREA ENDP
+          ;               Ввод с клавиатуры:
+          ;               -----------------
+          D10PROC PROC    NEAR
+                  MOV     AH,40H          ;Функция вывода на экран
+                  MOV     BX,01           ;Номер (Handle)
+                  MOV     CX,06           ;Длина текста запроса
+                  LEA     DX,PROMPT       ;Выдать запрос
+                  INT     21H
+          
+                  MOV     AH,0AH          ;Функция ввода с клавиатуры
+                  LEA     DX,NAMEPAR      ;Список параметров
+                  INT     21H
+                  CMP     NAMELEN,00      ;Имя введено?
+                  JNE     D20             ;   да  - обойти
+                  RET                     ;   нет - выйти
+          D20:
+                  MOV     AL,20H          ;Пробел для заполнения
+                  SUB     CH,CH
+                  MOV     CL,NAMELEN      ;Длина
+                  LEA     DI,NAMEREC      ;
+                  ADD     DI,CX           ;Адрес + длина
+                  NEG     CX              ;Вычислить
+                  ADD     CX,30           ;   оставшуюся длину
+                  REP     STOSB           ;Заполнить пробелом
+          D90:
+                  CALL    F10WRIT         ;Запись на диск
+                  CALL    E10SCRL         ;Проверка на скролинг
+                  RET
+          D10PROC ENDP
+          ;               Проверка на скролинг:
+          ;               --------------------
+          E10SCRL PROC    NEAR
+                  CMP     ROW,18          ;Последняя строка экрана
+                  JAE     E10             ;   да  - обойти,
+                  INC     ROW             ;   нет - увеличить строку
+                  JMP     E10
+          E10:
+                  MOV     AX,0601H        ;Продвинуть на одну строку
+                  CALL    Q10SCR
+          E90:    CALL    Q20CURS         ;Установка курсора
+                  RET
+          E10SCRL ENDP
+          ;               Запись на диск:
+          ;               --------------
+
+          
+          Ассемблер для IBM PC. Программы.                         123
+
+
+          F10WRIT PROC    NEAR
+                  MOV     AH,40H          ;Функция записи на диск
+                  MOV     BX,HANDLE
+                  MOV     CX,32           ;30 для имени + 2 для CR/LF
+                  LEA     DX,NAMEREC
+                  INT     21H
+                  JNC     F20             ;Ошибка записи?
+                  LEA     DX,WRTMSG       ;   да -
+                  CALL    X10ERR          ;   выдать предупреждение
+                  MOV     NAMELEN,00
+          F20:
+                  RET
+          F10WRIT ENDP
+          ;               Закрытие файла на диске:
+          ;               -----------------------
+          G10CLSE PROC    NEAR
+                  MOV     NAMEREC,1AH     ;Маркер конца записи (EOF)
+                  CALL    F10WRIT
+                  MOV     AH,3EH          ;Функция закрытия
+                  MOV     BX,HANDLE
+                  INT     21H
+                  RET
+          G10CLSE ENDP
+          ;               Прокрутка (скроллинг) экрана:
+          ;               ----------------------------
+          Q10SCR  PROC    NEAR            ;в AX - адрес элемента
+                  MOV     BH,1EH          ;Цвет - желтый на синем
+                  MOV     CX,0000
+                  MOV     DX,184FH
+                  INT     10H             ;Скроллинг
+                  RET
+          Q10SCR  ENDP
+          ;               Установка курсора:
+          ;               -----------------
+          Q20CURS PROC    NEAR
+                  MOV     AH,02
+                  MOV     BH,00
+                  MOV     DH,ROW          ;Установить курсор
+                  MOV     DL,00
+                  INT     10H
+                  RET
+          Q20CURS ENDP
+          ;               Вывод сообщения об ошибке:
+          ;               -------------------------
+          X10ERR  PROC    NEAR            ;DX содержит
+                  MOV     AH,40H          ;   адрес сообщения
+                  MOV     BX,01
+                  MOV     CX,21           ;Длина сообщения
+                  INT     21H
+                  MOV     ERRCDE,01       ;Установить код ошибки 
+                  RET
+          X10ERR  ENDP
+          
+
+          
+          Ассемблер для IBM PC. Программы.                         124
+
+
+          CODESG  ENDS
+                  END     BEGIN
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         125
+
+
+          
+                  page    60,132
+          TITLE   HANREAD (EXE)   Чтение записей, созданных в HANCREAT
+          ; -----------------------------------------------------
+          STACKSG SEGMENT PARA STACK 'Stack'
+                  DW      80 DUP(?)
+          STACKSG ENDS
+          ; -----------------------------------------------------
+          DATASG  SEGMENT PARA 'Data'
+          ENDCDE  DB      00
+          HANDLE  DW      ?
+          IOAREA  DB      32 DUP(' ')
+          PATHNAM DB      'D:\NAMEFILE.SRT',0
+          OPENMSG DB      '*** Open error ***', 0DH, 0AH
+          READMSG DB      '*** Read error ***', 0DH, 0AH
+          ROW     DB      00
+          DATASG  ENDS
+          ; ------------------------------------------------------
+          CODESG  SEGMENT PARA 'Code'
+          BEGIN   PROC    FAR
+                  ASSUME  CS:CODESG,DS:DATASG,SS:STACKSG,ES:DATASG
+                  PUSH    DS
+                  SUB     AX,AX
+                  PUSH    AX
+                  MOV     AX,DATASG
+                  MOV     DS,AX
+                  MOV     ES,AX
+                  MOV     AX,0600H
+                  CALL    Q10SCR          ;Очистить экран
+                  CALL    Q20CURS         ;Установить курсор
+                  CALL    E100PEN         ;Открыть файл,
+          ;                               ;   установить DTA
+                  CMP     ENDCDE,00       ;Ошибка открытия?
+                  JNZ     A90             ;   да - завершить программу
+          A20LOOP:
+                  CALL    F10READ         ;Чтение записи с диска
+                  CMP     ENDCDE,00       ;Ошибка чтения?
+                  JNZ     A90             ;   да  - выйти,
+                  CALL    G10DISP         ;   нет - выдать имя,
+                  JMP     A20LOOP         ;         и продолжить
+          A90:    RET
+          BEGIN   ENDP
+          ;               Открытие файла:
+          ;               --------------
+          E100PEN PROC    NEAR
+                  MOV     AH,3DH          ;Функция открытия
+                  MOV     CX,00           ;Нормальные атрибуты
+                  LEA     DX,PATHNAM
+                  INT     21H
+                  JC      E20             ;Ошибка открытия?
+                  MOV     HANDLE,AX       ;   нет - сохранить
+                  RET                     ;         файловый номер
+          E20:
+
+          
+          Ассемблер для IBM PC. Программы.                         126
+
+
+                  MOV     ENDCDE,01       ;   да - выдать
+                  LEA     DX,OPENMSG      ;   сообщение об ошибке
+                  CALL    X10ERR
+                  RET
+          E100PEN ENDP
+          ;               Чтение дисковой записи:
+          ;               ----------------------
+          F10READ PROC    NEAR
+                  MOV     AX,3FH          ;Функция чтения
+                  MOV     BX,HANDLE
+                  MOV     CX,32           ;30 для имени, 2 для CR/LF
+                  LEA     DX,IOAREA
+                  INT     21H
+                  JC      F20             ;Ошибка при чтении?
+                  CMP     AX,00           ;Конец файла?
+                  JE      F30
+                  CMP     IOAREA,1AH      ;Маркер конца файла (EOF)?
+                  JE      F30             ;   да - выйти
+                  RET
+          F20:
+                  LEA     DX,READMSG      ;   нет - выдать
+                  CALL    X10ERR          ;   сообщение об ошибке
+          F30:
+                  MOV     ENDCDE,01       ;Код завершения
+          F90:    RET
+          F10READ ENDP
+          ;               Вывод имени на экран:
+          ;               --------------------
+          G10DISP PROC    NEAR
+                  MOV     AH,40H          ;Функция вывода на экран
+                  MOV     BX,01           ;Установить номер
+                  MOV     CX,32           ;   и длину
+                  LEA     DX,IOAREA
+                  INT     21H
+                  CMP     ROW,20          ;Последняя строка экрана?
+                  JEA     G90             ;   да - обойти
+                  INC     ROW
+                  RET
+          G90:
+                  MOV     AX,0601H
+                  CALL    Q10SCR          ;Прокрутка (скроллинг)
+                  CALL    Q20CURS         ;Установить курсор
+                  RET
+          G10DISP ENDP
+          ;               Прокрутка (скроллинг) экрана:
+          ;               ----------------------------
+          Q10SCR  PROC    NEAR            ;в AX - адрес элемента
+                  MOV     BH,1EH          ;Установить цвет
+                  MOV     CX,0000
+                  MOV     DXX,184FH       ;Функция прокрутки
+                  INT     10H
+                  RET
+          Q10SCR  ENDP
+
+          
+          Ассемблер для IBM PC. Программы.                         127
+
+
+          ;               Установка курсора:
+          ;               -----------------
+          Q20CURS PROC    NEAR
+                  MOV     AH,02           ;Функция установки курсора
+                  MOV     BH,00           ;   курсор
+                  MOV     DH,ROW          ;   строка
+                  MOV     DL,00           ;   столбец
+                  INT     10H
+                  RET
+          Q20CURS ENDP
+          ;               Вывод сообщения об ошибке:
+          ;               -------------------------
+          X10ERR  PROC    NEAR
+                  MOV     AH,40H          ;в DX - адрес сообщения
+                  MOV     BX,01           ;Номер
+                  MOV     CX,20           ;Длина сообщения
+                  INT     21H
+                  RET
+          X10ERR  ENDP
+          
+          CODESG  ENDS
+                  END     BEGIN
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         128
+
+
+          
+                  page    60,132
+          TITLE   ASCREAD (COM)   Чтение ASCII файла
+          CODESG  SEGMENT PARA 'Code'
+                  ASSUME  CS:CODESG,DS:CODESG,SS:CODESG,ES:CODESG
+                  ORG     100H
+          BEGIN:  JMP     MAIN
+          ; -------------------------------------------------
+          SECTOR  DB      512 DUP(' ')    ;Область ввода
+          DISAREA DB      120 DUP(' ')    ;Область вывода на экран
+          ENDCDE  DW      00
+          HANDLE  DW      0
+          OPENMSG DB      '*** Open error ***'
+          PATHNAM DB      'D:\HANREAD.ASM', 0
+          ROW     DB      00
+          ; -------------------------------------------------
+          MAIN    PROC    NEAR            ;Основная программя
+                  MOV     AX,0600H
+                  CALL    Q10SCR          ;Очистить экран
+                  CALL    Q20CURS         ;Установить курсор
+                  CALL    E10OPEN         ;Открыть файл,
+                                          ;   установить DTA
+                  CMP     ENDCDE,00       ;Ошибка при открытии?
+                  JNE     A90             ;   да  - выйти,
+          A20LOOP:                        ;   нет - продолжить
+                  CALL    R10READ         ;Чтение первого сектора
+                  CMP     ENDCDE,00       ;Конец файла, нет данных?
+                  JE      A90             ;   да - выйти
+                  CALL    G10XPER         ;Выдать на экран
+          A90:    RET                     ;Завершить программу
+          MAIN    ENDP
+          ;               Открыть файл на диске:
+          ;               ---------------------
+          E10OPEN PROC    NEAR
+                  MOV     AH,3DH          ;Функция открытия
+                  MOV     AL,00           ;Только чтение
+                  LEA     DX,PATHNAM
+                  INT     21H
+                  JNC     E20             ;Проверить флаг CF
+                  CALL    X10ERR          ;   ошибка, если установлен
+                  RET
+          E20:
+                  MOV     HANDLE,AX       ;Запомниить номер файла
+                  RET
+          E10OPEN ENDP
+          ;               Построчный вывод данных на экран:
+          ;               --------------------------------
+          G10XPER PROC    NEAR
+                  CLD                     ;Направление слева-направо
+                  LEA     SI,SECTOR
+          G20:
+                 LEA     DI,DISAREA
+          G30:
+
+          
+          Ассемблер для IBM PC. Программы.                         129
+
+
+                  LEA     DX,SECTOR+512
+                  CMP     SI,DX           ;Конец сектора?
+                  JNE     G40             ;   нет - обойти,
+                  CALL    R10READ         ;   да  - читать следующий
+                  CMP     ENDCDE,00       ;Конец файла?
+                  JE      G80             ;   да  - выйти
+                  LEA     SI,SECTOR
+          G40:
+                  LEA     DX,DISAREA+80
+                  CMP     DI,DX           ;Конец DISAREA?
+                  JB      G50             ;   нет - обойти,
+                  MOV     [DI],0D0AH      ;   да  - установить CR/LF
+                  CALL    H10DISP         ;         и выдать на экран
+                  LEA     DI,DISAREA
+          G50:
+                  LODSB                   ;Загрузить [SI] в AL
+                                          ;   и увеличить SI
+                  STOSB                   ;Записать AL в [DI]
+                                          ;   и увеличить DI
+                  CMP     AL,1AH          ;Конец файла?
+                  JE      G80             ;   да - выйти
+                  CMP     AL,0AH          ;Конец строки?
+                  JNE     G30             ;   нет - повторить цикл,
+                  CALL    H10DISP         ;   да  - вывести на экран
+                  JMP     G20
+          G80:
+                  CALL    H10DISP         ;Вывести последнюю строку
+          G90:    RET
+          G10XPER ENDP
+          ;               Вывод строки на экран:
+          ;               ---------------------
+          H10DISP PROC    NEAR
+                  MOV     AH,40H          ;Функция вывода на экран
+                  MOV     BX,01           ;Номер (Handle)
+                  LEA     CX,DISAREA      ;Вычислить
+                  NEG     CX              ;   длину
+                  ADD     CX,DI           ;   строки
+                  LEA     DX,DISAREA
+                  INT     21H
+                  CMP     ROW,22          ;Последняя строка экрана?
+                  JAE     H20             ;   нет - выйти
+                  INC     ROW
+                  JMP     H90
+          H20:
+                  MOV     AX,0601H        ;Прокрутка (скроллинг)
+                  CALL    Q10SCR
+                  CALL    Q20CURS
+          H90:    RET
+          H10DISP ENDP
+          ;               Чтени дискового сектора:
+          ;               -----------------------
+          R10READ PROC    NEAR
+                  MOV     AH,3FH          ;Функция чтения
+
+          
+          Ассемблер для IBM PC. Программы.                         130
+
+
+                  MOV     BX,HANDLE       ;Устройство
+                  MOV     CX,512          ;Длина
+                  LEA     DX,SECTOR       ;Буфер
+                  INT     21H
+                  MOV     ENDCDE,AX
+                  RET
+          R10READ ENDP
+          ;               Прокрутка (скроллинг) экрана:
+          ;               ----------------------------
+          Q10SCR  PROC    NEAR            ;в AX адрес элемента
+                  MOV     BH,1EH          ;Установить цвет
+                  MOV     CX,0000         ;Прокрутка
+                  MOV     DX,184FH
+                  INT     10H
+                  RET
+          Q10SCR  ENDP
+          ;               Установка курсора:
+          ;               -----------------
+          Q20CURS PROC    NEAR
+                  MOV     AH,02           ;Функция
+                  MOV     BH,00           ;   установки курсора
+                  MOV     DH,ROW
+                  MOV     DL,00
+                  INT     10H
+                  RET
+          Q20CURS ENDP
+          ;               Вывод сообщения об ошибке на диске:
+          ;               ----------------------------------
+          X10ERR  PROC    NEAR
+                  MOV     AH,40H          ;Функция вывода на экран
+                  MOV     BX,01           ;Номер устройства
+                  MOV     CX,18           ;Длина
+                  LEA     DX,OPENMSG
+                  INT     21H
+                  MOV     ENDCDE,O1       ;Индикатор ошибки
+                  RET
+          X10ERR  ENDP
+          
+          CODESG  ENDS
+                  END     BEGIN
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         131
+
+
+          
+          TITLE   GETPATH (COM)   Получить текущий каталог
+          CODESG  SEGMENT PARA 'Code'
+                  ASSUME  CS:CODESG,DS:CODESG,ES:CODESG
+                  ORG     100H
+          BEGIN:  JMP     SHORT MAIN
+          ; -----------------------------------------------
+          PATHNAM DB      65 DUP(' ')     ;Имя текущего пути доступа
+          ; -----------------------------------------------
+          MAIN    PROC    NEAR
+                  MOV     AH,19H          ;Определить текущий диск
+                  INT     21H
+                  ADD     AL,41H          ;Заменить шест.номер
+                  MOV     DL,AL           ;   на букву: 0=A, 1=B ...
+                  CAL     B10DISP         ;Выдать номер дисковода,
+                  MOV     DL,':'
+                  CAL     B10DISP         ;   двоеточие,
+                  MOV     DL,'\'
+                  CAL     B10DISP         ;   обратную косую
+          
+                  MOV     AH,47H          ;Получить текущий каталог
+                  MOV     DL,00
+                  LEA     SI,PATHNAM
+                  INT     21H
+          A10LOOP:
+                  CMP     BYTE PTR [SI],0 ;Конец имени пути доступа
+                  JE      A20             ;   да - выйти
+                  MOV     AL,[SI]         ;Выдать на экран
+                  MOV     DL,AL           ;   имя пути доступа
+                  CALL    B10DISP         ;   побайтно
+                  INC     SI
+                  JMP     A10LOOP
+          A20:    RET                     ;Выход в DOS
+          MAIN    ENDP
+          
+          B10DISP PROC    NEAR
+                  MOV     AH,02           ;в DL - адрес элемента
+                  INT     21H             ;Функция вывода на экран
+                  RET
+          B10DISP ENDP
+          
+          CODESG  ENDS
+                  END     BEGIN
+          
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         132
+
+
+          
+          TITLE   BIOREAD (COM)   Чтение дискового сектора через BIOS
+          CODESG  SEGMENT PARA 'Code'
+                  ASSUME  CS:CODESG,DS:CODESG,SS:CODESG,ES:CODESG
+                  ORG     100H
+          BEGIN   JMP     MAIN
+          ; ---------------------------------------------------------
+          RECDIN  DB      512 DUP(' ')    ;Область ввода
+          ENDCDE  DB      00
+          CURADR  DW      0304H           ;Начало (дорожка/сектор)
+          ENDADR  DW      0501H           ;Конец (дорожка/сектор)
+          READMSG DB      '*** Read error ***$'
+          SIDE    DB      00
+          ; ---------------------------------------------------------
+          MAIN    PROC    NEAR
+                  MOV     AX,0600H        ;Функция прокрутки экрана
+          A20LOOP:
+                  CALL    Q10SCR          ;Очистить экран
+                  CALL    Q20CURS         ;Установить курсор
+                  CALL    C10ADDR         ;Определить адрес на диске
+                  MOV     CX,CURADR
+                  MOV     DX,ENDADR
+                  CMP     CX,DX           ;Последний сектор?
+                  JE      A90             ;   да - выйти
+                  CALL    F10READ         ;Получить дисковую запись
+                  CMP     ENDCDE,00       ;Ошибка чтения?
+                  JNZ     A90             ;   да - выйти
+                  CALL    G10DISP         ;Вывести сектор на экран
+                  JMP     A20LOOP         ;Повторить
+          A90     RET                     ;Завершить программу
+          MAIN    ENDP
+          ;               Вычислить следующий адрес на диске:
+          ;               ----------------------------------
+          C10ADDR PROC    NEAR
+                  MOV     CX,CURADR       ;Последняя дорожка/сектор
+                  CMP     CL,10           ;Последний сектор?
+                  JNE     C90             ;   нет - выйти
+                  CMP     SIDE,00         ;Обойти, если сторона = 0
+                  JE      C20
+                  INC     CH              ;Увеличить номер дорожки
+          C20:
+                  XOR     SIDE,01         ;Сменить сторону
+                  MOV     CL,01           ;Установить сектор = 1
+                  MOV     CURADR,CX
+          C90:    RET
+          C10ADDR ENDP
+          ;               Чтение дискового сектора:
+          ;               ------------------------
+          F10READ PROC    NEAR
+                  MOV     AL,01           ;Число секторов
+                  MOV     AH,02           ;Функция чтения
+                  LEA     BX,RECDIN       ;Адрес буфера
+                  MOV     CX,CURADR       ;Дорожка/сектор
+
+          
+          Ассемблер для IBM PC. Программы.                         133
+
+
+                  MOV     DH,SIDE         ;Сторона
+                  MOV     DL,01           ;Дисковод B
+                  INT     13H             ;Выполнить ввод
+                  CMP     AH,00           ;Ошибка чтения?
+                  JZ      F90             ;   нет - выйти
+                  MOV     ENDCDE,01       ;   да:
+                  CALL    X10ERR          ;   ошибка чтения
+          F90:
+                  INC     CURADR          ;Увеличить номер сектора
+                  RET
+          F10READ ENDP
+          ;               Вывод сектора на экран:
+          ;               ----------------------
+          G10DISP PROC    NEAR
+                  MOV     AH,40H          ;Функция вывода на экран
+                  MOV     BX,01           ;Номер устройства
+                  MOV     CX,512          ;Длина
+                  LEA     DX,RECDIN
+                  INT     21H
+                  RET
+          G10DISP ENDP
+          ;               Очистка экрана:
+          ;               --------------
+          Q10SCR  PROC    NEAR
+                  MOV     AX,0600H        ;Полный экран
+                  MOV     BH,1EH          ;Установить цвет
+                  MOV     CX,0000         ;Функция прокрутки
+                  MOV     DX,184FH
+                  INT     10H
+                  RET
+          Q10SCR  ENDP
+          ;               Установка курсора:
+          ;               -----------------
+          Q20CURS PROC    NEAR
+                  MOV     AH,02           ;Функция установки
+                  MOV     BH,00           ;   курсора
+                  MOV     DX,0000
+                  INT     10H
+                  RET
+          Q20CURS ENDP
+          ;               Вывод сообщения об ошибке на диске:
+          ;               ----------------------------------
+          X10ERR  PROC    NEAR
+                  MOV     AH,40H          ;Функция вывода на экран
+                  MOV     BH,01           ;Номер устройства
+                  MOV     CX,18           ;Длина сообщения
+                  LEA     DX,READMSG
+                  INT     21H
+                  RET
+          X10ERR  ENDP
+          CODESG  ENDS
+                  END     BEGIN
+           
+
+          
+          Ассемблер для IBM PC. Программы.                         134
+
+
+          
+          TITLE   PRTNAME (COM)   Ввод и печать имен
+          CODESG  SEGMENT PARA PUBLIC 'CODE'
+                  ASSUME  CS:CODESG,DS:CODESG,SS:CODESG,ES:CODESG
+                  ORG     100H
+          BEGIN:  JMP     SHORT MAIN
+          ; -----------------------------------------------------
+          NAMEPAR LABEL   BYTE            ;Список параметров
+          MAXNLEN DB      20              ;   максимальная длина имени
+          NAMELEN DB      ?               ;   длина введенного имени
+          NAMEFLD DB      20 DUP(' ')     ;   введенное имя
+                                          ;Строка заголовка:
+          HEADG   DB      'List of Employee Names    Page '
+          PAGECTR DB      '01',0AH,0AH
+          FFEED   DB      0CH             ;Перевод страницы
+          LFEED   DB      0AH             ;Перевод строки
+          LINECTR DB      01
+          PROMPT  DB      'Name? '
+          ; -----------------------------------------------------
+          MAIN    PROC    NEAR
+                  CALL    Q10CLR          ;Очистить экран
+                  CALL    M10PAGE         ;Установка номера страницы
+          A2LOOP:
+                  MOV     DX,0000         ;Установить курсор в 00,00
+                  CALL    Q20CURS
+                  CALL    D10INPT         ;Ввести имя
+                  CALL    Q10CLR
+                  CMP     NAMELEN,00      ;Имя введено?
+                  JE      A30             ;   если нет - выйти,
+                  CALL    E10PRNT         ;   если да - подготовить
+                                          ;             печать
+                  JMP     A20LOOP
+          A30:
+                  MOV     CX,01           ;Конец работы:
+                  LEA     DX,FFEED        ;   один символ
+                  CALL    P10OUT          ;   для прогона страницы,
+                  RET                     ;   возврат в DOS
+          MAIN    ENDP
+          ;               Ввод имени с клавиатуры:
+          ;               -----------------------
+          D10INPT PROC    NEAR
+                  MOV     AH,40H          ;Функция
+                  MOV     BX,01           ;   вывода на экран
+                  MOV     CX,05           ;   5 символов
+                  LEA     DX,PROMPT
+                  INT     21H             ;Вызов DOS
+                  MOV     AH,0AH          ;Функция ввода с клавиатуры
+                  LEA     DX,NAMEPAR
+                  INT     21H             ;Вызов DOS
+                  RET
+          D10INPT ENDP
+          ;               Подготовка для печати:
+          ;               ----------------------
+
+          
+          Ассемблер для IBM PC. Программы.                         135
+
+
+          E10PRNT PROC    NEAR
+                  CMP     LINECTR,60      ;Конец страницы?
+                  JB      E20             ;   нет - обойти
+                  CALL    M10PAGE         ;   да - печатать заголовок
+          E20:    MOV     CH,00
+                  MOV     CL,NAMELEN      ;Число символов в имени
+                  LEA     DX,NAMEFLD      ;Адрес имени
+                  CALL    P10OUT          ;Печатать имя
+                  MOV     CX,01           ;Один
+                  LEA     DX,LFEED        ;   перевод строки
+                  CALL    P10OUT
+                  INC     LINECTR         ;Увеличить счетчик строк
+          E10PRNT ENDP
+          ;               Подпрограмма печати заголовка:
+          ;               -----------------------------
+          M10PAGE PROC    NEAR
+                  CMP     WORD PTR PAGECTR,3130H  ;Первая страница?
+                  JE      M30             ;   да  - обойти
+                  MOV     CX,01           ;
+                  LEA     DX,FFEED        ;   нет --
+                  CALL    P10OUT          ;   перевести страницу,
+                  MOV     LINECTR,03      ;   установить счетчик строк
+          M30:
+                  MOV     CX,36           ;Длина заголовка
+                  LEA     DX,HEADG        ;Адрес заголовка
+          M40:
+                  CALL    P10OUT
+                  INC     PAGECTR+1       ;Увеличить счетчик страниц
+                  CMP     PAGECTR+1,3AH   ;Номер страницы = шест.xx3A?
+                  JNE     M50             ;   нет - обойти,
+                  MOV     PAGECTR+1,30H   ;   да  - перевести в ASCII
+                  INC     PAGECTR
+          M50:    RET
+          M10PAGE ENDP
+          ;               Подпрограмма печати:
+          ;               -------------------
+          P10OUT  PROC    NEAR            ;CX и DX установлены
+                  MOV     AH,40H          ;Функция печати
+                  MOV     BX,04           ;Номер устройства
+                  INT     21H             ;Вызов DOS
+                  RET
+          P10OUT  ENDP
+          ;               Очистка экрана:
+          ;               --------------
+          Q10CLR  PROC    NEAR
+                  MOV     AX,0600H        ;Функция прокрутки
+                  MOV     BH,60H          ;Цвет (07 для ч/б)
+                  MOV     CX,0000         ;От 00,00
+                  MOV     DX,184FH        ;   до 24,79
+                  INT     10H             ;Вызов BIOS
+                  RET
+          Q10CLR  ENDP
+          ;               Установка курсора (строка/столбец):
+
+          
+          Ассемблер для IBM PC. Программы.                         136
+
+
+          ;               ----------------------------------
+          Q20CURS PROC    NEAR            ;DX уже установлен
+                  MOV     AH,02           ;Функция установки курсора
+                  MOV     BH,00           ;Страница № 0
+                  INT     10H             ;Вызов BIOS
+                  RET
+          Q20CURS ENDP
+          CODESG  ENDS
+                  END     BEGIN
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         137
+
+
+          
+          TITLE   PRINASK (COM)   Чтение и печать дисковых записей
+          CODESG  SEGMENT PARA 'Code'
+                  ASSUME  CS:CODESG,DS:CODESG,SS:CODESG,ES:CODESG
+                  ORG     100H
+          BEGIN   JMP     MAIN
+          ; ---------------------------------------------------------
+          PATHPAR LABEL   BYTE            ;Список параметров для
+          MAXLEN  DB      32              ;   ввода
+          NAMELEN DB      ?               ;   имени файла
+          FILENAM DB      32 DUP(' ')
+          SECTOR  DB      512 DUP(' ')    ;Область ввода для файла
+          DISAREA DB      120 DUP(' ')    ;Область вывода
+          COUNT   DW      00
+          ENDCDE  DW      00
+          FFEED   DB      0CH
+          HANDLE  DW      0
+          OPENMSG DB      '*** Open error ***'
+          PROMPT  DB      'Name of file? '
+          ; ----------------------------------------------------------
+          MAIN    PROC    NEAR            ;Основная программа
+                  CALL    Q10SCR          ;Очистить экран
+                  CALL    Q20CURS         ;Установить курсор
+          A10LOOP:
+                  MOV     ENDCDE,00       ;Начальная установка
+                  CALL    C10PRMP         ;Получить имя файла
+                  CMP     NAMELEN,00      ;Есть запрос?
+                  JE      A90             ;   нет - выйти
+                  CALL    E10OPEN         ;Открыть файл,
+                                          ;   установить DTA
+                  CMP     ENDCDE,00       ;Ошибка при открытии?
+                  JNE     A80             ;   да - повторить запрос
+                  CALL    R10READ         ;Прочитать первый сектор
+                  CMP     ENDCDE,00       ;Конец файла, нет данных?
+                  JE      A80             ;   да - повторить запрос
+                  CALL    G10XPER         ;Распечатать сектор
+          A80:
+                  JMP     A10LOOP
+          A90:    RET
+          MAIN    ENDP
+          ;               Подпрограмма запроса имени файла:
+          ;               --------------------------------
+          C10PRMP PROC    NEAR
+                  MOV     AH,40H          ;Функция вывода на экран
+                  MOV     BX,01
+                  MOV     CX,13
+                  LEA     DX,PROMPT
+                  INT     21H
+                  MOV     AH,0AH          ;Функция ввода с клавиатуры
+                  LEA     DX,PATHPAR
+                  INT     21H
+                  MOV     BL,NAMELEN      ;Записать
+                  MOV     BH,00           ;   00 в конец
+
+          
+          Ассемблер для IBM PC. Программы.                         138
+
+
+                  MOV     FILENAM[BX],0   ;   имени файла
+          C90     RET
+          C10PRMP ENDP
+          ;               Открытие дискового файла:
+          ;               ------------------------
+          E10OPEN PROC    NEAR
+                  MOV     AH,3DH          ;Функция открытия
+                  MOV     AL,00           ;Только чтение
+                  LEA     DX,FILENAM
+                  INT     21H
+                  JNC     E20             ;Проверить флаг CF
+                  CALL    X10ERR          ;   ошибка, если установлен
+                  RET
+          E20:
+                  MOV     HANDLE,AX       ;Сохранить номер файла
+                  MOV     AX,2020H
+                  MOV     CX,256          ;Очистить пробелами
+                  REP     STOSW           ;   область сектора
+                  RET
+          E100PEN ENDP
+          ;               Подготовка и печать данных:
+          ;               --------------------------   
+          G10XFER PROC    NEAR
+                  CLD                     ;Направление слева-направо
+                  LEA     SI,SECTOR       ;Начальная установка
+          G20:
+                  LEA     DI,DISAREA
+                  MOV     COUNT,00
+          G30:
+                  LEA     DX,SECTOR+512
+                  CMP     SI,DX           ;Конец сектора?
+                  JNE     G40
+                  CALL    R10READ         ;   да - читать следующий
+                  CMP     ENDCDE,00       ;Конец файла?
+                  JE      G80             ;   да - выйти
+                  LEA     SI,SECTOR
+          G40:
+                  MOV     BX,COUNT
+                  CMP     BX,80           ;Конец области вывода?
+                  JB      G50             ;   нет - обойти
+                  MOV     [DI+BX],0D0AH   ;   да  - записать CR/LF
+                  CALL    P10PRNT
+                  LEA     DI,DISAREA      ;Начало области вывода    
+          G50:
+                  LODSB                   ;Записать [SI] в AL,
+                                          ;   увеличить SI
+                  MOV     BX,COUNT
+                  MOV     [DI+BX],AL      ;Записать символ
+                  INC     BX
+                  CMP     AL,1AH          ;Конец файла?
+                  JE      G80             ;   да - выйти
+                  CMP     AL,0AH          ;Конец строки?
+                  JNE     G60             ;   нет - обойти,
+
+          
+          Ассемблер для IBM PC. Программы.                         139
+
+
+                  CALL    P10PRNT         ;   да - печатать
+                  JMP     G20
+          G60:
+                  CMP     AL,09H          ;Символ табуляции?
+                  JNE     G70
+                  DEC     BX              ;   да - установить BX:
+                  MOV     BYTE PTR [DI+BX],20H  ;Заменит TAB на пробел
+                  AND     BX,0FFF8H       ;Обнулить правые 8 бит
+                  ADD     BX,08           ;   и прибавить 8
+          G70:
+                  MOV     COUNT,BX
+                  JMP     G30
+          G80:    MOV     BX,COUNT        ;Конец файла
+                  MOV     BYTE PTR [DI+BX],0CH    ;Прогон страницы
+                  CALL    P10PRNT         ;Печатать последнюю строку
+          G90:    RET
+          G10XFER ENDP
+          ;               Подпрограммы печати:
+          ;               -------------------
+          P10PRNT PROC    NEAR
+                  MOV     AH,40H          ;Функция печати
+                  MOV     BX,04
+                  MOV     CX,COUNT        ;Длина
+                  INC     CX
+                  LEA     DX,DISAREA
+                  INT     21H
+                  MOV     AX,2020H        ;Очистить область вывода
+                  MOV     CX,60
+                  LEA     DI,DISAREA
+                  REP     STOSW
+                  RET
+          P10PRNT ENDP
+          ;               Подпрограмма чтения сектора:
+          ;               ---------------------------
+          R10READ PROC    NEAR
+                  MOV     AH,3FH          ;Функция чтения
+                  MOV     BX,HANDLE       ;Номер файла
+                  MOV     CX,512          ;Длина
+                  MOV     DX,SECTOR       ;Буфер
+                  INT     21H
+                  MOV     ENDCDE,AX
+                  RET
+          R10READ ENDP
+          ;               Прокрутка экрана:
+          ;               ----------------
+          Q10SCR  PROC    NEAR
+                  MOV     AX,0600H
+                  MOV     BH,1EH          ;Установить цвет
+                  MOV     CX,0000         ;Прокрутка (сскроллинг)
+                  MOV     DX,184FH
+                  INT     10H
+                  RET
+          Q10SCR  ENDP
+
+          
+          Ассемблер для IBM PC. Программы.                         140
+
+
+          ;               Подпрограмма установки курсора:
+          ;               ------------------------------
+          Q20CURS PROC    NEAR
+                  MOV     AH,02           ;Функция установки
+                  MOV     BH,00           ;   курсора
+                  MOV     DX,00
+                  INT     10H
+                  RET
+          Q20CURS ENDP
+          ;               Вывод сообщения об ошибке:
+          ;               -------------------------
+          X10ERR  PROC    NEAR
+                  MOV     AH,40H          ;Функция вывода на экран
+                  MOV     BX,01           ;Номер
+                  MOV     CX,18           ;Длина
+                  LEA     DX,OPENMSG      ;Адрес сообщения
+                  INT     1H
+                  MOV     NDCDE,01        ;Признак ошибки
+                  RET
+          X10ERR  ENDP
+          CODESG  ENDS
+                  END     BEGIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         141
+
+
+          
+                                       TITLE   MACRO1  (EXE) Макрос для инициализации
+                                       ; --------------------------------------------
+                                       INIT1   MACRO
+                                               ASSUME  CS:CSEG,DS:DSEG,SS:STACK,ES:DSEG
+                                       PUSH    DS
+                                       SUB     AX,AX
+                                       PUSH    AX
+                                       MOV     AX,DSEG
+                                       MOV     DS,AX
+                                       MOV     ES,AX
+                                       ENDM                       ;Конец макрокоманды
+                                       ; --------------------------------------------
+          0000                         STACK   SEGMENT PARA STACK 'Stack'
+          0000     20 [ ???? ]                 DW      32 DUP(?)
+          0040                         STACK   ENDS
+                                       ; --------------------------------------------
+          0000                         DSEG    SEGMENT PARA 'Data'
+          0000  54 65 73 74 20 6F      MESSGE  DB      'Test of macro-instruction', 13
+                66 20 6D 61 63 72
+                6F 2D 69 6E 73 74
+                72 65 73 74 69 6F
+                6E 0D
+          001A                         DSEG    ENDS
+                                       ; --------------------------------------------
+          0000                         CSEG    SEGMENT PARA 'Code'
+          0000                         BEGIN   PROC    FAR
+                                               INIT1              ;Макрокоманда
+          0000  1E                    +        PUSH    DS
+          0001  2B C0                 +        SUB     AX,AX
+          0003  50                    +        PUSH    AX
+          0004  B8 ---- R             +        MOV     AX,DSEG
+          0007  8E D8                 +        MOV     DS,AX
+          0009  8E C0                 +        MOV     ES,AX
+          000B  B4 40                          MOV     AH,40H     ;Вывод на экран
+          000D  BB 0001                        MOV     BX,01      ;Номер
+          0010  B9 001A                        MOV     CX,26      ;Длина
+          0013  8D 16 0000 R                   LEA     DX,MESSGE  ;Сообщение
+          0017  CD 21                          INT     21H
+          0019  CB                             RET
+          001A                         BEGIN   ENDP
+          001A                         CSEG    ENDS
+                                               END     BEGIN
+          
+          Macros:
+                             N a m e          Length
+          INIT1. . . . . . . . . . . . . . . . 0004
+          
+          Segments and Groups:
+                             N a m e           Size    Align   Combine  Class
+          CSEG . . . . . . . . . . . . . . . . 001A    PARA    NONE    'CODE'
+          DSEG . . . . . . . . . . . . . . . . 001A    PARA    NONE    'DATA'
+          STACK. . . . . . . . . . . . . . . . 0040    PARA    STACK   'STACK'
+
+          
+          Ассемблер для IBM PC. Программы.                         142
+
+
+          
+          Symbols:
+                             N a m e           Type    Value   Attr
+          BEGIN. . . . . . . . . . . . . . . . F PROC  0000    CSEG    Length=001A
+          MESSAGE. . . . . . . . . . . . . . . L BYTE  0000    DSEG
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         143
+
+
+          
+                                   TITLE   MACRO2  (EXE) Использование параметров
+                                   ; ------------------------------------------------
+                                   INIT2   MACRO   CSNAME,DSNAME,SSNAME
+                                           ASSUME  CS:CSNAME,DS:DSNAME,SS:SSNAME,ES:DSNAME
+                                           PUSH    DS
+                                           SUB     AX,AX
+                                           PUSH    AX
+                                           MOV     AX,DSNAME
+                                           MOV     DS,AX
+                                           MOV     ES,AX
+                                           ENDM                   ;Конец макрокоманды
+                                   ; ------------------------------------------------
+          0000                     STACK   SEGMENT PARA STACK 'Stack'
+          0000     20 [ ???? ]             DW      32 DUP(?)
+          0040                     STACK   ENDS
+                                   ; ------------------------------------------------
+          0000                     DSEG    SEGMENT PARA 'Data'
+          0000  54 65 73 74 20 6F  MESSAGE DB      'Test of macro', '$'
+                66 20 6D 61 63 72
+                6F 24
+          000E                     DSEG    ENDS
+                                   ; ------------------------------------------------
+          0000                     CSEG    SEGMENT PARA 'Code'
+          0000                     BEGIN   PROC    FAR
+                                           INIT2   CSEG,DSEG,STACK
+          0000  1E                +        PUSH    DS
+          0001  2B C0             +        SUB     AX,AX
+          0003  50                +        PUSH    AX
+          0004  B8 ---- R         +        MOV     AX,DSEG
+          0007  8E D8             +        MOV     DS,AX
+          0009  8E C0             +        MOV     ES,AX
+          000B  B4 09                      MOV     AH,09          ;Вывод на экран
+          000D  8D 16 0000 R               LEA     DX,MESSGE      ;Сообщение
+          0011  CD 21                      INT     21H
+          0013  CB                         RET
+          0014                     BEGIN   ENDP
+          0014                     CSEG    ENDS
+                                           END     BEGIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         144
+
+
+          
+                                   TITLE   MACRO3  (EXE) Директивы .LALL и .SALL
+                                   ; ------------------------------------------------
+                                   INIT2   MACRO   CSNAME,DSNAME,SSNAME
+                                           ASSUME  CS:CSNAME,DS:DSNAME,SS:SSNAME,ES:DSNAME
+                                           PUSH    DS
+                                           SUB     AX,AX
+                                           PUSH    AX
+                                           MOV     AX,DSNAME
+                                           MOV     DS,AX
+                                           MOV     ES,AX
+                                           ENDM
+                                   ; ------------------------------------------------
+                                   PROMPT  MACRO   MESSAGE
+                                   ;       Макрокоманда выводит на экран любые сообщения
+                                   ;;      Генерирует команды вызова DOS
+                                           MOV     AH,09          ;Вывод на экран
+                                           LEA     DX,MESSAGE
+                                           INT     21H
+                                           ENDM
+                                   ; ------------------------------------------------
+          0000                     STACK   SEGMENT PARA STACK 'Stack'
+          0000     20 [ ???? ]             DW      32 DUP (?)
+          0040                     STACK   ENDS
+                                   ; ------------------------------------------------
+          0000                     DATA    SEGMENT PARA 'Data'
+          0000  43 75 73 74 6F 6D  MESSG1  DB      'Customer name?', '$'
+                65 72 20 6E 61 6D
+                65 3F 24
+          000F  43 75 73 74 6F 6D  MESSG2  DB      'Customer address?', '$'
+                65 72 20 61 64 64
+                72 65 73 73 3F 24
+          0021                     DATA    ENDS
+                                   ; ------------------------------------------------
+          0000                     CSEG    SEGMENT PARA 'Code'
+          0000                     BEGIN   PROC    FAR
+                                           .SALL
+                                           INIT2   CSEG,DATA,STACK
+                                           PROMPT  MESSG1
+                                           .LALL
+                                           PROMPT  MESSG2
+                                 + ;       Макрокоманда выводит на экран любые сообщения
+          0013  B4 09            +         MOV     AH,09          ;Вывод на экран
+          0015  8D 16 000F R     +         LEA     DX,MESSG2
+          0019  CD 21            +         INT     21H
+          001B  CB                         RET
+          001C                     BEGIN   ENDP
+          001C                     CSEG    ENDS
+                                           END     BEGIN
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         145
+
+
+          
+                                   TITLE   MACRO4  (COM) Использование директивы LOCAL
+                                   ; -------------------------------------------------
+                                   DIVIDE  MACRO   DIVIDEND,DIVISOR,QUOTIENT
+                                           LOCAL   COMP
+                                           LOCAL   OUT
+                                   ;       AX=делимое, BX=делитель, CX=частное
+                                           MOV     AX,DIVIDEND    ;Загрузить делимое
+                                           MOV     BX,DIVISOR     ;Загрузить делитель
+                                           SUB     CX,CX          ;Регистр для частного
+                                   COMP:
+                                           CMP     AX,BX          ;Делимое < делителя?
+                                           JB      OUT            ;   да -  выйти
+                                           SUB     AX,BX          ;Делимое - делитель
+                                           INC     CX             ;Частное + 1
+                                           JMP     COMP
+                                   OUT:
+                                           MOV     QUOTIENT,CX    ;Записать результат
+                                           ENDM
+                                   ; ------------------------------------------------
+          0000                     CSEG    SEGMENT PARA 'Code'
+                                           ASSUME  CS:CSEG,DS:CSEG,SS:CSEG,ES:CSEG
+          0100                             ORG     100H
+          0100  EB 06              BEGIN:  JMP     SHORT MAIN
+                                   ; ------------------------------------------------
+          0102  0096               DIVDND  DW      150            ;Делимое
+          0104  001B               DIVSOR  DW      27             ;Делитель
+          0106  ????               QUOTNT  DW      ?              ;Частное
+                                   ; ------------------------------------------------
+          0108                     MAIN    PROC    NEAR
+                                           .LALL
+                                           DIVIDE  DIVDND,DIVSOR,QUOTNT
+                                 + ;       AX=делимое, BX=делитель, CX=частное
+          0108  A1 0102 R        +         MOV     AX,DIVDND      ;Загрузить делимое
+          010B  8B 1E 0104 R     +         MOV     BX,DIVSOR      ;Загрузить делитель
+          010F  2B C9            +         SUB     CX,CX          ;Регистр для частного
+          0111                   + ??0000:
+          0111  3B C3            +         CMP     AX,BX          ;Делимое < делителя?
+          0113  72 05            +         JB      ??0001         ;   да -  выйти
+          0115  2B C3            +         SUB     AX,BX          ;Делимое - делитель
+          0117  41               +         INC     CX             ;Частное + 1
+          0118  EB F7            +         JMP     ??0000
+          011A                   + ??0001:
+          011A  89 0E 0106 R     +         MOV     QUOTNT,CX      ;Записать результат
+          011E  C3                         RET
+          011F                     MAIN    ENDP
+          011F                     CSEG    ENDS
+                                           END     BEGIN
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         146
+
+
+          
+                                   TITLE   MACRO5  (EXE) Проверка директивы INCLUDE
+                                   EDIF
+                                   ; ------------------------------------------------
+          0000                     STACK   SEGMENT PARA STACK 'Stack'
+          0000     20 [????]               DW      32 DUP(?)
+          0040                     STACK   ENDS
+                                   ; ------------------------------------------------
+          0000                     DATA    SEGMENT PARA 'Data'
+          0000  54 65 73 74 20 6F  MESSGE  DB      'Test of macro','$'
+                66 20 6D 61 63 72
+                6F 24
+          000E                     DATA    ENDS
+                                   ; ------------------------------------------------
+          0000                     CSEG    SEGMENT PARA 'Code'
+          0000                     BEGIN   PROC    FAR
+                                           INIT    CSEG,DATA,STACK
+          0000  1E               +         PUSH    DS
+          0001  3B  C0           +         SUB     AX,AX
+          0003  50               +         PUSH    AX
+          0004  B8 ---- R        +         MOV     AX,DATA
+          0007  8E D8            +         MOV     DS,AX
+          0009  8E C0            +         MOV     ES,AX
+                                           PROMPT  MESSGE
+          000B  B4 09            +         MOV     AH,09          ;Вывод на экран
+          000D  8D 16 0000 R     +         LEA     DX,MESSGE
+          0011  CD 21            +         INT     21H
+          0013  CB                         RET
+          0014                     BEGIN   ENDP
+          0014                     CSEG    ENDS
+                                           END     BEGIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         147
+
+
+          
+                                   TITLE   MACRO6 (COM)  Проверка дирктив IF и IFNDEF
+                                   ; ------------------------------------------------
+                                   DIVIDE  MACRO   DIVIDEND,DIVISOR,QUOTIENT
+                                           LOCAL   COMP
+                                           LOCAL   OUT
+                                           CNTR    = 0
+                                   ;       AX-делимое, BX-делитель, CX-частное
+                                           IFNDEF  DIVIDEND
+                                   ;               Делитель не определен
+                                           CNTR    = CNTR +1
+                                           ENDIF
+                                           IFNDEF  DIVISOR
+                                   ;               Делимое не определено
+                                           CNTR    = CNTR +1
+                                           ENDIF
+                                           IFNDEF  QUOTIENT
+                                   ;               Частное не определено
+                                           CNTR    = CNTR +1
+                                           ENDIF
+                                           IF      CNTR
+                                   ;               Макрорасширение отменено
+                                           EXITM
+                                           ENDIF
+                                           MOV     AX,DIVIDEND   ;Загрузка делимого
+                                           MOV     BX,DIVISOR    ;Загрузка делителя
+                                           SUB     CX,CX         ;Регистр для частного
+                                   COMP:
+                                           CMP      AX,BX        ;Делимое < делителя?
+                                           JB       OUT          ;   да - выйти
+                                           SUB      AX,BX        ;Делимое - делитель
+                                           INC      CX           ;Частное + 1
+                                           JMP      COMP
+                                   OUT:
+                                           MOV      QUOTIENT,CX  ;Запись результата
+                                           ENDM
+                                   ; ------------------------------------------------
+          0000                     CSEG    SEGMENT  PARA 'Code'
+                                           ASSUME   CS:CSEG,DS:CSEG,SS:CSEG,ES:CSEG
+          0100                             ORG      100H
+          0100  EB 06              BEGIN:  JMP      SHORT MAIN
+                                   ; ------------------------------------------------
+          0102  0096               DIVDND  DW       150
+          0104  001B               DIVSOR  DW       27
+          0106  ????               QUOTNT  DW       ?
+                                   ; ------------------------------------------------
+          0108                     MAIN    PROC     NEAR
+                                           .LALL
+                                           DIVIDE   DIVDND,DIVSOR,QUOTNT
+          = 0000                 +         CNTR    = 0
+                                 + ;       AX-делимое, BX-делитель, CX-частное
+                                 +         ENDIF
+                                 +         ENDIF
+
+          
+          Ассемблер для IBM PC. Программы.                         148
+
+
+                                 +         ENDIF
+                                 +         ENDIF
+          0108  A1 0102 R        +         MOV     AX,DIVDND     ;Загрузка делимого
+          0108  8B 1E 0104 R     +         MOV     BX,DIVSOR     ;Загрузка делителя
+          010F  2B C9            +         SUB     CX,CX         ;Регистр для частного
+          0111                   + ??0000:
+          0111  3B C3            +         CMP     AX,BX         ;Делимое < делителя?
+          0113  72 05            +         JB      ??0001        ;   да - выйти
+          0115  2B C3            +         SUB     AX,BX         ;Делимое - делитель
+          0117  41               +         INC     CX
+          0118  EB F7            +         JMP     ??0000
+          011A                   + ??0001:
+          011A  89 0E 0106 R     +         MOV     QUOTNT,CX     ;Запись результата
+                                           DIVIDE  DIDND,DIVSOR,QUOT
+          = 0000                 +         CNTR    = 0
+                                 + ;       AX-делимое, BX-делитель, CX-частное
+                                 +         IFNDEF  DIDND
+                                 + ;               Делитель не определен
+          = 0001                 +         CNTR    = CNTR +1
+                                 +         ENDIF
+                                 +         ENDIF
+                                 +         IFNDEF  QUOT
+                                 + ;               Частное не определено
+          = 0002                 +         CNTR    = CNTR +1
+                                 +         ENDIF
+                                 +         IF      CNTR
+                                 + ;               Макрорасширение отменено
+                                 +         EXITM
+          011E  C3                         RET
+          011F                     MAIN    ENDP
+          011F                     CSEG    ENDS
+                                           END    BEGIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         149
+
+
+          
+                                       TITLE   MACRO7  (COM) Проверка директивы IFIDN
+                                       ; --------------------------------------------
+                                       MOVIF   MACRO   TAG
+                                               IFIDN   <&TAG>,<B>
+                                               REP MOVSB
+                                               EXITM
+                                               ENDIF
+                                               IFIDN   <&TAG>,<W>
+                                               REP MOVSW
+                                               ELSE
+                                       ;       Не указан параметр B или W,
+                                       ;           по умолчанию принято B
+                                               REP MOVSB
+                                               ENDIF
+                                               ENDM
+                                       ; --------------------------------------------
+          0000                         CSIG    SEGMENT PARA 'Code'
+                                               ASSUME  CS:CSEG,DS:CSEG,SS:CSEG,ES:CSEG
+          0100                                 ORG     100H
+          0100  EB 00                  BEGIN:  JMP     SHORT MAIN
+                                       ;       ...
+          0102                         MAIN    PROC    NEAR
+                                               .LALL
+                                               MOVIF   B
+                                     +         IFIDN   <B>,<B>
+          0102  F3/A4                +         REP MOVSB
+                                     +         EXITM
+                                               MOVIF   W
+                                     +         ENDIF
+                                     +         IFIDN   <W>, <W>
+          0104  F3/A5                +         REP MOVSW
+                                     +         ENDIF
+                                               MOVIF
+                                     +         ENDIF
+                                     +         ELSE
+                                     + ;       Не указан параметр B или W,
+                                     + ;           по умолчанию принято B
+          0106  F3/A4                +         REP MOVSB
+                                     +         ENDIF
+          0108 C3                              RET
+          0109                         MAIN    ENDP
+          0109                         CSEG    ENDS
+                                               END     BEGIN
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         150
+
+
+          
+                      ┌───────────┐                     ┌───────────┐
+                      │ Основная  │                     │ Основная  │
+                      │ программа │                     │ программа │
+                      └─────┬─────┘                     └─────┬─────┘
+                            │                                 │
+                            │                                 │
+               ┌────────────┼────────────┐             ┌──────┴──────┐
+               │            │            │             │             │
+               │            │            │             │             │
+          ┌────────┐  ┌────────┐  ┌────────┐   ┌────────┐   ┌────────┐
+          │  П/П 1  │  │  П/П 2  │  │  П/П 3  │   │  П/П 1  │   │  П/П 2  │
+          └─────────┘  └─────────┘  └─────────┘   └────┬────┘   └─────────┘
+                                                       │
+                                                       │
+                                                  ┌────────┐
+                                                  │  П/П 3  │
+                                                  └─────────┘
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         151
+
+
+          
+                  ┌───────────────────────────────────────┐
+                  │               EXTRN   SUBPROG:FAR     │
+                  │  MAINPROG:    .                       │
+                  │               .                       │
+                  │               CALL    SUBPROG         │
+                  │               .                       │
+                  │               .                       │
+                  ├───────────────────────────────────────┤
+                  │               PUBLIC  SUBPROG         │
+                  │  SUBPROG:     .                       │
+                  │               .                       │
+                  │               .                       │
+                  │               RET                     │
+                  └───────────────────────────────────────┘
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         152
+
+
+          
+                                          page    60,132
+                                  TITLE   CALLMULL1 (EXE) Вызов подпрограммы умножения
+                                          EXTRN   SUBMUL:FAR
+                                  ;-----------------------------------------------
+          0000                    STACKSG         SEGMENT PARA STACK 'Stack'
+          0000    40 [ ???? ]             DW      64 DUP(?)
+          0080                    STACKSG         ENDS
+                                  ;-----------------------------------------------
+          0000                    DATASG  SEGMENT PARA 'Data'
+          0000  0140              QTY     DW      0140H
+          0002  2500              PRICE   DW      2500H
+          0004                    DATASG  ENDS
+                                  ;-----------------------------------------------
+          0000                    CODESG  SEGMENT PARA 'Code'
+          0000                    BEGIN   PROC    FAR
+                                          ASSUME  CS:CODESG,DS:DATASG,SS:STACKSG
+          0000  1E                        PUSH    DS
+          0001  2B C0                     SUB     AX,AX
+          0003  50                        PUSH    AX
+          0004  B8 ---- R                 MOV     AX,DATASG
+          0007  8E D8                     MOV     DS,AX
+          0009  A1 0002 R                 MOV     AX,PRICE    ;Загрузить стоимость
+          000C  8B 1E 0000 R              MOV     BX,QTY      ;  и количество
+          0010  9A 0000 ---- E            CALL    SUBMUL      ;Вызвать подпрограмму
+          0015  CB                        RET
+          0016                    BEGIN   ENDP
+          0016                    CODESG  ENDS
+                                          END     BEGIN
+          
+          Segments and Groups:
+                          N a m e         Size    Align   Combine Class
+          CODESG . . . . . . . . . . . .  0016    PARA    NONE    'CODE'
+          DATASG . . . . . . . . . . . .  0004    PARA    NONE    'DATA'
+          STACKSG. . . . . . . . . . . .  0080    PARA    STACK   'STACK'
+          
+          Symbols:
+                          N a m e         Type    Value   Attr
+          BEGIN. . . . . . . . . . . . .  F PROC  0000    CODESG  Length=0016
+          PRICE. . . . . . . . . . . . .  L WORD  0002    DATASG
+          QTY. . . . . . . . . . . . . .  L WORD  0000    DATASG
+          SUBMUL . . . . . . . . . . . .  L FAR   0000            External
+          
+          
+                                          page    60,132
+                                  TITLE   SUBMUL  Подпрограмма для умножения
+                                  ;-----------------------------------------------
+          0000                    CODESG  SEGMENT PARA 'Code'
+          0000                    SUBMUL  PROC    FAR
+                                          ASSUME  CS:CODESG
+                                          PUBLIC  SUBMUL
+          0000  F7 E3                     MUL     BX      ;AX-стоимость, BX-количество
+          0002  CB                        RET             ;Произведение в DX:AX
+
+          
+          Ассемблер для IBM PC. Программы.                         153
+
+
+          0003                    SUBMUL  ENDP
+          0003                    CODESG  ENDS
+                                          END     SUBMUL
+          
+          Segments and groups:
+                          N a m e         Size    Align   Combine Class
+          CODESG . . . . . . . . . . . .  0003    PARA    NONE    'CODE'
+          
+          Symbols:
+                          N a m e         Type    Value   Attr
+          SUBMUL . . . . . . . . . . . .  F PROC  0000    CODESG  Clobal  Length=0003
+          
+          
+          LINK
+          IBM Personal Computer Linker
+          Version 2.30 (C) Copyright IBM Corp 1981, 1985
+          Object Modules: B:CALLMUL1+B:SUBMUL1
+          Run File: [B:CALLMUL1.EXE]: <return>
+          List File:[NUL.MAP]: CON
+          Libraries [.LIB]: <return>
+          
+           Start   Stop  Length  Name             Class
+          
+           00000H 00015H 0016H  CODESG            CODE  <--Примечание: 2 кодовых
+           00020H 00022H 0003H  CODESG            CODE  <--  сегмента
+           00030H 00033H 0004H  DATASG            DATA
+           00040H 000BFH 0080H  STACKSG           STACK
+          
+          Program entry point at 0000:0000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         154
+
+
+          
+                                          page    60,132
+                                  TITLE   CALLMUL2 (EXE)  Вызов подпрограммы умножения
+                                          EXTERN  SUBMUL:FAR
+                                  ;----------------------------------------------
+          0000                    STACKSG         SEGMENT PARA STACK 'Stack'
+          0000  40 [????]                         DW      64 DUP(?)
+          0080                    STACKSG         ENDS
+                                  ;----------------------------------------------
+          0000                    DATASG  SEGMENT PARA 'Data'
+          0000     0140           QTY     DW      0140H
+          0002    2500            PRICE   DW      2500H
+          0004                    DATASG  ENDS
+                                  ;----------------------------------------------
+          0000                    CODESG  SEGMENT PARA  PUBLIC 'Code'
+          0000                    BEGIN   PROC    FAR
+                                          ASSUME  CS:CODESG,DS:DATASG,SS:STACKSG
+          0000    1E                      PUSH    DS
+          0001    2B C0                   SUB     AX,AX
+          0003    50                      PUSH    AX
+          0004    B8 ---- R               MOV     AX,DATASG
+          0007    8E D8                   MOV     DS,AX
+          0009    A1 0002 R               MOV     AX,PRICE   ;Загрузить стоимость
+          000C    8B 1E 0000 R            MOV     BX,QTY     ; и количество
+          0010    9A 0000 ---- E          CALL    SUBMUL     ;Вызвать подпрограмму
+          0015    CB                      RET
+          0016                    BEGIN   ENDP
+          
+          0016                    CODESG  ENDS
+                                          END     BEGIN
+          
+          Segments and Group:
+                          N a m e         Size    Align   Combine Class
+          CODESG . . . . . . . . . . . . .0016    PARA    PUBLIC  'CODE'
+          DATASG . . . . . . . . . . . . .0004    PARA    NONE    'DATA'
+          STACKSG. . . . . . . . . . . . .0080    PARA    STACK   'STACK'
+          
+          Symbols:
+                          N a m e         Type    Value   Attr
+          BEGIN. . . . . . . . . . . . . F PROC   0000    CODESG Lenght=0016
+          PRICE. . . . . . . . . . . . . L WORD   0002    DATASG
+          QTY. . . . . . . . . . . . . . L WORD   0000    DATASG
+          SUBMUL . . . . . . . . . . . . L FAR    0000           External
+          
+          
+                                          page    60,132
+                                  TITLE   SUBMUL2 Вызываемая подпрограмма умножения
+                                  ;----------------------------------------------
+          0000                    CODESG  SEGMENT PARA    PUBLIC 'CODE'
+          0000                    SUBMUL  PROC    FAR
+                                          ASSUME  CS:CODESG
+                                          PUBLIC  SUBMUL
+          0000    F7 E3                   MUL     BX      ;AX-стоимость, BX-количество
+
+          
+          Ассемблер для IBM PC. Программы.                         155
+
+
+          0002    CB                      RET             ;Произведение в DX:AX
+          0003                    SUBMUL  ENDP
+          0003                    CODESG  ENDS
+                                          END     SUBMUL
+          
+          Segments and Groups:
+                          N a m e         Size    Align   Combine Class
+          CODESG. . . . . . . . . . . . . 0003    PARA    PUBLIC  'CODE'
+          
+          Symbols:
+                          N a m e         Type    Value   Attr
+          SUBMUL. . . . . . . . . . . . .F PROC   0000    CODESG  Global  Length=0003
+          
+          
+          LINK
+          IBM Personal Computer Linker
+          Version 2.30 (C) Copyright IBM Corp 1981, 1985
+          Object Modules: B:CALLMUL2+B:SUBMUL2
+          Run File: [B:CALLMUL2.EXE]: <return>
+          List File: [NUL.MAP]: CON
+          Libraries [.LIB]: <return>
+          
+           Start   Stop  Length  Name             Class
+           00000H 00022H 0023H  CODESG            CODE  <-- Примечание: 1 сегмент кода
+           00030H 00033H 0004H  DATASG            DATA
+           00040H 000BFH 0080H  STACKSG           STACK
+          
+          Program entry point at 0000:0000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         156
+
+
+          
+                                          page    60,132
+                                  TITLE   CALLMUL3 (EXE)  Вызов подпрограммы
+                                  ;                       для умножения
+                                          EXTRN   SUBMUL:FAR
+                                          PUBLIC  QTY,PRICE
+                                  ;-------------------------------------------------
+          0000                    STACKSG         SEGMENT PARA STACK 'Stack'
+          0000    40 [????]               DW      64 DUP(?)
+          0080                    STACKSD         ENDS
+                                  ;-------------------------------------------------
+          0000                    DATASG  SEGMENT PARA PUBLIC 'Data'
+          0000    0140            QTY     DW      0140H
+          0002    2500            PRICE   DW      2500H
+          0004                    DATASG  ENDS
+                                  ;-------------------------------------------------
+          0000                    CODESG  SEGMENT PARA PUBLIC 'Code'
+          0000                    BEGIN   PROC    FAR
+                                          ASSUME  CS:CODESG,DS:DATASG,SS:STACKSG
+          0000    1E                      PUSH    DS
+          0001    2B C0                   SUB     AX,AX
+          0003    50                      PUSH    AX
+          0004    B8 ---- R               MOV     AX,DATASG
+          0007    8E D8                   MOV     DS,AX
+          0009    9A 0000 ---- E          CALL    SUBMUL    ;Вызвать подпрограмму
+          000E    CB                      RET
+          000F                    BEGIN   ENDP
+          
+          000F                    CODESG  ENDS
+                                          END     BEGIN
+          
+          Segments and Groups:
+                          N a m e         Size    Align   Combine Class
+          CODESG . . . . . . . . . . . .  000F    PARA    PUBLIC  'CODE'
+          DATASG . . . . . . . . . . . .  0004    PARA    PUBLIC  'DATA'
+          STACKSG. . . . . . . . . . . .  0080    PARA    STACK   'STACK'
+          
+          Symbols:
+                          N a m e         Type    Value   Attr
+          BEGIN. . . . . . . . . . . . .  F PROC  0000    CODESG  Length=000F
+          PRICE. . . . . . . . . . . . .  L WORD  0002    DATASG  Global
+          QTY. . . . . . . . . . . . . .  L WORD  0000    DATASG  Global
+          SUBMUL . . . . . . . . . . . .  L FAR   0000            External
+          
+          
+                                          page    60,132
+                                  TITLE   SUBMUL  Подпрограмма для умножения
+                                          EXTRN   QTY:WORD,PRICE:WORD
+                                  ;-------------------------------------------------
+          0000                    CODESG  SEGMENT PARA PUBLIC 'CODE'
+          0000                    SUBMUL  PROC    FAR
+                                          ASSUME  CS:CODESG
+                                          PUBLIC  SUBMUL
+
+          
+          Ассемблер для IBM PC. Программы.                         157
+
+
+          0000    A1 0000 E               MOV     AX,PRICE
+          0003    8B 1E 0000 E            MOV     BX,QTY
+          0007    F7 E3                   MUL     BX         ;Произведение в DX:AX
+          0009    CB                      RET
+          000A                    SUBMUL  ENDP
+          000A                    CODESG  ENDS
+                                          END     SUBMUL
+          
+          Segments and Groups:
+                          N a m e         Size    Align   Combine Class
+          CODESG . . . . . . . . . . . .  000A    PARA    PUBLIC  'CODE'
+          
+          Symbols:
+                          N a m e         Type    Value   Attr
+          PRICE. . . . . . . . . . . . .  V WORD  0000            External
+          QTY. . . . . . . . . . . . . .  V WORD  0000            External
+          SUBMUL . . . . . . . . . . . .  F PROC  0000    CODESG  Global  Length=000A
+          
+          
+          LINK
+          IBM Personal Computer Linker
+          Version 2.30 (C) Copyright IBM Corp 1981, 1985
+          Object Modules: B:CALLMUL3+B:SUBMUL3
+          Run File: [B:CALLMUL3.EXE]: <return>
+          List File: [NUL.MAP]: CON
+          Libraries [.LIB]: <return>
+          
+           Start   Stop  Length  Name             Class
+          
+           00000H 00019H 001AH  CODESG            CODE
+           00030H 00033H 0004H  DATASG            DATA
+           00040H 000BFH 0080H  STACKSG           STACK
+          
+          PROGRAM entry point at 0000:0000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         158
+
+
+          
+                                          page    60,132
+                                  TITLE   CALLMULL4 (EXE) Передача параметров
+                                  ;                       в подпрограмму
+                                          EXTRN   SUBMUL:FAR
+                                  ;-------------------------------------------------
+          0000                    STACKSG         SEGMENT PARA STACK 'Stack'
+          0000    40 [ ???? ]             DW      64 DUP(?)
+          0080                    STACKSG         ENDS
+                                  ;-------------------------------------------------
+          0000                    DATASG  SEGMENT PARA 'Data'
+          0000  0140              QTY     DW      0140H
+          0002  2500              PRICE   DW      2500H
+          0004                    DATASG  ENDS
+                                  ;-------------------------------------------------
+          0000                    CODESG  SEGMENT PARA PUBLIC 'Code'
+          0000                    BEGIN   PROC    FAR
+                                          ASSUME  CS:CODESG,DS:DATASG,SS:STACKSG
+          0000  1E                        PUSH    DS
+          0001  2B C0                     SUB     AX,AX
+          0003  50                        PUSH    AX
+          0004  B8 ---- R                 MOV     A,DATASG
+          0007  8E D8                     MOV     DS,AX
+          0009  FF 36 0002 R              PUSH    PRICE
+          000D  FF 36 0000 R              PUSH    QTY
+          0011  9A 0000 ---- E            CALL    SUBMUL      ;Вызвать подпрограмму
+          0016  CB                        RET
+          0017                    BEGIN   ENDP
+          0017                    CODESG  ENDS
+                                          END     BEGIN
+          
+          Segments and Groups:
+                          N a m e         Sise    Align   Combine Class
+          CODESG . . . . . . . . . . . .  0017    PARA    NONE    'CODE'
+          DATASG . . . . . . . . . . . .  0004    PARA    NONE    'DATA'
+          STACKSG. . . . . . . . . . . .  0080    PARA    STACK   'STACK'
+          
+          Symbols:
+                          N a m e         Type    Value   Attr
+          BEGIN. . . . . . . . . . . . .  F PROC  0000    CODESG  Length=0017
+          PRICE. . . . . . . . . . . . .  L WORD  0002    DATASG
+          QTY. . . . . . . . . . . . . .  L WORD  0000    DATASG
+          SUBMUL . . . . . . . . . . . .  L FAR   0000            External
+          
+          
+                                          page    60,132
+                                  TITLE   SUBMUL  Вызываемая подпрограмма умножения
+          0000                    CODESG  SEGMENT PARA PUBLIC 'Code'
+          0000                    SUBMUL  PROC    FAR
+                                          ASSUME  CS:CODESG
+                                          PUBLIC  SUMBUL
+          0000    55                      PUSH    BP
+          0001    8P EC                   MOV     BP,SP
+
+          
+          Ассемблер для IBM PC. Программы.                         159
+
+
+          0003    8B 46 08                MOV     AX,[BP+8]     ;Стоимость
+          0006    8B 5E 06                MOV     BX,[BP+6]     ;Количество
+          0009    F7 E3                   MUL     BX            ;Произведение в DX:AX
+          000B    5D                      POP     BP
+          000F                    SUMBUL  ENDP
+          000F                    CODESG  ENDS
+                                          END
+          
+          Segments and Groups:
+                          N a m e         Size    Align   Combine Class
+          CODESG . . . . . . . . . . . .  000F    PARA    PUBLIC  'CODE'
+          
+          Symbols:
+                          N a m e         Type    Value   Attr
+          SUBMUL . . . . . . . . . . . .  F PROC  0000    CODESG  Global  Length=000F
+          
+          
+          LINK
+          IBM Personal Computer Linker
+          Version 2.30 (C) Copyright IBM Corp 1981, 1985
+          Object Modules: B:CALLMUL4+B:SUBMUL4
+          Run File: [B:CALLMUL4.EXE]: <return>
+          List File: [NUL.MAP]: CON
+          Libraries [.LIB]: <return>
+          
+           Start   Stop  Length  Name             Class
+          
+           00000H 00019H 001AH  CODESG            CODE
+           00030H 00033H 0004H  DATASG            DATA
+           00040H 000BFH 0080H  STACKSG           STACK
+          
+          PROGRAM entry point at 0000:0000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         160
+
+
+          
+          LOAD"D:BASTEST.BAS
+          
+          LIST
+          010     CLEAR ,32768!
+          020     ' для BLOAD
+          030     ' для DEFSEG
+          040     ' для точки входа в CALL
+          050     ' для вызова ASM-модуля
+          060     FOR N = 1 TO 5
+          070     INPUT "Hours "; H
+          080     INPUT "Rate "; R
+          090     W = H * R
+          100     PRINT "Wage = " W
+          110     NEXT N
+          120     END
+          
+          
+          TITLE   LINKBAS Ассемблерная подпрограмма, вызываемая из BASIC
+          CODESG  SEGMENT PARA 'CODE'
+                  ASSUME  CS:CODESG
+          CLRSCRN PROC    FAR
+                  PUSH    BP              ;Сохранить BP
+                  MOV     BP,SP           ;База списка параметров
+                  MOV     AX,0600H        ;Функция прокрутки
+                  MOV     BH,07           ;  всего
+                  MOV     CX,0000         ;  экрана
+                  MOV     DX,184FH
+                  INT     10H
+                  POP     BP
+                  RET                     ;Завершить подпрограмму
+          CLRSCRN ENDP
+          CODESG  ENDS
+                  END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          Ассемблер для IBM PC. Программы.                         161
+
+
+          
+          D>LINK
+          
+          IBM Personal Computer Linker
+          Version 2.30 (C) Copyright IBM Corp. 1981, 1985
+          
+          Object Modules [.OBJ]: LINKBAS
+          Run File [LINKBAS.EXE]: LINKBAS/HIGH
+          List File [NUL.MAP]: CON
+          Libraries [.LIB]:
+          Warning: no stack segment
+          
+           Start  Stop   Length Name              Class
+           00000H 00011H 00012H CODESG            CODE
+          D>DEBUG BASIC.COM
+          -R
+          AX=0000  BX=0000  CX=0012  DX=0000  SP=FFFF  BP=0000  SI=0000  DI=0000
+          DS=1410  ES=1410  SS=1410  CS=1410  IP=0100    NV  UP  EI  PL  NZ  NA  PO  NC
+          1410:0100 E9E03E        JMP     3FE3
+          -N D:LINKBAS.EXE
+          -L
+          -R
+          AX=FFA3  BX=0000  CX=0012  DX=0000  SP=0000  BP=0000  SI=0000  DI=0000
+          DS=1410  ES=1410  SS=9FE0  CS=9FE0  IP=0000    NV  UP  EI  PL  NZ  NA  PO  NC
+          9FE0:0000  55
+          -R SS
+          SS 9FE0
+          :1410
+          -R CS
+          CS 9FE0
+          :1410
+          -R IP
+          IP 0000
+          :0100
+          -G
+          Ok
+          DEF SEG = &H9EF0
+          Ok
+          BSAVE "D:CLRSCREEN.MOD",0,&H12
+          Ok
+          SYSTEM
+          Program terminated normally
+          -Q
+          D>BASIC
+          IBM Personal Computer Basic
+          Ver4sion D3.10 Copyright IBM Corp. 1981, 1985
+          61310 Bytes free
+          Ok
+          LOAD"D:BASTEST.BAS
+          Ok
+          20      BLOAD "D:CLRSCREEN.MOD"
+          30      DEF SEG = &H9FE0
+          40      CLRSCRN = 0
+
+          
+          Ассемблер для IBM PC. Программы.                         162
+
+
+          50      CALL CLRSCRN
+          LIST
+          
+          10      CLEAR ,32768!
+          20      BLOAD "D:CLRSCRN.MOD"
+          30      DEF SEG = &H9FE0
+          40      CLRSCRN = 0
+          50      CALL CLRSCRN
+          60      FOR N = 1 TO 5
+          70      INPUT "HOURS"; H
+          80      INPUT "rATE"; R
+          90      W = H * R
+          100     PRINT "WAGE = " W
+          110     NEXT N
+          120     END
+          Ok
+          
+          
+          
+          program pascall ( input, output );
+          
+              procedure move_cursor( const row: integer;
+                                     const col: integer ); extern;
+              var
+                  temp_row:       integer;
+                  temp_col:       integer;
+          
+              begin
+                  write( 'Enter cursor row: ' );
+                  readln( temp_row );
+          
+                  write( 'Enter cursor column:' );
+                  readln( temp_col );
+          
+                  move_cursor( temprow, temp_col );
+                  write( 'New cursor location' );
+                end.
+          
+          
+          TITLE   MOVCUR  Подпрограмма на ассемблере,
+          ;               вызываемая из программы на Паскале
+                  PUBLIC  MOVE_CURSOR
+          ;----------------------------------------------------------
+          ;    MOVE_CURSOR:       Устанавливает курсор
+          ;                       по переданным параметрам
+          ;    Параметры: const row       Строка и столбец
+          ;               const col       для установки курсора
+          ;    Возвращаемое значение:     Отсутствует
+          ;----------------------------------------------------------
+          CODESEG SEGMENT PARA PUBLIC 'CODE'
+          
+          MOVE_CURSOR PROC FAR
+                  ASSUME  CS:CODESEG
+
+          
+          Ассемблер для IBM PC. Программы.                         163
+
+
+          ROWWPAR EQU     8               ;Параметр "строка"
+          COLPAR  EQU     6               ;Параметр "столбец"
+          
+                  PUSH    BP              ;Сохранить регистр BP
+                  MOV     BP,SP           ;Установить BP на параметры
+          
+                  MOV     SI,[BP+ROWPAR]  ;SI указывает на строку
+                  MOV     DH,[SI]         ;Поместить столбец в DL
+          
+                  MOV     AH,02           ;Функция установки курсора
+                  SUB     BH,BH           ;Страница #0
+                  INT     10H
+          
+                  POP     BP              ;Вернуться
+                  RET     4               ;  в вызывающую программу
+          MOVE_CURSOR       ENDP
+          CODESEG ENDS
+                  END
+          
+          
+          
+          Адрес
+          начала                  Программа
+          
+          00000   Таблица векторов прерываний (см. гл. 23)
+          
+          00400   Область связи с постоянной памятью (ROM)
+          
+          00500   Область связи с операционной системой (DOS)
+          
+          00600   IBMBIO.COM
+                    Буфер каталога
+                    Дисковый буфер
+                    Блок параметров дисковода/таблица распределения
+                      файлов (FAT, одна для каждого дисковода)
+          
+          XXXX0   Резидентная часть командного процессора COMMAND.COM
+          
+          XXXX0   Область памяти для программ (типа COM или EXE)
+          
+          XXXX0   Пользовательский стек для COM-программ (256 байтов)
+          
+          XXXX0   Транзитная часть командного процессора COMMAND.COM
+                    (записывается в старшие адреса памяти).
+          
+          
+          
+          TITLE   EXDOS   (EXE) Функция DOS 4BH для выполнения DIR
+          CSEG    GMENT   PARA 'Code'
+                  ASSUME  CS:CSEG,DS:CSEG,ES:CSEG
+          BEGIN:  JMP     SHORT MAIN
+          ;----------------------------------------------------------
+          PARAREA DW      ?               ;Адрес строки вызова
+
+          
+          Ассемблер для IBM PC. Программы.                         164
+
+
+                  DW      OFFSET DIRCOM   ;Указатель
+                                          ;  на командную строку
+                  DW      CSEG
+                  DW      OFFSET FCB1     ;Указатель на FCB2
+                  DW      CSEG
+          
+          DIRCOM  DB      17,'/C DIR D:',13,0
+          FCB1    DB      16 DUP(0)
+          FCB2    DB      16 DUP(0)
+          PROGNAM DB      'D:COMMAND.COM',0
+          ; ---------------------------------------------------------
+          MAIN    PROC    FAR
+                  MOV     AH,4AH          ;Получить 64K памяти
+                  MOV     BH,100H         ;  в параграфах
+                  INT     21H
+                  JC      E10ERR          ;Нет памяти?
+          
+                  MOV     DI,2CH          ;Получить сегментный адрес
+                  MOV     AX,[DI]         ;  строки вызова
+                  LEA     SI,PARAREA      ;  и записать его в
+                  MOV     [SI],AX         ;  1 слово блока параметров
+                  MOV     AX,CS           ;Загрузить в DS и ES
+                  MOV     DS,AX           ;  адрес CSEG
+                  MOV     ES,AX
+          
+                  MOV     AH,4BH          ;Функция загрузки
+                  MOV     AL,00           ;  и выполнения
+                  LEA     BX,PARAREA      ;  COMMAND.COM
+                  LEA     DX,PROGNAM
+                  INT     21H             ;Вызвать DOS
+                  JC      E20ERR          ;Ошибка выполнения?
+                  MOV     AL,00           ;Нет кода ошибки
+                  JMP     X10XIT
+          0ERR:
+                  MOV     AL,01           ;Код ошибки 1
+                  JMP     X10XIT
+          0ERR:
+                  MOV     AL,02           ;Код ошибки 2
+                  JMP     X10XIT
+          0XIT:
+                  MOV     AH,4CH          ;Функция завершения
+                  INT     21H             ;Вызвать DOS
+          IN      ENDP
+          EG      ENDS
+                  END
+          
+          
+          
+           Адрес                  Функция прерывания
+          (шест.)                 (шест.)
+          
+            0-3            0  Деление на ноль
+            4-7            1  Пошаговый режим (трассировка для DEBUG)
+
+          
+          Ассемблер для IBM PC. Программы.                         165
+
+
+            8-B            2  Немаскируемое прерывание (NMI)
+            C-F            3  Точка останова в потоке команд (для DEBUG)
+           10-13           4  Переполнение регистров АЛУ
+           14-17           5  Печать экрана
+           18-1F              Зарезервировано
+           20-23           8  Сигнал от таймера
+           24-27           9  Сигнал от клавиатуры
+           28-37     A,B,C,D  Используются для AT
+           38-3B           E  Сигнал от дисковода
+           3C-3F           F  Обслуживание принтера
+           40-43          10  Управление экраном (см. гл. 8,9,10)
+           44-47          11  Запрос списка оборудования (см. гл. 9)
+           48-4B          12  Запрос размера физической памяти (см. гл. 2)
+           4C-4F          13  Управление дисковым вводом-выводом (гл. 18)
+           50-53          14  Управление коммуникационным вводом-выводом
+           54-57          15  Управление магнитофоном и спец.функции для AT
+           58-5B          16  Управление вводом с клавиатуры (гл. 9)
+           5C-5F          17  Вывод на принтер (гл. 19)
+           60-63          18  Обращение к BASIC в ПЗУ (ROM)
+           64-67          19  Перезагрузка системы
+           68-6B          1A  Запрос и установка времени и даты
+           6C-6F          1B  Получение управления по прерыванию с клавиатуры
+           70-73          1C  Получение управления по прерыванию от таймера
+           74-77          1D  Адрес таблицы параметров инициализации дисплея
+           78-7B          1E  Адрес таблицы параметров дисковода
+           7C-7F          1F  Адрес таблицы графических символов
+           80-83          20  DOS Нормальное завершение программы
+           84-87          21  DOS Обращение к функциям DOS
+           88-8B          22  DOS Адрес подпрограммы обработки завершения
+           8C-8F          23  DOS Адрес подпрограммы реакции на Ctrl+Break
+           90-93          24  DOS Вектор подпрограммы реакции на фатальную ошибку
+           94-97          25  DOS Абсолютное чтение секторов диска
+           98-9B          26  DOS Абсолютная запись на сектора диска
+           9C-9F          27  DOS Завершение программы, оставляющее ее резидентом
+           A0-FF       28-3F  DOS Операции DOS
+          100-1FF      40-7F  Зарезервировано
+          200-217      80-85  Зарезервировано для BASIC
+          218-3C3      86-F0  Используется BASIC-интерпретатором
+          3C4-3FF      F1-FF  Зарезервировано
+          
+          Примечание: прерывания 00-1F для BIOS, 20-FF для DOS и BASIC
+          
+          
+          
+          TITLE   RESIDENT (COM) Резидентная программа для очистки
+          ;                      экрана и установки цвета при нажатии
+          ;                      Alt+Left Shift
+          ;----------------------------------------------------------
+          
+          INTTAB  SEGMENT AT 0H         ;Таблица векторов прерываний:
+                  ORG     9H*4          ;  адрес для Int 9H,
+          KBADDR  LABEL   DWORD         ;  двойное слово
+          INTTAB  ENDS
+
+          
+          Ассемблер для IBM PC. Программы.                         166
+
+
+          ;----------------------------------------------------------
+          
+          ROMAREA SEGMENT AT 400H       ;Область параметров BIOS:
+                  ORG     17H           ;  адрес флага клавиатуры,
+          KBFLAG  DB      ?             ;  состояние Alt + Shift
+          ROMAREA ENDS
+          ;----------------------------------------------------------
+          
+          CSEG    SEGMENT PARA          ;Сегмент кода
+                  ASSUME  CS:CS
+                  ORG     100H
+          BEGIN:  JMP     INITZ         ;Выполняется только один раз
+          
+          KBSAVE  DD      ?             ;Для адреса INT 9 BIOS
+          ;               Очистка экрана и установка цветов:
+          ;               ---------------------------------
+          COLORS  PROC    NEAR          ;Процедура выполняется
+                  PUSH    AX            ;  при нажатии Alt+Left Shift
+                  PUSH    BX
+                  PUSH    CX            ;Сохранить регистры
+                  PUSH    DX
+                  PUSH    SI
+                  PUSH    DI
+                  PUSH    DS
+                  PUSH    ES
+                  PUSHF
+                  CALL    KBSAV         ;Обработать прерывание
+                  ASSUME  DS:ROMAREA
+                  MOV     AX,ROMAREA    ;Установить DS для
+                  MOV     DS,AX         ;  доступа к состоянию
+                  MOV     AL,KB  AG     ;  Alt+Left Shift
+                  CMP     AL,00001010B  ;Alt+Left Shift нажаты?
+                  JNE     EXIT          ;  нет - выйти
+                  MOV     AX,0600H      ;Функция прокрутки
+                  MOV     BH,61H        ;Установить цвет
+                  MOV     CX,00
+                  MOV     DX,18 FH
+                  INT     10H
+          EXIT:
+                  POP     ES            ;Восстановить регистры
+                  POP     DS
+                  POP     DI
+                  POP     SI
+                  POP     DX
+                  POP     CX
+                  POP     BX
+                  POP     AX
+                  IRET                  ;Вернуться
+          COLORS  ENDP
+          
+          ;               Подпрограмма инициализации:
+          ;               --------------------------
+          INITZE  PROC    NEAR            ;Выполнять только один раз
+
+          
+          Ассемблер для IBM PC. Программы.                         167
+
+
+                  ASSUME  DS:INTTAB
+                  PUSH    DS              ;Обеспечить возврат в DOS
+                  MOV     AX,INTTAB       ;Установить сегмент данных
+                  MOV     DS,AX
+                  CLI                     ;Запретить прерывания
+                                          ;Замена адреса обработчика:
+                  MOV     AX,WORD PTR KBADDR      ;Сохранить адрес
+                  MOV     WORD PTR KBSAVE,AX      ;  BIOS
+                  MOV     AX,WORD PTR BADDR+2
+                  MOV     WORD PTR KBSAVE+2,AX
+                  MOV     WORD PTR KBADDR,OFFSET COLORS ;Заменить
+                  MOV     WORD PTR KBADDR+2,CS          ;  адрес BIOS
+                  STI                      ;Разрешить прерывания
+                  MOV     DX,OFFSET INITZE ;Размер программы
+                  INT     27H              ;Завершить и остаться
+          INITZE  ENDP                     ;  резидентом
+          
+          CSEG    ENDS
+                  END     BEGIN
+          
+          
+          
+          TITLE   SOUND   (COM) Процедура для генерации звука
+          SOUNSG  SEGMENT PARA 'Code'
+                  ASSUME  CS:SOUNG,DS:SOUNG,SS:SOUNG
+                  ORG     100H
+          BEGIN:  JMP     SHORT MAIN
+          ; -------------------------------------------------------
+          DURTION DW      1000            ;Время звучания
+          TONE    DW      256H            ;Высота (частота) звука
+          ; -------------------------------------------------------
+          MAIN    PROC    NEAR
+                  IN      AL,61H          ;Получить и сохранить
+                  PUSH    AX              ;  данные порта
+                  CLI                     ;Запретить прерывания
+                  CALL    B10SPKR         ;Произвести звук
+                  POP     AX              ;Восстановить значение
+                  OUT     61H,AL          ;  порта
+                  STI                     ;Разрешить прерывания
+                  RET
+          MAIN    ENDP
+          
+          B10SPKR PROC    NEAR
+          B20:    MOV     DX,DURTION      ;Установить время звучания
+          B30:
+                  AND     AL,11111100B    ;Очистить биты 0 и 1
+                  OUT     61H,AL          ;Передать на динамик
+                  MOV     CX,TONE         ;Установить частоту
+          B40:
+                  LOOP    B40             ;Задержка времени
+                  OR      AL,00000010B    ;Установить бит 1
+                  OUT     61H,AL          ;Передать на динамик
+                  MOV     CX,TONE         ;становить частоту
+
+          
+          Ассемблер для IBM PC. Программы.                         168
+
+
+          B50:
+                  LOOP    B50             ;Задержка времени
+                  DEC     DX              ;Уменьшить время звучания
+                  JNZ     B30             ;Продолжать?
+                  SHL     DURTION,1       ;  нет - увеличить время,
+                  SHR     TONE,1          ;  сократить частоту
+                  JNZ     B20             ;Нулевая частота?
+                  RET                     ;  да - выйти
+          B10SPKR ENDP
+          
+          SOUNSG  ENDS
+                  END     BEGIN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          

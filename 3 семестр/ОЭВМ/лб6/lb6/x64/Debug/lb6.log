@@ -1,0 +1,11 @@
+﻿  Assembling first.asm...
+first.asm(1): error A2008: syntax error : .
+first.asm(2): error A2008: syntax error : .
+first.asm(5): error A2008: syntax error : first
+first.asm(6): error A2008: syntax error : numbers
+first.asm(8): error A2070: invalid instruction operands
+first.asm(9): error A2070: invalid instruction operands
+first.asm(24): error A2070: invalid instruction operands
+first.asm(25): error A2070: invalid instruction operands
+first.asm(28): fatal error A1010: unmatched block nesting : first
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets(70,5): error MSB3721: выход из команды "ml64.exe /c /nologo /Zi /Fo"x64\Debug\first.obj" /W3 /errorReport:prompt  /Tafirst.asm" с кодом "1".

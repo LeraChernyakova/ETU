@@ -1,0 +1,96 @@
+Node
+
+Класс, который описывает элемент списка.
+
+Класс Node должен иметь 3 поля:
+
+__data      # данные, приватное поле
+__prev__    # ссылка на предыдущий элемент списка
+__next__    # ссылка на следующий элемент списка
+Click and drag to move
+Вам необходимо реализовать следующие методы в классе Node:
+
+__init__(self, data, prev, next)
+конструктор, у которого значения по умолчанию для аргументов prev и next равны None.
+
+get_data(self)
+метод возвращает значение поля __data.
+
+__str__(self)
+перегрузка метода __str__. Описание того, как должен выглядеть результат вызова метода смотрите ниже в примере взаимодействия с Node.
+
+
+Click and drag to move
+Пример того, как должен выглядеть вывод объекта:
+
+node = Node(1)
+print(node) # data: 1, prev: None, next: None
+
+node.__prev__ = Node(2, None, None)
+print(node) # data: 1, prev: 2, next: None
+
+node.__next__ = Node(3, None, None)
+print(node) # data: 1, prev: 2, next: 3
+Click and drag to move
+Linked List
+Класс, который описывает связный двунаправленный список.
+
+Класс LinkedList должен иметь 3 поля:
+
+__length      # длина списка
+__first__     # данные первого элемента списка
+__last__      # данные последнего элемента списка
+Click and drag to move
+Вам необходимо реализовать конструктор:
+
+__init__(self, first, last)
+конструктор, у которого значения по умолчанию для аргументов first и last равны None.
+
+Если значение переменной first равно None, а переменной last не равно None, метод должен вызывать исключение ValueError с сообщением: "invalid value for last".
+
+Если значение переменной first не равно None, а переменной last равна None, метод должен создавать список из одного элемента. В данном случае, first равен last, ссылки prev и next равны None, значение поля __data для элемента списка равно first.
+
+Если значения переменных не равны None, необходимо создать список из двух элементов. В таком случае, значение поля __data для первого элемента списка равно first, значение поля __data для второго элемента списка равно last.
+Click and drag to move
+и следующие методы в классе LinkedList:
+
+__len__(self)
+перегрузка метода __len__.
+
+append(self, element)
+добавление элемента в конец списка. Метод должен создать объект класса Node, у которого значение поля __data будет равно element и добавить этот объект в конец списка.
+
+__str__(self)
+перегрузка метода __str__. Описание того, как должен выглядеть результат вызова метода смотрите ниже в примере взаимодействия с LinkedList.
+
+pop(self)
+удаление последнего элемента. Метод должен выбрасывать исключение IndexError с сообщением "LinkedList is empty!", если список пустой.
+
+popitem(self, element)
+удаление элемента, у которого значение поля __data равно element. Метод должен выбрасывать исключение KeyError,  с сообщением "<element> doesn't exist!", если элемента в списке нет.
+
+clear(self)
+очищение списка.
+Click and drag to move
+
+
+Пример того, как должно выглядеть взаимодействие с Вашим связным списком:
+
+
+linked_list = LinkedList()
+print(linked_list) # LinkedList[]
+print(len(linked_list)) # 0
+
+linked_list.append(10)
+print(linked_list) # LinkedList[length = 1, [data: 10, prev: None, next: None]]
+print(len(linked_list)) # 1
+
+linked_list.append(20)
+print(linked_list)
+# LinkedList[length = 2, [data: 10, prev: None, next: 20; data: 20, prev: 10, next: None]]
+print(len(linked_list)) # 2
+
+linked_list.pop()
+print(linked_list)
+print(linked_list) # LinkedList[length = 1, [data: 10, prev: None, next: None]]
+print(len(linked_list)) # 1

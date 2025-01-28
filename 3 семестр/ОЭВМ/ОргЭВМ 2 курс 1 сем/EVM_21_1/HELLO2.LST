@@ -1,0 +1,128 @@
+Microsoft (R) Macro Assembler Version 5.10                  9/9/19 20:41:25
+
+                                                             Page     1-1
+
+
+       1				; HELLO2 - Учебная программа N2  лаб.ра
+					б.#1 по дисциплине "Архитектура компьют
+					ера"
+       2				;    дштл      Программа использует про
+					цедуру для печати строки
+       3				;
+       4				;      ТЕКСТ  ПРОГРАММЫ
+       5				
+       6 = 0024				EOFLine  EQU  '$'         ; Определение
+					 символьной константы
+       7				                          ;     "Конец 
+					строки"
+       8				
+       9				; Стек  программы
+      10				
+      11 0000				AStack    SEGMENT  STACK
+      12 0000  000C[			          DW 12 DUP(?)    ; Отводится 1
+					2 слов памяти
+      13	   ????			
+      14			 ]	
+      15				
+      16 0018				AStack    ENDS
+      17				
+      18				; Данные программы
+      19				
+      20 0000				DATA      SEGMENT
+      21				
+      22				;  Директивы описания данных
+      23				
+      24 0000  8A E2 AE 20 A7 A4	HELLO     DB 'Кто здесь?', 0AH, 0DH,EOF
+					Line
+      25       A5 E1 EC 3F 0A 0D	
+      26       24			
+      27 000D  8B A0 E0 A8 AD 20	GREETING  DB 'Ларин Антон 8383$'
+      28       80 AD E2 AE AD 20	
+      29       38 33 38 33 24		
+      30 001E				DATA      ENDS
+      31				
+      32				; Код программы
+      33				
+      34 0000				CODE      SEGMENT
+      35				          ASSUME CS:Code ;DS:DATA SS:ST
+					ACKSS
+      36				; Процедура печати строки
+      37 0000				WriteMsg  PROC  NEAR
+      38 0000  B4 09			          mov   AH,9
+      39 0002  CD 21			          int   21h  ; Вызов функции DO
+					S по прерыванию
+      40 0004  C3			          ret
+      41 0005				WriteMsg  ENDP
+      42				
+      43				; Головная процедура
+      44 0005				Main      PROC  FAR
+      45 0005  1E			          push  DS       ;\  Сохранение
+Microsoft (R) Macro Assembler Version 5.10                  9/9/19 20:41:25
+
+                                                             Page     1-2
+
+
+					 адреса начала PSP в стеке
+      46 0006  2B C0			          sub   AX,AX    ; > для послед
+					ующего восстановления по
+      47 0008  50			          push  AX       ;/  команде re
+					t, завершающей процедуру.
+      48 0009  B8 ---- R		          mov   AX,DATA             ; З
+					агрузка сегментного
+      49 000C  8E D8			          mov   DS,AX               ; р
+					егистра данных.
+      50 000E  BA 0000 R		          mov   DX, OFFSET HELLO    ; В
+					ывод на экран первой
+      51 0011  E8 0000 R		          call  WriteMsg            ; с
+					троки приветствия.
+      52 0014  BA 000D R		          mov   DX, OFFSET GREETING ; В
+					ывод на экран второй
+      53 0017  E8 0000 R		          call  WriteMsg            ; с
+					троки приветствия.
+      54 001A  CB			          ret                       ; В
+					ыход в DOS по команде,
+      55				                                    ; н
+					аходящейся в 1-ом слове PSP.
+      56 001B				Main      ENDP
+      57 001B				CODE      ENDS
+      58				          END Main
+Microsoft (R) Macro Assembler Version 5.10                  9/9/19 20:41:25
+
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+ASTACK . . . . . . . . . . . . .  	0018	PARA	STACK	
+CODE . . . . . . . . . . . . . .  	001B	PARA	NONE	
+DATA . . . . . . . . . . . . . .  	001E	PARA	NONE	
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+EOFLINE  . . . . . . . . . . . .  	NUMBER	0024	
+
+GREETING . . . . . . . . . . . .  	L BYTE	000D	DATA
+
+HELLO  . . . . . . . . . . . . .  	L BYTE	0000	DATA
+
+MAIN . . . . . . . . . . . . . .  	F PROC	0005	CODE	Length = 0016
+
+WRITEMSG . . . . . . . . . . . .  	N PROC	0000	CODE	Length = 0005
+
+@CPU . . . . . . . . . . . . . .  	TEXT  0101h		
+@FILENAME  . . . . . . . . . . .  	TEXT  HELLO2		
+@VERSION . . . . . . . . . . . .  	TEXT  510		
+
+
+     51 Source  Lines
+     51 Total   Lines
+     13 Symbols
+
+  47468 + 461839 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

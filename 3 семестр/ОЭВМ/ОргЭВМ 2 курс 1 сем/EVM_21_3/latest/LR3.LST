@@ -1,0 +1,256 @@
+Microsoft (R) Macro Assembler Version 5.10                  10/2/19 23:57:13
+                                                             Page     1-1
+
+
+				
+ 0000				STACKSG SEGMENT  PARA STACK 'Stack'
+ 0000  0020[			        DW       32 DUP(?)
+	   ????			
+			 ]	
+				
+ 0040				STACKSG	ENDS
+				
+ 0000				DATASG  SEGMENT  PARA 'Data'		
+						;SEG DATA
+ 0000  0001			VARA	DW	1h
+ 0002  0001			VARB	DW	1h
+ 0004  0001			VARI	DW	1h
+ 0006  0001			VARK	DW	1h
+ 0008  0001			VARI1	DW	1h
+ 000A  0001			VARI2	DW	1h
+ 000C  0001			VARRES	DW	1h
+ 000E				DATASG	ENDS				
+								;ENDS DATA
+				
+ 0000				CODE      SEGMENT   			
+							;SEG CODE
+				ASSUME  DS:DataSG, CS:Code
+					
+ 0000				Main      PROC  FAR
+ 0000  B8 ---- R		   	mov  ax, DATASG                        
+				;ds setup
+ 0003  8E D8			   	mov  ds, ax                        
+					
+				   
+ 0005  EB 1A 90				jmp f1
+ 0008				f1_end:
+ 0008  A1 0008 R			mov ax,VARI1
+ 000B  8F 06 0008 R			pop VARI1
+					
+ 000F  EB 40 90				jmp f2
+ 0012				f2_end:
+ 0012  8F 06 000A R			pop VARI2
+					
+ 0016  EB 75 90				jmp f3
+ 0019				f3_end:
+ 0019  8F 06 000C R			pop VARRES
+					
+ 001D  B4 4C				mov  ah, 4ch			
+									;exit
+ 001F  CD 21				int  21h  
+				   
+				  
+ 0021				f1: ;dw f1(VARA,VARB,VARI)
+ 0021  A1 0000 R		   mov 	ax,VARA			;ax = *si
+					(a)
+ 0024  8B 36 0002 R		   mov  si,VARB		;si = &b
+ 0028  8B 1E 0004 R		   mov bx,VARI			;bx = i
+ 002C  D1 E3				shl bx,1			;bx *= 
+Microsoft (R) Macro Assembler Version 5.10                  10/2/19 23:57:13
+                                                             Page     1-2
+
+
+				2
+				   
+ 002E  3B C6			   cmp	ax,si			;cmp ax,*si
+					(a,b)
+				   
+				   
+ 0030  7F 10			   jg	f1_1			;if a>b
+				
+ 0032				f1_2:					;else (
+				6i-10)
+ 0032  D1 E3				shl bx,1			;bx *= 
+				2
+ 0034  A1 0004 R			mov ax,VARI			;ax = i
+ 0037  D1 E0				shl ax,1			;ax *= 
+				2
+ 0039  03 C3				add ax,bx			;ax += 
+				bx	(ax = 6i)
+ 003B  2D 000A				sub ax,10			;ax -= 
+				10
+ 003E  50				push ax				;ret ax
+ 003F  EB 0E 90				jmp f1_c
+					
+ 0042				f1_1:   				;then -
+				(4i+3) = (-4i - 3)
+ 0042  D1 E3				shl bx,1			;bx *= 
+				2
+ 0044  2B C0				sub ax,ax			;ax = 0
+ 0046  2B C3				sub ax,bx			;ax = -
+				bx	(-4i)
+ 0048  2D 0003				sub ax,3			;ax -= 
+				3  
+ 004B  50				push ax				;ret ax
+ 004C  EB 01 90				jmp f1_c
+					
+ 004F				f1_c:
+ 004F  EB B7				jmp f1_end
+					
+					
+ 0051				f2: ;dw f2(VARA,VARB,VARI)
+ 0051  A1 0000 R		   mov 	ax,VARA			;ax = *si
+					(a)
+ 0054  3B 06 0002 R		   cmp	ax,VARB			;cmp ax,*si
+					(a,b)
+ 0058  7F 03			   jg	f2_1			;if a>b
+ 005A  EB 1B 90			   jmp	f2_2
+ 005D				f2_1:   				;then -
+				(6i + 8) = (-6i - 8)
+ 005D  8B 1E 0004 R			mov bx,VARI			;bx = i
+ 0061  D1 E3				shl bx,1			;bx *= 
+				2
+ 0063  D1 E3				shl bx,1			;bx *= 
+				2
+ 0065  A1 0004 R			mov ax,VARI			;ax = i
+ 0068  D1 E0				shl ax,1			;ax *= 
+Microsoft (R) Macro Assembler Version 5.10                  10/2/19 23:57:13
+                                                             Page     1-3
+
+
+				2
+ 006A  03 C3				add ax,bx			;ax += 
+				bx	(ax = 6i)
+ 006C  2B DB				sub bx,bx			;bx = 0
+ 006E  2B D8				sub bx,ax			;bx = -
+				ax	(bx = -6i)
+ 0070  83 EB 08				sub bx,8			;bx -= 
+				8
+ 0073  53				push bx				;ret bx
+				
+ 0074  EB 15 90				jmp f2_c
+ 0077				f2_2:					;else 9
+				-3(i-1) = -3i + 12
+ 0077  A1 0004 R			mov ax,VARI			;ax = i
+ 007A  D1 E0				shl ax,1			;ax *= 
+				2
+ 007C  03 06 0004 R			add ax,VARI		;ax += i
+					(ax = 3i)
+ 0080  2B DB				sub bx,bx			;bx = 0
+ 0082  2B D8				sub bx,ax			;bx = -
+				ax	(bx = -3i)
+ 0084  83 C3 0C				add bx,12			;bx += 
+				12
+ 0087  53				push bx				;ret bx
+ 0088  EB 01 90				jmp f2_c
+ 008B				f2_c:
+ 008B  EB 85				jmp f2_end
+					
+				
+ 008D				f3: ;dw f3(VARI1,VARI2,VARK)
+ 008D  A1 0006 R		   mov 	ax,VARK			;ax = *si
+					(k)
+ 0090  3D 0000			   cmp	ax,0			;cmp k,0
+ 0093  74 14			   je	f3_1			;if k=0
+				;   jmp	f3_2
+ 0095				f3_2:					;else m
+				in(i1,i2)
+ 0095  A1 0008 R			mov ax,VARI1			;ax = i
+				1
+ 0098  3B 06 000A R			cmp ax,VARI2		;cmp i1,i2
+ 009C  7F 04				jg f3_2_c			;unless
+				 quiri1 > i2
+ 009E  50				push ax				;ret i2
+ 009F  EB 1A 90				jmp f3_c
+ 00A2				f3_2_c:					;else
+ 00A2  FF 36 000A R			push VARI2			;ret i1
+ 00A6  EB 13 90				jmp f3_c		
+ 00A9				f3_1:   				;then a
+				bs(i1+i2)
+ 00A9  A1 0008 R			mov ax,VARI1			;ax = i
+				1
+ 00AC  03 06 000A R			add ax,VARI2			;ax += 
+				i2 (ax = i1 + i2)
+ 00B0  3D 0000				cmp ax,0			;cmp i1
+Microsoft (R) Macro Assembler Version 5.10                  10/2/19 23:57:13
+                                                             Page     1-4
+
+
+				+i2,0
+ 00B3  7D 02				jnl	f3_1_c			;unless
+				 ax >= 0
+ 00B5  F7 D8				neg ax				;neg ax
+ 00B7				f3_1_c:					;else d
+				ont			
+ 00B7  50				push ax				;ret ax
+ 00B8  EB 01 90				jmp f3_c
+						
+ 00BB				f3_c:
+ 00BB  E9 0019 R			jmp f3_end
+				 
+ 00BE				Main      ENDP
+ 00BE				CODE      ENDS
+				END Main				
+									;ENDS C
+				ODE	
+Microsoft (R) Macro Assembler Version 5.10                  10/2/19 23:57:13
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+CODE . . . . . . . . . . . . . .  	00BE	PARA	NONE	
+DATASG . . . . . . . . . . . . .  	000E	PARA	NONE	'DATA'
+STACKSG  . . . . . . . . . . . .  	0040	PARA	STACK	'STACK'
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+F1 . . . . . . . . . . . . . . .  	L NEAR	0021	CODE
+F1_1 . . . . . . . . . . . . . .  	L NEAR	0042	CODE
+F1_2 . . . . . . . . . . . . . .  	L NEAR	0032	CODE
+F1_C . . . . . . . . . . . . . .  	L NEAR	004F	CODE
+F1_END . . . . . . . . . . . . .  	L NEAR	0008	CODE
+F2 . . . . . . . . . . . . . . .  	L NEAR	0051	CODE
+F2_1 . . . . . . . . . . . . . .  	L NEAR	005D	CODE
+F2_2 . . . . . . . . . . . . . .  	L NEAR	0077	CODE
+F2_C . . . . . . . . . . . . . .  	L NEAR	008B	CODE
+F2_END . . . . . . . . . . . . .  	L NEAR	0012	CODE
+F3 . . . . . . . . . . . . . . .  	L NEAR	008D	CODE
+F3_1 . . . . . . . . . . . . . .  	L NEAR	00A9	CODE
+F3_1_C . . . . . . . . . . . . .  	L NEAR	00B7	CODE
+F3_2 . . . . . . . . . . . . . .  	L NEAR	0095	CODE
+F3_2_C . . . . . . . . . . . . .  	L NEAR	00A2	CODE
+F3_C . . . . . . . . . . . . . .  	L NEAR	00BB	CODE
+F3_END . . . . . . . . . . . . .  	L NEAR	0019	CODE
+
+MAIN . . . . . . . . . . . . . .  	F PROC	0000	CODE	Length = 00BE
+
+VARA . . . . . . . . . . . . . .  	L WORD	0000	DATASG
+VARB . . . . . . . . . . . . . .  	L WORD	0002	DATASG
+VARI . . . . . . . . . . . . . .  	L WORD	0004	DATASG
+VARI1  . . . . . . . . . . . . .  	L WORD	0008	DATASG
+VARI2  . . . . . . . . . . . . .  	L WORD	000A	DATASG
+VARK . . . . . . . . . . . . . .  	L WORD	0006	DATASG
+VARRES . . . . . . . . . . . . .  	L WORD	000C	DATASG
+
+@CPU . . . . . . . . . . . . . .  	TEXT  0101h		
+@FILENAME  . . . . . . . . . . .  	TEXT  LR3		
+@VERSION . . . . . . . . . . . .  	TEXT  510		
+
+Microsoft (R) Macro Assembler Version 5.10                  10/2/19 23:57:13
+                                                             Symbols-2
+
+
+
+    132 Source  Lines
+    132 Total   Lines
+     35 Symbols
+
+  48070 + 457140 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

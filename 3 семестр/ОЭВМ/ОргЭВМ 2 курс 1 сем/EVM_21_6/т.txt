@@ -1,0 +1,51 @@
+	.686P
+.MODEL FLAT, STDCALL
+.STACK 4096
+.DATA
+    helloFormat BYTE "Hello %s!",10,13,0
+.CODE
+
+EXTRN  readName : proc ;and void* readName()
+EXTRN  printf : proc ;we'll use printf
+;readName PROTO C
+;printf PROTO arg1:Ptr Byte, printlist: VARARG
+
+
+sayHello PROC	
+	call readName ;eax = readName()
+	lea ebx, helloFormat ;ebx = &helloFormat
+
+	;printf(ebx,eax)
+	push eax
+	push ebx
+	call printf
+	add esp, 8 ;pop x2
+
+	retn
+
+sayHello ENDP
+
+END
+
+		(int)(((int*)((int)nums))+1)	7565124	int
+
+
+5
+2
+-5
+5
+1
+
+
+10000
+10
+-10
+10
+-8 -6 -4 -2 0 2 4 6 8
+
+10000
+10
+-50
+-30
+-48 -46 -44 -42 -40 -38 -36 -34 -32
+

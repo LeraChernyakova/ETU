@@ -1,0 +1,30 @@
+установить рез_высота = 1
+проходим по детям текущего куррент_рут
+если ребенок есть в ключах словаря следует, что у этого ребенка есть дети
+вычисляем высоту для каждого ребенка(прибавляем один), находим максимальное
+проверка на вхождение в ключи словария ин три.кейс()
+
+    #def height(self):
+        result_height = 1
+        for child in self.root.elements:
+            if child in tree.keys():
+                self.root.height(child)
+            else:
+                result_height = max(result_height, 1+self.height(child))
+        return result_height
+def height(current_root):
+    for key in tree:
+        result_height = 1
+        childs = tree[key]
+        for child in childs:
+            if child in tree.keys():
+
+9 7 5 5 2 9 9 9 2 -1
+10
+9 7 5 5 2 9 9 9 2 -1
+
+def height(tree, current_root):
+    all_height = 1
+    for child in tree:
+
+    return all_height

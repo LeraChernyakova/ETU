@@ -1,0 +1,49 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "methods.h"
+#include <conio.h>
+double delta,c,d;
+void main()
+  {
+    int k;
+    long int s;
+    float a1,b1,c1,d1,eps1,delta1;
+    double a,b,eps,x;
+    double F(double);
+    printf("Input eps: ");
+    scanf("%f",&eps1);
+    eps = eps1;
+    printf("Input c: ");
+    scanf("%f",&c1);
+    c = c1;
+    printf("Input d: ");
+    scanf("%f",&d1);
+    d = d1;
+    printf("Input a: ");
+    scanf("%f",&a1);
+    a = a1;
+    printf("Input b: ");
+    scanf("%f",&b1);
+    b = b1;
+    printf("Input delta: ");
+    scanf("%f",&delta1);
+    delta = delta1;
+    x = BISECT(a,b,eps,k);
+    printf("x=%f    k=%d\n",x,k);
+    getch();
+  }
+double F(double x)
+  {
+    extern double c,d,delta;
+    double s;
+    long int S;
+    s = c*(x - d);
+    if( s/delta < 0 )
+      S = s/delta - .5;
+    else
+      S = s/delta + .5;
+      s = S*delta;
+      s = Round( s,delta );
+    return(s);
+  }
