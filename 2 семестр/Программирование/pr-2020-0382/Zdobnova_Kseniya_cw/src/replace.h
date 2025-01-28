@@ -1,0 +1,1 @@
+void replace(struct Text text);

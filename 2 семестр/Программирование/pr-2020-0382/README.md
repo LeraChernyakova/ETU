@@ -1,0 +1,31 @@
+# Программирование 1 курс 2020 год, группа 0382
+| Surname     | Name      | github            |   lb1 |   lb2 | lb3   | lb4   | cw   |
+|:------------|:----------|:------------------|------:|------:|:------|:------|:-----|
+| Azarov      | Maksim    | Maxim0382         |     4 |     4 | 4     | -     | 4    |
+| Afanasyev   | Nazar     | HoshiyamaSeizen   |     4 |     5 | 4     | -     | 4    |
+| Gudov       | Nikita    | ngudow            |     2 |     4 | 4     | -     | 3    |
+| Detkova     | Anna      | detkovaannya      |     5 |     4 | 4     | -     | 5    |
+| Didenko     | Danil     | DanilFlint        |     2 |     4 | 3     | -     | 5    |
+| Dovchenko   | Mikhail   | Khail909          |     2 |     4 | 3     | -     | -    |
+| Zdobnova    | Kseniya   | velonzy           |     5 |     4 | 4     | -     | 5    |
+| Zlobin      | Andrey    | Andrew-Zlobin     |     3 |     5 | 5     | -     | 5    |
+| Ilyin       | Denis     | Fittern           |     4 |     5 | 4     | -     | 4    |
+| Kondratov   | Yuriy     | YuriiKondratov    |     3 |     4 | 5     | -     | 5    |
+| Kriventsova | Lyubov    | Lyubava0382       |     5 |     4 | 4     | -     | 5    |
+| Kryuchkov   | Artem     | Mathless          |     5 |     4 | 4     | -     | 5    |
+| Kulikov     | Maksim    | kulikov02         |     4 |     4 | 4     | -     | 4    |
+| Lityagin    | Semen     | SemyonLityagin    |     4 |     4 | 4     | -     | 3    |
+| Mikhailova  | Oksana    | oksi-oksik        |     5 |     4 | 4     | -     | 5    |
+| Mukatanov   | Arseniy   | Arseniy18         |     3 |     3 | 3     | -     | -    |
+| Osinkin     | Evgeniy   | ev-osi            |     4 |     4 | 4     | -     | 3    |
+| Okhotnikova | Galina    | galinaOkhotnikova |     5 |     5 | 4     | -     | 4    |
+| Pavlov      | Sergey    | doom9k            |     3 |     4 | 4     | -     | 3    |
+| Rubezhova   | Nataliya  | ranatasha         |     5 |     5 | 5     | -     | 5    |
+| Salikhov    | Maksim    | MaximSalikhov     |     2 |     3 | -     | -     | -    |
+| Sannikov    | Vadim     | Vadsxd            |     2 |     4 | 4     | -     | -    |
+| Sergeev     | Dmitriy   | DmitrySergeev02   |     5 |     5 | 5     | -     | 5    |
+| Sitchenko   | Kseniya   | KseniaSitchenko   |     2 |     3 | 3     | -     | 4    |
+| Tikhonov    | Sergey    | Sergei4302        |     4 |     3 | 4     | -     | -    |
+| Tiulenev    | Timofei   | Timofey02         |     5 |     5 | 4     | -     | -    |
+| Chegodaeva  | Elizaveta | lizavetaChe       |     4 |     4 | 3     | -     | 4    |
+| Shangichev  | Vasiliy   | vasiliy2002       |     5 |     4 | 4     | -     | 5    |

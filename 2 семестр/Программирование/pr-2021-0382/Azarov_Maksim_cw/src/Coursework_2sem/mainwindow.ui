@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>929</width>
+    <height>677</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Coursework</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="canvas">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>691</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>929</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="act_open_file"/>
+    <addaction name="save_In_same_file"/>
+    <addaction name="save_in_new_file"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Инструменты</string>
+    </property>
+    <addaction name="rgba_filter"/>
+    <addaction name="cutIntoPieces"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="draw_circle"/>
+   <addaction name="draw_square"/>
+  </widget>
+  <action name="save_In_same_file">
+   <property name="text">
+    <string>Сохранить </string>
+   </property>
+  </action>
+  <action name="draw_circle">
+   <property name="icon">
+    <iconset resource="resourse.qrc">
+     <normaloff>:/res/Image/icon_circle.png</normaloff>:/res/Image/icon_circle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Нарисовть круг</string>
+   </property>
+  </action>
+  <action name="save_in_new_file">
+   <property name="text">
+    <string>Сохранить в новый файл</string>
+   </property>
+  </action>
+  <action name="rgba_filter">
+   <property name="text">
+    <string>RGBA-фильтр</string>
+   </property>
+  </action>
+  <action name="act_open_file">
+   <property name="text">
+    <string>Открыть файл</string>
+   </property>
+  </action>
+  <action name="cutIntoPieces">
+   <property name="text">
+    <string>Разрезать на N*M частей</string>
+   </property>
+  </action>
+  <action name="draw_square">
+   <property name="icon">
+    <iconset resource="resourse.qrc">
+     <normaloff>:/res/Image/icon_square.png</normaloff>:/res/Image/icon_square.png</iconset>
+   </property>
+   <property name="text">
+    <string>Нарисовать квадрат с диагоналями</string>
+   </property>
+   <property name="toolTip">
+    <string>Нарисовать прямоугольник с диагоналями</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resourse.qrc"/>
+ </resources>
+ <connections/>
+</ui>

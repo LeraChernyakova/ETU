@@ -1,0 +1,1 @@
+int sum (int numbers[], int quantity);

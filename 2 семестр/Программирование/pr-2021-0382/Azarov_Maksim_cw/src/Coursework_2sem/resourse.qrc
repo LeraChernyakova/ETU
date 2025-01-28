@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>Image/icon_circle.png</file>
+        <file>Image/icon_2.png</file>
+        <file>Image/one_piece.png</file>
+        <file>Image/icon_square.png</file>
+    </qresource>
+</RCC>

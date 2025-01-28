@@ -1,0 +1,31 @@
+# Информатика 1 курс 2020 год, группа 0382
+| Surname     | Name      | github            | lb1   | lb2   | lb3   |
+|:------------|:----------|:------------------|:------|:------|:------|
+| Azarov      | Maksim    | Maxim0382         | 3     | 3     | 2     |
+| Afanasyev   | Nazar     | HoshiyamaSeizen   | 5     | 4     | 5     |
+| Gudov       | Nikita    | ngudow            | 2     | 3     | 2     |
+| Detkova     | Anna      | detkovaannya      | 3     | 2     | 3     |
+| Didenko     | Danil     | DanilFlint        | 4     | 5     | 3     |
+| Dovchenko   | Mikhail   | Khail909          | 3     | 3     | 3     |
+| Zdobnova    | Kseniya   | velonzy           | 3     | 3     | 3     |
+| Zlobin      | Andrey    | Andrew-Zlobin     | 4     | 4     | 2     |
+| Ilyin       | Denis     | Fittern           | 3     | 4     | 3     |
+| Kondratov   | Yuriy     | YuriiKondratov    | 5     | 4     | 3     |
+| Kriventsova | Lyubov    | Lyubava0382       | 3     | 4     | 4     |
+| Kryuchkov   | Artem     | Mathless          | 3     | 5     | 3     |
+| Kulikov     | Maksim    | kulikov02         | 3     | 5     | 4     |
+| Lityagin    | Semen     | SemyonLityagin    | 3     | 4     | 3     |
+| Mikhailova  | Oksana    | oksi-oksik        | 3     | 4     | 4     |
+| Mukatanov   | Arseniy   | Arseniy18         | 3     | 3     | 2     |
+| Osinkin     | Evgeniy   | ev-osi            | 3     | 3     | 3     |
+| Okhotnikova | Galina    | galinaOkhotnikova | 3     | 4     | 3     |
+| Pavlov      | Sergey    | doom9k            | 3     | 2     | 3     |
+| Rubezhova   | Nataliya  | ranatasha         | 3     | 4     | 4     |
+| Salikhov    | Maksim    | MaximSalikhov     | -     | -     | -     |
+| Sannikov    | Vadim     | Vadsxd            | 3     | 4     | 2     |
+| Sergeev     | Dmitriy   | DmitrySergeev02   | 3     | 5     | 4     |
+| Sitchenko   | Kseniya   | KseniaSitchenko   | 2     | 4     | 2     |
+| Tikhonov    | Sergey    | Sergei4302        | 2     | 2     | 2     |
+| Tiulenev    | Timofei   | Timofey02         | 2     | 2     | -     |
+| Chegodaeva  | Elizaveta | lizavetaChe       | 3     | 4     | 3     |
+| Shangichev  | Vasiliy   | vasiliy2002       | 5     | 5     | 5     |

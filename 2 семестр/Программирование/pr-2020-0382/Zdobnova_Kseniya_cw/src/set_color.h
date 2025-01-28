@@ -1,0 +1,1 @@
+void set_color(struct Text text);

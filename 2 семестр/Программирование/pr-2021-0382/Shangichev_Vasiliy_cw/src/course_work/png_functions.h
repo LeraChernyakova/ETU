@@ -1,0 +1,4 @@
+#ifndef PNG_FUNCTIONS_H
+#define PNG_FUNCTIONS_H
+
+#endif // PNG_FUNCTIONS_H

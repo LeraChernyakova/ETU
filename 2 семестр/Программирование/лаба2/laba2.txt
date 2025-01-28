@@ -1,0 +1,58 @@
+Создайте двунаправленный список музыкальных композиций MusicalComposition и api (application programming interface - в данном случае набор функций) для работы со списком.
+
+Структура элемента списка (тип - MusicalComposition):
+
+name - строка неизвестной длины (гарантируется, что длина не может быть больше 80 символов), название композиции.
+author - строка неизвестной длины (гарантируется, что длина не может быть больше 80 символов), автор композиции/музыкальная группа.
+year - целое число, год создания.
+Функция для создания элемента списка (тип элемента MusicalComposition):
+
+MusicalComposition* createMusicalComposition(char* name, char* author, int year)
+Функции для работы со списком:
+
+MusicalComposition* createMusicalCompositionList(char** array_names, char** array_authors, int* array_years, int n); // создает список музыкальных композиций MusicalCompositionList, в котором:
+n - длина массивов array_names, array_authors, array_years.
+поле name первого элемента списка соответствует первому элементу списка array_names (array_names[0]).
+поле author первого элемента списка соответствует первому элементу списка array_authors (array_authors[0]).
+поле year первого элемента списка соответствует первому элементу списка array_authors (array_years[0]).
+     Аналогично для второго, третьего, ... n-1-го элемента массива.
+
+     ! длина массивов array_names, array_authors, array_years одинаковая и равна n, это проверять не требуется.
+
+     Функция возвращает указатель на первый элемент списка.
+
+void push(MusicalComposition*  head, MusicalComposition* element); // добавляет element  в конец списка musical_composition_list
+void removeEl (MusicalComposition*  head, char* name_for_remove); // удаляет элемент element списка, у которого значение name равно значению  name_for_remove
+int count(MusicalComposition*  head); //возвращает количество элементов списка
+void print_names(MusicalComposition*  head); //Выводит названия композиций.
+В функции main написана некоторая последовательность вызова команд для проверки работы вашего списка.
+
+Функцию main менять не нужно.
+
+	
+7
+Fields of Gold
+Sting
+1993
+In the Army Now
+Status Quo
+1986
+Mixed Emotions
+The Rolling Stones
+1989
+Billie Jean
+Michael Jackson
+1983
+Seek and Destroy
+Metallica
+1982
+Wicked Game
+Chris Isaak
+1989
+Points of Authority
+Linkin Park
+2000
+Sonne
+Rammstein
+2001
+Points of Authority

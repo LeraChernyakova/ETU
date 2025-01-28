@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="canvas">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>321</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Выбор изображения</string>
+    </property>
+    <addaction name="open_im"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Функции</string>
+    </property>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>Поворот всего изображения</string>
+     </property>
+     <addaction name="Povorot_90"/>
+     <addaction name="Povorot_180"/>
+     <addaction name="Povorot_270"/>
+    </widget>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>Поворот части изображения</string>
+     </property>
+     <addaction name="Povorot_Rec_90"/>
+     <addaction name="Povorot_Rec_180"/>
+     <addaction name="Povorot_Rec_270"/>
+    </widget>
+    <addaction name="Pramoygolnik"/>
+    <addaction name="Razdel"/>
+    <addaction name="Ramka_1"/>
+    <addaction name="menu_3"/>
+    <addaction name="menu_4"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>Справка</string>
+    </property>
+    <addaction name="action"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_5"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="open_im">
+   <property name="text">
+    <string>Выбрать файл</string>
+   </property>
+  </action>
+  <action name="Pramoygolnik">
+   <property name="text">
+    <string>Прямоугольник</string>
+   </property>
+  </action>
+  <action name="Razdel">
+   <property name="text">
+    <string>Разделть</string>
+   </property>
+  </action>
+  <action name="Ramka_1">
+   <property name="text">
+    <string>Рамка</string>
+   </property>
+  </action>
+  <action name="Ramka_2">
+   <property name="text">
+    <string>Рамка 2</string>
+   </property>
+  </action>
+  <action name="Povorot_Rec_180">
+   <property name="text">
+    <string>Поворот на 180 градусов</string>
+   </property>
+  </action>
+  <action name="Povorot_90">
+   <property name="text">
+    <string>Поворот на 90 градусов</string>
+   </property>
+  </action>
+  <action name="Povorot_Rec_90">
+   <property name="text">
+    <string>Поворот на 90 градусов</string>
+   </property>
+  </action>
+  <action name="Povorot_180">
+   <property name="text">
+    <string>Поворот на 180 градусов</string>
+   </property>
+  </action>
+  <action name="Povorot_270">
+   <property name="text">
+    <string>Поворот на 270 градусов</string>
+   </property>
+  </action>
+  <action name="Povorot_Rec_270">
+   <property name="text">
+    <string>Поворот на 270 градусов</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>Справка</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
