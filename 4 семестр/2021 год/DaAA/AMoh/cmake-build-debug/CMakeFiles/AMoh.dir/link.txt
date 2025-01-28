@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++ -g -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/AMoh.dir/main.cpp.o CMakeFiles/AMoh.dir/FF.cpp.o CMakeFiles/AMoh.dir/kmp_cycle.cpp.o CMakeFiles/AMoh.dir/aho.cpp.o -o AMoh 

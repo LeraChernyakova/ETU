@@ -1,0 +1,31 @@
+1. 
+
+/bin/
+ls -R -l | grep ^- > /home/ubstudy/Study/OS/lab2/commands.txt >>
+-rwxr-xr-x 1 root root        18456 фев  7  2021 411toppm
+
+/boot/
+ls -R -l | grep ^b > /home/ubstudy/Study/OS/lab2/commands.txt >>
+brw-rw----  1 root    disk      8,   1 фев 28 16:20 sda1
+
+/dev/
+ls -R -l | grep ^c > /home/ubstudy/Study/OS/lab2/commands.txt >>
+crw-r--r--  1 root    root     10, 235 фев 28 16:20 autofs
+
+/dev/
+ls -R -l | grep ^d > /home/ubstudy/Study/OS/lab2/commands.txt >>
+drwxr-xr-x  2 root    root         540 мар  1 14:09 block
+
+/dev/
+ls -R -l | grep ^l > /home/ubstudy/Study/OS/lab2/commands.txt >>
+lrwxrwxrwx  1 root    root          11 фев 28 16:20 core -> /proc/kcore
+
+/
+sudo ls -R -l / | grep ^p > /home/ubstudy/Study/OS/lab2/commands.txt >>
+prw------- 1 root root   0 фев 28 16:20 1.ref
+
+/
+sudo ls -R -l / | grep ^s > /home/ubstudy/Study/OS/lab2/commands.txt >>
+srw-rw-rw-  1 root              root     0 фев 28 16:20 acpid.socket
+
+

@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/Pavlov_Dmitry_lb1/main.cpp
+iostream
+-
+vector
+-
+time.h
+-
+

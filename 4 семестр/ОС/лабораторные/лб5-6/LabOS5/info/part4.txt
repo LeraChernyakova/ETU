@@ -1,0 +1,390 @@
+Script started on 2023-05-09 01:01:59+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="79" LINES="29"]
+[?2004h]0;margo@ubuntu: ~/LabOS5[01;32mmargo@ubuntu[00m:[01;34m~/LabOS5[00m$ sudo su
+[?2004l[sudo] password for margo: 
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# [K]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2
+[?2004lPID: 3954
+Catched signal 64, counter = 0
+Catched signal 64, counter = 0
+Catched signal 64, counter = 0
+Catched signal 64, counter = 0
+Catched signal 64, counter = 0
+^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2 1
+[?2004lCatched signal 10, counter = 0
+Catched signal 63, counter = 1
+Catched signal 62, counter = 2
+Catched signal 12, counter = 3
+Catched signal 64, counter = 4
+Catched signal 10, counter = 5
+Catched signal 63, counter = 6
+Catched signal 62, counter = 7
+Catched signal 12, counter = 8
+Catched signal 64, counter = 9
+Catched signal 10, counter = 10
+Catched signal 63, counter = 11
+end
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# jobs
+[?2004l[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2
+[?2004lPID: 3980
+Catched signal 10, counter = 0
+Catched signal 10, counter = 0
+^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2
+[?2004lPID: 4003
+Catched signal 64, counter = 0
+Catched signal 64, counter = 0
+Catched signal 10, counter = 0
+^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2
+[?2004lPID: 4009
+Catched signal 10, counter = 0
+^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2[5Pjobs./task3_12[5Pexitvisudo[2Pexit[2Plsnano script.sh[3P./script.sh           nano task3_2.c
+[?2004l[?2004h[?1049h[22;0;0t[1;26r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[24;33H(B[0;7m[ Reading... ](B[m[24;32H(B[0;7m[ Read 37 lines ](B[m[H(B[0;7m  GNU nano 6.2 [22btask3_2.c [31b [1;78H(B[m[25d(B[0;7m^G(B[m Help[25;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[25;61H(B[0;7m^T(B[m Execute[26d(B[0;7m^X(B[m Exit[26;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify[2d(B[0;1m[36m#include[33m <stdio.h>[3d[36m#include[33m <stdlib.h>[4d[36m#include[33m <signal.h>[5d[36m#include[33m <unistd.h>[7d(B[0m[32mint[39m(B[m counter = 0;[9d[32mvoid[39m(B[m sigHandler([32mconst[39m(B[m [32mint[39m(B[m sig, [32msiginfo_t[39m(B[m* s, [32mvoid[39m(B[m* ucontext){[10;5Hprintf((B[0;1m[33m"Catched signal %d, counter = %d\n"[39m(B[m,sig, s->si_value.sival_int);[12;4Hsleep(1);[13d}[15d[32mvoid[39m(B[m (*mysig([32mint[39m(B[m sig,[32mvoid[39m(B[m (*hnd)([32mint[39m(B[m,[32msiginfo_t[39m(B[m*, [32mvoid[39m(B[m*)))([32mint[39m(B[m, [32msiginfo_t[39m(B[m*,[32mvoid[39m(B[0;7m>[17;9H(B[0;1m[34m// надежна�^o об�^`або�^bка �^aигналов[18;9H(B[0m[32mstruct[39m(B[m sigaction act,oldact;[19;9Hact.sa_sigaction = hnd;[20;9Hsigemptyset(&act.sa_mask);[21;9Hsigaddset(&act.sa_mask,(B[0;1m[31mSIGINT[39m(B[m);[22;9Hact.sa_flags = (B[0;1m[31mSA_SIGINFO[39m(B[m;[23;9H(B[0;1m[33mif[39m(B[m(sigaction(sig,&act,0) < 0)[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[24d[K[?12l[?25h[22d[?25l[?12l[?25h[23d[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17H[35mreturn[39m(B[m (B[0;1m[31mSIG_ERR[39m(B[m;[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H[35mreturn[39m(B[m act.sa_sigaction;[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[32mint[39m(B[m main(){[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hprintf((B[0;1m[33m"PID: %d\n"[39m(B[m,getpid());[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hmysig((B[0;1m[31mSIGUSR1[39m(B[m,sigHandler);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hmysig((B[0;1m[31mSIGRTMAX[39m(B[m,sigHandler);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H(B[0;1m[33mfor[39m(B[m(;;)[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17Hpause();[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;8H[42m[1K[49m(B[m[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H[35mreturn[39m(B[m 0;[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25hm[?25l[?12l[?25hy[?25l[?12l[?25hs[?25l[?12l[?25hi[?25l[?12l[?25hg[?25l[?12l[?25h([?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[1;48H(B[0;7m*[78G(B[m[?12l[?25h[16;22H[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h(B[0;1m[31mI[39m(B[m,sigHandler);[16;22H[?25l[?12l[?25h(B[0;1m[31mN[39m(B[m,sigHandler);[16;23H[?25l[?12l[?25h[19;9H[?25l[?12l[?25h[22d}[?25l[?12l[?25h[23d[?25l[?12l[?25h[20d[?25l[?12l[?25h[17;16H[?25l[?12l[?25h[14;23H[?25l[?12l[?25h[11d}[?25l[?12l[?25h[8;23H[?25l[?12l[?25h[5d[?25l[?12l[?25h[2d[?25l[?12l[?25h7[2;23r8[3T[1;26r[2;1H[32mvoid[39m(B[m (*mysig([32mint[39m(B[m sig,[32mvoid[39m(B[m (*hnd)([32mint[39m(B[m,[32msiginfo_t[39m(B[m*, [32mvoid[39m(B[m*)))([32mint[39m(B[m, [32msiginfo_t[39m(B[m*,[32mvoid[39m(B[0;7m>[4;9H(B[0;1m[34m// надежна�^o об�^`або�^bка �^aигналов[2;23H[39m(B[m[?25l[?12l[?25h7[2;23r8[3T[1;26r[2;4Hsleep(1);[3d}[2;13H[?25l[?12l[?25h7[2;23r8[3T[1;26r[2;1H[32mvoid[39m(B[m sigHandler([32mconst[39m(B[m [32mint[39m(B[m sig, [32msiginfo_t[39m(B[m* s, [32mvoid[39m(B[m* ucontext){[3;5Hprintf((B[0;1m[33m"Catched signal %d, counter = %d\n"[39m(B[m,sig, s->si_value.sival_int);[2;23H[?25l[?12l[?25h7[2;23r8M[1;26r[2;1H[?25l[?12l[?25h7[2;23r8M[1;26r[2;1H[32mint[39m(B[m counter = 0;[?25l[?12l[?25h7[2;24r8M[1;26r[2;1H[?25l[?12l[?25h7[2;23r8M[1;26r[2;1H(B[0;1m[36m#include[33m <unistd.h>[39m(B[m[?25l[?12l[?25h[3d[?25l[?12l[?25h[4;17H[?25l[?12l[?25h[5d[?25l[?12l[?25h[6;23H[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9;13H[?25l[?12l[?25h[10d}[?25l[?12l[?25h[11d[?25l[?12l[?25h[12;23H[?25l[?12l[?25h[13d[?25l[?12l[?25h[14;23H[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[?12l[?25h[A[?25l[?12l[?25hi[?25l[?12l[?25hg[?25l[?12l[?25h,[?25l[?12l[?25h&[?25l[?12l[?25ha[?25l[?12l[?25hc[?25l[?12l[?25ht[?25l[?12l[?25h,[?25l[?12l[?25h0[?25l[?12l[?25h[1P[?25l[?12l[?25h&) < 0)[32G[?25l[?12l[?25ho) < 0)[33G[?25l[?12l[?25hl) < 0)[34G[?25l[?12l[?25hd) < 0)[35G[?25l[?12l[?25ha) < 0)[36G[?25l[?12l[?25hc) < 0)[37G[?25l[?12l[?25ht) < 0)[38G[?25l[?12l[?25h[21;32H[?25l[?12l[?25h[20;38H[?25l[?12l[?25h)[?25l[?12l[?25h [?25l[?12l[?25h<[?25l[?12l[?25h [?25l[?12l[?25h0[?25l[?12l[?25h)[?25l[?12l[?25h{[?25l[?12l[?25h[21;32H[?25l[22d[K[23;9H[35mreturn[39m(B[m act.sa_sigaction;[A[?12l[?25h[?25l[?12l[?25h}[?25l[?12l[?25h[?25l[?12l[?25h[8G[1K }[?25l[?12l[?25h[A[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[17G[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h;[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[42m [49m(B[m[K[?25l[?12l[?25h [?25l[?12l[?25h[17Gretur[K[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[42m[1K [49m(B[m [?25l[?12l[?25h[1K p[?25l[?12l[?25he[?25l[?12l[?25hr[?25l[?12l[?25hr[?25l[?12l[?25ho[?25l[?12l[?25hr[?25l[?12l[?25h([?25l[?12l[?25h)[?25l[?12l[?25h[?25l[?12l[?25h")[?25l[?12l[?25h(B[0;1m[33m""[39m(B[m)[?25l[?12l[?25h[?25l[?12l[?25h(B[0;1m[33ms"[39m(B[m)[?25l[?12l[?25h(B[0;1m[33mi"[39m(B[m)[?25l[?12l[?25h(B[0;1m[33mg"[39m(B[m)[?25l[?12l[?25h(B[0;1m[33ma"[39m(B[m)[?25l[?12l[?25h(B[0;1m[33mc"[39m(B[m)[?25l[?12l[?25h(B[0;1m[33mt"[39m(B[m)[?25l[?12l[?25h(B[0;1m[33mi"[39m(B[m)[?25l[?12l[?25h(B[0;1m[33mo"[39m(B[m)[?25l[?12l[?25h(B[0;1m[33mn"[39m(B[m)[?25l[?12l[?25h[C[?25l[?12l[?25h)[?25l[?12l[?25h;[?25l[22d[K[23;9H}[K[A[?12l[?25h[?25l[?12l[?25h[8G[42m[1K [49m(B[m[?25l[?12l[?25h[16G[42m[1K [49m(B[m[?25l[?12l[?25h[1K e[?25l[?12l[?25hx[?25l[?12l[?25hi[?25l[?12l[?25ht[?25l[?12l[?25h([?25l[?12l[?25h)[?25l[?12l[?25h[?25l[?12l[?25h-)[?25l[?12l[?25h1)[?25l[?12l[?25h)[?25l[?12l[?25h;[?25l[?12l[?25h[23;10H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H[35mreturn[39m(B[m act.sa_sigaction;[26G[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h[22;26H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25hoact.sa_sigaction;[22;17H[?25l[?12l[?25hlact.sa_sigaction;[22;18H[?25l[?12l[?25hdact.sa_sigaction;[22;19H[?25l[25;16H    (B[0;7mM-D(B[m DOS Format     (B[0;7mM-A(B[m Append   [58G(B[0;7mM-B(B[m Backup File[26;2H(B[0;7mC(B[m Cancel[16G    (B[0;7mM-M(B[m Mac Format     (B[0;7mM-P(B[m Prepend [7b(B[0;7m^T(B[m Browse[K[24d(B[0;7mFile Name to Write: task3_2.c [48b [24;30H(B[m[?12l[?25h[?25l  [1K (B[0;7m[ Writing... ](B[m[K[1;48H(B[0;7m [78G(B[m[24;31H(B[0;7m[ Wrote 39 lines ](B[m[25;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[58G   (B[0;7m^T(B[m Execute[K[26;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste [6b(B[0;7m^J(B[m Justify[?12l[?25h[22;19H[?25l[24d[J[26d[?12l[?25h[26;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# gcc task3_2.c -o task3_2
+[?2004l[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2
+[?2004lPID: 4024
+Catched signal 34, counter = 0
+Catched signal 34, counter = 0
+Catched signal 34, counter = 0
+Catched signal 34, counter = 0
+Catched signal 34, counter = 0
+^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2[15@gcc task3_2.c -o task3_2[15P./task3_2
+[?2004lPID: 4129
+Catched signal 34, counter = 1
+Catched signal 34, counter = 2
+Catched signal 34, counter = 3
+Catched signal 34, counter = 4
+^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2
+[?2004lPID: 4168
+Catched signal 34, counter = 1
+Catched signal 34, counter = 2
+Catched signal 34, counter = 3
+Catched signal 34, counter = 4
+^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2[15@gcc task3_2.c -o task3_2[10Pnano task3_2.c
+[?2004l[?2004h[?1049h[22;0;0t[1;26r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[24;33H(B[0;7m[ Reading... ](B[m[24;32H(B[0;7m[ Read 39 lines ](B[m[H(B[0;7m  GNU nano 6.2 [22btask3_2.c [31b [1;78H(B[m[25d(B[0;7m^G(B[m Help[25;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[25;61H(B[0;7m^T(B[m Execute[26d(B[0;7m^X(B[m Exit[26;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify[2d(B[0;1m[36m#include[33m <stdio.h>[3d[36m#include[33m <stdlib.h>[4d[36m#include[33m <signal.h>[5d[36m#include[33m <unistd.h>[7d(B[0m[32mint[39m(B[m counter = 0;[9d[32mvoid[39m(B[m sigHandler([32mconst[39m(B[m [32mint[39m(B[m sig, [32msiginfo_t[39m(B[m* s, [32mvoid[39m(B[m* ucontext){[10;5Hprintf((B[0;1m[33m"Catched signal %d, counter = %d\n"[39m(B[m,sig, s->si_value.sival_int);[12;4Hsleep(1);[13d}[15d[32mvoid[39m(B[m (*mysig([32mint[39m(B[m sig,[32mvoid[39m(B[m (*hnd)([32mint[39m(B[m,[32msiginfo_t[39m(B[m*, [32mvoid[39m(B[m*)))([32mint[39m(B[m, [32msiginfo_t[39m(B[m*,[32mvoid[39m(B[0;7m>[17;9H(B[0;1m[34m// надежна�^o об�^`або�^bка �^aигналов[18;9H(B[0m[32mstruct[39m(B[m sigaction act,oldact;[19;9Hact.sa_sigaction = hnd;[20;9Hsigemptyset(&act.sa_mask);[21;9Hsigaddset(&act.sa_mask,(B[0;1m[31mSIGINT[39m(B[m);[22;9Hact.sa_flags = (B[0;1m[31mSA_SIGINFO[39m(B[m;[23;9H(B[0;1m[33mif[39m(B[m(sigaction(sig,&act,&oldact) < 0){[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[24d[K[?12l[?25h[22d[?25l[?12l[?25h[23d[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17Hperror((B[0;1m[33m"sigaction"[39m(B[m);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17Hexit(-1);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H[35mreturn[39m(B[m oldact.sa_sigaction;[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[32mint[39m(B[m main(){[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hprintf((B[0;1m[33m"PID: %d\n"[39m(B[m,getpid());[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hmysig((B[0;1m[31mSIGUSR1[39m(B[m,sigHandler);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hmysig((B[0;1m[31mSIGRTMIN[39m(B[m,sigHandler);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H(B[0;1m[33mfor[39m(B[m(;;)[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17Hpause();[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;8H[42m[1K[49m(B[m[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H[35mreturn[39m(B[m 0;[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H}[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25hm[?25l[?12l[?25hy[?25l[?12l[?25hs[?25l[?12l[?25hi[?25l[?12l[?25hg[?25l[?12l[?25h([?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[1;48H(B[0;7m*[78G(B[m[?12l[?25h[17;22H[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h(B[0;1m[31mA[39m(B[m,sigHandler);[17;22H[?25l[?12l[?25h(B[0;1m[31mX[39m(B[m,sigHandler);[17;23H[?25l[?12l[?25h(B[0;1m[31mO[39m(B[m,sigHandler);[17;24H[?25l[?12l[?25h[1P[?25l[25;16H    (B[0;7mM-D(B[m DOS Format     (B[0;7mM-A(B[m Append   [58G(B[0;7mM-B(B[m Backup File[26;2H(B[0;7mC(B[m Cancel[16G    (B[0;7mM-M(B[m Mac Format     (B[0;7mM-P(B[m Prepend [7b(B[0;7m^T(B[m Browse[K[24d(B[0;7mFile Name to Write: task3_2.c [48b [24;30H(B[m[?12l[?25h[?25l  [1K (B[0;7m[ Writing... ](B[m[K[1;48H(B[0;7m [78G(B[m[24;31H(B[0;7m[ Wrote 39 lines ](B[m[25;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[58G   (B[0;7m^T(B[m Execute[K[26;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste [6b(B[0;7m^J(B[m Justify[?12l[?25h[17;23H[?25l[24d[J[26d[?12l[?25h[26;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# nano task3_2.c[5P./task3_2
+[?2004lPID: 4192
+Catched signal 10, counter = 1
+Catched signal 10, counter = 2
+^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2
+[?2004lPID: 4212
+Real-time signal 30
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2
+[?2004lPID: 4229
+Catched signal 10, counter = 0
+Catched signal 10, counter = 1
+Catched signal 10, counter = 0
+^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2 &
+[?2004l[1] 4254
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# PID: 4254
+kill -10 4254 -q 0
+[?2004lbash: kill: -q: arguments must be process or job IDs
+User defined signal 1
+Catched signal 10, counter = 0
+[?2004h]0;margo@ubuntu: ~/LabOS5[01;32mmargo@ubuntu[00m:[01;34m~/LabOS5[00m$ sudo su
+[?2004l[sudo] password for margo: 
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# exitvisudo[2Pexit[2Pls  ./task3_2
+[?2004lPID: 4267
+Catched signal 10, counter = 0
+Catched signal 10, counter = 1
+^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2[5Pexitvisudo[2Pexit[2Plsnano script.sh              nano task3_2.c
+[?2004l[?2004h[?1049h[22;0;0t[1;26r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[24;33H(B[0;7m[ Reading... ](B[m[24;32H(B[0;7m[ Read 39 lines ](B[m[H(B[0;7m  GNU nano 6.2 [22btask3_2.c [31b [1;78H(B[m[25d(B[0;7m^G(B[m Help[25;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[25;61H(B[0;7m^T(B[m Execute[26d(B[0;7m^X(B[m Exit[26;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify[2d(B[0;1m[36m#include[33m <stdio.h>[3d[36m#include[33m <stdlib.h>[4d[36m#include[33m <signal.h>[5d[36m#include[33m <unistd.h>[7d(B[0m[32mint[39m(B[m counter = 0;[9d[32mvoid[39m(B[m sigHandler([32mconst[39m(B[m [32mint[39m(B[m sig, [32msiginfo_t[39m(B[m* s, [32mvoid[39m(B[m* ucontext){[10;5Hprintf((B[0;1m[33m"Catched signal %d, counter = %d\n"[39m(B[m,sig, s->si_value.sival_int);[12;4Hsleep(1);[13d}[15d[32mvoid[39m(B[m (*mysig([32mint[39m(B[m sig,[32mvoid[39m(B[m (*hnd)([32mint[39m(B[m,[32msiginfo_t[39m(B[m*, [32mvoid[39m(B[m*)))([32mint[39m(B[m, [32msiginfo_t[39m(B[m*,[32mvoid[39m(B[0;7m>[17;9H(B[0;1m[34m// надежна�^o об�^`або�^bка �^aигналов[18;9H(B[0m[32mstruct[39m(B[m sigaction act,oldact;[19;9Hact.sa_sigaction = hnd;[20;9Hsigemptyset(&act.sa_mask);[21;9Hsigaddset(&act.sa_mask,(B[0;1m[31mSIGINT[39m(B[m);[22;9Hact.sa_flags = (B[0;1m[31mSA_SIGINFO[39m(B[m;[23;9H(B[0;1m[33mif[39m(B[m(sigaction(sig,&act,&oldact) < 0){[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[24d[K[?12l[?25h[22d[?25l[?12l[?25h[23d[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17Hperror((B[0;1m[33m"sigaction"[39m(B[m);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17Hexit(-1);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H[35mreturn[39m(B[m oldact.sa_sigaction;[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[32mint[39m(B[m main(){[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hprintf((B[0;1m[33m"PID: %d\n"[39m(B[m,getpid());[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hmysig((B[0;1m[31mSIGUSR1[39m(B[m,sigHandler);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hmysig((B[0;1m[31mSIGRTMAX[39m(B[m,sigHandler);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H(B[0;1m[33mfor[39m(B[m(;;)[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17Hpause();[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;8H[42m[1K[49m(B[m[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H[35mreturn[39m(B[m 0;[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h7[2;24r8M[1;26r[2;9Hact.sa_sigaction = hnd;[?25l[?12l[?25h7[2;23r8M[1;26r[2;9H[32mstruct[39m(B[m sigaction act,oldact;[?25l[?12l[?25h7[2;23r8M[1;26r[2;9H(B[0;1m[34m// надежна�^o об�^`або�^bка �^aигналов[39m(B[m[?25l[?12l[?25h7[2;24r8M[1;26r[2;1H[?25l[?12l[?25h7[2;24r8M[1;26r[2;1H[32mvoid[39m(B[m (*mysig([32mint[39m(B[m sig,[32mvoid[39m(B[m (*hnd)([32mint[39m(B[m,[32msiginfo_t[39m(B[m*, [32mvoid[39m(B[m*)))([32mint[39m(B[m, [32msiginfo_t[39m(B[m*,[32mvoid[39m(B[0;7m>[24;1H(B[m[K[2d[?25l[?12l[?25h7[2;23r8M[1;26r[2;1H[?25l[?12l[?25h7[2;23r8M[1;26r[2;1H}[?25l[?12l[?25h7[2;23r8M[1;26r[2;4Hsleep(1);[?25l[?12l[?25h7[2;23r8M[1;26r[2;1H[?25l[?12l[?25h7[2;23r8M[1;26r[2;5Hprintf((B[0;1m[33m"Catched signal %d, counter = %d\n"[39m(B[m,sig, s->si_value.sival_int);[?25l[?12l[?25h7[2;23r8M[1;26r[2;1H[32mvoid[39m(B[m sigHandler([32mconst[39m(B[m [32mint[39m(B[m sig, [32msiginfo_t[39m(B[m* s, [32mvoid[39m(B[m* ucontext){[?25l[?12l[?25h7[2;24r8M[1;26r[2;1H[?25l[?12l[?25h7[2;23r8M[1;26r[2;1H[32mint[39m(B[m counter = 0;[?25l[?12l[?25h7[2;24r8M[1;26r[2;1H[?25l[?12l[?25h7[2;23r8M[1;26r[2;1H(B[0;1m[36m#include[33m <unistd.h>[39m(B[m[?25l[?12l[?25h7[2;23r8M[1;26r[2;1H(B[0;1m[36m#include[33m <signal.h>[39m(B[m[?25l[?12l[?25h7[2;23r8M[1;26r[2;1H(B[0;1m[36m#include[33m <stdlib.h>[39m(B[m[?25l[?12l[?25h7[2;23r8M[1;26r[2;1H(B[0;1m[36m#include[33m <stdio.h>[39m(B[m[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[?12l[?25h[22d[?25l[?12l[?25h[23d[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17Hperror((B[0;1m[33m"sigaction"[39m(B[m);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17Hexit(-1);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H[35mreturn[39m(B[m oldact.sa_sigaction;[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[32mint[39m(B[m main(){[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hprintf((B[0;1m[33m"PID: %d\n"[39m(B[m,getpid());[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hmysig((B[0;1m[31mSIGUSR1[39m(B[m,sigHandler);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hmysig((B[0;1m[31mSIGRTMAX[39m(B[m,sigHandler);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H(B[0;1m[33mfor[39m(B[m(;;)[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17Hpause();[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;8H[42m[1K[49m(B[m[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H[35mreturn[39m(B[m 0;[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25hm[?25l[?12l[?25hy[?25l[?12l[?25hs[?25l[?12l[?25hi[?25l[?12l[?25hg[?25l[?12l[?25h([?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[1;48H(B[0;7m*[78G(B[m[?12l[?25h[16;22H[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h(B[0;1m[31mI[39m(B[m,sigHandler);[16;22H[?25l[?12l[?25h(B[0;1m[31mN[39m(B[m,sigHandler);[16;23H[?25l[25;16H    (B[0;7mM-D(B[m DOS Format     (B[0;7mM-A(B[m Append   [58G(B[0;7mM-B(B[m Backup File[26;2H(B[0;7mC(B[m Cancel[16G    (B[0;7mM-M(B[m Mac Format     (B[0;7mM-P(B[m Prepend [7b(B[0;7m^T(B[m Browse[K[24d(B[0;7mFile Name to Write: task3_2.c [48b [24;30H(B[m[?12l[?25h[?25l  [1K (B[0;7m[ Writing... ](B[m[K[1;48H(B[0;7m [78G(B[m[24;31H(B[0;7m[ Wrote 39 lines ](B[m[25;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[58G   (B[0;7m^T(B[m Execute[K[26;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste [6b(B[0;7m^J(B[m Justify[?12l[?25h[16;23H[?25l[24d[J[26d[?12l[?25h[26;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# nano task3_2.c[5P./task3_2[5Pexitvisudo[2Pexit[2Plsnano script.sh              gcc task3_2.c -o task3_2
+[?2004l[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2
+[?2004lPID: 4296
+Catched signal 34, counter = 0
+Catched signal 34, counter = 1
+Catched signal 34, counter = 2
+Catched signal 34, counter = 3
+Catched signal 34, counter = 4
+c ^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# vim   ./task3_2[15@gcc task3_2.c -o task3_2[10Pnano task3_2.c
+[?2004l[?2004h[?1049h[22;0;0t[1;26r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[24;33H(B[0;7m[ Reading... ](B[m[24;32H(B[0;7m[ Read 39 lines ](B[m[H(B[0;7m  GNU nano 6.2 [22btask3_2.c [31b [1;78H(B[m[25d(B[0;7m^G(B[m Help[25;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[25;61H(B[0;7m^T(B[m Execute[26d(B[0;7m^X(B[m Exit[26;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify[2d(B[0;1m[36m#include[33m <stdio.h>[3d[36m#include[33m <stdlib.h>[4d[36m#include[33m <signal.h>[5d[36m#include[33m <unistd.h>[7d(B[0m[32mint[39m(B[m counter = 0;[9d[32mvoid[39m(B[m sigHandler([32mconst[39m(B[m [32mint[39m(B[m sig, [32msiginfo_t[39m(B[m* s, [32mvoid[39m(B[m* ucontext){[10;5Hprintf((B[0;1m[33m"Catched signal %d, counter = %d\n"[39m(B[m,sig, s->si_value.sival_int);[12;4Hsleep(1);[13d}[15d[32mvoid[39m(B[m (*mysig([32mint[39m(B[m sig,[32mvoid[39m(B[m (*hnd)([32mint[39m(B[m,[32msiginfo_t[39m(B[m*, [32mvoid[39m(B[m*)))([32mint[39m(B[m, [32msiginfo_t[39m(B[m*,[32mvoid[39m(B[0;7m>[17;9H(B[0;1m[34m// надежна�^o об�^`або�^bка �^aигналов[18;9H(B[0m[32mstruct[39m(B[m sigaction act,oldact;[19;9Hact.sa_sigaction = hnd;[20;9Hsigemptyset(&act.sa_mask);[21;9Hsigaddset(&act.sa_mask,(B[0;1m[31mSIGINT[39m(B[m);[22;9Hact.sa_flags = (B[0;1m[31mSA_SIGINFO[39m(B[m;[23;9H(B[0;1m[33mif[39m(B[m(sigaction(sig,&act,&oldact) < 0){[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[24d[K[?12l[?25h[22d[?25l[?12l[?25h[23d[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17Hperror((B[0;1m[33m"sigaction"[39m(B[m);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17Hexit(-1);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H[35mreturn[39m(B[m oldact.sa_sigaction;[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[32mint[39m(B[m main(){[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hprintf((B[0;1m[33m"PID: %d\n"[39m(B[m,getpid());[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hmysig((B[0;1m[31mSIGUSR1[39m(B[m,sigHandler);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hmysig((B[0;1m[31mSIGRTMIN[39m(B[m,sigHandler);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H(B[0;1m[33mfor[39m(B[m(;;)[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17Hpause();[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;8H[42m[1K[49m(B[m[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H[35mreturn[39m(B[m 0;[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[8;9H[?25l[?12l[?25h}[?25l[?12l[?25h[9d[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[9G[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h}[?25l[?12l[?25h[A[?25l[?12l[?25h[A [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[9G[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h [?25l[?12l[?25ho[?25l[?12l[?25hl[?25l[?12l[?25hd[?25l[?12l[?25ha[?25l[?12l[?25h[?25l[1;48H(B[0;7m*[78G(B[m[?12l[?25h[9;18H[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[8;10H[?25l[?12l[?25h[A[?25l[?12l[?25h[A   [?25l[?12l[?25h[17G[?25l[?12l[?25hp[?25l[?12l[?25he[?25l[?12l[?25hr[?25l[?12l[?25hr[?25l[?12l[?25ho[?25l[?12l[?25hr[?25l[?12l[?25h([?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[A[?25l[?12l[?25ha[?25l[?12l[?25hc[?25l[?12l[?25ht[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h0) < 0){[32G[?25l[?12l[?25h[?25l[25;16H    (B[0;7mM-D(B[m DOS Format     (B[0;7mM-A(B[m Append   [58G(B[0;7mM-B(B[m Backup File[26;2H(B[0;7mC(B[m Cancel[16G    (B[0;7mM-M(B[m Mac Format     (B[0;7mM-P(B[m Prepend [7b(B[0;7m^T(B[m Browse[K[24d(B[0;7mFile Name to Write: task3_2.c [48b [24;30H(B[m[?12l[?25h[?25l  [1K (B[0;7m[ Writing... ](B[m[K[1;48H(B[0;7m [78G(B[m[24;31H(B[0;7m[ Wrote 39 lines ](B[m[25;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[58G   (B[0;7m^T(B[m Execute[K[26;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste [6b(B[0;7m^J(B[m Justify[?12l[?25h[5;32H[?25l[24d[J[26d[?12l[?25h[26;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# nano task3_2.c[5P./task3_2[15@gcc task3_2.c -o task3_2
+[?2004l[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# gcc task3_2.c -o task3_2[10Pnano task3_2.c[5P./task3_2
+[?2004lPID: 4321
+Catched signal 34, counter = 0
+Catched signal 34, counter = 1
+Catched signal 34, counter = 2
+Catched signal 34, counter = 3
+Catched signal 34, counter = 4
+^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# cat task3_2.c
+[?2004l#include <stdio.h>
+#include <stdlib.h>
+#include <signal.h>
+#include <unistd.h>
+
+int counter = 0;
+
+void sigHandler(const int sig, siginfo_t* s, void* ucontext){
+    printf("Catched signal %d, counter = %d\n",sig, s->si_value.sival_int);
+
+   sleep(1);
+}
+
+void (*mysig(int sig,void (*hnd)(int,siginfo_t*, void*)))(int, siginfo_t*,void*) {
+
+   	// надежная обработка сигналов
+   	struct sigaction act,oldact;
+   	act.sa_sigaction = hnd;
+   	sigemptyset(&act.sa_mask);
+   	sigaddset(&act.sa_mask,SIGINT);
+   	act.sa_flags = SA_SIGINFO;
+   	if(sigaction(sig,&act,0) < 0){
+           	perror("sigaction");
+		exit(-1);
+	}
+   	return act.sa_sigaction;
+
+}
+
+int main(){
+	printf("PID: %d\n",getpid());
+	mysig(SIGUSR1,sigHandler);
+        mysig(SIGRTMIN,sigHandler);
+	for(;;)
+		pause();
+	
+
+        return 0;
+}
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# cat task3_2.c[4P./task3_2[15@gcc task3_2.c -o task3_2[10Pnano task3_2.c
+[?2004l[?2004h[?1049h[22;0;0t[1;26r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[24;33H(B[0;7m[ Reading... ](B[m[24;32H(B[0;7m[ Read 39 lines ](B[m[H(B[0;7m  GNU nano 6.2 [22btask3_2.c [31b [1;78H(B[m[25d(B[0;7m^G(B[m Help[25;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[25;61H(B[0;7m^T(B[m Execute[26d(B[0;7m^X(B[m Exit[26;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify[2d(B[0;1m[36m#include[33m <stdio.h>[3d[36m#include[33m <stdlib.h>[4d[36m#include[33m <signal.h>[5d[36m#include[33m <unistd.h>[7d(B[0m[32mint[39m(B[m counter = 0;[9d[32mvoid[39m(B[m sigHandler([32mconst[39m(B[m [32mint[39m(B[m sig, [32msiginfo_t[39m(B[m* s, [32mvoid[39m(B[m* ucontext){[10;5Hprintf((B[0;1m[33m"Catched signal %d, counter = %d\n"[39m(B[m,sig, s->si_value.sival_int);[12;4Hsleep(1);[13d}[15d[32mvoid[39m(B[m (*mysig([32mint[39m(B[m sig,[32mvoid[39m(B[m (*hnd)([32mint[39m(B[m,[32msiginfo_t[39m(B[m*, [32mvoid[39m(B[m*)))([32mint[39m(B[m, [32msiginfo_t[39m(B[m*,[32mvoid[39m(B[0;7m>[17;9H(B[0;1m[34m// надежна�^o об�^`або�^bка �^aигналов[18;9H(B[0m[32mstruct[39m(B[m sigaction act,oldact;[19;9Hact.sa_sigaction = hnd;[20;9Hsigemptyset(&act.sa_mask);[21;9Hsigaddset(&act.sa_mask,(B[0;1m[31mSIGINT[39m(B[m);[22;9Hact.sa_flags = (B[0;1m[31mSA_SIGINFO[39m(B[m;[23;9H(B[0;1m[33mif[39m(B[m(sigaction(sig,&act,0) < 0){[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[24d[K[?12l[?25h[22d[?25l[?12l[?25h[23d[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17Hperror((B[0;1m[33m"sigaction"[39m(B[m);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17Hexit(-1);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H[35mreturn[39m(B[m act.sa_sigaction;[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[32mint[39m(B[m main(){[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hprintf((B[0;1m[33m"PID: %d\n"[39m(B[m,getpid());[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hmysig((B[0;1m[31mSIGUSR1[39m(B[m,sigHandler);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hmysig((B[0;1m[31mSIGRTMIN[39m(B[m,sigHandler);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H(B[0;1m[33mfor[39m(B[m(;;)[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17Hpause();[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;8H[42m[1K[49m(B[m[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H[35mreturn[39m(B[m 0;[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[8;9H[?25l[?12l[?25h}[?25l[?12l[?25h[9d[?25l[?12l[?25h[A[?25l[?12l[?25h[8;9H[?25l[?12l[?25h}[?25l[1;48H(B[0;7m*[78G(B[m[?12l[?25h[8;8H[42m[1K [49m(B[m [?25l[?12l[?25h[K[?25l[8;24r[24;1H
+[1;26r[7;26H[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[42m[1K [49m(B[m [?25l[?12l[?25h[7;9H[K[?25l[?12l[?25h[K[?25l[7;24r[24;1H
+[1;26r[6;37H[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[6;24H"sigaction[K[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[42m[1K [49m(B[m [?25l[?12l[?25h[12G[K[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[K[?25l[6;24r[24;1H
+[1;26r[5;39H[?12l[?25h[?25l[?12l[?25h [?25l7[6;24r8[6dM[1;26r[6;1H[?12l[?25h[?25l[?12l[?25h[8G[42m[1K [49m(B[m[?25l[?12l[?25h[16G[42m[1K [49m(B[m[?25l[?12l[?25h[1K r[?25l[?12l[?25he[?25l[?12l[?25ht[?25l[?12l[?25hu[?25l[?12l[?25hr[?25l[?12l[?25h[17G[35mreturn[39m(B[m[?25l[?12l[?25h[42m [49m(B[m[?25l[?12l[?25h (B[0;1m[31mS[39m(B[m[?25l[?12l[?25h(B[0;1m[31mI[39m(B[m[?25l[?12l[?25h(B[0;1m[31mG[39m(B[m[?25l[?12l[?25h(B[0;1m[31m_[39m(B[m[?25l[?12l[?25h(B[0;1m[31mE[39m(B[m[?25l[?12l[?25h(B[0;1m[31mR[39m(B[m[?25l[?12l[?25h(B[0;1m[31mR[39m(B[m[?25l[?12l[?25h;[?25l[25;16H    (B[0;7mM-D(B[m DOS Format     (B[0;7mM-A(B[m Append   [58G(B[0;7mM-B(B[m Backup File[26;2H(B[0;7mC(B[m Cancel[16G    (B[0;7mM-M(B[m Mac Format     (B[0;7mM-P(B[m Prepend [7b(B[0;7m^T(B[m Browse[K[24d(B[0;7mFile Name to Write: task3_2.c [48b [24;30H(B[m[?12l[?25h[?25l  [1K (B[0;7m[ Writing... ](B[m[K[1;48H(B[0;7m [78G(B[m[24;31H(B[0;7m[ Wrote 37 lines ](B[m[25;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[58G   (B[0;7m^T(B[m Execute[K[26;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste [6b(B[0;7m^J(B[m Justify[?12l[?25h[6;32H[?25l[24d[J[26d[?12l[?25h[26;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# nano task3_2.c[1Pcat task3_2.c[4P./task3_2[15@gcc task3_2.c -o task3_2
+[?2004l[01m[Ktask3_2.c:[m[K In function '[01m[Kmysig[m[K':
+[01m[Ktask3_2.c:23:24:[m[K [01;35m[Kwarning: [m[Kreturning '[01m[Kvoid (*)(int)[m[K' from a function with incompatible return type '[01m[Kvoid (*)(int,  siginfo_t *, void *)[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   23 |                 return [01;35m[KSIG_ERR[m[K;
+      |                        [01;35m[K^~~~~~~[m[K
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2
+[?2004lPID: 4355
+Catched signal 34, counter = 0
+Catched signal 34, counter = 1
+Catched signal 34, counter = 2
+Catched signal 34, counter = 3
+Catched signal 34, counter = 4
+^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2[15@gcc task3_2.c -o task3_2[10Pnano task3_2.c
+[?2004l[?2004h[?1049h[22;0;0t[1;26r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[24;33H(B[0;7m[ Reading... ](B[m[24;32H(B[0;7m[ Read 37 lines ](B[m[H(B[0;7m  GNU nano 6.2 [22btask3_2.c [31b [1;78H(B[m[25d(B[0;7m^G(B[m Help[25;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[25;61H(B[0;7m^T(B[m Execute[26d(B[0;7m^X(B[m Exit[26;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify[2d(B[0;1m[36m#include[33m <stdio.h>[3d[36m#include[33m <stdlib.h>[4d[36m#include[33m <signal.h>[5d[36m#include[33m <unistd.h>[7d(B[0m[32mint[39m(B[m counter = 0;[9d[32mvoid[39m(B[m sigHandler([32mconst[39m(B[m [32mint[39m(B[m sig, [32msiginfo_t[39m(B[m* s, [32mvoid[39m(B[m* ucontext){[10;5Hprintf((B[0;1m[33m"Catched signal %d, counter = %d\n"[39m(B[m,sig, s->si_value.sival_int);[12;4Hsleep(1);[13d}[15d[32mvoid[39m(B[m (*mysig([32mint[39m(B[m sig,[32mvoid[39m(B[m (*hnd)([32mint[39m(B[m,[32msiginfo_t[39m(B[m*, [32mvoid[39m(B[m*)))([32mint[39m(B[m, [32msiginfo_t[39m(B[m*,[32mvoid[39m(B[0;7m>[17;9H(B[0;1m[34m// надежна�^o об�^`або�^bка �^aигналов[18;9H(B[0m[32mstruct[39m(B[m sigaction act,oldact;[19;9Hact.sa_sigaction = hnd;[20;9Hsigemptyset(&act.sa_mask);[21;9Hsigaddset(&act.sa_mask,(B[0;1m[31mSIGINT[39m(B[m);[22;9Hact.sa_flags = (B[0;1m[31mSA_SIGINFO[39m(B[m;[23;9H(B[0;1m[33mif[39m(B[m(sigaction(sig,&act,0) < 0)[2d[?12l[?25h[?25l[?12l[?25h[3d[?25l[?12l[?25h[4d[?25l[?12l[?25h[5d[?25l[?12l[?25h[6d[?25l[?12l[?25h[7d[?25l[?12l[?25h[8d[?25l[?12l[?25h[9d[?25l[?12l[?25h[10d[?25l[?12l[?25h[11d[?25l[?12l[?25h[12d[?25l[?12l[?25h[13d[?25l[?12l[?25h[14d[?25l[?12l[?25h[15d[?25l[?12l[?25h[16d[?25l[?12l[?25h[17d[?25l[?12l[?25h[18d[?25l[?12l[?25h[19d[?25l[?12l[?25h[20d[?25l[?12l[?25h[21d[?25l[24d[K[?12l[?25h[22d[?25l[?12l[?25h[23d[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17H[35mreturn[39m(B[m (B[0;1m[31mSIG_ERR[39m(B[m;[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H[35mreturn[39m(B[m act.sa_sigaction;[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[32mint[39m(B[m main(){[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hprintf((B[0;1m[33m"PID: %d\n"[39m(B[m,getpid());[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hmysig((B[0;1m[31mSIGUSR1[39m(B[m,sigHandler);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9Hmysig((B[0;1m[31mSIGRTMIN[39m(B[m,sigHandler);[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H(B[0;1m[33mfor[39m(B[m(;;)[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;17Hpause();[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;8H[42m[1K[49m(B[m[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;9H[35mreturn[39m(B[m 0;[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H}[?25l[?12l[?25h7[2;24r8[24d
+[1;26r[23;1H[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h[A[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25hm[?25l[?12l[?25hy[?25l[?12l[?25hs[?25l[?12l[?25hi[?25l[?12l[?25hg[?25l[?12l[?25h([?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[?12l[?25h[C[?25l[1;48H(B[0;7m*[78G(B[m[?12l[?25h[16;22H[1P[?25l[?12l[?25h[1P[?25l[?12l[?25h(B[0;1m[31mA[39m(B[m,sigHandler);[16;22H[?25l[?12l[?25h(B[0;1m[31mX[39m(B[m,sigHandler);[16;23H[?25l[25;16H    (B[0;7mM-D(B[m DOS Format     (B[0;7mM-A(B[m Append   [58G(B[0;7mM-B(B[m Backup File[26;2H(B[0;7mC(B[m Cancel[16G    (B[0;7mM-M(B[m Mac Format     (B[0;7mM-P(B[m Prepend [7b(B[0;7m^T(B[m Browse[K[24d(B[0;7mFile Name to Write: task3_2.c [48b [24;30H(B[m[?12l[?25h[?25l  [1K (B[0;7m[ Writing... ](B[m[K[1;48H(B[0;7m [78G(B[m[24;31H(B[0;7m[ Wrote 37 lines ](B[m[25;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[58G   (B[0;7m^T(B[m Execute[K[26;2H(B[0;7mX(B[m Exit  [16G(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste [6b(B[0;7m^J(B[m Justify[?12l[?25h[16;23H[?25l[24d[J[26d[?12l[?25h[26;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# nano task3_2.c[5P./task3_2[15@gcc task3_2.c -o task3_2
+[?2004l[01m[Ktask3_2.c:[m[K In function '[01m[Kmysig[m[K':
+[01m[Ktask3_2.c:23:24:[m[K [01;35m[Kwarning: [m[Kreturning '[01m[Kvoid (*)(int)[m[K' from a function with incompatible return type '[01m[Kvoid (*)(int,  siginfo_t *, void *)[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   23 |                 return [01;35m[KSIG_ERR[m[K;
+      |                        [01;35m[K^~~~~~~[m[K
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# gcc task3_2.c -o task3_2[10Pnano task3_2.c[5P./task3_2
+[?2004lPID: 4378
+Catched signal 64, counter = 0
+Catched signal 64, counter = 1
+Catched signal 64, counter = 2
+Catched signal 64, counter = 3
+Catched signal 64, counter = 4
+^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# cat task2 3_2.c
+[?2004l#include <stdio.h>
+#include <stdlib.h>
+#include <signal.h>
+#include <unistd.h>
+
+int counter = 0;
+
+void sigHandler(const int sig, siginfo_t* s, void* ucontext){
+    printf("Catched signal %d, counter = %d\n",sig, s->si_value.sival_int);
+
+   sleep(1);
+}
+
+void (*mysig(int sig,void (*hnd)(int,siginfo_t*, void*)))(int, siginfo_t*,void*) {
+
+   	// надежная обработка сигналов
+   	struct sigaction act,oldact;
+   	act.sa_sigaction = hnd;
+   	sigemptyset(&act.sa_mask);
+   	sigaddset(&act.sa_mask,SIGINT);
+   	act.sa_flags = SA_SIGINFO;
+   	if(sigaction(sig,&act,0) < 0)
+		return SIG_ERR;
+   	return act.sa_sigaction;
+
+}
+
+int main(){
+	printf("PID: %d\n",getpid());
+	mysig(SIGUSR1,sigHandler);
+        mysig(SIGRTMAX,sigHandler);
+	for(;;)
+		pause();
+	
+
+        return 0;
+}
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# cat task3_2.c[4P./task3_2[15@gcc task3_2.c -o task3_2[15P./task3_2
+[?2004lPID: 4792
+Catched signal 64, counter = 0
+Catched signal 64, counter = 1
+Catched signal 64, counter = 2
+Catched signal 64, counter = 3
+Catched signal 64, counter = 4
+^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2
+[?2004lPID: 4816
+Catched signal 10, counter = 1
+Catched signal 64, counter = 0
+Catched signal 64, counter = 1
+Catched signal 64, counter = 2
+Catched signal 64, counter = 3
+Catched signal 64, counter = 4
+Catched signal 10, counter = 2
+^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2
+[?2004lPID: 4840
+Catched signal 10, counter = 0
+Catched signal 64, counter = 0
+Catched signal 64, counter = 1
+Catched signal 64, counter = 2
+Catched signal 64, counter = 3
+Catched signal 64, counter = 4
+Catched signal 10, counter = 2
+^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# ./task3_2
+[?2004lPID: 4865
+Catched signal 10, counter = 0
+Catched signal 64, counter = 0
+Catched signal 64, counter = 1
+Catched signal 64, counter = 2
+Catched signal 64, counter = 3
+Catched signal 64, counter = 4
+Catched signal 10, counter = 1
+^C
+[?2004h]0;root@ubuntu: /home/margo/LabOS5root@ubuntu:/home/margo/LabOS5# exit
+[?2004lexit
+[?2004h]0;margo@ubuntu: ~/LabOS5[01;32mmargo@ubuntu[00m:[01;34m~/LabOS5[00m$ exit
+[?2004lexit
+
+Script done on 2023-05-09 01:47:42+03:00 [COMMAND_EXIT_CODE="130"]

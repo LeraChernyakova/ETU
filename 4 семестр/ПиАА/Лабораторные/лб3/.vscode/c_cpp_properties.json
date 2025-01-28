@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "windows-gcc-x64",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Users/22153/gcc/include/c++/11.2.0",
+                "C:/Users/22153/gcc/include/c++/11.2.0/x86_64-w64-mingw32"
+            ],
+            "compilerPath": "C:/Users/22153/gcc/bin/gcc.exe",
+            "cStandard": "${default}",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "windows-gcc-x64",
+            "compilerArgs": [
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,12 @@
+ PPID   PID  PGID   SID TTY      TPGID STAT   UID   TIME COMMAND
+ 1878  1879  1879  1879 pts/2     1889 Ss    1000   0:00      \_ bash -i
+ 1879  1889  1889  1879 pts/2     1889 S+    1000   0:00          \_ ./father result.txt
+ 1889  1890  1889  1879 pts/2     1889 S+    1000   0:00              \_ son1
+ 1889  1891  1889  1879 pts/2     1889 S+    1000   0:00              \_ son2 result.txt
+ 1889  1892  1889  1879 pts/2     1889 Z+    1000   0:00              \_ [son3] <defunct>
+ 1889  1893  1889  1879 pts/2     1889 S+    1000   0:00              \_ sh -c ps xjf | grep "STAT\|1879" > result.txt
+ 1893  1894  1889  1879 pts/2     1889 R+    1000   0:00                  \_ ps xjf
+ 1893  1895  1889  1879 pts/2     1889 S+    1000   0:00                  \_ grep STAT\|1879
+  601  1891  1889  1879 pts/2     1879 S     1000   0:00 son2 result.txt
+ 1891  1899  1889  1879 pts/2     1879 S     1000   0:00  \_ sh -c ps xjf | grep son2 >> result.txt
+ 1899  1901  1889  1879 pts/2     1879 S     1000   0:00      \_ grep son2

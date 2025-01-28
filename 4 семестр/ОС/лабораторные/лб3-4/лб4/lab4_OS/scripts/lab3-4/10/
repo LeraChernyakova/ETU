@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <sched.h>
+int main(void)
+{
+    struct sched_param shdprm; // значения параметров планирования
+    int pid, pid1, pid2, pid3, ppid, status;
+    int n, m, l, k; // переменные для задания значений приоритетов,
+    // для удобства можно оформить их как аргументы
+    //командной
+    // строки при запуске и
+    // как аргумент добавить задаваемую политику
+//    планирования
+    n = 50;
+   // m = 60;
+  //  l = 10;
+ //   k = 80; // заданные значения приоритетов c
+   // политикой RR
+         m=60; l=10; k=4; //для повторного эксперимента с
+        //политикой FIFO
+    pid = getpid();
+    ppid = getppid();
+    shdprm.sched_priority = n;
+    if (sched_setscheduler(0, SCHED_FIFO, &shdprm) == -1)
+    {
+        perror("SCHED_SETSCHEDULER");
+    
+    }
+    for (int i = 0; i< 50; i++){
+    	if ((pid1 = fork()) == 0)
+    	{
+        	shdprm.sched_priority = n;
+		if (i%2==0){
+        		if (sched_setscheduler(pid1, SCHED_RR, &shdprm) == -1)
+            			perror("SCHED_SETSCHEDULER_1");
+        		execl("son1", "son1", NULL);
+		}
+    		if (i%2!=0){
+        		if (sched_setscheduler(pid1, SCHED_FIFO, &shdprm) == -1)
+            			perror("SCHED_SETSCHEDULER_1");
+        		execl("son1", "son1", NULL);
+		}
+
+	}
+    }
+    for (int i = 0; i<50;i++){
+	//int stat = wait(&status);
+    	printf("Процесс с pid = %d завершен, sched: ", wait(&status));
+    	    switch (sched_getscheduler(0))
+    	{
+    		case SCHED_FIFO:
+        printf("SCHED_FIFO\n");
+        break;
+    case SCHED_RR:
+        printf("SCHED_RR\n");
+        break;
+    case SCHED_OTHER:
+        printf("SCHED_OTHER\n");
+        break;
+    case -1:
+        perror("SCHED_GETSCHEDULER");
+        break;
+    default:
+        printf("Неизвестная политика планирования\n");
+    	}
+    }
+    return 0;
+}

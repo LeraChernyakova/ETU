@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Pavlov_Dmitry_lb4"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Pavlov_Dmitry_lb4">
+				<Option output="/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Pavlov_Dmitry_lb4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 Pavlov_Dmitry_lb4"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Pavlov_Dmitry_lb4/fast">
+				<Option output="/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Pavlov_Dmitry_lb4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 Pavlov_Dmitry_lb4/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/KMP_cycle.hpp">
+			<Option target="Pavlov_Dmitry_lb4"/>
+		</Unit>
+		<Unit filename="/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/cycle.hpp">
+			<Option target="Pavlov_Dmitry_lb4"/>
+		</Unit>
+		<Unit filename="/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/main.cpp">
+			<Option target="Pavlov_Dmitry_lb4"/>
+		</Unit>
+		<Unit filename="/Users/dmitriypavlov/Desktop/university/2cur/2sem/DaAA/pdlb4/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

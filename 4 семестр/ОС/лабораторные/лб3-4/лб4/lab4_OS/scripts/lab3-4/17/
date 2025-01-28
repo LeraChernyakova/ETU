@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <unistd.h>
+#include <time.h>
+#include <string.h>
+void* thread_function1(void *arg);
+void* thread_function2(void *arg);
+char* get_cur_time();
+int main()
+{
+    pthread_t thread1, thread2;
+    int result1, result2;
+
+    // Создание первого потока
+    result1 = pthread_create(&thread1, NULL, thread_function1, NULL);
+    if (result1 != 0) {
+        perror("Создание первого потока");
+        exit(EXIT_FAILURE);
+    }
+
+    // Создание второго потока
+    result2 = pthread_create(&thread2, NULL, thread_function2, NULL);
+    if (result2 != 0) {
+        perror("Создание второго потока");
+        exit(EXIT_FAILURE);
+    }
+
+    // Ждем завершения потоков
+    pthread_join(thread1, NULL);
+    pthread_join(thread2, NULL);
+
+    printf("Главный поток завершен\n");
+    exit(EXIT_SUCCESS);
+}
+
+void *thread_function1(void *arg)
+{
+    int i;
+    printf("Поток 1 создан\n");
+    for (i = 0; i < 10; i++) {
+        sleep(5); // Засыпаем на 5 секунд
+        printf("Поток 1: %d пятисекундных интервалов; Время: %s\n", i+1, get_cur_time());
+    }
+    printf("Поток 1 завершен; Время: %s\n", get_cur_time());
+    return NULL;
+}
+
+void *thread_function2(void *arg)
+{
+    int i;
+    printf("Поток 2 создан\n");
+    for (i = 0; i < 20; i++) {
+        sleep(1); // Засыпаем на 1 секунду
+        printf("Поток 2: %d секундных интервалов; Время: %s\n", i+1, get_cur_time());
+    }
+    printf("Поток 2 завершен; Время: %s\n", get_cur_time());
+    return NULL;
+}
+
+char *get_cur_time()
+{
+    time_t mytime = time(NULL);
+    char * time_str = ctime(&mytime);
+    time_str[strlen(time_str)-1] = '\0';	
+    return time_str;
+}
+

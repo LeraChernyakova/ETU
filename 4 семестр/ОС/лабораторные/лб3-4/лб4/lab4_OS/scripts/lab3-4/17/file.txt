@@ -1,0 +1,22 @@
+    1 ?        Sl     0:00 /init
+    4 ?        Sl     0:00 plan9 --control-socket 5 --log-level 4 --server-fd 6 --pipe-fd 8 --log-truncate
+  103 ?        Ss     0:00 /init
+  104 ?        S      0:00  \_ /init
+  105 pts/0    Ss+    0:00      \_ -bash
+  337 ?        Ss     0:00 /init
+  338 ?        S      0:00  \_ /init
+  339 pts/1    Ss     0:00      \_ -bash
+ 1492 pts/1    S+     0:00          \_ ./thread_demo
+ 1493 pts/1    S+     0:00              \_ sh -c ps axhf > file.txt
+ 1494 pts/1    R+     0:00                  \_ ps axhf
+    1 ?        Sl     0:00 /init
+    4 ?        Sl     0:00 plan9 --control-socket 5 --log-level 4 --server-fd 6 --pipe-fd 8 --log-truncate
+  103 ?        Ss     0:00 /init
+  104 ?        S      0:00  \_ /init
+  105 pts/0    Ss+    0:00      \_ -bash
+  337 ?        Ss     0:00 /init
+  338 ?        S      0:00  \_ /init
+  339 pts/1    Ss     0:00      \_ -bash
+ 1492 pts/1    S+     0:00          \_ ./thread_demo
+ 1529 pts/1    S+     0:00              \_ sh -c ps axhf >> file.txt
+ 1530 pts/1    R+     0:00                  \_ ps axhf

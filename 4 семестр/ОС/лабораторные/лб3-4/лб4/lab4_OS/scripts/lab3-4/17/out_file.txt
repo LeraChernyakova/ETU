@@ -1,0 +1,18 @@
+Поток 1 создан
+Поток 2 создан
+Работает первый и второй поток
+    1 ?        Sl     0:00 /init
+    4 ?        Sl     0:01 plan9 --control-socket 5 --log-level 4 --server-fd 6 --pipe-fd 8 --log-truncate
+  103 ?        Ss     0:00 /init
+  104 ?        S      0:00  \_ /init
+  105 pts/0    Ss+    0:00      \_ -bash
+  337 ?        Ss     0:00 /init
+  338 ?        S      0:01  \_ /init
+  339 pts/1    Ss+    0:01      \_ -bash
+ 2983 pts/1    S      0:00          \_ -bash
+ 2989 pts/1    Sl     0:00              \_ ./thread_demo_file
+ 2997 pts/1    S      0:00                  \_ sh -c ps -axhf >> out_file.txt
+ 2998 pts/1    R      0:00                      \_ ps -axhf
+ 1900 ?        Ss     0:00 /init
+ 1901 ?        S      0:00  \_ /init
+ 1902 pts/2    Ss+    0:00      \_ -bash

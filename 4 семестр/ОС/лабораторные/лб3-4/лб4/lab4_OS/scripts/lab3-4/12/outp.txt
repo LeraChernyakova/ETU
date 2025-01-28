@@ -1,0 +1,27 @@
+  UID   GID  RUID   PID  PPID  PGID TT          VSZ STAT COMMAND
+    0     0  1000  1929  1217  1929 pts/1      8920 S+   sudo ./father
+    0     0  1000  1930  1929  1930 pts/3      8920 Ss    \_ sudo ./father
+    0     0     0  1931  1930  1931 pts/3      2640 SL+       \_ ./father
+    0     0     0  1932  1931  1931 pts/3      2772 SL+           \_ son 3 4
+    0     0     0  1934  1932  1931 pts/3         0 R+            |   \_ [sh]
+    0     0     0  1933  1931  1931 pts/3      2772 SL+           \_ son 3 4
+    0     0     0  1935  1933  1931 pts/3      2888 S+                \_ sh -c ps -xf -o uid,gid,ruid,pid,ppid,pgid,tty,vsz,stat,command > outp.txt
+    0     0     0  1937  1935  1931 pts/3      7480 R+                    \_ ps -xf -o uid,gid,ruid,pid,ppid,pgid,tty,vsz,stat,command
+    0  1000  1000   869   855   869 pts/0      8020 S    su -
+    0     0     0   870   869   870 pts/0      6308 S+    \_ -bash
+    0  1000  1000   819   808   819 pts/0      8020 S    su -
+    0     0     0   820   819   820 pts/0      6204 S     \_ -bash
+    0     0     0   854   820   854 pts/0      7640 S         \_ su - go1vs1noob
+    0     0     0     1     0     0 ?          2296 Sl   /init
+    0     0     0     4     1     0 ?          2340 Sl   plan9 --control-socket 5 --log-level 4 --server-fd 6 --pipe-fd 8 --log-truncate
+    0     0     0   806     1   806 ?          2300 Ss   /init
+    0     0     0   807   806   806 ?          2316 S     \_ /init
+    0     0     0  1215     1  1215 ?          2300 Ss   /init
+    0     0     0  1216  1215  1215 ?          2316 S     \_ /init
+    0     0     0  1241     1  1241 ?          2300 Ss   /init
+    0     0     0  1242  1241  1241 ?          2316 S     \_ /init
+    0     0     0  1243  1242  1243 pts/2      6316 Ss+       \_ -bash
+nit
+    0     0     0  1241     1  1241 ?          2300 Ss   /init
+    0     0     0  1242  1241  1241 ?          2316 S     \_ /init
+    0     0     0  1243  1242  1243 pts/2      6316 Ss+       \_ -bash

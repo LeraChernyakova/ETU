@@ -1,0 +1,350 @@
+Script started on 2023-04-19 20:01:20+03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="102" LINES="51"]
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~[00m$ cd lab3-4/
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4[00m$ cd [K[K[Kcd 13
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13[00m$ ./father result.txt 
+[?2004lFATHER PARAMS: sid = 1879 pid=1889 ppid=1879 
+SON_1 PARAMS: pid=1890 ppid=1889
+Father creates and waits 
+SON_2 PARAMS: pid=1891 ppid=1889
+Father finished before son termination without waiting for it 
+SON_3 PARAMS: pid=1892 ppid=1889
+son3 terminated –ZOMBIE
+SON_3 PARAMS: pid=1892 ppid=1889
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13[00m$ cat result.txt
+[?2004l PPID   PID  PGID   SID TTY      TPGID STAT   UID   TIME COMMAND
+ 1878  1879  1879  1879 pts/2     1889 Ss    1000   0:00      \_ bash -i
+ 1879  1889  1889  1879 pts/2     1889 S+    1000   0:00          \_ ./father result.txt
+ 1889  1890  1889  1879 pts/2     1889 S+    1000   0:00              \_ son1
+ 1889  1891  1889  1879 pts/2     1889 S+    1000   0:00              \_ son2 result.txt
+ 1889  1892  1889  1879 pts/2     1889 Z+    1000   0:00              \_ [son3] <defunct>
+ 1889  1893  1889  1879 pts/2     1889 S+    1000   0:00              \_ sh -c ps xjf | grep "STAT\|1879" > result.txt
+ 1893  1894  1889  1879 pts/2     1889 R+    1000   0:00                  \_ ps xjf
+ 1893  1895  1889  1879 pts/2     1889 S+    1000   0:00                  \_ grep STAT\|1879
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13[00m$ kill -l
+[?2004l 1) SIGHUP	 2) SIGINT	 3) SIGQUIT	 4) SIGILL	 5) SIGTRAP
+ 6) SIGABRT	 7) SIGBUS	 8) SIGFPE	 9) SIGKILL	10) SIGUSR1
+11) SIGSEGV	12) SIGUSR2	13) SIGPIPE	14) SIGALRM	15) SIGTERM
+16) SIGSTKFLT	17) SIGCHLD	18) SIGCONT	19) SIGSTOP	20) SIGTSTP
+21) SIGTTIN	22) SIGTTOU	23) SIGURG	24) SIGXCPU	25) SIGXFSZ
+26) SIGVTALRM	27) SIGPROF	28) SIGWINCH	29) SIGIO	30) SIGPWR
+31) SIGSYS	34) SIGRTMIN	35) SIGRTMIN+1	36) SIGRTMIN+2	37) SIGRTMIN+3
+38) SIGRTMIN+4	39) SIGRTMIN+5	40) SIGRTMIN+6	41) SIGRTMIN+7	42) SIGRTMIN+8
+43) SIGRTMIN+9	44) SIGRTMIN+10	45) SIGRTMIN+11	46) SIGRTMIN+12	47) SIGRTMIN+13
+48) SIGRTMIN+14	49) SIGRTMIN+15	50) SIGRTMAX-14	51) SIGRTMAX-13	52) SIGRTMAX-12
+53) SIGRTMAX-11	54) SIGRTMAX-10	55) SIGRTMAX-9	56) SIGRTMAX-8	57) SIGRTMAX-7
+58) SIGRTMAX-6	59) SIGRTMAX-5	60) SIGRTMAX-4	61) SIGRTMAX-3	62) SIGRTMAX-2
+63) SIGRTMAX-1	64) SIGRTMAX	
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13[00m$ cd ..
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4[00m$ cd 13.SON_2 PARAMS ARE CHANGED: pid=1891 ppid=601
+[K^C[?2004l[?2004h[?2004l
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4[00m$ cd 13.1
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.1[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.1[00m$ ./father 
+[?2004lprinted from parent process - 1902
+printed from child proc
+SON_1 PARAMS: pid=1906 ppid=1902
+son1 exited sucessfuly
+
+printed from parent process - 1902
+printed from child proc
+SON_2 PARAMS: pid=1911 ppid=1902
+son2 exited sucessfuly
+
+printed from parent process - 1902
+printed from child proc
+SON_3 PARAMS: pid=1916 ppid=1902
+signal intercepted! some handling
+son3 exited sucessfuly
+
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.1[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.1[00m$ cd ..
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4[00m$ cd 13.2
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ ./father &
+[?2004l[1] 1921
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ Father's params: pid = 1921, ppid = 1879
+Son's params: pid = 1922, ppid = 1921
+
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ kill -SIGUSR 1921
+[?2004lbash: kill: SIGUSR: invalid signal specification
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ kill -SIGUSR 1921[C1 1921
+[?2004lCatched signal SIGUSR1
+Parent = 1879
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ kill -SIGUSR1 1921[1P 19212 1921[C[C[C[C[C[K2
+[?2004lCatched signal SIGUSR2
+Parent = 1921
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ ./father1 &
+[?2004l[2] 1923
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ Father's params: pid = 1923, ppid = 1879
+Son's params: pid = 1924, ppid = 1923
+
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ killl[K -s[KSI[K[KSIGUS1[KR1 1921[K3
+[?2004lCatched signal SIGUSR1
+Parent = 1879
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ kill -SIGUSR1 1923[K4
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ skeep[K[K[K[Kleep 19[K0 & sleep 15 & sleep 20 & sleep 25 &
+[?2004l[3] 1925
+[4] 1926
+[5] 1927
+[6] 1928
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ jons -l[1P[1@b
+[?2004l[1]   1921 Running                 ./father &
+[2]   1923 Running                 ./father1 &
+[3]   1925 Running                 sleep 10 &
+[4]   1926 Running                 sleep 15 &
+[5]-  1927 Running                 sleep 20 &
+[6]+  1928 Running                 sleep 25 &
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ jobs -l
+[?2004l[1]   1921 Running                 ./father &
+[2]   1923 Running                 ./father1 &
+[3]   1925 Running                 sleep 10 &
+[4]   1926 Running                 sleep 15 &
+[5]-  1927 Running                 sleep 20 &
+[6]+  1928 Running                 sleep 25 &
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ jobs -l
+[?2004l[1]   1921 Running                 ./father &
+[2]   1923 Running                 ./father1 &
+[3]   1925 Done                    sleep 10
+[4]   1926 Done                    sleep 15
+[5]-  1927 Running                 sleep 20 &
+[6]+  1928 Running                 sleep 25 &
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ jobs -l
+[?2004l[1]   1921 Running                 ./father &
+[2]   1923 Running                 ./father1 &
+[5]-  1927 Done                    sleep 20
+[6]+  1928 Running                 sleep 25 &
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ sleep 1[K[K[K[K[K[K[Kjobs -l
+[?2004l[1]   1921 Running                 ./father &
+[2]-  1923 Running                 ./father1 &
+[6]+  1928 Done                    sleep 25
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ kill -9 1921
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ kill -9 1921[K3
+[?2004l[1]-  Killed                  ./father
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ kill -9 19231[5Pjobs -l
+[?2004l[2]+  1923 Killed                  ./father1
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ jobs -lkill -9 19231[5Pjobs -lsleep 10 & sleep 15 & sleep 20 & sleep 25 &[25Pkill -SIGUSR1 1924sleep 10 & sleep 15 & sleep 20 & sleep 25 &
+[?2004l[1] 1929
+[2] 1930
+[3] 1931
+[4] 1932
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ fg %4
+[?2004lsleep 25
+[1]   Done                    sleep 10
+[2]   Done                    sleep 15
+[3]-  Done                    sleep 20
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/13.2[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/13.2[00m$ cd ..
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4[00m$ cd 14
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/14[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/14[00m$ suyd[K[Kdo ./nice_demo 
+[?2004l[sudo] password for go1vs1noob: 
+Приоритет =  0
+Попытались сменить приоритет на 20.Новый приоритет = 19
+Попытались уменьшить приоритет на 10.Новый приоритет = 9
+Попытались уменьшить приоритет на 100.Новый приоритет = -20
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/14[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/14[00m$ cd ..
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4[00m$ cd 16
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/16[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/16[00m$ nohuo .[K[K[Kp ./nohup_demo2
+[?2004lnohup: ignoring input and appending output to 'nohup.out'
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/16[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/16[00m$ cat nohup_demo2.c 
+[?2004l#include <stdio.h>
+
+int main(){
+	puts("Test string!");
+	return 0;
+}
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/16[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/16[00m$ cat nohup.out 
+[?2004lTest string!
+Test string!
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/16[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/16[00m$ uname -a
+[?2004lLinux DESKTOP-2IJSUSC 5.15.90.1-microsoft-standard-WSL2 #1 SMP Fri Jan 27 02:56:13 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/16[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/16[00m$ df -TH [K[K[K[K[K[K[Kps -aux
+[?2004lUSER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0   2328  1508 ?        Sl   18:30   0:00 /init
+root         4  0.0  0.0   2372    68 ?        Sl   18:30   0:00 plan9 --control-socket 5 --log-level 
+root         8  0.0  0.0   2332   108 ?        Ss   18:30   0:00 /init
+root         9  0.0  0.0   2348   112 ?        S    18:30   0:00 /init
+go1vs1n+    10  0.0  0.0   6344  5444 pts/0    Ss+  18:30   0:00 -bash
+root       600  0.0  0.0   2332   108 ?        Ss   19:01   0:00 /init
+root       601  0.0  0.0   2348   112 ?        R    19:01   0:00 /init
+go1vs1n+   602  0.0  0.0   6980  6020 pts/1    Ss   19:01   0:00 -bash
+go1vs1n+  1878  0.0  0.0   3224  1056 pts/1    D+   20:01   0:00 script --timing=time_log scrpt
+go1vs1n+  1879  0.0  0.0   6836  5976 pts/2    Ss   20:01   0:00 bash -i
+go1vs1n+  1922  0.0  0.0   2772   100 pts/2    S    20:02   0:00 ./father
+go1vs1n+  1954  0.0  0.0   7788  3116 pts/2    R+   20:05   0:00 ps -aux
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/16[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/16[00m$ cat/p[K[K /proc/sys/kernel/e[Kpid_max 
+[?2004l32768
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/16[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/16[00m$ cd ..
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4[00m$ cd 17
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/17[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/17[00m$ ./thread_demo
+[?2004lПоток 1 создан
+Поток 2 создан
+Работает первый и второй поток
+    1 ?        Sl     0:00 /init
+    4 ?        Sl     0:00 plan9 --control-socket 5 --log-level 4 --server-fd 6 --pipe-fd 8 --log-trun
+    8 ?        Ss     0:00 /init
+    9 ?        S      0:00  \_ /init
+   10 pts/0    Ss+    0:00      \_ -bash
+  600 ?        Ss     0:00 /init
+  601 ?        S      0:00  \_ /init
+  602 pts/1    Ss     0:00      \_ -bash
+ 1878 pts/1    S+     0:00      |   \_ script --timing=time_log scrpt
+ 1879 pts/2    Ss     0:00      |       \_ bash -i
+ 1966 pts/2    Sl+    0:00      |           \_ ./thread_demo
+ 1970 pts/2    S+     0:00      |               \_ sh -c ps -axhf
+ 1971 pts/2    R+     0:00      |                   \_ ps -axhf
+ 1922 pts/2    S      0:00      \_ ./father
+Поток 2: 1 секундных интервалов; Время: Wed Apr 19 20:06:20 2023
+Поток 2: 2 секундных интервалов; Время: Wed Apr 19 20:06:21 2023
+Поток 2: 3 секундных интервалов; Время: Wed Apr 19 20:06:22 2023
+Поток 2: 4 секундных интервалов; Время: Wed Apr 19 20:06:23 2023
+Поток 1: 1 пятисекундных интервалов; Время: Wed Apr 19 20:06:24 2023
+Поток 2: 5 секундных интервалов; Время: Wed Apr 19 20:06:24 2023
+Поток 2: 6 секундных интервалов; Время: Wed Apr 19 20:06:25 2023
+Поток 2: 7 секундных интервалов; Время: Wed Apr 19 20:06:26 2023
+Поток 2: 8 секундных интервалов; Время: Wed Apr 19 20:06:27 2023
+Поток 2: 9 секундных интервалов; Время: Wed Apr 19 20:06:28 2023
+Поток 1: 2 пятисекундных интервалов; Время: Wed Apr 19 20:06:29 2023
+Поток 2: 10 секундных интервалов; Время: Wed Apr 19 20:06:29 2023
+Поток 2: 11 секундных интервалов; Время: Wed Apr 19 20:06:30 2023
+Поток 2: 12 секундных интервалов; Время: Wed Apr 19 20:06:31 2023
+Поток 2: 13 секундных интервалов; Время: Wed Apr 19 20:06:32 2023
+Поток 2: 14 секундных интервалов; Время: Wed Apr 19 20:06:33 2023
+Поток 1: 3 пятисекундных интервалов; Время: Wed Apr 19 20:06:34 2023
+Поток 2: 15 секундных интервалов; Время: Wed Apr 19 20:06:34 2023
+Поток 2: 16 секундных интервалов; Время: Wed Apr 19 20:06:35 2023
+Поток 2: 17 секундных интервалов; Время: Wed Apr 19 20:06:36 2023
+Поток 2: 18 секундных интервалов; Время: Wed Apr 19 20:06:37 2023
+Поток 2: 19 секундных интервалов; Время: Wed Apr 19 20:06:38 2023
+Поток 1: 4 пятисекундных интервалов; Время: Wed Apr 19 20:06:39 2023
+Поток 2: 20 секундных интервалов; Время: Wed Apr 19 20:06:39 2023
+Поток 2 завершен; Время: Wed Apr 19 20:06:39 2023
+Поток 1: 5 пятисекундных интервалов; Время: Wed Apr 19 20:06:44 2023
+Поток 1: 6 пятисекундных интервалов; Время: Wed Apr 19 20:06:49 2023
+Поток 1: 7 пятисекундных интервалов; Время: Wed Apr 19 20:06:54 2023
+Поток 1: 8 пятисекундных интервалов; Время: Wed Apr 19 20:06:59 2023
+Поток 1: 9 пятисекундных интервалов; Время: Wed Apr 19 20:07:04 2023
+Поток 1: 10 пятисекундных интервалов; Время: Wed Apr 19 20:07:09 2023
+Только первый поток работает
+    1 ?        Sl     0:00 /init
+    4 ?        Sl     0:00 plan9 --control-socket 5 --log-level 4 --server-fd 6 --pipe-fd 8 --log-trun
+    8 ?        Ss     0:00 /init
+    9 ?        S      0:00  \_ /init
+   10 pts/0    Ss+    0:00      \_ -bash
+  600 ?        Ss     0:00 /init
+  601 ?        S      0:00  \_ /init
+  602 pts/1    Ss     0:00      \_ -bash
+ 1878 pts/1    S+     0:00      |   \_ script --timing=time_log scrpt
+ 1879 pts/2    Ss     0:00      |       \_ bash -i
+ 1966 pts/2    Sl+    0:00      |           \_ ./thread_demo
+ 1973 pts/2    S+     0:00      |               \_ sh -c ps -axhf
+ 1974 pts/2    R+     0:00      |                   \_ ps -axhf
+ 1922 pts/2    S      0:00      \_ ./father
+Поток 1 завершен; Время: Wed Apr 19 20:07:09 2023
+Главный поток завершен
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/17[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/17[00m$ ./thread_demo_2
+[?2004lПоток 1 создан
+Поток 2 создан
+Поток 2: 1 секундных интервалов
+Поток 2: 2 секундных интервалов
+Поток 2: 3 секундных интервалов
+Поток 2: 4 секундных интервалов
+Принят сигнал SIGUSR1.
+Поток 2 завершён
+Поток 1 завершен
+Главный поток завершен
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/17[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/17[00m$ gcc thre[K[K[K[K[K[K[K[K./a.out 
+[?2004lПоток 1 создан
+Поток 2 создан
+Поток 2: 1 секундных интервалов
+Поток 2: 2 секундных интервалов
+Поток 2: 3 секундных интервалов
+Поток 2: 4 секундных интервалов
+Принят сигнал SIGUSR1.
+Поток 2 завершён
+Поток 1 завершен
+Главный поток завершен
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/17[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/17[00m$ cd ..
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4[00m$ cd 22
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/22[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/22[00m$ c[K./ctrl_c_once_interc 
+[?2004lCurrent pid = 1981 and ppid = 1879
+^C^C - signal received
+^C
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/22[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/22[00m$ ./ctrl_c_once_interc [C[K[K[K[K[K[K[K[K[K[K[K[Kmult_interc [K
+[?2004lCurrent pid = 1982 and ppid = 1879
+^C^C - signal received, i = 0
+^C^C - signal received, i = 1
+^C^C - signal received, i = 2
+^C^C - signal received, i = 3
+^C^C - signal received, i = 4
+^C^C - signal received, i = 5
+^C
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/22[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/22[00m$ cat ct[Krtl__mult_interc[C[C[1Pcrtl__mult_interc[1Pcrtl__mult_interc[1Pcrtl__mult_interc[1Prtl__mult_interc.crtl__mult_interc/crtl__mult_interc
+[?2004lCurrent pid = 1985 and ppid = 1879
+^\^- - signal received, i = 0
+^\^- - signal received, i = 1
+^\^- - signal received, i = 2
+^\^- - signal received, i = 3
+^\^- - signal received, i = 4
+^\^- - signal received, i = 5
+^\Quit
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/22[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/22[00m$ kill -l
+[?2004l 1) SIGHUP	 2) SIGINT	 3) SIGQUIT	 4) SIGILL	 5) SIGTRAP
+ 6) SIGABRT	 7) SIGBUS	 8) SIGFPE	 9) SIGKILL	10) SIGUSR1
+11) SIGSEGV	12) SIGUSR2	13) SIGPIPE	14) SIGALRM	15) SIGTERM
+16) SIGSTKFLT	17) SIGCHLD	18) SIGCONT	19) SIGSTOP	20) SIGTSTP
+21) SIGTTIN	22) SIGTTOU	23) SIGURG	24) SIGXCPU	25) SIGXFSZ
+26) SIGVTALRM	27) SIGPROF	28) SIGWINCH	29) SIGIO	30) SIGPWR
+31) SIGSYS	34) SIGRTMIN	35) SIGRTMIN+1	36) SIGRTMIN+2	37) SIGRTMIN+3
+38) SIGRTMIN+4	39) SIGRTMIN+5	40) SIGRTMIN+6	41) SIGRTMIN+7	42) SIGRTMIN+8
+43) SIGRTMIN+9	44) SIGRTMIN+10	45) SIGRTMIN+11	46) SIGRTMIN+12	47) SIGRTMIN+13
+48) SIGRTMIN+14	49) SIGRTMIN+15	50) SIGRTMAX-14	51) SIGRTMAX-13	52) SIGRTMAX-12
+53) SIGRTMAX-11	54) SIGRTMAX-10	55) SIGRTMAX-9	56) SIGRTMAX-8	57) SIGRTMAX-7
+58) SIGRTMAX-6	59) SIGRTMAX-5	60) SIGRTMAX-4	61) SIGRTMAX-3	62) SIGRTMAX-2
+63) SIGRTMAX-1	64) SIGRTMAX	
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/22[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/22[00m$ cd ..
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4[00m$ cd 23
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/23[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/23[00m$ ./real_time_signals e[K&
+[?2004l[1] 1986
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/23[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/23[00m$ ps
+[?2004l  PID TTY          TIME CMD
+ 1879 pts/2    00:00:00 bash
+ 1922 pts/2    00:00:00 father
+ 1986 pts/2    00:00:00 real_time_signa
+ 1987 pts/2    00:00:00 ps
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/23[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/23[00m$ kill -35 1986
+[?2004l[?2004hSignal 35 ignored.
+]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/23[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/23[00m$ kill -35 1986[K[K[K[K[K[K[K49[K0 -[K1986
+[?2004lSignal 40 ignored.
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/23[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/23[00m$ kill -40 1986[1P 19861 1986
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/23[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/23[00m$ ps
+[?2004l  PID TTY          TIME CMD
+ 1879 pts/2    00:00:00 bash
+ 1922 pts/2    00:00:00 father
+ 1988 pts/2    00:00:00 ps
+[1]+  Real-time signal 7      ./real_time_signals
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/23[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/23[00m$ cd ..
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4[00m$ cd 24
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/24[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/24[00m$ gcc thread_ea[K[Kplan_1.c -o thread__[Kplan_1 && sudo ./thread_plan_1
+[?2004lПолитика процесса: policy SCHED_FIFO
+Приоритет процесса: 10
+Thread 1 policy: policy SCHED_RR
+Thread 2 policy: policy SCHED_FIFO
+Thread_1 with thread id = 2048 and pid = 2047 is started
+Thread_2 with thread id = 2049 and pid = 2047 is started
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/24[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/24[00m$ sudo ./thread_dummy
+[?2004lПолитика процесса: policy SCHED_FIFO
+Child thread started.
+Thread's policy SCHED_OTHER
+Child thread finished.
+Parent thread exiting.
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/24[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/24[00m$ gcc thread_dummy_4.c -o thread_dummy_4 && sudo ./thread_dummy4 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_ 4 10 15
+[?2004lMain started
+Thread priority: 15
+Thread priority: 10
+Main end
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/24[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/24[00m$ gcc thread_dummy_3.c -o thread_dummy_3 && sudo ./thread_dummy_ 3
+[?2004lThread priority: 1
+Thread priority: 99
+[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4/24[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4/24[00m$ cd ..
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~/lab3-4[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~/lab3-4[00m$ cd ..
+[?2004l[?2004h]0;go1vs1noob@DESKTOP-2IJSUSC: ~[01;32mgo1vs1noob@DESKTOP-2IJSUSC[00m:[01;34m~[00m$ exit
+[?2004lexit
+
+Script done on 2023-04-19 20:10:37+03:00 [COMMAND_EXIT_CODE="0"]

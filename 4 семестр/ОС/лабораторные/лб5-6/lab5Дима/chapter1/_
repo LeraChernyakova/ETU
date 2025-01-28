@@ -1,0 +1,50 @@
+#include <pthread.h>
+#include <signal.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+void *thread_func(void *arg) {
+    int thread_num = (int)(intptr_t)arg;
+    printf("Thread %d started, waiting for signals\n", thread_num);
+
+    sigset_t set;
+    sigemptyset(&set);
+    sigaddset(&set, SIGUSR1);
+
+    while (1) {
+        int sig;
+        sigwait(&set, &sig);
+        printf("Thread %d received signal %d\n", thread_num, sig);
+    }
+
+    return NULL;
+}
+
+void handler(int sig){
+    printf("Caught sig %d", sig); 
+    signal(sig, SIG_DFL);
+	
+}
+
+
+int main() {
+    pthread_t thread1, thread2;
+    signal(SIGUSR1, handler); 
+    // Создаем два потока
+    pthread_create(&thread1, NULL, thread_func, (void *)(intptr_t)1);
+    pthread_create(&thread2, NULL, thread_func, (void *)(intptr_t)2);
+    sleep(1);
+    pthread_kill(thread1, SIGUSR1);
+    sleep(1);
+    pthread_kill(thread1, SIGUSR1);
+    sleep(1);
+    printf("Disposition is set to default. Sending SIGUSR1(10) to threads again.\n");
+    pthread_kill(thread1, SIGUSR1);
+    pthread_kill(thread2, SIGUSR1);
+
+    pthread_join(thread1, NULL);
+    pthread_join(thread2, NULL);
+
+    return 0;
+}

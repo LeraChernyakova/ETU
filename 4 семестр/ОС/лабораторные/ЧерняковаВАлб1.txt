@@ -1,0 +1,1950 @@
+>ChernyakovaVA_lb1.txt
+
+II. Основы работы c командным интерфейсом.
+1. Введите следующие информационные команды для получения полезных сведений об ОС и текущем сеансе:
+
+date>ChernyakovaVA_lb1.txt
+Чт 09 фев 2023 17:44:21 MSK
+Вывод текущей даты
+
+who>>ChernyakovaVA_lb1.txt
+valeria  :0           2023-02-09 20:17 (:0)
+Получение информации о пользователях, подключенных к системе, и терминальных сессиях, через которые происходит подключение
+
+tty>>ChernyakovaVA_lb1.txt
+/dev/pts/0
+Печать используемого имени  теминала
+
+logname>>ChernyakovaVA_lb1.txt
+valeria
+Имя пользователя
+
+uname>>ChernyakovaVA_lb1.txt
+Linux
+Архитектура процессора
+
+
+2. Введите команду:
+
+sleep 5
+Приостановление выполнения на 5 секунд. Через 5 секунд новое приглашение $.
+
+sleep 10000
+Приостановление выполнения на 10000 секунд. Через 10000 секунд должно появиться новое приглашение $.
+Благодаря прерыванию SIGINT --  INTERRUPT, а именно введению символа <^C>, появляется приглашение $.
+
+
+3. Справочное руководство
+
+Была использована команда 'man' для изучения справочной информации о различных командах системы.
+Выявлены следующие правила общие построения справочников в ОС Linux:
+-NAME(Имя команды и её назначение)
+-SYNOPSIS(Краткий обзор команды, то есть ее синтаксис)
+-DESCRIPTION(Описние различных ключей и дополнительных возможностей)
+-EXAMPLES(Примеры использования)
+-AUTHOR(Автор команды)
+-REPORTING BUGS(При возникновении ошибок, куда отправлять информацию о них)
+-COPYRIGHT(Авторское право)
+-SEE ALSO(ЧТо еще можно прочитать)
+
+
+4. Работа с файлами
+
+touch junk>>ChernyakovaVA_lb1.txt
+touch temp>>ChernyakovaVA_lb1.txt
+
+a) Для получение информации о файлах из командной строки служит команда ls
+Введя команду ls, получим (здесь и далее приведены примерные реакции системы):
+ls>>ChernyakovaVA_lb1.txt
+ChernyakovaVA_lb1.txt
+junk
+temp
+
+- команда  перечисляет имена существующих в вашем каталоге файлов.
+Используя команду  ls  с ключом  -l, получим:
+ls -l>>ChernyakovaVA_lb1.txt
+итого 4
+-rw-rw-r-- 1 valeria valeria 2422 фев  9 18:25 ChernyakovaVA_lb1.txt
+-rw-rw-r-- 1 valeria valeria    0 фев  9 18:24 junk
+-rw-rw-r-- 1 valeria valeria    0 фев  9 18:24 temp
+Вывод списка всех файлов данной директории
+
+ls junk>>ChernyakovaVA_lb1.txt
+junk
+
+ls junk temp>>ChernyakovaVA_lb1.txt
+junk
+temp
+Вывод только указанных файлов в заданном порядке
+
+b) Вывод содержимого файлов. Выведите содержимое  имеющихся  у вас файлов с помощью команды cat :
+cat junk>>ChernyakovaVA_lb1.txt
+Это первая лабораторная работа по дисциплине операционные системы.
+
+cat temp>>ChernyakovaVA_lb1.txt
+Этот файл еще пуст! Напишите хоть что-нибудь.
+
+cat junk temp>>ChernyakovaVA_lb1.txt
+Это первая лабораторная работа по дисциплине операционные системы.
+Этот файл еще пуст! Напишите хоть что-нибудь.
+
+При получении нескольких аргументов cat выводит данные файлов в указанном порядке.
+
+c) Операции с файлами
+Переименование файла
+
+mv junk AAAA>>ChernyakovaVA_lb1.txt
+
+ls>>ChernyakovaVA_lb1.txt
+AAAA
+ChernyakovaVA_lb1.txt
+temp
+
+cat junk>>ChernyakovaVA_lb1.txt
+cat: junk: Нет такого файла или каталога
+
+Копирование файлов
+cp AAAA BBBB>>ChernyakovaVA_lb1.txt
+
+ls>>ChernyakovaVA_lb1.txt
+AAAA
+BBBB
+ChernyakovaVA_lb1.txt
+temp
+
+Удаление файлов
+rm temp junk>>ChernyakovaVA_lb1.txt
+rm: невозможно удалить 'junk': Нет такого файла или каталога
+
+rm AAAA BBBB>>ChernyakovaVA_lb1.txt
+
+ls>>ChernyakovaVA_lb1.txt
+ChernyakovaVA_lb1.txt
+
+
+5.Работа с каталогами
+ 
+pwd>>ChernyakovaVA_lb1.txt
+/home/valeria/Документы/ЛЭТИ/2курс/ОС/1304ValeriyaChernyakovaLAB1
+
+touch prog.c>>ChernyakovaVA_lb1.txt
+Создание произвольного файла prog.c
+Полное имя файла: /home/valeria/Документы/ЛЭТИ/2курс/ОС/1304ValeriyaChernyakovaLAB1/prog.c
+
+ls /home/valeria/Документы/ЛЭТИ/2курс/ОС/1304ValeriyaChernyakovaLAB1>>ChernyakovaVA_lb1.txt
+ChernyakovaVA_lb1.txt
+prog.c
+При наборе простой команды ls выводятся данные аталога, в котором на данном этапе происходит работа, при введении конкретной директории - именно её содержимое.
+
+ls />>ChernyakovaVA_lb1.txt
+bin
+boot
+cdrom
+dev
+etc
+home
+lib
+lib32
+lib64
+libx32
+lost+found
+media
+mnt
+opt
+proc
+root
+run
+sbin
+snap
+srv
+swapfile
+sys
+tmp
+usr
+var
+
+ls -l />>ChernyakovaVA_lb1.txt
+итого 1039668
+lrwxrwxrwx   1 root root          7 сен 18  2021 bin -> usr/bin
+drwxr-xr-x   4 root root       4096 фев  9 21:07 boot
+drwxrwxr-x   2 root root       4096 сен 18  2021 cdrom
+drwxr-xr-x  21 root root       4980 фев  9 20:21 dev
+drwxr-xr-x 131 root root      12288 фев  9 21:06 etc
+drwxr-xr-x   4 root root       4096 сен 18  2021 home
+lrwxrwxrwx   1 root root          7 сен 18  2021 lib -> usr/lib
+lrwxrwxrwx   1 root root          9 сен 18  2021 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root          9 сен 18  2021 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root         10 сен 18  2021 libx32 -> usr/libx32
+drwx------   2 root root      16384 сен 18  2021 lost+found
+drwxr-xr-x   3 root root       4096 сен 18  2021 media
+drwxr-xr-x   2 root root       4096 авг 19  2021 mnt
+drwxr-xr-x   4 root root       4096 окт 17  2021 opt
+dr-xr-xr-x 363 root root          0 фев  9 20:15 proc
+drwx------   4 root root       4096 сен 18  2021 root
+drwxr-xr-x  35 root root       1000 фев  9 21:08 run
+lrwxrwxrwx   1 root root          8 сен 18  2021 sbin -> usr/sbin
+drwxr-xr-x  21 root root       4096 сен 24 14:36 snap
+drwxr-xr-x   2 root root       4096 авг 19  2021 srv
+-rw-------   1 root root 1064535040 сен 18  2021 swapfile
+dr-xr-xr-x  13 root root          0 фев  9 20:15 sys
+drwxrwxrwt  17 root root       4096 фев  9 22:36 tmp
+drwxr-xr-x  14 root root       4096 авг 19  2021 usr
+drwxr-xr-x  14 root root       4096 авг 19  2021 var
+
+Содержмое каталога /bin - бинарные файлы пользователя. Этот каталог содержит исполняемые файлы.
+
+cd ..>>ChernyakovaVA_lb1.txt
+Переход в вышележащий каталог.
+
+pwd>>1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt
+/home/valeria/Документы/ЛЭТИ/2курс/ОС
+Полное имя вышележащего каталога.
+
+ls>>1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt
+1304ValeriyaChernyakovaLAB1
+4UnixShell.html
+5bornshell.html
+ChernyakovaVA_lb1.txt
+Содержимое вышележащего каталога.
+
+cd ..>>1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt
+Переход в еще "выше".
+
+pwd>>ОС/1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt
+/home/valeria/Документы/ЛЭТИ/2курс
+Полное имя каталога, лежащего еще "выше".
+
+cd ..>>ОС/1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt
+Переход еще "выше". Попадание в каталог /home/valeria/Документы/ЛЭТИ/.
+Если продолжать это до бесконечности, то попадем в корневой каталог /.
+
+ls -ld />>2курс/ОС/1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt
+drwxr-xr-x 20 root root 4096 сен 18  2021 /
+
+ls -ld /bin>>2курс/ОС/1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt
+lrwxrwxrwx 1 root root 7 сен 18  2021 /bin -> usr/bin
+
+ls -ld ~>>2курс/ОС/1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt
+drwxr-xr-x 25 valeria valeria 4096 фев  9 23:05 /home/valeria
+
+Содержимое каталогов / или /bin не может быть изменено, так как нет прав доступа.
+
+cd
+Возвращение в домашний каталог
+
+mkdir lb1>>/home/valeria/Документы/ЛЭТИ/2курс/ОС/1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt
+Создание подкаталога.
+
+cd lb1
+Переход в созданный ктаалог.
+В данном случае полное маршрутное имя для перехода не указывается. Это необходиомо в сулчае, когда каталог не находится в работающей на данной момент директории. 
+
+cp ../prog.c .>>/home/valeria/Документы/ЛЭТИ/2курс/ОС/1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt
+
+ls>>/home/valeria/Документы/ЛЭТИ/2курс/ОС/1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt
+prog.c
+
+cd ..
+
+ls>>/home/valeria/Документы/ЛЭТИ/2курс/ОС/1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt
+lb1
+prog.c
+PycharmProjects
+snap
+Видео
+Документы
+Загрузки
+Изображения
+Музыка
+Общедоступные
+Рабочий стол
+Шаблоны
+
+rmdir lb1>>/home/valeria/Документы/ЛЭТИ/2курс/ОС/1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt
+rmdir: не удалось удалить 'lb1': Каталог не пуст
+
+rm lb1/prog.c>>/home/valeria/Документы/ЛЭТИ/2курс/ОС/1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt
+
+rmdir lb1>>/home/valeria/Документы/ЛЭТИ/2курс/ОС/1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt
+
+ls>>/home/valeria/Документы/ЛЭТИ/2курс/ОС/1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt
+prog.c
+PycharmProjects
+snap
+Видео
+Документы
+Загрузки
+Изображения
+Музыка
+Общедоступные
+Рабочий стол
+Шаблоны
+
+
+6. Процессы ОС Linux
+ps -A>>/home/valeria/Документы/ЛЭТИ/2курс/ОС/1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt
+    PID TTY          TIME CMD
+      1 ?        00:00:12 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 rcu_gp
+      4 ?        00:00:00 rcu_par_gp
+      5 ?        00:00:00 netns
+      7 ?        00:00:00 kworker/0:0H-events_highpri
+      9 ?        00:00:00 kworker/0:1H-events_highpri
+     10 ?        00:00:00 mm_percpu_wq
+     11 ?        00:00:00 rcu_tasks_rude_
+     12 ?        00:00:00 rcu_tasks_trace
+     13 ?        00:00:00 ksoftirqd/0
+     14 ?        00:00:18 rcu_sched
+     15 ?        00:00:00 migration/0
+     16 ?        00:00:00 idle_inject/0
+     18 ?        00:00:00 cpuhp/0
+     19 ?        00:00:00 cpuhp/1
+     20 ?        00:00:00 idle_inject/1
+     21 ?        00:00:00 migration/1
+     22 ?        00:00:00 ksoftirqd/1
+     24 ?        00:00:00 kworker/1:0H-events_highpri
+     25 ?        00:00:00 cpuhp/2
+     26 ?        00:00:00 idle_inject/2
+     27 ?        00:00:00 migration/2
+     28 ?        00:00:00 ksoftirqd/2
+     30 ?        00:00:00 kworker/2:0H-events_highpri
+     31 ?        00:00:00 cpuhp/3
+     32 ?        00:00:00 idle_inject/3
+     33 ?        00:00:00 migration/3
+     34 ?        00:00:00 ksoftirqd/3
+     36 ?        00:00:00 kworker/3:0H-events_highpri
+     37 ?        00:00:00 cpuhp/4
+     38 ?        00:00:00 idle_inject/4
+     39 ?        00:00:00 migration/4
+     40 ?        00:00:00 ksoftirqd/4
+     42 ?        00:00:00 kworker/4:0H-events_highpri
+     43 ?        00:00:00 cpuhp/5
+     44 ?        00:00:00 idle_inject/5
+     45 ?        00:00:00 migration/5
+     46 ?        00:00:02 ksoftirqd/5
+     48 ?        00:00:00 kworker/5:0H-events_highpri
+     49 ?        00:00:00 cpuhp/6
+     50 ?        00:00:00 idle_inject/6
+     51 ?        00:00:00 migration/6
+     52 ?        00:00:00 ksoftirqd/6
+     54 ?        00:00:00 kworker/6:0H-events_highpri
+     55 ?        00:00:00 cpuhp/7
+     56 ?        00:00:00 idle_inject/7
+     57 ?        00:00:00 migration/7
+     58 ?        00:00:00 ksoftirqd/7
+     60 ?        00:00:00 kworker/7:0H-events_highpri
+     61 ?        00:00:00 kdevtmpfs
+     62 ?        00:00:00 inet_frag_wq
+     63 ?        00:00:00 kauditd
+     64 ?        00:00:00 khungtaskd
+     65 ?        00:00:00 oom_reaper
+     66 ?        00:00:00 writeback
+     67 ?        00:00:00 kcompactd0
+     68 ?        00:00:00 ksmd
+     69 ?        00:00:00 khugepaged
+    117 ?        00:00:00 kintegrityd
+    118 ?        00:00:00 kblockd
+    119 ?        00:00:00 blkcg_punt_bio
+    120 ?        00:00:00 tpm_dev_wq
+    121 ?        00:00:00 ata_sff
+    122 ?        00:00:00 md
+    123 ?        00:00:00 edac-poller
+    124 ?        00:00:00 devfreq_wq
+    125 ?        00:00:00 watchdogd
+    127 ?        00:00:00 irq/25-AMD-Vi
+    129 ?        00:00:00 kswapd0
+    130 ?        00:00:00 ecryptfs-kthrea
+    132 ?        00:00:00 kthrotld
+    133 ?        00:00:00 irq/26-aerdrv
+    134 ?        00:00:00 irq/26-pciehp
+    135 ?        00:00:00 irq/27-aerdrv
+    136 ?        00:00:00 irq/28-aerdrv
+    137 ?        00:00:00 kworker/4:1H-kblockd
+    143 ?        00:00:00 acpi_thermal_pm
+    145 ?        00:00:00 kworker/1:1H-kblockd
+    146 ?        00:00:00 vfio-irqfd-clea
+    147 ?        00:00:00 kworker/2:1H-kblockd
+    148 ?        00:00:00 kworker/3:1H-events_highpri
+    149 ?        00:00:00 mld
+    150 ?        00:00:00 ipv6_addrconf
+    159 ?        00:00:00 kstrp
+    162 ?        00:00:00 zswap-shrink
+    170 ?        00:00:00 charger_manager
+    195 ?        00:00:00 kworker/7:1H-kblockd
+    230 ?        00:00:00 scsi_eh_0
+    231 ?        00:00:00 scsi_tmf_0
+    232 ?        00:00:21 irq/46-SYNA7DB5
+    236 ?        00:00:01 kworker/5:1H-events_highpri
+    237 ?        00:00:02 kworker/6:1H-kblockd
+    261 ?        00:00:03 jbd2/sda6-8
+    262 ?        00:00:00 ext4-rsv-conver
+    302 ?        00:00:02 systemd-journal
+    330 ?        00:00:00 ipmi-msghandler
+    387 ?        00:00:01 systemd-udevd
+    447 ?        00:00:00 cryptd
+    448 ?        00:00:00 ccp-1-q2
+    449 ?        00:00:00 ccp-1-q3
+    450 ?        00:00:00 ccp-1-q4
+    480 ?        00:00:00 cfg80211
+    547 ?        00:00:00 amd_iommu_v2
+    550 ?        00:00:00 ath10k_wq
+    551 ?        00:00:00 ath10k_aux_wq
+    552 ?        00:00:00 ath10k_tx_compl
+    580 ?        00:00:00 kworker/u33:1-hci0
+    584 ?        00:00:00 gfx
+    585 ?        00:00:00 comp_1.0.0
+    586 ?        00:00:00 comp_1.0.1
+    587 ?        00:00:00 comp_1.0.2
+    588 ?        00:00:00 comp_1.0.3
+    589 ?        00:00:00 comp_1.0.4
+    590 ?        00:00:00 comp_1.0.5
+    591 ?        00:00:00 comp_1.0.6
+    592 ?        00:00:00 comp_1.0.7
+    593 ?        00:00:00 sdma0
+    594 ?        00:00:00 sdma1
+    595 ?        00:00:00 kworker/u33:2-hci0
+    596 ?        00:01:03 gfx
+    597 ?        00:00:00 comp_1.0.0
+    598 ?        00:00:00 comp_1.1.0
+    599 ?        00:00:00 comp_1.2.0
+    600 ?        00:00:00 comp_1.3.0
+    601 ?        00:00:00 comp_1.0.1
+    602 ?        00:00:00 comp_1.1.1
+    603 ?        00:00:00 comp_1.2.1
+    604 ?        00:00:00 comp_1.3.1
+    605 ?        00:00:01 sdma0
+    611 ?        00:00:00 vcn_dec
+    612 ?        00:00:00 vcn_enc0
+    613 ?        00:00:00 vcn_enc1
+    614 ?        00:00:00 jpeg_dec
+    615 ?        00:00:00 dm_vblank_contr
+    616 ?        00:00:00 card1-crtc0
+    617 ?        00:00:00 card1-crtc1
+    618 ?        00:00:00 card1-crtc2
+    619 ?        00:00:00 card1-crtc3
+    852 ?        00:00:02 jbd2/sda7-8
+    853 ?        00:00:00 ext4-rsv-conver
+    867 ?        00:00:01 systemd-resolve
+    922 ?        00:00:01 accounts-daemon
+    923 ?        00:00:01 acpid
+    925 ?        00:00:32 avahi-daemon
+    926 ?        00:00:00 bluetoothd
+    927 ?        00:00:00 cron
+    928 ?        00:00:00 cupsd
+    929 ?        00:00:09 dbus-daemon
+    930 ?        00:00:08 NetworkManager
+    936 ?        00:00:01 irqbalance
+    937 ?        00:00:00 networkd-dispat
+    940 ?        00:00:06 polkitd
+    942 ?        00:00:00 rsyslogd
+    947 ?        00:00:00 switcheroo-cont
+    948 ?        00:00:01 systemd-logind
+    950 ?        00:00:02 udisksd
+    951 ?        00:00:00 wpa_supplicant
+    954 ?        00:00:00 avahi-daemon
+   1004 ?        00:00:00 cups-browsed
+   1012 ?        00:00:00 unattended-upgr
+   1027 ?        00:00:00 ModemManager
+   1044 ?        00:00:00 gdm3
+   1162 ?        00:00:00 rtkit-daemon
+   1200 ?        00:00:00 whoopsie
+   1206 ?        00:00:00 kerneloops
+   1208 ?        00:00:00 kerneloops
+   1300 ?        00:00:00 upowerd
+   1623 ?        00:00:00 colord
+   1648 ?        00:00:02 systemd
+   1649 ?        00:00:00 (sd-pam)
+   1739 ?        00:00:00 krfcommd
+   9053 ?        00:00:08 kworker/4:0-events
+  11214 ?        00:00:13 kworker/2:0-events
+  11235 ?        00:00:08 kworker/1:0-events
+  11659 ?        00:00:01 dbus-daemon
+  12078 ?        00:00:00 gdm-session-wor
+  12087 ?        00:00:00 gnome-keyring-d
+  12092 tty2     00:00:00 gdm-x-session
+  12094 tty2     00:07:09 Xorg
+  12128 tty2     00:00:00 gnome-session-b
+  12202 ?        00:00:00 at-spi-bus-laun
+  12207 ?        00:00:00 dbus-daemon
+  12226 ?        00:00:00 gnome-session-c
+  12227 ?        00:01:47 pulseaudio
+  12234 ?        00:00:00 gnome-session-b
+  12248 ?        00:09:17 gnome-shell
+  12275 ?        00:00:00 gvfsd
+  12280 ?        00:00:00 gvfsd-fuse
+  12302 ?        00:00:00 ibus-daemon
+  12306 ?        00:00:00 ibus-dconf
+  12307 ?        00:00:01 ibus-extension-
+  12309 ?        00:00:00 ibus-x11
+  12311 ?        00:00:00 ibus-portal
+  12324 ?        00:00:02 at-spi2-registr
+  12328 ?        00:00:00 xdg-permission-
+  12330 ?        00:00:00 gnome-shell-cal
+  12339 ?        00:00:00 evolution-sourc
+  12347 ?        00:00:00 goa-daemon
+  12349 ?        00:00:00 dconf-service
+  12352 ?        00:00:00 gvfsd-metadata
+  12362 ?        00:00:01 goa-identity-se
+  12367 ?        00:00:01 gvfs-udisks2-vo
+  12375 ?        00:00:00 evolution-calen
+  12382 ?        00:00:00 gvfs-goa-volume
+  12386 ?        00:00:00 gvfs-gphoto2-vo
+  12390 ?        00:00:00 gvfs-afc-volume
+  12395 ?        00:00:00 gvfs-mtp-volume
+  12412 ?        00:00:00 evolution-addre
+  12429 ?        00:00:00 gjs
+  12441 ?        00:00:00 gvfsd-trash
+  12453 ?        00:00:00 gsd-a11y-settin
+  12454 ?        00:00:00 gsd-color
+  12456 ?        00:00:00 gsd-datetime
+  12457 ?        00:00:01 gsd-housekeepin
+  12463 ?        00:00:00 gsd-keyboard
+  12466 ?        00:00:00 gsd-media-keys
+  12468 ?        00:00:00 gsd-power
+  12469 ?        00:00:00 gsd-print-notif
+  12471 ?        00:00:00 gsd-rfkill
+  12473 ?        00:00:00 gsd-screensaver
+  12474 ?        00:00:00 gsd-sharing
+  12479 ?        00:00:00 gsd-smartcard
+  12481 ?        00:00:00 gsd-sound
+  12483 ?        00:00:00 gsd-usb-protect
+  12486 ?        00:00:00 gsd-wacom
+  12492 ?        00:00:00 gsd-wwan
+  12499 ?        00:00:00 gsd-xsettings
+  12500 ?        00:00:00 gsd-disk-utilit
+  12513 ?        00:00:00 evolution-alarm
+  12570 ?        00:00:00 ibus-engine-sim
+  12587 ?        00:00:06 snap-store
+  12616 ?        00:00:00 xdg-document-po
+  12643 ?        00:00:00 gsd-printer
+  12725 ?        00:00:00 xdg-desktop-por
+  12729 ?        00:00:00 xdg-desktop-por
+  13293 ?        00:07:52 chrome
+  13298 ?        00:00:00 cat
+  13299 ?        00:00:00 cat
+  13301 ?        00:00:00 chrome_crashpad
+  13303 ?        00:00:00 chrome_crashpad
+  13309 ?        00:00:00 chrome
+  13310 ?        00:00:00 chrome
+  13311 ?        00:00:00 nacl_helper
+  13314 ?        00:00:00 chrome
+  13336 ?        00:15:34 chrome
+  13337 ?        00:02:08 chrome
+  13393 ?        00:00:05 chrome
+  13411 ?        00:00:51 chrome
+  13488 ?        00:00:46 chrome
+  13509 ?        00:00:18 chrome
+  13523 ?        00:00:04 chrome
+  13536 ?        00:00:28 chrome
+  13553 ?        00:00:00 chrome
+  13562 ?        00:00:00 chrome
+  13613 ?        00:00:40 chrome
+  14100 ?        00:00:15 chrome
+  14114 ?        00:00:02 chrome
+  14161 ?        00:17:34 chrome
+  14737 ?        00:00:00 update-notifier
+  40095 ?        00:00:07 chrome
+  76967 ?        00:00:00 xfsalloc
+  76968 ?        00:00:00 xfs_mru_cache
+  76972 ?        00:00:00 jfsIO
+  76973 ?        00:00:00 jfsCommit
+  76974 ?        00:00:00 jfsCommit
+  76975 ?        00:00:00 jfsCommit
+  76976 ?        00:00:00 jfsCommit
+  76977 ?        00:00:00 jfsCommit
+  76978 ?        00:00:00 jfsCommit
+  76979 ?        00:00:00 jfsCommit
+  76980 ?        00:00:00 jfsCommit
+  76981 ?        00:00:00 jfsSync
+  79036 ?        00:00:01 snapd
+  88587 ?        00:00:03 kworker/u32:2-events_unbound
+  88735 ?        00:00:05 kworker/u32:0+events_unbound
+  88823 ?        00:00:18 nautilus
+  88860 ?        00:00:03 kworker/6:1-events
+  88966 ?        00:00:03 kworker/u32:4+events_unbound
+  89168 ?        00:00:24 gnome-terminal-
+  89175 pts/0    00:00:00 bash
+  89449 ?        00:00:52 chrome
+  89618 ?        00:00:01 kworker/7:2-events
+  89633 ?        00:00:02 kworker/3:1-events
+  89788 ?        00:00:02 kworker/0:1-events
+  90355 ?        00:00:00 kworker/5:0-events
+  90716 ?        00:00:08 chrome
+  90729 ?        00:00:00 chrome
+  90799 ?        00:00:00 kworker/6:2-events
+  90806 ?        00:00:00 kworker/2:1
+  90816 ?        00:00:00 kworker/1:2-events
+  90932 ?        00:00:00 kworker/4:2-events
+  90934 ?        00:00:00 kworker/0:2-events
+  90947 ?        00:00:00 kworker/3:2-events
+  90958 ?        00:00:00 kworker/7:0-events
+  90978 ?        00:00:00 kworker/5:1-events
+  91016 ?        00:00:00 kworker/u32:3-events_unbound
+  91034 ?        00:00:11 gedit
+  91141 ?        00:00:00 kworker/5:2-events
+  91186 pts/0    00:00:00 ps
+  
+PID - идентификатор процесса, то есть уникальный номер, который идентифицирует процесс
+TTY - терминал, из которого запущен процесс
+TIME - общее время процессора, затрачение на выполнение процессора 
+CMD - команда запуска процессора 
+  
+ps>>/home/valeria/Документы/ЛЭТИ/2курс/ОС/1304ValeriyaChernyakovaLAB1/ChernyakovaVA_lb1.txt  
+    PID TTY          TIME CMD
+  89175 pts/0    00:00:00 bash
+  91310 pts/0    00:00:00 ps
+ 
+  
+III. Изучение цикла подготовки и исполнения программ в ОС Linux.
+ 
+Создание файла prog.c
+touch prog.c>>ChernyakovaVA_lb1.txt
+ 
+Содержание файла prog.c:
+#include <stdio.h>
+main ()
+{
+printf ("Hello, everybody ! ");
+}
+
+Создание объектного файла
+cc -c prog.c
+prog.c:2:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+    2 | main ()
+      | ^~~~
+Имя фобъектного файла - prog.o
+
+Собираем исполяемый файл
+cc prog.c
+prog.c:2:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+    2 | main ()
+      | ^~~~
+Имя исполняемого файла - a.out
+
+Получение исполняемого файла с именем hello
+cc -o hello prog.c
+prog.c:2:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+    2 | main ()
+      | ^~~~
+
+Проверка работоспособности полученных исполняемых файлов
+./a.out>>ChernyakovaVA_lb1.txt
+Hello, everybody ! 
+
+./hello>>ChernyakovaVA_lb1.txt
+Hello, everybody ! 
+
+Переназначьте вывод программы в файл res. Проверьте результат.
+./a.out>>res
+cat res>>ChernyakovaVA_lb1.txt
+Hello, everybody !
+
+Создание файла my_open.c
+touch my_open.c
+
+Содержимое файла my_open.c:
+#include <stdio.h>
+main ( argc, argv )
+int argc;
+char *argv [];
+{
+if (argc > 1) {
+   if (fopen(argv[1],"r") == NULL) {
+printf("%s: неудача при попытке открыть файл %s",argv[0],argv[1]);}
+  else
+printf("%s: файл %s открыт",argv[0],argv[1]);
+}
+else
+     printf("открываемый файл не указан");
+}
+
+Создание исполняемого файла
+cc my_open.c
+my_open.c:2:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+    2 | main ( argc, argv )
+      | ^~~~
+Имя исполняемого файла - a.out
+
+Перед проверкой работы программы создадим файл
+touch test.txt
+
+Исполнение программы, аргумент - имя реально существующего файла
+./a.out test.txt>>ChernyakovaVA_lb1.txt
+./a.out: файл test.txt открыт
+
+Исполнение программы, аргумент - имя не существующего файла
+./a.out testing.txt>>ChernyakovaVA_lb1.txt
+./a.out: неудача при попытке открыть файл testing.txt
+
+Исполнение программы без указывания аргументов
+./a.out>>ChernyakovaVA_lb1.txt
+открываемый файл не указан
+
+Создание файла file_name.c, таким образом, чтобы на печать выводилось имя файла (существующего или не существующего)
+touch file_name.c
+Код программы:
+#include <stdio.h>
+int main (){
+printf("test.txt");
+}
+
+Получите исполняемую программу с именем file_name.
+cc -o file_name file_name.c
+
+Попытайтесь организовать конвейер из двух созданных исполняемых программ.
+
+Корректирование кода программы my_open для чтения названия файла из file_name.c
+ #include <stdio.h>
+ #include <stdlib.h>
+main ( argc, argv )
+int argc;
+char *argv [];
+{
+char* name = (char*)malloc(70*sizeof(char));
+scanf("%s", name);
+if (argc >= 1) {
+   if (fopen(name,"r") == NULL) {
+printf("%s: неудача при попытке открыть файл %s",argv[0],name);}
+  else
+printf("%s: файл %s открыт",argv[0],name);
+}
+else
+     printf("открываемый файл не указан");
+}
+
+./file_name|./my_open
+./my_open: файл test.txt открыт
+| - выполнение поочередно одной команды в другой
+
+./file_name||./my_open
+test.txt
+|| - выполнение одной команды
+
+IV. Изучение команд и утилит обработки текстов.
+
+1. G r e p - поиск по шаблону, заданному регулярным выражением
+
+Выведите только те строки из вывода ls -l /tmp, которые:
+1) соответствуют каталогам
+ls -l /tmp|grep 'drwx------'>>ChernyakovaVA_lb1.txt
+drwx------ 3 root    root    4096 фев 15 13:21 snap-private-tmp
+drwx------ 2 valeria valeria 4096 фев 15 13:20 ssh-y5SGNjqb849s
+drwx------ 3 root    root    4096 фев 15 13:20 systemd-private-de76b169591d4ac2a3777fa1c4ae59a3-colord.service-3UzIbi
+drwx------ 3 root    root    4096 фев 15 13:19 systemd-private-de76b169591d4ac2a3777fa1c4ae59a3-ModemManager.service-MirzRe
+drwx------ 3 root    root    4096 фев 15 13:19 systemd-private-de76b169591d4ac2a3777fa1c4ae59a3-switcheroo-control.service-yBptKi
+drwx------ 3 root    root    4096 фев 15 13:19 systemd-private-de76b169591d4ac2a3777fa1c4ae59a3-systemd-logind.service-Ytjmqi
+drwx------ 3 root    root    4096 фев 15 13:19 systemd-private-de76b169591d4ac2a3777fa1c4ae59a3-systemd-resolved.service-050u1g
+drwx------ 3 root    root    4096 фев 15 13:19 systemd-private-de76b169591d4ac2a3777fa1c4ae59a3-upower.service-N0ZI1e
+drwx------ 2 valeria valeria 4096 фев 15 15:12 tracker-extract-files.1000
+drwx------ 2 gdm     gdm     4096 фев 15 13:19 tracker-extract-files.125
+
+2) соответствуют выполняемым для всех файлам
+ls -l /tmp|grep 'rw-------'>>ChernyakovaVA_lb1.txt
+-rw------- 1 valeria valeria    0 фев 15 13:20 config-err-IwNJ37
+
+3) принадлежат пользователь root;
+ls -l /tmp|grep 'root'>>ChernyakovaVA_lb1.txt
+drwx------ 3 root    root    4096 фев 15 13:21 snap-private-tmp
+drwx------ 3 root    root    4096 фев 15 13:20 systemd-private-de76b169591d4ac2a3777fa1c4ae59a3-colord.service-3UzIbi
+drwx------ 3 root    root    4096 фев 15 13:19 systemd-private-de76b169591d4ac2a3777fa1c4ae59a3-ModemManager.service-MirzRe
+drwx------ 3 root    root    4096 фев 15 13:19 systemd-private-de76b169591d4ac2a3777fa1c4ae59a3-switcheroo-control.service-yBptKi
+drwx------ 3 root    root    4096 фев 15 13:19 systemd-private-de76b169591d4ac2a3777fa1c4ae59a3-systemd-logind.service-Ytjmqi
+drwx------ 3 root    root    4096 фев 15 13:19 systemd-private-de76b169591d4ac2a3777fa1c4ae59a3-systemd-resolved.service-050u1g
+drwx------ 3 root    root    4096 фев 15 13:19 systemd-private-de76b169591d4ac2a3777fa1c4ae59a3-upower.service-N0ZI1e
+
+4)не принадлежат пользователю root.
+ls -l /tmp|grep -v 'root'>>ChernyakovaVA_lb1.txt
+итого 40
+-rw------- 1 valeria valeria    0 фев 15 13:20 config-err-IwNJ37
+drwx------ 2 valeria valeria 4096 фев 15 13:20 ssh-y5SGNjqb849s
+drwx------ 2 valeria valeria 4096 фев 15 15:30 tracker-extract-files.1000
+drwx------ 2 gdm     gdm     4096 фев 15 13:19 tracker-extract-files.125
+
+2. C u t  - выборка отдельных полей из строк файла
+
+1) номера запущенных Вами процессов;
+ps -A|tr -s ' '|cut -d' ' -f2>>ChernyakovaVA_lb1.txt
+PID
+1
+2
+3
+4
+5
+6
+8
+10
+11
+12
+13
+14
+15
+16
+18
+19
+20
+21
+22
+24
+25
+26
+27
+28
+30
+31
+32
+33
+34
+36
+37
+38
+39
+40
+42
+43
+44
+45
+46
+48
+49
+50
+51
+52
+54
+55
+56
+57
+58
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+117
+118
+119
+120
+121
+122
+123
+124
+125
+127
+128
+130
+131
+133
+134
+135
+136
+137
+142
+143
+145
+146
+147
+157
+160
+168
+198
+212
+220
+225
+227
+228
+229
+233
+235
+254
+255
+267
+269
+296
+324
+326
+368
+413
+435
+436
+437
+449
+536
+543
+544
+545
+563
+572
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+618
+619
+620
+621
+820
+821
+849
+905
+906
+909
+910
+911
+913
+914
+919
+920
+922
+924
+926
+927
+928
+931
+932
+964
+1006
+1019
+1040
+1157
+1230
+1232
+1239
+1318
+1643
+1672
+1676
+1677
+1682
+1684
+1687
+1692
+1707
+1712
+1720
+1726
+1730
+1738
+1746
+1750
+1755
+1760
+1764
+1766
+1769
+1828
+1895
+1924
+1929
+1948
+1953
+1967
+2005
+2009
+2010
+2014
+2017
+2026
+2032
+2033
+2043
+2048
+2056
+2070
+2071
+2073
+2076
+2078
+2081
+2085
+2087
+2088
+2089
+2090
+2092
+2100
+2103
+2106
+2108
+2109
+2112
+2120
+2149
+2176
+2215
+2234
+2235
+2261
+2262
+2329
+2437
+2442
+2443
+2450
+2454
+2473
+2478
+2485
+2487
+2489
+2493
+2516
+2519
+2563
+2601
+2943
+3002
+3015
+3023
+3031
+3047
+3253
+3363
+5103
+5105
+6974
+7187
+7283
+7470
+7590
+7604
+8586
+8736
+8770
+8827
+8927
+9340
+10612
+10667
+12230
+12593
+13485
+13797
+13810
+13877
+13912
+14189
+14493
+14551
+14826
+14843
+14862
+15025
+15038
+15073
+15074
+15118
+15279
+15332
+15345
+15401
+15423
+15438
+15473
+15474
+15509
+15586
+16019
+16130
+16485
+16652
+16760
+16885
+16900
+17074
+17081
+17105
+17106
+17107
+
+2) идентификаторы пользователей,  имеющих  x-терминалы на Вашей рабочей станции;
+cut -d: -f1 /etc/passwd>>ChernyakovaVA_lb1.txt
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+gnats
+nobody
+systemd-network
+systemd-resolve
+systemd-timesync
+messagebus
+syslog
+_apt
+tss
+uuidd
+tcpdump
+avahi-autoipd
+usbmux
+rtkit
+dnsmasq
+cups-pk-helper
+speech-dispatcher
+avahi
+kernoops
+saned
+nm-openvpn
+hplip
+whoopsie
+colord
+geoclue
+pulse
+gnome-initial-setup
+gdm
+sssd
+valeria
+systemd-coredump
+
+3) Ваше входное имя в системе.
+who|cut -d' ' -f1>>ChernyakovaVA_lb1.txt
+valeria
+
+3. T r  -  преобразователь символов
+
+Выведите информацию о ваших файлах прописными буквами.
+ls -l|tr A-Z a-z
+итого 88
+-rwxrwxr-x 1 valeria valeria 16848 фев 15 14:52 a.out
+-rw-rw-r-- 1 valeria valeria 28364 фев 15 15:35 chernyakovava_lb1.txt
+-rwxrwxr-x 1 valeria valeria 16696 фев 15 14:30 hello
+-rw-rw-r-- 1 valeria valeria   371 фев 15 14:56 my_open.c
+-rw-rw-r-- 1 valeria valeria  2144 фев 15 14:40 my_open.o
+-rw-rw-r-- 1 valeria valeria    63 фев 15 14:23 prog.c
+-rw-rw-r-- 1 valeria valeria  1696 фев 15 14:25 prog.o
+-rw-rw-r-- 1 valeria valeria    51 фев 15 14:42 test.txt
+
+4. S o r t - сортировка и / или слияние файлов
+
+1) в алфавитном порядке
+ls -l|sort -k9>>ChernyakovaVA_lb1.txt
+итого 92
+-rwxrwxr-x 1 valeria valeria 16848 фев 15 14:52 a.out
+-rw-rw-r-- 1 valeria valeria 28982 фев 15 15:45 ChernyakovaVA_lb1.txt
+-rwxrwxr-x 1 valeria valeria 16696 фев 15 14:30 hello
+-rw-rw-r-- 1 valeria valeria   371 фев 15 14:56 my_open.c
+-rw-rw-r-- 1 valeria valeria  2144 фев 15 14:40 my_open.o
+-rw-rw-r-- 1 valeria valeria    63 фев 15 14:23 prog.c
+-rw-rw-r-- 1 valeria valeria  1696 фев 15 14:25 prog.o
+-rw-rw-r-- 1 valeria valeria    51 фев 15 14:42 test.txt
+
+2) в порядке увеличения размеров файлов,
+ls -l|sort -nk5>>ChernyakovaVA_lb1.txt
+итого 92
+-rw-rw-r-- 1 valeria valeria    51 фев 15 14:42 test.txt
+-rw-rw-r-- 1 valeria valeria    63 фев 15 14:23 prog.c
+-rw-rw-r-- 1 valeria valeria   371 фев 15 14:56 my_open.c
+-rw-rw-r-- 1 valeria valeria  1696 фев 15 14:25 prog.o
+-rw-rw-r-- 1 valeria valeria  2144 фев 15 14:40 my_open.o
+-rwxrwxr-x 1 valeria valeria 16696 фев 15 14:30 hello
+-rwxrwxr-x 1 valeria valeria 16848 фев 15 14:52 a.out
+-rw-rw-r-- 1 valeria valeria 29593 фев 15 15:47 ChernyakovaVA_lb1.txt
+
+3) в порядке уменьшения размеров файлов.
+ls -l|sort -rnk5>>ChernyakovaVA_lb1.txt
+-rw-rw-r-- 1 valeria valeria 30205 фев 15 15:49 ChernyakovaVA_lb1.txt
+-rwxrwxr-x 1 valeria valeria 16848 фев 15 14:52 a.out
+-rwxrwxr-x 1 valeria valeria 16696 фев 15 14:30 hello
+-rw-rw-r-- 1 valeria valeria  2144 фев 15 14:40 my_open.o
+-rw-rw-r-- 1 valeria valeria  1696 фев 15 14:25 prog.o
+-rw-rw-r-- 1 valeria valeria   371 фев 15 14:56 my_open.c
+-rw-rw-r-- 1 valeria valeria    63 фев 15 14:23 prog.c
+-rw-rw-r-- 1 valeria valeria    51 фев 15 14:42 test.txt
+итого 92
+
+5. U n i q  -  выдача информации о повторяющихся строках файла
+
+Выведите повторяющиеся размеры файлов из каталога /usr/bin. Для этого из вывода ls -l с помощью cut оставьте только размеры, отсортируйте полученный  поток  и  из результата выделите только повторения.
+ls -l /usr/bin|tr -s ' '|cut -d' ' -f 5|sort -n|uniq -D
+5
+2
+2
+2
+2
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+3
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+4
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+7
+7
+7
+7
+7
+7
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+8
+9
+9
+9
+9
+9
+10
+10
+10
+11
+11
+11
+11
+11
+11
+11
+11
+11
+11
+11
+11
+11
+11
+12
+12
+12
+12
+12
+13
+13
+13
+13
+13
+16
+16
+17
+17
+18
+18
+18
+19
+19
+19
+19
+19
+20
+20
+20
+20
+20
+20
+20
+20
+20
+21
+21
+21
+21
+21
+21
+21
+21
+21
+21
+22
+22
+22
+22
+22
+22
+22
+22
+22
+22
+22
+22
+22
+22
+22
+23
+23
+23
+23
+23
+23
+23
+23
+23
+23
+23
+23
+23
+23
+23
+23
+24
+24
+24
+24
+24
+24
+24
+24
+24
+24
+24
+24
+24
+24
+24
+24
+24
+24
+24
+24
+25
+25
+25
+25
+25
+25
+25
+25
+26
+26
+26
+26
+26
+26
+26
+26
+28
+28
+28
+28
+28
+28
+28
+29
+29
+29
+29
+29
+29
+29
+30
+30
+31
+31
+31
+31
+33
+33
+33
+34
+34
+34
+34
+34
+34
+35
+35
+35
+53
+53
+59
+59
+59
+95
+95
+215
+215
+215
+273
+273
+273
+274
+274
+275
+275
+275
+275
+275
+275
+275
+275
+277
+277
+277
+277
+279
+279
+281
+281
+350
+350
+352
+352
+530
+530
+647
+647
+2346
+2346
+5656
+5656
+5656
+10232
+10232
+10232
+10232
+10232
+10232
+14328
+14328
+14328
+14328
+14328
+14328
+14408
+14408
+14408
+14408
+14408
+14408
+14408
+14408
+14480
+14480
+14480
+14480
+14488
+14488
+14488
+14488
+14488
+14488
+14488
+14488
+14488
+14488
+14488
+14488
+14568
+14568
+14568
+14568
+14568
+14568
+14568
+14568
+14568
+14568
+14568
+14568
+14568
+14568
+14568
+14568
+14568
+14568
+14568
+14640
+14640
+14640
+14640
+14640
+14640
+14640
+14648
+14648
+14648
+14648
+14648
+14648
+14648
+14648
+14648
+14648
+14648
+14656
+14656
+14656
+14656
+14656
+14656
+14656
+14656
+14656
+14656
+14664
+14664
+14720
+14720
+18504
+18504
+18504
+18584
+18584
+18584
+18584
+18584
+18584
+18656
+18656
+18664
+18664
+18664
+18664
+18744
+18744
+18744
+18744
+18744
+18752
+18752
+18752
+18752
+18752
+18752
+18752
+18752
+18752
+18808
+18808
+18816
+18816
+18824
+18824
+18824
+22520
+22520
+22680
+22680
+22680
+22680
+22680
+22752
+22752
+22760
+22760
+22760
+22760
+22760
+22760
+22760
+22760
+22760
+22768
+22768
+22776
+22776
+22832
+22832
+22832
+22840
+22840
+22840
+22840
+22864
+22864
+22904
+22904
+22912
+22912
+22912
+22912
+22912
+22912
+23440
+23440
+26696
+26696
+26776
+26776
+26776
+26784
+26784
+26784
+26840
+26840
+26848
+26848
+26848
+26848
+26856
+26856
+26856
+26856
+26864
+26864
+26928
+26928
+26928
+26928
+26944
+26944
+26952
+26952
+27008
+27008
+27016
+27016
+27104
+27104
+30864
+30864
+30952
+30952
+30952
+30952
+30952
+30952
+30952
+30952
+30968
+30968
+31112
+31112
+31112
+31112
+35048
+35048
+35048
+35048
+35048
+35048
+35072
+35072
+35080
+35080
+35120
+35120
+35120
+35224
+35224
+35464
+35464
+35464
+35464
+35488
+35488
+39144
+39144
+39144
+39144
+39144
+39144
+39144
+39176
+39176
+39176
+39256
+39256
+39256
+39256
+39256
+39256
+39256
+39256
+39256
+39256
+39256
+39256
+39256
+39256
+39256
+39256
+39256
+39256
+39256
+39256
+39288
+39288
+40360
+40360
+43240
+43240
+43240
+43352
+43352
+43352
+43352
+43352
+43352
+43352
+43352
+43352
+43352
+43352
+43384
+43384
+43384
+43384
+43384
+43384
+43384
+43416
+43416
+43448
+43448
+46366
+46366
+47336
+47336
+47448
+47448
+47448
+47456
+47456
+47456
+47480
+47480
+47480
+47480
+51296
+51296
+51352
+51352
+51432
+51432
+51544
+51544
+51544
+51544
+51576
+51576
+51576
+51592
+51592
+51664
+51664
+55528
+55528
+55528
+55552
+55552
+55640
+55640
+55672
+55672
+55824
+55824
+59736
+59736
+59736
+59736
+59744
+59744
+59768
+59768
+59768
+59768
+59768
+59952
+59952
+63720
+63720
+63864
+63864
+67816
+67816
+67816
+67816
+67816
+67960
+67960
+67992
+67992
+68208
+68208
+72024
+72024
+72024
+72024
+72056
+72056
+76008
+76008
+80256
+80256
+80256
+80256
+84408
+84408
+105232
+105232
+108920
+108920
+113184
+113184
+117280
+117280
+142144
+142144
+142144
+186664
+186664
+186856
+186856
+187672
+187672
+1158288
+1158288
+1158288
+3478464
+3478464
+
+6. C m p  - сравнение двух файлов
+cmp prog.c prog
+prog.c prog различаются: байт 1, строка 1
+
+cmp my_open.c my_open
+my_open.c my_open различаются: байт 1, строка 1
+
+7. D i f f  -  выявление различий между файлами
+Сравните prog.c и my_open.c с помощью diff:
+diff -e prog.c my_open.c>eqv
+
+Сoдержимое eqv
+5a
+else
+     printf("открываемый файл не указан");
+}
+
+
+.
+4c
+char* name = (char*)malloc(70*sizeof(char));
+scanf("%s", name);
+if (argc >= 1) {
+   if (fopen(name,"r") == NULL) {
+printf("%s: неудача при попытке открыть файл %s",argv[0],name);}
+  else
+printf("%s: файл %s открыт",argv[0],name);
+.
+1,2c
+ #include <stdio.h>
+ #include <stdlib.h>
+main ( argc, argv )
+int argc;
+char *argv [];
+.
+
+Вывод в  ормате ed скрипта. 
+Как из одной программы получить другую
+5а - после 5 строки добавить следующую описанную строку
+строка с - заменить номер строки на предложенный вариант
+

@@ -1,0 +1,23 @@
+Sending signals...
+Sending normal signal 1
+Sending normal signal 2
+Sending normal signal 3
+Sending normal signal 4
+Sending normal signal 5
+Sending real-time signal 34
+Sending real-time signal 35
+Sending real-time signal 36
+Sending real-time signal 37
+Sending real-time signal 38
+Signals sent. Sleeping for 5 seconds to allow handling...
+Handling real-time signal 34
+Handling real-time signal 35
+Handling real-time signal 36
+Handling real-time signal 37
+Handling real-time signal 38
+Handling normal signal 1
+Handling normal signal 2
+Handling normal signal 3
+Handling normal signal 4
+Handling normal signal 5
+
