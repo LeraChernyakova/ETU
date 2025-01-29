@@ -1,0 +1,4 @@
+/mnt/c/labspa-concurrency-LeraChernyakova/1304_ChernyakovaVA_lab4/src/CMakeFiles/main.dir
+/mnt/c/labspa-concurrency-LeraChernyakova/1304_ChernyakovaVA_lab4/src/CMakeFiles/clean_custom.dir
+/mnt/c/labspa-concurrency-LeraChernyakova/1304_ChernyakovaVA_lab4/src/CMakeFiles/edit_cache.dir
+/mnt/c/labspa-concurrency-LeraChernyakova/1304_ChernyakovaVA_lab4/src/CMakeFiles/rebuild_cache.dir

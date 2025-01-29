@@ -1,0 +1,62 @@
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.user-photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column; /* Размещение текста в столбик */
+}
+
+.user-details p {
+    text-align: right;
+    margin: 0;
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.create {
+    color: #474747;
+    font-size: 12px;
+    margin-top: 1px;
+}
+
+.user-modal-header {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.user-search-input {
+    font-family: 'Century Gothic', sans-serif;
+    width: 75%;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.user-search-input::placeholder {
+    color: #7E7E7E;
+}
+
+.modal-content-user {
+    width: 70%;
+    max-width: 35%;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}

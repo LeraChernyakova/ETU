@@ -1,0 +1,3 @@
+/home/ilya201232/CLionProjects/labs-PA-23/0304_Aristarkhov_Ilya_lab4/cmake-build-debug/CMakeFiles/0304_Aristarkhov_Ilya_lab4.dir
+/home/ilya201232/CLionProjects/labs-PA-23/0304_Aristarkhov_Ilya_lab4/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ilya201232/CLionProjects/labs-PA-23/0304_Aristarkhov_Ilya_lab4/cmake-build-debug/CMakeFiles/rebuild_cache.dir

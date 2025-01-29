@@ -1,0 +1,8 @@
+# ninja log v6
+17	1181	7553098440000000	CMakeFiles/lab6.dir/matrix.cpp.obj	c9709ac9e339a4dc
+11	1259	7553098440000000	CMakeFiles/lab6.dir/main.cpp.obj	a9a00a915f32d7c4
+4	1343	7553098438400000	libs/clew/CMakeFiles/libclew.dir/libclew/ocl_init.cpp.obj	4e596ebe3503288d
+1344	1482	7553098460000000	libs/clew/liblibclew.a	31babfe1a8eaa72c
+1482	1646	7553098460000000	lab6.exe	e17d74fa365bd278
+24	1158	7553099713400000	CMakeFiles/lab6.dir/main.cpp.obj	a9a00a915f32d7c4
+1158	1321	7553099740000000	lab6.exe	e17d74fa365bd278

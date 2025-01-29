@@ -1,0 +1,10 @@
+env: "prod"
+grpc:
+  port: 8882
+  timeout: 10h
+mongo:
+  host: "db"
+  database: "plants_market"
+  password: "pass"
+  user: "user"
+  port: "27017"

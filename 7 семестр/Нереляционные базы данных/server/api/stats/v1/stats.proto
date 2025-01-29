@@ -1,0 +1,96 @@
+syntax = "proto3";
+
+package stats.v1;
+
+option go_package = "stats/v1;stats_v1";
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+
+
+
+service StatsAPI {
+    rpc GetPlantsStatsV1 (GetPlantsStatsV1Request) returns (GetPlantsStatsV1Response) {
+        option (google.api.http) = {
+            post: "/api/stats/plants"
+            body: "*"
+        };
+    };
+
+    rpc GetBuyStatsV1 (GetBuyStatsV1Request) returns (GetBuyStatsV1Response) {
+        option (google.api.http) = {
+            post: "/api/stats/buy"
+            body: "*"
+        };
+    };
+
+    rpc GetTradeStatsV1 (GetTradeStatsV1Request) returns (GetTradeStatsV1Response) {
+        option (google.api.http) = {
+            post: "/api/stats/trade"
+            body: "*"
+        };
+    };
+
+    rpc GetAdsStatsV1 (GetAdsStatsV1Request) returns (GetAdsStatsV1Response) {
+        option (google.api.http) = {
+            post: "/api/stats/ads"
+            body: "*"
+        };
+    };
+}
+
+message GetPlantsStatsV1Request{
+    TimeFilter filter = 1;
+    repeated string type = 2;
+    repeated string lightCondition = 3;
+}
+message GetPlantsStatsV1Response{
+    message StatsInfo {
+        string species = 1;
+        int64 count = 2;
+    }
+    int64 count = 1;
+    repeated StatsInfo stats = 2;
+}
+
+message GetBuyStatsV1Request{
+    TimeFilter filter = 1;
+}
+message GetBuyStatsV1Response{
+    message StatsInfo {
+        google.protobuf.Timestamp date = 1;
+        int64 count = 2;
+    }
+    int64 count = 1;
+    repeated StatsInfo stats = 2;
+}
+
+message GetTradeStatsV1Request{
+    TimeFilter filter = 1;
+}
+message GetTradeStatsV1Response{
+    message StatsInfo {
+        google.protobuf.Timestamp date = 1;
+        int64 count = 2;
+        int64 status = 3;
+    }
+    int64 count = 1;
+    repeated StatsInfo stats = 2;
+}
+
+message GetAdsStatsV1Request{
+    TimeFilter filter = 1;
+}
+message GetAdsStatsV1Response{
+    message StatsInfo {
+        google.protobuf.Timestamp date = 1;
+        int64 count = 2;
+    }
+    repeated StatsInfo stats = 1;
+    int64 count = 2;
+}
+
+message TimeFilter {
+    google.protobuf.Timestamp timeFrom = 1;
+    google.protobuf.Timestamp timeTo = 2;
+}

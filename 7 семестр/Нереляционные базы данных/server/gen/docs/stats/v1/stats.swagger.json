@@ -1,0 +1,342 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "stats/v1/stats.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "StatsAPI"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/stats/ads": {
+      "post": {
+        "operationId": "StatsAPI_GetAdsStatsV1",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1GetAdsStatsV1Response"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1GetAdsStatsV1Request"
+            }
+          }
+        ],
+        "tags": [
+          "StatsAPI"
+        ]
+      }
+    },
+    "/api/stats/buy": {
+      "post": {
+        "operationId": "StatsAPI_GetBuyStatsV1",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1GetBuyStatsV1Response"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1GetBuyStatsV1Request"
+            }
+          }
+        ],
+        "tags": [
+          "StatsAPI"
+        ]
+      }
+    },
+    "/api/stats/plants": {
+      "post": {
+        "operationId": "StatsAPI_GetPlantsStatsV1",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1GetPlantsStatsV1Response"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1GetPlantsStatsV1Request"
+            }
+          }
+        ],
+        "tags": [
+          "StatsAPI"
+        ]
+      }
+    },
+    "/api/stats/trade": {
+      "post": {
+        "operationId": "StatsAPI_GetTradeStatsV1",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1GetTradeStatsV1Response"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1GetTradeStatsV1Request"
+            }
+          }
+        ],
+        "tags": [
+          "StatsAPI"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "v1GetAdsStatsV1Request": {
+      "type": "object",
+      "properties": {
+        "filter": {
+          "$ref": "#/definitions/v1TimeFilter"
+        }
+      }
+    },
+    "v1GetAdsStatsV1Response": {
+      "type": "object",
+      "properties": {
+        "stats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1GetAdsStatsV1ResponseStatsInfo"
+          }
+        },
+        "count": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "v1GetAdsStatsV1ResponseStatsInfo": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "count": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "v1GetBuyStatsV1Request": {
+      "type": "object",
+      "properties": {
+        "filter": {
+          "$ref": "#/definitions/v1TimeFilter"
+        }
+      }
+    },
+    "v1GetBuyStatsV1Response": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "string",
+          "format": "int64"
+        },
+        "stats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1GetBuyStatsV1ResponseStatsInfo"
+          }
+        }
+      }
+    },
+    "v1GetBuyStatsV1ResponseStatsInfo": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "count": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "v1GetPlantsStatsV1Request": {
+      "type": "object",
+      "properties": {
+        "filter": {
+          "$ref": "#/definitions/v1TimeFilter"
+        }
+      }
+    },
+    "v1GetPlantsStatsV1Response": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "string",
+          "format": "int64"
+        },
+        "stats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1GetPlantsStatsV1ResponseStatsInfo"
+          }
+        }
+      }
+    },
+    "v1GetPlantsStatsV1ResponseStatsInfo": {
+      "type": "object",
+      "properties": {
+        "species": {
+          "type": "string"
+        },
+        "count": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "v1GetTradeStatsV1Request": {
+      "type": "object",
+      "properties": {
+        "filter": {
+          "$ref": "#/definitions/v1TimeFilter"
+        }
+      }
+    },
+    "v1GetTradeStatsV1Response": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "string",
+          "format": "int64"
+        },
+        "stats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v1GetTradeStatsV1ResponseStatsInfo"
+          }
+        }
+      }
+    },
+    "v1GetTradeStatsV1ResponseStatsInfo": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "count": {
+          "type": "string",
+          "format": "int64"
+        },
+        "status": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "v1TimeFilter": {
+      "type": "object",
+      "properties": {
+        "timeFrom": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "timeTo": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

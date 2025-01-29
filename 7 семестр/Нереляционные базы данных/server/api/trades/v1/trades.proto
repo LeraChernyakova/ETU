@@ -1,0 +1,117 @@
+syntax = "proto3";
+
+package trades.v1;
+
+option go_package = "trades/v1;trades_v1";
+
+import "google/api/annotations.proto";
+
+service Trades {
+  rpc GetTradeInV1 (GetTradeInV1Request) returns (GetTradeInV1Response){
+    option (google.api.http) = {
+      get: "/api/trade/in/{id}"
+    };
+  };
+
+  rpc GetTradeOutV1 (GetTradeOutV1Request) returns (GetTradeOutV1Response){
+    option (google.api.http) = {
+      get: "/api/trade/out/{id}"
+    };
+  }
+  rpc PostTradeV1 (PostTradeV1Request) returns (PostTradeV1Response){
+    option (google.api.http) = {
+      post: "/api/trade"
+      body: "*"
+    };
+  }
+  rpc AcceptTradeV1 (AcceptTradeV1Request) returns (AcceptTradeV1Response){
+    option (google.api.http) = {
+      post: "/api/trade/accept/{tradeId}"
+    };
+  }
+  rpc RejectTradeV1 (RejectTradeV1Request) returns (RejectTradeV1Response){
+    option (google.api.http) = {
+      post: "/api/trade/reject/{tradeId}"
+    };
+  }
+  rpc PostBuyV1 (PostBuyV1Request) returns (PostBuyV1Response){
+    option (google.api.http) = {
+      post: "/api/buy"
+    };
+  }
+}
+
+enum Status {
+  STATUS_UNSPECIFIED = 0;
+  STATUS_PENDING = 1;
+  STATUS_ACCEPTED = 2;
+  STATUS_REJECTED = 3;
+}
+
+message Trade{
+  message Plant{
+    string name = 1;
+    string image = 2;
+  }
+  message User{
+    string name = 1;
+    string surname = 2;
+    string fatherName = 3;
+    Plant plant = 4;
+  }
+  string id = 1;
+  User offerer = 2;
+  User accepter = 3;
+  Status status = 4;
+}
+
+message GetTradeInV1Request{
+  string id = 1;
+}
+message GetTradeInV1Response{
+  repeated Trade trade = 1;
+}
+
+message GetTradeOutV1Request{
+  string id = 1;
+}
+message GetTradeOutV1Response{
+  repeated Trade trade = 1;
+}
+
+message PostTradeV1Request{
+  string offererId = 1;
+  string offererPlantId = 2;
+  string accepterId = 3;
+  string accepterPlantId = 4;
+}
+
+message PostTradeV1Response{
+
+}
+
+message AcceptTradeV1Request{
+  string tradeId = 1;
+}
+
+message AcceptTradeV1Response{
+
+}
+
+message RejectTradeV1Request{
+  string tradeId = 1;
+}
+
+message RejectTradeV1Response{
+
+}
+
+message PostBuyV1Request{
+  string offererId = 1;
+  string offererPlantId = 2;
+  string accepterId = 3;
+}
+
+message PostBuyV1Response{
+
+}

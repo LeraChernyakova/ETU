@@ -1,0 +1,1 @@
+/usr/bin/c++  -g3 -pthread CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/matrix.cpp.o -o main 

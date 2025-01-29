@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package data.v1;
+
+option go_package = "data/v1;data_v1";
+
+import "google/api/annotations.proto";
+
+service DataAPI {
+    rpc ExportDBV1 (ExportDBV1Request) returns (ExportDBV1Response) {
+        option (google.api.http) = {
+            get: "/api/data"
+        };
+    };
+    rpc ImportDBV1 (ImportDBV1Request) returns (ImportDBV1Response) {
+        option (google.api.http) = {
+            post: "/api/data"
+            body: "*"
+        };
+    };
+}
+    message ExportDBV1Request {
+
+    }
+
+    
+    message ExportDBV1Response {
+        bytes db = 1;
+    }
+    
+    message ImportDBV1Request {
+        bytes db = 1;
+    }
+    
+    message ImportDBV1Response {}

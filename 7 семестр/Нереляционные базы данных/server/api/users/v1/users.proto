@@ -1,0 +1,100 @@
+syntax = "proto3";
+
+package users.v1;
+
+option go_package = "users/v1;users_v1";
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+
+service User {
+  rpc UserLoginV1(UserLoginV1Request) returns (UserLoginV1Response) {
+    option (google.api.http) = {
+      post: "/api/v1/login"
+      body: "*"
+    };
+  }
+
+  rpc UserRegisterV1 (UserRegisterV1Request) returns (UserRegisterV1Response){
+    option (google.api.http) = {
+      post: "/api/v1/register"
+      body: "*"
+    };
+  };
+
+  rpc GetUserV1 (GetUserV1Request) returns (GetUserV1Response){
+    option (google.api.http) = {
+      get: "/api/v1/user/{id}"
+      response_body: "user"
+    };
+  };
+
+  rpc UpdateUserV1 (UpdateUserV1Request) returns (UpdateUserV1Response){
+    option (google.api.http) = {
+      post: "/api/v1/user/{id}"
+      body: "*"
+    };
+  };
+
+}
+
+message UserLoginV1Request{
+  string login = 1;
+  string password = 2;
+}
+
+enum Role {
+  ROLE_UNSPECIFIED = 0;
+  ROLE_ADMIN = 1;
+  ROLE_REGULAR = 2;
+}
+
+message UserLoginV1Response{
+  string id = 1;
+  Role role =2;
+}
+
+message UserRegisterV1Request{
+  string name = 1;
+  string surname = 2;
+  string fatherName = 3;
+  oneof login{
+    string email = 4;
+    string phoneNumber = 5;
+  }
+  string password = 6;
+}
+
+message UserRegisterV1Response{}
+
+message GetUserV1Request{
+  string id = 1;
+}
+
+message GetUserV1Response{
+  message User {
+    string photo = 1;
+    string surname = 2;
+    string name = 3;
+    string father_name = 4;
+    string phone_number = 5;
+    string email = 6;
+    google.protobuf.Timestamp createdAt = 7;
+    google.protobuf.Timestamp updatedAt = 8;
+  }
+  User user = 1;
+}
+
+message UpdateUserV1Request{
+  string id = 1;
+  string name = 2;
+  string surname = 3;
+  string fatherName = 4;
+  string email = 5;
+  string phoneNumber = 6;
+  string photo = 7;
+}
+
+message UpdateUserV1Response{
+
+}

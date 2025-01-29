@@ -1,0 +1,4 @@
+bin/*.d
+bin/*.exe
+data/output.txt
+.vscode

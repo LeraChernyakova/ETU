@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/a/pa/lab5/main.cpp
+GL/glew.h
+-
+GLFW/glfw3.h
+-
+cstdlib
+-
+iostream
+-
+memory
+-
+chrono
+-
+mandelbrot.h
+-
+
+mandelbrot.h
+cstddef
+-
+

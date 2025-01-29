@@ -1,0 +1,112 @@
+\ProvidesPackage{generalPreamble}
+
+% ====== Localization & fonts ======
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{polyglossia} % Russian lang
+\setdefaultlanguage{russian}
+\setmainfont{Times New Roman}[Mapping=tex-text]
+\newfontfamily\cyrillicfont{Times New Roman}[Mapping=tex-text]
+
+\setmonofont[Scale=0.9]{DejaVu Sans Mono}
+\newfontfamily{\cyrillicfonttt}{DejaVu Sans Mono}[Scale=0.8]
+
+% ====== Math ======
+\usepackage{amsmath} % Math stuff
+\usepackage{mathtools}
+\usepackage{cool}
+\usepackage{gensymb}
+\usepackage{amssymb}
+\usepackage{interval}
+
+\intervalconfig{
+    soft open fences
+}
+
+% ====== CSV ======
+\usepackage{csvsimple} % Load CSV
+
+% ====== References ======
+\usepackage{hyperref} % Links
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+% ====== Captions ======
+\usepackage{caption}
+\usepackage{subcaption}
+\captionsetup[figure]{name=Рисунок, labelsep=endash, parskip=0pt}
+
+\captionsetup[table]{
+    labelsep=period,
+    justification=RaggedRight,
+    parskip=0pt,
+    singlelinecheck=false,
+    skip=3pt
+}
+
+\captionsetup[figure]{
+    name=Рисунок,
+    justification=centering,
+    labelsep=period,
+    parskip=6pt,
+    skip=3pt
+}
+
+
+% ====== Misc ======
+\usepackage{metalogo} % Logos for LaTeX
+\usepackage{lipsum} % Lorem ipsum
+\usepackage{graphicx} % Pictures
+\usepackage{tabularx} % X-tables
+\usepackage{csquotes} % French quoutes
+\usepackage{multirow} % Multi-row tables
+\usepackage{tcolorbox} % Nice colored box
+
+\usepackage{lastpage} % Link to the last page
+\usepackage{booktabs}
+
+\usepackage{placeins} % FloatBarrier
+
+\usepackage[final]{pdfpages} % Include PDF
+\setboolean{@twoside}{false}
+
+% ====== Plotting ======
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{dateplot}
+
+
+% ====== My commands ======
+
+\newcommand{\screenshot}[3]{
+    \begin{figure}[h]
+        \centering
+        \includegraphics[#1]{#2}
+        \caption{#3}
+    \end{figure}
+}
+
+\newcommand{\dfn}[1]{
+    \textit{#1}
+}
+
+\newcounter{examplecounter}[section]
+
+\newenvironment{example}[1]{
+    \refstepcounter{examplecounter}
+    \paragraph{Пример \thesection.\theexamplecounter. } #1\\
+}{
+    
+}
+
+% ====== Counters ======
+
+\numberwithin{equation}{section}

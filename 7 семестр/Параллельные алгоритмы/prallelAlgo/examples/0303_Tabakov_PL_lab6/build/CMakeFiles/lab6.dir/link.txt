@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/lab6.dir/main.cpp.o CMakeFiles/lab6.dir/matrix.cpp.o -o lab6  libs/clew/liblibclew.a -ldl 

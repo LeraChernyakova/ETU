@@ -1,0 +1,26 @@
+cmake_minimum_required(VERSION 3.1)
+
+add_subdirectory(libs)
+
+project(ex_multyply)
+include_directories(${CMAKE_SOURCE_DIR}/include)
+include_directories(${CMAKE_SOURCE_DIR}/utils)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g3 -pthread")
+
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/src/cl/kernel.cl
+     DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+
+add_executable(
+     ${PROJECT_NAME} 
+     src/main.cpp
+     src/matrix.cpp
+     utils/create_device.cpp
+     utils/build_program.cpp
+     utils/invoke_kernel.cpp
+     utils/save_result.cpp
+     utils/generate_task.cpp
+)
+target_link_libraries(${PROJECT_NAME} libclew)

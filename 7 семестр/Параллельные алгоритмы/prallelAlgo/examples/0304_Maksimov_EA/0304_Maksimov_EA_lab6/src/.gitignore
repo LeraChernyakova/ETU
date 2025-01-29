@@ -1,0 +1,8 @@
+bin/*.d
+bin/*.exe
+build/*
+data/output.txt
+.vscode
+libs/*
+cmake-build-debug
+.idea

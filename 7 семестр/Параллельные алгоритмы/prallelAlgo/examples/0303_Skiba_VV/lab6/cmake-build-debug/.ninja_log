@@ -1,0 +1,5 @@
+# ninja log v6
+10	1145	7553100960000000	CMakeFiles/enumDevices.dir/src/main.cpp.obj	9119202a54928910
+3	1385	7553100956600000	libs/clew/CMakeFiles/libclew.dir/libclew/ocl_init.cpp.obj	937adcf181f77dc
+1386	1519	7553100980000000	libs/clew/liblibclew.a	31babfe1a8eaa72c
+1519	1668	7553100980000000	enumDevices.exe	1f628bb7fa6755f4

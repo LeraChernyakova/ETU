@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/lab5.dir/main.cpp.o CMakeFiles/lab5.dir/mandelbrot.cpp.o  -o lab5  /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libGLU.so -ldl -lGL -lGLU -lXrandr -lXext -lX11 -lrt -lGLEW -lglfw /usr/lib/x86_64-linux-gnu/libOpenCL.so 

@@ -1,0 +1,62 @@
+1 1000 1:
+Crossbeam SegQueue:
+    21.6ms
+My shared queue implementation:
+    19.2ms
+My lock-free queue implementation:
+    17.8ms
+My blocking queue implementation:
+    18.6ms
+Rust ideomatic async version:
+    26.8ms
+
+
+1000 8 50:
+Crossbeam SegQueue:
+    87.2ms
+My shared queue implementation:
+    76.9ms
+My lock-free queue implementation:
+    76.3ms
+My blocking queue implementation:
+    73.9ms
+Rust ideomatic async version:
+    87.1ms
+
+1000 100 50:
+Crossbeam SegQueue:
+    198.56ms
+My shared queue implementation:
+    147.3ms
+My lock-free queue implementation:
+    128.85ms
+My blocking queue implementation:
+    90.34ms
+Rust ideomatic async version:
+    87.1ms
+
+
+100 1000 50:
+Crossbeam SegQueue:
+    33.8ms
+My shared queue implementation:
+    33.7ms
+My lock-free queue implementation:
+    26.5ms
+My blocking queue implementation:
+    28.36ms
+Rust ideomatic async version:
+    35.3ms
+
+
+1000 1000 1:
+Crossbeam SegQueue:
+    36.06ms
+My shared queue implementation:
+    35.73ms
+My lock-free queue implementation:
+    35.9ms
+My blocking queue implementation:
+    35.26ms
+Rust ideomatic async version:
+    22.28ms

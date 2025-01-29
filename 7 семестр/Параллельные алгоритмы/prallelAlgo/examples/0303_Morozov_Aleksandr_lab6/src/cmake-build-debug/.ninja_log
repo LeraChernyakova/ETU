@@ -1,0 +1,16 @@
+# ninja log v6
+31	1172	7553093960000000	CMakeFiles/ex_multyply.dir/utils/save_result.cpp.obj	6602840385a9841
+20	1177	7553093960000000	CMakeFiles/ex_multyply.dir/utils/build_program.cpp.obj	4502a0ad28e27332
+26	1228	7553093960000000	CMakeFiles/ex_multyply.dir/utils/invoke_kernel.cpp.obj	5366445eb0287c95
+16	1234	7553093960000000	CMakeFiles/ex_multyply.dir/utils/create_device.cpp.obj	c6202ec8a60f5a6f
+37	1240	7553093960000000	CMakeFiles/ex_multyply.dir/utils/generate_task.cpp.obj	924ed5f6555f1ef7
+11	1288	7553093960000000	CMakeFiles/ex_multyply.dir/src/main.cpp.obj	c6d4d12fbeaf455
+4	1547	7553093940200000	libs/clew/CMakeFiles/libclew.dir/libclew/ocl_init.cpp.obj	31d6844984cebeb8
+1547	1701	7553093960000000	libs/clew/liblibclew.a	31babfe1a8eaa72c
+1702	1880	7553093960000000	ex_multyply.exe	a4d1008d7a5aa0d7
+11	1000	7553104620700000	CMakeFiles/ex_multyply.dir/src/main.cpp.obj	c6d4d12fbeaf455
+1000	1162	7553104640000000	ex_multyply.exe	a4d1008d7a5aa0d7
+26	1028	7553106164600000	CMakeFiles/ex_multyply.dir/src/main.cpp.obj	c6d4d12fbeaf455
+1028	1189	7553106180000000	ex_multyply.exe	a4d1008d7a5aa0d7
+23	996	7553106613700000	CMakeFiles/ex_multyply.dir/src/main.cpp.obj	c6d4d12fbeaf455
+996	1143	7553106640000000	ex_multyply.exe	a4d1008d7a5aa0d7

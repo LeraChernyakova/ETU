@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/0304_Aristarkhov_Ilya_lab4.dir/main.cpp.o CMakeFiles/0304_Aristarkhov_Ilya_lab4.dir/model/Square_matrix.cpp.o CMakeFiles/0304_Aristarkhov_Ilya_lab4.dir/thread/Matrix_threading.cpp.o -o 0304_Aristarkhov_Ilya_lab4 

@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" modified="2024-02-16T18:38:17.699Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="jGmh2P4OyiVCseR4V7UT" version="23.1.5" type="device">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="1002" dy="551" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="-YLPaWiGfDbkhbNqOUda-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=classicThin;endFill=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3h6hTAy-Vyu-1r_KlwYv-3" target="-YLPaWiGfDbkhbNqOUda-45" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="235" as="targetPoint" />
+            <mxPoint x="490" y="215" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-YLPaWiGfDbkhbNqOUda-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=classicThin;endFill=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-YLPaWiGfDbkhbNqOUda-1" target="-YLPaWiGfDbkhbNqOUda-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-YLPaWiGfDbkhbNqOUda-1" value="&lt;font face=&quot;Lucida Console&quot;&gt;Начало&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;arcSize=50;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="450" y="60" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-YLPaWiGfDbkhbNqOUda-2" value="&lt;font face=&quot;Lucida Console&quot;&gt;текст (x) &lt;br&gt;ключ (k)&lt;br&gt;матрица-ключ (K)&lt;br&gt;&lt;/font&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=10;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="410" y="120" width="160" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="-YLPaWiGfDbkhbNqOUda-27" value="&lt;font face=&quot;Lucida Console&quot;&gt;Конец&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;arcSize=50;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="730" y="220" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-YLPaWiGfDbkhbNqOUda-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=classicThin;endFill=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-YLPaWiGfDbkhbNqOUda-2" target="3h6hTAy-Vyu-1r_KlwYv-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="505" y="125" as="sourcePoint" />
+            <mxPoint x="490" y="185" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3h6hTAy-Vyu-1r_KlwYv-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=classicThin;endFill=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-YLPaWiGfDbkhbNqOUda-45" target="3h6hTAy-Vyu-1r_KlwYv-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-YLPaWiGfDbkhbNqOUda-45" value="&lt;font face=&quot;Lucida Console&quot;&gt;x[i] заменяется согласно матрице (K)&amp;nbsp;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;arcSize=5;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="400" y="235" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3h6hTAy-Vyu-1r_KlwYv-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=classicThin;endFill=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3h6hTAy-Vyu-1r_KlwYv-0" target="3h6hTAy-Vyu-1r_KlwYv-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3h6hTAy-Vyu-1r_KlwYv-0" value="&lt;font face=&quot;Lucida Console&quot;&gt;x вносится в матрицу (кол. столб. length(k))&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;arcSize=5;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="660" y="90" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Fl8opb_WniqGqvQGuhMR-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3h6hTAy-Vyu-1r_KlwYv-3" target="3h6hTAy-Vyu-1r_KlwYv-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3h6hTAy-Vyu-1r_KlwYv-3" value="&lt;font face=&quot;Lucida Console&quot;&gt;i от 1 до length(x)&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="380" y="185" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="3h6hTAy-Vyu-1r_KlwYv-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=classicThin;endFill=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="3h6hTAy-Vyu-1r_KlwYv-6" target="-YLPaWiGfDbkhbNqOUda-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3h6hTAy-Vyu-1r_KlwYv-6" value="&lt;font face=&quot;Lucida Console&quot;&gt;Стол&lt;/font&gt;&lt;font face=&quot;Lucida Console&quot;&gt;бцы матрицы индексируются ключом (k) и переставляются в алфавитном порядке&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;arcSize=5;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="660" y="140" width="220" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,123 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "data/v1/data.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "DataAPI"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/data": {
+      "get": {
+        "operationId": "DataAPI_ExportDBV1",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1ExportDBV1Response"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "DataAPI"
+        ]
+      },
+      "post": {
+        "operationId": "DataAPI_ImportDBV1",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1ImportDBV1Response"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1ImportDBV1Request"
+            }
+          }
+        ],
+        "tags": [
+          "DataAPI"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "v1ExportDBV1Response": {
+      "type": "object",
+      "properties": {
+        "db": {
+          "type": "string",
+          "format": "byte"
+        }
+      }
+    },
+    "v1ImportDBV1Request": {
+      "type": "object",
+      "properties": {
+        "db": {
+          "type": "string",
+          "format": "byte"
+        }
+      }
+    },
+    "v1ImportDBV1Response": {
+      "type": "object"
+    }
+  }
+}

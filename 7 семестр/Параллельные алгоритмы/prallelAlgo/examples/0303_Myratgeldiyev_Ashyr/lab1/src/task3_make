@@ -1,0 +1,2 @@
+all:
+	g++ task3.cpp task3.h common_funcs.h common_funcs.cpp -o task3.out

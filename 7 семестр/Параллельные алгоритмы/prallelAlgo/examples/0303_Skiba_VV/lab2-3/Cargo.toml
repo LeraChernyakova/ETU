@@ -1,0 +1,31 @@
+[package]
+name = "lab2"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.75"
+async-channel = "2.0.0"
+crossbeam = "0.8.2"
+futures = "0.3.29"
+lockfree = "0.5.1"
+parking_lot = { version = "0.12.1", optional = true }
+rand = "0.8.5"
+tokio = { version = "1.33.0", features =[ "rt", "sync"] }
+
+
+[lib]
+
+
+[features]
+default = []
+my_blocking_queue = []
+my_shared_queue = []
+lock_free_queue = []
+crossbeam_queue = []
+async_channels_threads = []
+
+advanced_sync = ["parking_lot", "tokio/parking_lot"]
+parking-backoff-runner = []

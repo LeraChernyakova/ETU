@@ -1,0 +1,21 @@
+[package]
+name = "lab4"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+path= "src/lib.rs"
+
+[dependencies]
+clap = "4.4.11"
+colored = "2.1.0"
+rand = { version = "0.8.5", features = [] }
+threadpool = "1.8.1"
+time = { version = "0.3.31", features = [] }
+
+[features]
+default = []
+multithreaded = []
+strassen = []

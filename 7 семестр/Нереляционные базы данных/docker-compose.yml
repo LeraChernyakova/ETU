@@ -1,0 +1,49 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: app
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    networks:
+      - app
+    depends_on:
+      - db
+    ports:
+      - "127.0.0.1:8881:8881"
+
+  db:
+    container_name: db
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - app
+
+  frontend:
+    container_name: client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8081:8080"
+    networks:
+      - app
+      - frontend
+    depends_on:
+      - app
+
+volumes:
+  mongo-data:
+
+networks:
+  app:
+    driver: bridge
+  frontend:

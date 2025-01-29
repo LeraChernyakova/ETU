@@ -1,0 +1,4 @@
+src/bin/*.exe
+src/.vscode
+src/bin/*.d
+*.docx

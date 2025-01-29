@@ -1,0 +1,24 @@
+# ninja log v6
+42	1375	7553481509474397	CMakeFiles/ex_multyply.dir/utils/save_result.cpp.obj	377a5ee5706f50b0
+32	1399	7553481509368919	CMakeFiles/ex_multyply.dir/utils/build_program.cpp.obj	d2517118deaca202
+27	1367	7553481509323756	CMakeFiles/ex_multyply.dir/utils/create_device.cpp.obj	50b9740ea626f70d
+1763	1853	7553481526692761	libs/clew/liblibclew.a	31babfe1a8eaa72c
+55	2149	7554531181735235	CMakeFiles/ex_multyply.dir/utils/invoke_kernel.cpp.obj	bdd2de8a26a7cc84
+47	1456	7553481509524399	CMakeFiles/ex_multyply.dir/utils/generate_task.cpp.obj	5aae482b088d43f
+42	2348	7554531181595935	CMakeFiles/ex_multyply.dir/src/main.cpp.obj	f69ed6553b793357
+18	1763	7553481509238523	libs/clew/CMakeFiles/libclew.dir/libclew/ocl_init.cpp.obj	3d6165bbad03da94
+2349	2595	7554531204662548	ex_multyply.exe	a4d1008d7a5aa0d7
+85	2597	7554552002925657	CMakeFiles/ex_multyply.dir/utils/save_result.cpp.obj	223a605d0f6f14c8
+60	2600	7554552002684744	CMakeFiles/ex_multyply.dir/utils/build_program.cpp.obj	d51ff17fac9615d5
+49	2607	7554552002565972	CMakeFiles/ex_multyply.dir/utils/create_device.cpp.obj	154ca6f474679974
+72	2625	7554552002800208	CMakeFiles/ex_multyply.dir/utils/invoke_kernel.cpp.obj	a6dea715f09b5de1
+102	2700	7554552003096670	CMakeFiles/ex_multyply.dir/utils/generate_task.cpp.obj	a3dc280858f2861c
+14	2332	7554552308574998	CMakeFiles/ex_multyply.dir/src/main.cpp.obj	a39f48f38c91418f
+16	2503	7554552467860929	CMakeFiles/ex_multyply.dir/src/matrix.cpp.obj	2a68a1a5bad92869
+2504	3103	7554552492741518	ex_multyply.exe	33c64b2994cef078
+15	2184	7554552593798264	CMakeFiles/ex_multyply.dir/src/matrix.cpp.obj	2a68a1a5bad92869
+2185	2711	7554552615504456	ex_multyply.exe	33c64b2994cef078
+21	2395	7554555152081472	CMakeFiles/ex_multyply.dir/src/main.cpp.obj	a39f48f38c91418f
+2396	2924	7554555175824390	ex_multyply.exe	33c64b2994cef078
+25	2410	7554556335364369	CMakeFiles/ex_multyply.dir/src/main.cpp.obj	a39f48f38c91418f
+2412	2924	7554556359239948	ex_multyply.exe	33c64b2994cef078

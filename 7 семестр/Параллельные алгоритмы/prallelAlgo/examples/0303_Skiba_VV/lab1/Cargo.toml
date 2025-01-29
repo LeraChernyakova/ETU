@@ -1,0 +1,23 @@
+[package]
+name = "PA1"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+fork = "0.1.22"
+nix = { version = "0.27.1", features = ["time", "process", "pthread"] }
+rand = "0.8.5"
+
+[[bin]]
+name = "threads"
+
+[[bin]]
+name = "threads-optimized"
+
+[[bin]]
+name = "processes"
+
+[lib]
+name = "workers"

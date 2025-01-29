@@ -1,0 +1,44 @@
+\ProvidesPackage{sourceCode}
+
+% ====== Source code listings ======
+\usepackage{listings} % Source code
+\lstset{
+    basicstyle=\small\ttfamily,
+    breaklines=true,
+    breakatwhitespace=true,
+    commentstyle=\color{green},
+    keywordstyle=\bfseries\color{blue},
+    tabsize=4
+}
+
+\lstdefinestyle{num}{
+    numbers=left,
+    numbersep=0.5cm,
+    numberstyle=\ttfamily,
+    xleftmargin=0.85cm,
+}
+
+\lstdefinestyle{framed_num}{
+    frame=single,
+    numbers=left,
+    numbersep=0.5cm,
+    numberstyle=\ttfamily\color{red},
+    xleftmargin=0pt,
+    framexleftmargin=1cm,
+    framextopmargin=2pt,
+    framesep=0pt
+}
+
+\lstdefinestyle{sql_style}{
+    morekeywords=[10]{while, do, procedure, begin, end, if, tinyint, enum, datetime, boolean, declare, function, return, deterministic, is}
+}
+
+\captionsetup[lstlisting]{
+    labelsep=period,
+    justification=RaggedLeft,
+    parskip=0pt,
+    singlelinecheck=false,
+    skip=3pt
+}
+
+\renewcommand{\lstlistingname}{Листинг}

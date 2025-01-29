@@ -1,0 +1,3 @@
+/home/ilya201232/CLionProjects/PA_Lab_2/cmake-build-debug/CMakeFiles/PA_Lab_2.dir
+/home/ilya201232/CLionProjects/PA_Lab_2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ilya201232/CLionProjects/PA_Lab_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

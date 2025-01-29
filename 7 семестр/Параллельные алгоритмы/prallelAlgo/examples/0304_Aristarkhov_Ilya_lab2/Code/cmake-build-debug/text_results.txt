@@ -1,0 +1,11 @@
+
+is_fine: 0; producer_count: 1; multi_threads_count: 5; matrix_size:40; > 132
+is_fine: 0; producer_count: 5; multi_threads_count: 5; matrix_size:40; > 375
+is_fine: 0; producer_count: 10; multi_threads_count: 5; matrix_size:40; > 403
+is_fine: 0; producer_count: 20; multi_threads_count: 5; matrix_size:40; > 454
+is_fine: 0; producer_count: 50; multi_threads_count: 5; matrix_size:40; > 286
+is_fine: 1; producer_count: 1; multi_threads_count: 5; matrix_size:40; > 141
+is_fine: 1; producer_count: 5; multi_threads_count: 5; matrix_size:40; > 302
+is_fine: 1; producer_count: 10; multi_threads_count: 5; matrix_size:40; > 305
+is_fine: 1; producer_count: 20; multi_threads_count: 5; matrix_size:40; > 205
+is_fine: 1; producer_count: 50; multi_threads_count: 5; matrix_size:40; > 323

@@ -1,0 +1,8 @@
+/home/ilya201232/CLionProjects/labs-PA-23/OCL_test/cmake-build-debug/CMakeFiles/enumDevices.dir
+/home/ilya201232/CLionProjects/labs-PA-23/OCL_test/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ilya201232/CLionProjects/labs-PA-23/OCL_test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ilya201232/CLionProjects/labs-PA-23/OCL_test/cmake-build-debug/libs/CMakeFiles/edit_cache.dir
+/home/ilya201232/CLionProjects/labs-PA-23/OCL_test/cmake-build-debug/libs/CMakeFiles/rebuild_cache.dir
+/home/ilya201232/CLionProjects/labs-PA-23/OCL_test/cmake-build-debug/libs/clew/CMakeFiles/libclew.dir
+/home/ilya201232/CLionProjects/labs-PA-23/OCL_test/cmake-build-debug/libs/clew/CMakeFiles/edit_cache.dir
+/home/ilya201232/CLionProjects/labs-PA-23/OCL_test/cmake-build-debug/libs/clew/CMakeFiles/rebuild_cache.dir

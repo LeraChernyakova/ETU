@@ -1,0 +1,8 @@
+/home/liza/PA_lab6/build/CMakeFiles/lab6.dir
+/home/liza/PA_lab6/build/CMakeFiles/edit_cache.dir
+/home/liza/PA_lab6/build/CMakeFiles/rebuild_cache.dir
+/home/liza/PA_lab6/build/libs/CMakeFiles/edit_cache.dir
+/home/liza/PA_lab6/build/libs/CMakeFiles/rebuild_cache.dir
+/home/liza/PA_lab6/build/libs/clew/CMakeFiles/libclew.dir
+/home/liza/PA_lab6/build/libs/clew/CMakeFiles/edit_cache.dir
+/home/liza/PA_lab6/build/libs/clew/CMakeFiles/rebuild_cache.dir

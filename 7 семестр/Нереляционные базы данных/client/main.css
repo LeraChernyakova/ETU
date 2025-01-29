@@ -1,0 +1,173 @@
+.page-layout {
+    display: flex;
+}
+
+.inputs-start-page {
+    font-family: 'Century Gothic', sans-serif;
+    width: 100%;
+    border: 1px solid #EEECEC;
+    border-radius: 10px;
+    background-color: #EEECEC;
+    padding: 10px;
+    font-size: 14px;
+    color: black;
+    box-sizing: border-box;
+}
+
+.inputs-start-page::placeholder {
+    color: #7E7E7E;
+}
+
+.inputs-start-page:focus {
+    border-color: transparent;
+    outline: none;
+}
+
+.inputs {
+    font-family: 'Century Gothic', sans-serif;
+    width: 100%;
+    border: 1px solid #EEECEC;
+    border-radius: 10px;
+    background-color: #EEECEC;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: black;
+    box-sizing: border-box;
+}
+
+.inputs::placeholder {
+    color: #7E7E7E;
+}
+
+.inputs:focus {
+    border-color: transparent;
+    outline: none;
+}
+
+.inputs-labels {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 2%;
+}
+
+.checkbox-labels {
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+textarea {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid #EEECEC;
+    background-color: #EEECEC;
+    resize: none;
+}
+
+.green-button-white-text {
+    font-family: 'Century Gothic', sans-serif;
+    width: 100%;
+    font-size: 14px;
+    border: 2px solid #89A758;
+    font-weight: bold;
+    background-color: #89A758;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.green-button-white-text:hover {
+    background-color: #77934a;
+}
+
+.white-button-green-text{
+    margin-top: 2%;
+    width: 100%;
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #89A758;
+    background-color: transparent;
+    border: 2px solid #89A758;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    align-items: center;
+    position: relative;
+}
+
+.white-button-green-text:hover {
+    color: #77934a;
+    border: 2px solid #77934a;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-left: 10%;
+}
+
+.sidebar {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.search-input {
+    font-family: 'Century Gothic', sans-serif;
+    width: 84%;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.search-input::placeholder {
+    color: #7E7E7E;
+}
+
+.modal-header {
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.clickable {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.white-button-green-text-sale{
+    margin-top: 4%;
+    width: 100%;
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #89A758;
+    background-color: transparent;
+    border: 2px solid #89A758;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    align-items: center;
+    position: relative;
+}
+
+.white-button-green-text-sale:hover {
+    color: #77934a;
+    border: 2px solid #77934a;
+}

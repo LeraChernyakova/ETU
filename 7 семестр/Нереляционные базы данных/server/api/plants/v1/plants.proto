@@ -1,0 +1,301 @@
+syntax = "proto3";
+
+package plants.v1;
+
+option go_package = "plants/v1;plants_v1";
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+
+service PlantsAPI {
+    rpc GetPlantsWithCareRulesV1 (GetPlantsWithCareRulesV1Request) returns (GetPlantsWithCareRulesV1Response) {
+        option (google.api.http) = {
+            post: "/api/care/{page}/{size}"
+            body: "*"
+        };
+    };
+
+    rpc CreateNewCareRuleV1 (CreateNewCareRuleV1Request) returns (CreateNewCareRuleV1Response) {
+        option (google.api.http) = {
+            post: "/api/care/new"
+            body: "*"
+        };
+    };
+
+    rpc GetPlantByIdV1 (GetPlantByIdV1Request) returns (GetPlantByIdV1Response) {
+        option (google.api.http) = {
+            get: "/api/plants/{id}"
+        };
+    };
+    rpc GetCareRuleV1 (GetCareRuleV1Request) returns (GetCareRuleV1Response) {
+        option (google.api.http) = {
+            get: "/api/care/{id}"
+        };
+    };
+
+    rpc CreatePlantV1 (CreatePlantV1Request) returns (CreatePlantV1Response) {
+        option (google.api.http) = {
+            post: "/api/plants/add"
+            body: "*"
+        };
+    };
+
+    rpc GetPlantsForTradeV1 (GetPlantsForTradeV1Request) returns (GetPlantsForTradeV1Response) {
+        option (google.api.http) = {
+            get: "/api/plants/trade/{userId}"
+        };
+    };
+
+    rpc GetPlantsV1 (GetPlantsV1Request) returns (GetPlantsV1Response) {
+        option (google.api.http) = {
+            post: "/api/plants/{page}/{size}/{sort}"
+            body: "*"
+        };
+    };
+    
+    rpc BuyPlantV1 (BuyPlantV1Request) returns (BuyPlantV1Response) {
+        option (google.api.http) = {
+            post: "/api/plants/buy"
+            body: "*"
+        };
+    };
+
+    rpc GetBoughtPlantsV1 (GetBoughtPlantsV1Request) returns (GetBoughtPlantsV1Response) {
+        option (google.api.http) = {
+            post: "/api/plants/buy/{userId}"
+            body: "*"
+        };
+    };
+
+    rpc GetTradedPlantsV1 (GetTradedPlantsV1Request) returns (GetTradedPlantsV1Response) {
+        option (google.api.http) = {
+            post: "/api/plants/trade/{userId}"
+            body: "*"
+        };
+    };
+
+    rpc GetActivePlantsV1 (GetActivePlantsV1Request) returns (GetActivePlantsV1Response) {
+        option (google.api.http) = {
+            get: "/api/plants/active/{userId}"
+        };
+    };
+    
+    rpc GetArchivedPlantsV1 (GetArchivedPlantsV1Request) returns (GetArchivedPlantsV1Response) {
+        option (google.api.http) = {
+            get: "/api/plants/archive/{userId}"
+        };
+    };
+    rpc ListPlantTypesV1(GetPlantTypesV1Request) returns (GetPlantTypesV1Response) {
+        option (google.api.http) = {
+            get: "/api/plants/types/typesArray"
+        };
+    };
+}
+
+message Filter {
+    string species = 1;
+    string type = 2;
+    repeated string size = 3;
+    repeated string lightCondition = 4;
+    repeated string wateringFrequency = 5;
+    repeated string temperatureRegime = 6;
+    repeated string careComplexity = 7;
+    string description = 8;
+    string place = 9;
+    float priceFrom = 10; 
+    float priceTo = 11;  
+}
+
+message CreatePlantV1Request {
+    string image = 1;
+    string place = 2;
+    string size = 3;
+    float price = 4; 
+    string lightCondition = 5;
+    string wateringFrequency = 6;
+    string temperatureRegime = 7;
+    string careComplexity = 8;
+    string description = 9;
+    string type = 10;
+    string species = 11;
+    string userId = 14;
+}
+
+message CreatePlantV1Response {}
+
+message GetPlantsV1Request {
+    int64 page = 1;
+    int64 size = 2;
+    string sort = 3;
+    bool isDesc = 4;
+    Filter filter = 5;
+    string userId = 6;
+}
+
+message GetPlantsV1Response {
+    repeated Plant plants = 1;
+    int64 count = 2;
+}
+
+message GetCareRuleV1Request {
+    string id = 1;
+}
+
+message GetCareRuleV1Response {
+    repeated CareRule careRules = 1;
+}
+
+message CareRule {
+    message User {
+        string userId = 1;
+        string userName = 2;
+        string userSurname = 3;
+        string userFatherName = 4;
+    }
+    User user = 1;
+    string description = 2;
+    google.protobuf.Timestamp createdAt = 3;
+}
+
+message CreateNewCareRuleV1Request {
+    string species = 1;
+    string userId = 2;
+    string descriptionAddition = 3;
+    string type = 4;
+    string lightCondition = 5;
+    string temperatureRegime = 6;
+    string image = 7;
+}
+
+message CreateNewCareRuleV1Response {}
+
+message GetPlantsWithCareRulesV1Request {
+    message Filter {
+        string species = 1;
+        string type = 2;
+        repeated string lightCondition = 3;
+        repeated string temperatureRegime = 4;
+        string description = 5;
+    }
+    Filter filter = 1;
+    int64 page = 2;
+    int64 size = 3;
+}
+    
+message GetPlantsWithCareRulesV1Response {
+    message PlantInfo {
+        string species = 1;
+        string image = 2;
+        string ruleId = 3;
+        string type = 4;
+    }
+    repeated PlantInfo plants = 1;
+    int64 count = 2;
+}
+
+
+message GetPlantsForTradeV1Request {
+    string userId = 1;
+}
+
+message GetPlantsForTradeV1Response {
+    message PlantInfo{
+        string species = 1;
+        string price = 2;
+        string place = 3;
+        google.protobuf.Timestamp createdAt = 4;
+        string id = 5;
+        string image = 6;
+        
+    }
+    repeated PlantInfo plants = 1;
+}
+
+message GetExampleV1Request {}
+
+message GetPlantByIdV1Request{
+    string id  = 1;
+}
+message GetPlantByIdV1Response{
+    message PlantInfo {
+        string species = 1;
+        string type = 2;
+        string size = 3;
+        string lightCondition = 4;
+        string wateringFrequency = 5;
+        string temperatureRegime = 6;
+        string careComplexity = 7;
+        string description = 8;
+        string place = 9;
+        string image = 10;
+        float price = 11;
+        google.protobuf.Timestamp createdAt = 12;
+    }
+    message User {
+        string id = 1;
+        string photo = 2;
+        string name = 3;
+        string surname = 4;
+        string fatherName = 5;
+    }
+    PlantInfo plant = 1;
+    User user = 2;
+}
+
+message BuyPlantV1Request{
+    string sellerId = 1;
+    string buyerId = 2;
+    string plantId = 3;
+    string species = 4;
+    float price = 5;
+}
+message BuyPlantV1Response{
+
+}
+
+message GetBoughtPlantsV1Request{
+    string userId = 1;
+    Filter filter = 2; 
+}
+message GetBoughtPlantsV1Response{
+    repeated Plant plants = 1;
+}
+
+message GetTradedPlantsV1Request{
+    string userId = 1;
+    Filter filter = 2;
+}
+message GetTradedPlantsV1Response{
+    repeated Plant plants = 1;
+}
+
+message Plant {
+    string id = 1;
+    string image = 2;
+    string species = 3; 
+    float price = 4; 
+    google.protobuf.Timestamp createdAt = 5;
+    string place = 6;
+}
+
+message GetActivePlantsV1Request{
+    string userId = 1;
+}
+message GetActivePlantsV1Response{
+    repeated Plant plants = 1;
+}
+
+message GetArchivedPlantsV1Request{
+    string userId = 1;
+}
+message GetArchivedPlantsV1Response{
+    repeated Plant plants = 1;
+}
+
+message GetPlantTypesV1Request {
+    
+}
+
+message GetPlantTypesV1Response {
+    repeated string types = 1;
+}

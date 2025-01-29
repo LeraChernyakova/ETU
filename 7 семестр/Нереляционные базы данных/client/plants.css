@@ -1,0 +1,112 @@
+.plant-container {
+    margin-top: 5%;
+    margin-left: 1%;
+    width: 100%;
+}
+
+.plant-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.plant-card {
+    width: 19%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.plant-card-hide {
+    width: 19%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.plant-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.plant-image {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.plant-info {
+    text-align: left;
+}
+
+.plant-title {
+    font-family: 'Century Gothic', sans-serif;
+    color: #89A758;
+    font-weight: bold;
+}
+
+.plant-price {
+    font-family: 'Century Gothic', sans-serif;
+    color: black;
+    font-weight: bold;
+}
+
+.plant-place,
+.plant-date {
+    font-size: 13px;
+    font-family: 'Century Gothic', sans-serif;
+    color: #7E7E7E;
+}
+
+.plant-card.placeholder {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.pagination-container {
+    display: flex;
+    column-gap: 10px;
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+.paginate-buttons {
+    height: 30px;
+    width: 30px;
+    border-radius: 1px;
+    cursor: pointer;
+    background-color: rgb(236, 235, 235);
+    border: 1px solid #EEECEC;
+    color: black;
+}
+
+.paginate-buttons:hover {
+    background-color: #d8d8d8;
+}
+
+.active-page {
+    background-color: #88a658;
+    border: 1px solid #88a658;
+    color: white;
+}
+
+.active-page:hover {
+    background-color: #88a658;
+}
+
+.specific-plant-photo {
+    width: 350px;
+    height: 350px;
+    margin-bottom: 5px;
+}
+
+.plant-info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+
+p {
+    font-family: 'Century Gothic', sans-serif;
+}

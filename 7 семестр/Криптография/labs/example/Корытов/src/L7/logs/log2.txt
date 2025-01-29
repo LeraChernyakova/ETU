@@ -1,0 +1,28 @@
+I. PREPARATIONS
+
+Alice composes a message M, addressed to Bob.
+
+Alice chooses a random session key S:
+454FAF877ED61FBFF204A6A6CB59F098
+
+Alice symmetrically encrypts the message M with the session key S.
+
+Alice chooses Bob's public key e:
+010001
+
+Alice asymmetrically encrypts the session key S with Bob's public RSA key e:
+B6BFE7F96B37CAC8857A5F2AF5BD6569960EC52590479C7028BAF641BE743AB40BEF6EADFD8F241BC5063D99EF98A0B44AC1083BFADD0AAC84026C77C05DB826
+
+II. MESSAGE TRANSMISSION
+
+Alice sends the hybrid encrypted file to Bob over an insecure channel.
+
+III. MESSAGE INTERCEPTION
+
+Trudy intercepts the hybrid encrypted file and isolates the encrypted session key S:
+B6BFE7F96B37CAC8857A5F2AF5BD6569960EC52590479C7028BAF641BE743AB40BEF6EADFD8F241BC5063D99EF98A0B44AC1083BFADD0AAC84026C77C05DB826
+
+IV. BEGINNING OF THE ATTACK CYCLE
+
+She sends an exact copy of the original, encrypted message to Bob and extends it with the session key S' (encrypted with Bob's public key). Compared to the message sent by Alice, Trudy simply replaces the encrypted session key [ENC(S, PubKeyBob) is replaced by ENC(S', PubKeyBob)].
+Trudy repeats this step 130 times, whereas the step count depends on the bit length of the used session key (step count = bit length + 2).

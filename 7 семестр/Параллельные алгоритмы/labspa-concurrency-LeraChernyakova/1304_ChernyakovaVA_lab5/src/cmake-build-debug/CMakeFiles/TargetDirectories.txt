@@ -1,0 +1,8 @@
+C:/labspa-concurrency-LeraChernyakova/1304_ChernyakovaVA_lab5/src/cmake-build-debug/CMakeFiles/ex_multyply.dir
+C:/labspa-concurrency-LeraChernyakova/1304_ChernyakovaVA_lab5/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/labspa-concurrency-LeraChernyakova/1304_ChernyakovaVA_lab5/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/labspa-concurrency-LeraChernyakova/1304_ChernyakovaVA_lab5/src/cmake-build-debug/libs/CMakeFiles/edit_cache.dir
+C:/labspa-concurrency-LeraChernyakova/1304_ChernyakovaVA_lab5/src/cmake-build-debug/libs/CMakeFiles/rebuild_cache.dir
+C:/labspa-concurrency-LeraChernyakova/1304_ChernyakovaVA_lab5/src/cmake-build-debug/libs/clew/CMakeFiles/libclew.dir
+C:/labspa-concurrency-LeraChernyakova/1304_ChernyakovaVA_lab5/src/cmake-build-debug/libs/clew/CMakeFiles/edit_cache.dir
+C:/labspa-concurrency-LeraChernyakova/1304_ChernyakovaVA_lab5/src/cmake-build-debug/libs/clew/CMakeFiles/rebuild_cache.dir
