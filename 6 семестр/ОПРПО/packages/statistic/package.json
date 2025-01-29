@@ -1,0 +1,11 @@
+{
+  "name": "statistic",
+  "version": "1.0.0",
+  "description": "Библиотека для сбора статистики с moodle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DianaRomanenko",
+  "license": "ISC"
+}

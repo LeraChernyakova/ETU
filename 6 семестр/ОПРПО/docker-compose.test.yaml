@@ -1,0 +1,73 @@
+version: "3.8"
+
+services:
+  selenium:
+    container_name: selenium-test
+    image: selenium/standalone-chrome
+    ports:
+      - 4444:4444
+      - 5900:5900
+      - 7900:7900
+    networks:
+      - test
+      - frontend
+
+  node:
+    container_name: node-test
+    image: node:alpine
+    volumes:
+      - ./client/:/project
+    working_dir: /project/src/test
+    tty: true
+    command: sh -c "cd /project && npm install && sh"
+    networks:
+      - test
+      - frontend
+
+  backend:
+    container_name: backend
+    image: backend
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    env_file:
+      - server/.env
+    networks:
+      - backend
+      - frontend
+
+  mongodb:
+    container_name: mongodb
+    image: mongodb/mongodb-community-server:6.0-ubi8
+    env_file:
+      - server/.env
+    volumes:
+      - mongo-data:/data/db
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js
+    restart: unless-stopped
+    networks:
+      - backend
+
+  frontend:
+    container_name: client
+    image: client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8081:8080"
+    networks:
+      - frontend
+
+volumes:
+  mongo-data:
+
+networks:
+  backend:
+    driver: bridge
+  frontend:
+  test:

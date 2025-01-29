@@ -1,0 +1,386 @@
+
+    const domain = "http://localhost:8080"
+
+    async function initTracker(){
+        var pageId = await sendPageInfo();
+        var interactions = new Interactor({
+        trackAll: false,
+        numberActionsToSend: 5,
+        trackPagePresence: true,
+        pageId: pageId,
+        interactions: true,
+        interactionElement: ["A", "BUTTON", "TEXTAREA", "INPUT"],
+        interactionEvents: ["mousedown", "copy", "paste"],
+        conversions: true,
+        conversionElement: "conversion",
+        conversionEvents: ["scroll", "contextmenu"],
+        endpoint: `${domain}/api/statistics`,
+        async: true,
+        debug: true
+    });
+    }
+
+    async function sendPageInfo() {
+        var pageEntity = {
+            page: window.location.href,
+            browser: navigator.userAgent,
+            title: document.title,
+            page_html: document.documentElement.outerHTML,
+            window: {
+                width: document.documentElement.clientWidth,
+                height: document.documentElement.clientHeight
+            }
+        }
+        var response = await fetch(`${domain}/api/statistics/page`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(pageEntity)
+        })
+        if (response.ok) {
+            return await response.json()
+        }
+    }
+
+    async function healthCheck(retries){
+        const apiHealthCheck = `${domain}/api/healthcheck`
+        try{
+            let response = await fetch(apiHealthCheck);
+            if (!response.ok){
+                console.log('Во время подключения произошла ошибка. Данные могут быть не записаны.');
+                if(retries > 0){
+                    console.log(`Повторное подключение. Осталось попыток: ${retries-1}`)
+                    await new Promise(resolve => setTimeout(resolve, 5000));
+                    await healthCheck(retries - 1)
+                }else{
+                    console.log("Попытки подключения исчерпаны. Moodle работает без сбора статистики.")
+                }
+            }
+            else {
+                console.log("Скрипт подключен успешно. Соединение с сервером установлено.");
+                initTracker();
+            }
+        } catch(error){
+            console.log('Во время подключения произошла ошибка. Данные могут быть не записаны.');
+            if(retries > 0){
+                    console.log(`Повторное подключение. Осталось попыток: ${retries-1}`)
+                    await new Promise(resolve => setTimeout(resolve, 5000));
+                    await healthCheck(retries - 1)
+                }else{
+                    console.log("Попытки подключения исчерпаны. Moodle работает без сбора статистики.")
+                }
+        }
+    }
+
+    healthCheck(3)
+
+
+
+let mousewheelCounter = 0
+
+    function getUserName() { // works only on e.moevm.info
+        return document
+            .getElementById('action-menu-toggle-1')
+            .getElementsByClassName('usertext')[0]
+            .innerText;
+    }
+
+    function getCourseName() { // works only on e.moevm.info
+        return document
+            .getElementById('page-header')
+            .getElementsByTagName('h1')[0]
+            .innerText
+    }
+
+    function getUserID(){ // works only on e.moevm.info
+        return document
+            .getElementById('page-footer')
+            .getElementsByTagName('a')[0]
+            .getAttribute("href").slice(41)
+    }
+
+    function createDateAsUTC(date) {
+        return new Date(
+            Date.UTC(
+                date.getFullYear(),
+                date.getMonth(),
+                date.getDate(),
+                date.getHours(),
+                date.getMinutes(),
+                date.getSeconds(),
+                date.getMilliseconds()
+            )
+        );
+    }
+
+    function getUserEmail(callback) { // works only on e.moevm.info
+        let id = getUserID();
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://e.moevm.info/user/profile.php?id=" + id);
+        xhr.responseType = 'document';
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                let doc = xhr.response;
+                let email = doc.getElementById('region-main')
+                .getElementsByTagName('a')[1].innerText;
+                callback(email);
+            }
+        }
+    }
+
+    function trackDevtoolsOpening(interactor) {
+        document.addEventListener('keydown', e => {
+            if (e.code === 'F12' || e.code === 'KeyI' && e.ctrlKey && e.shiftKey){
+                e.stopPropagation();
+                if(interactor.debug)
+                    console.log(e.target)
+                interactor.__addInteraction__(e, "devtools", 'page');
+            }
+        })
+    }
+
+    var Interactor = function (config) {
+        this.__init__(config);
+    };
+
+    Interactor.prototype = {
+        
+
+        __init__: function (config) {
+            var interactor = this;
+            getUserEmail((email) => interactor.email = email)
+
+            interactor.interactions = typeof (config.interactions) == "boolean" ? config.interactions : true,
+                interactor.trackAll = typeof (config.trackAll) == "boolean" ? config.trackAll : false,
+                interactor.pageId = typeof (config.pageId) == "string" ? config.pageId : '-',
+                interactor.numberActionsToSend = typeof (config.numberActionsToSend) == "number" ? config.numberActionsToSend : 15,
+                interactor.trackPagePresence = typeof (config.trackPagePresence) == "boolean" ? config.trackPagePresence : true,
+                interactor.interactionElement = Array.isArray(config.interactionElement) === true ? config.interactionElement : [],
+                interactor.interactionEvents = Array.isArray(config.interactionEvents) === true ? config.interactionEvents : ['mouseup', 'touchend'],
+                interactor.conversions = typeof (config.conversions) == "boolean" ? config.conversions : true,
+                interactor.conversionElement = typeof (config.conversionElement) == "string" ? config.conversionElement : 'conversion',
+                interactor.conversionEvents = Array.isArray(config.conversionEvents) === true ? config.conversionEvents : ['mouseup', 'touchend'],
+                interactor.endpoint = typeof (config.endpoint) == "string" ? config.endpoint : '/interactions',
+                interactor.async = typeof (config.async) == "boolean" ? config.async : true,
+                interactor.debug = typeof (config.debug) == "boolean" ? config.debug : true,
+                interactor.records = [],
+                interactor.session = {},
+                interactor.loadTime = new Date();
+
+            interactor.__initializeSession__();
+            interactor.__bindEvents__();
+
+
+            return interactor;
+        },
+
+        __bindEvents__: function () {
+            var interactor = this;
+            
+            if (interactor.trackPagePresence)
+                document.addEventListener("visibilitychange", function (e) {
+                    e.stopPropagation();
+                    if(interactor.debug)
+                        console.log(e.target)
+                    interactor.__addInteraction__(e, document.visibilityState, 'page');
+                    });
+
+            if (interactor.trackAll) {
+                for (var i = 0; i < interactor.interactionEvents.length; i++) {
+                    document.querySelector('body').addEventListener(interactor.interactionEvents[i], function (e) {
+                        e.stopPropagation();
+                        if(interactor.debug)
+                            console.log(e.target)
+                        interactor.__addInteraction__(e, "conversation", 'button');
+                    });
+                }
+                
+
+            }
+            if (!interactor.trackAll && interactor.interactions === true) {
+                for (var i = 0; i < interactor.interactionEvents.length; i++) {
+                    document.querySelector('body').addEventListener(interactor.interactionEvents[i], function (e) {
+                        e.stopPropagation();
+                        if (interactor.interactionElement.includes(e.target.nodeName)) {
+                            if(interactor.debug)
+                                console.log(e.target)
+                            interactor.__addInteraction__(e, "interactions", e.target.toString());
+                        }
+                    });
+                }
+            }
+
+            if (!interactor.trackAll && interactor.conversions === true) {
+                trackDevtoolsOpening(interactor)
+                for (var i = 0; i < interactor.conversionEvents.length; i++) {
+                    document.addEventListener(interactor.conversionEvents[i], function (e) {
+                        e.stopPropagation();
+                        if(interactor.debug)
+                            console.log(e.target)
+                        interactor.__addInteraction__(e, "conversation", e.target.toString());
+                    });
+                }
+            }
+
+            window.onbeforeunload = function (e) {
+                interactor.__sendInteractions__();
+            };
+
+            return interactor;
+        },
+
+        __addInteraction__: function (e, type, element_type) {
+            if(e.type != "scroll"){
+                var interactor = this;
+
+                let name;
+                if(e.target)
+                if (e.target.nodeName == 'BUTTON')
+                    name = e.target.innerText
+                else
+                    name = e.target.nodeName.toLowerCase()
+              let html_code = `${e.target.outerHTML}`
+            if (type == "devtools" || e.type == "keydown"){
+                html_code = "undefined"
+            }
+                trackingEntity = {
+                    timestamp: createDateAsUTC(new Date()).toISOString(),
+                    page: interactor.session.page.href,
+                    element_type: element_type,
+                    element_name: name,
+                    action_type: type,
+                    event_type: e.type,
+                    element_html: html_code
+                }
+                interactor.records.push(trackingEntity);
+              if (interactor.debug) {
+
+                interactor.__closeSession__();
+
+                console.log("Session:\n", interactor.session);
+
+            }
+
+            if (interactor.numberActionsToSend === interactor.records.length){    
+
+                interactor.__sendInteractions__()
+
+                interactor.records = []
+              
+               }
+            }
+            if(e.type == "scroll" && mousewheelCounter == 1){
+                mousewheelCounter++
+                var interactor = this;
+
+                let name;
+                if(e.target)
+                if (e.target.nodeName == 'BUTTON')
+                    name = e.target.innerText
+                else
+                    name = e.target.nodeName.toLowerCase()
+                let html_code = `${e.target.outerHTML}`
+                if (type == "devtools" || e.type == "keydown"){
+                    html_code = "undefined"
+                }
+                trackingEntity = {
+                    timestamp: createDateAsUTC(new Date()).toISOString(),
+                    page: interactor.session.page.href,
+                    element_type: element_type,
+                    element_name: name,
+                    action_type: type,
+                    event_type: e.type,
+                    element_html: html_code
+                }
+                interactor.records.push(trackingEntity);
+
+                if (interactor.debug) {
+                    interactor.__closeSession__();
+                    console.log("Session:\n", interactor.session);
+                }
+                if (interactor.numberActionsToSend === interactor.records.length){    
+                    interactor.__sendInteractions__()
+                    interactor.records = []
+                }
+            }else{
+                mousewheelCounter++
+                if (mousewheelCounter == 5){
+                    mousewheelCounter = 0
+                }
+            }   
+            return interactor;
+        },
+
+        __initializeSession__: function () {
+            var interactor = this;
+
+            interactor.session = {
+                loadTime: interactor.loadTime,
+                unloadTime: new Date(),
+                language: window.navigator.language,
+                platform: window.navigator.platform,
+                port: window.location.port,
+                clientStart: {
+                    name: window.navigator.appVersion,
+                    innerWidth: window.innerWidth,
+                    innerHeight: window.innerHeight,
+                    outerWidth: window.outerWidth,
+                    outerHeight: window.outerHeight
+                },
+                page: {
+                    location: window.location.pathname,
+                    href: window.location.href,
+                    origin: window.location.origin,
+                    title: document.title
+                },
+                endpoint: interactor.endpoint
+            };
+
+            return interactor;
+        },
+
+        __closeSession__: function () {
+
+            var interactor = this;
+
+            interactor.session.unloadTime = new Date();
+            interactor.session.interactions = interactor.records;
+            interactor.session.clientEnd = {
+                name: window.navigator.appVersion,
+                innerWidth: window.innerWidth,
+                innerHeight: window.innerHeight,
+                outerWidth: window.outerWidth,
+                outerHeight: window.outerHeight
+            };
+
+            return interactor;
+        },
+
+
+        __sendInteractions__: function () {
+
+            var interactor = this;
+            if (interactor.records.length === 0) return interactor;
+            
+            var xhr = new XMLHttpRequest();
+
+            interactor.__closeSession__();
+            xhr.open('POST', interactor.endpoint, interactor.async);
+            xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+            var trackingEntity = {
+                student: getUserName(), 
+                email: interactor.email, 
+                student_id: getUserID(),
+                course: getCourseName(), 
+                actions: interactor.records,
+                session_id: interactor.pageId
+            }
+            console.log(trackingEntity)
+            xhr.send(JSON.stringify(trackingEntity));
+
+            return interactor;
+        }
+    };

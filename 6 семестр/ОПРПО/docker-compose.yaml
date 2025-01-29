@@ -1,0 +1,101 @@
+version: "3.8"
+
+services:
+  backend:
+    container_name: backend
+    image: backend
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file:
+      - server/.env
+    ports:
+      - "8080:8080"
+    networks:
+      - backend
+      - moodle
+      - frontend
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost" ]
+      interval: 10s
+      timeout: 1s
+      retries: 2
+      start_period: 4s
+
+  mongodb:
+    container_name: mongodb 
+    image: mongodb/mongodb-community-server:6.0-ubi8
+    env_file: 
+      - server/.env
+    volumes:
+      - mongo-data:/data/db
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js
+    ports:
+    - "27017:27017"
+    restart: unless-stopped
+    networks:
+      - backend
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost" ]
+      interval: 10s
+      timeout: 1s
+      retries: 2
+      start_period: 4s
+
+  frontend:
+    container_name: client
+    image: client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8081:8080"
+    networks:
+      - backend
+      - frontend
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost" ]
+      interval: 10s
+      timeout: 1s
+      retries: 2
+      start_period: 4s
+
+  moodle:
+    container_name: moodle
+    image: bitnami/moodle
+    env_file:
+      - server/.env
+    ports:
+      - "80:8080"
+      - "443:8443"
+    volumes:
+      - moodle-data:/bitnami/moodle
+    restart: unless-stopped
+    networks:
+      - moodle
+
+  mariadb:
+    container_name: mariadb
+    image: mariadb
+    networks:
+      - moodle
+    env_file:
+      - server/.env
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    restart: unless-stopped
+
+
+volumes:
+  mongo-data:
+  moodle-data:
+  mariadb-data:
+
+networks:
+  backend:
+    driver: bridge
+  moodle:
+  frontend:
+

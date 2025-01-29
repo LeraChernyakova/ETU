@@ -1,0 +1,69 @@
+{
+  "name": "exchange",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test": "npx mocha test.mjs"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "^3.0.6",
+    "@mdi/font": "5.9.55",
+    "@vue/cli": "^5.0.8",
+    "axios": "^1.6.8",
+    "chai": "^5.1.1",
+    "chart.js": "^4.4.0",
+    "chartjs-adapter-moment": "^1.0.1",
+    "chartjs-plugin-zoom": "^2.0.1",
+    "core-js": "^3.8.3",
+    "mocha": "^10.4.0",
+    "moment": "^2.30.1",
+    "roboto-fontface": "*",
+    "selenium-webdriver": "^4.19.0",
+    "vue": "^3.2.13",
+    "vue-chartjs": "^5.2.0",
+    "vue-ctk-date-time-picker": "^3.0.0-alpha.0",
+    "vue-date-pick": "^1.5.1",
+    "vue-router": "^4.2.5",
+    "vuetify": "^3.5.8",
+    "vuetify-datetime-picker": "^2.1.1",
+    "webfontloader": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "vue-cli-plugin-vuetify": "~2.5.8",
+    "webpack-plugin-vuetify": "^2.0.0-alpha.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {
+      "vue/multi-word-component-names": "off"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}

@@ -1,0 +1,50 @@
+version: "3.8"
+
+services:
+  backend:
+    container_name: backend
+    image: backend
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    env_file:
+      - server/.env
+    networks:
+      - backend
+      - frontend
+
+  mongodb:
+    container_name: mongodb
+    image: mongodb/mongodb-community-server:6.0-ubi8
+    env_file:
+      - server/.env
+    volumes:
+      - mongo-data:/data/db
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js
+    restart: unless-stopped
+    networks:
+      - backend
+
+  frontend:
+    container_name: client
+    image: client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8081:8080"
+    networks:
+      - frontend
+
+
+volumes:
+  mongo-data:
+
+networks:
+  backend:
+    driver: bridge
+  frontend:

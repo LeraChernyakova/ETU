@@ -1,0 +1,949 @@
+openapi: 3.1.0
+info:
+  title: FastAPI
+  version: 0.1.0
+paths:
+  /api/statistics/:
+    get:
+      tags:
+      - api
+      - statistics
+      summary: Get All Sessions
+      operationId: get_all_sessions_api_statistics__get
+      parameters:
+      - name: begin_timestamp
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+            format: date-time
+          - type: 'null'
+          description: start date
+          title: Begin Timestamp
+        description: start date
+      - name: end_timestamp
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+            format: date-time
+          - type: 'null'
+          description: stop date
+          title: End Timestamp
+        description: stop date
+      - name: student_id
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          description: student moodle id
+          title: Student Id
+        description: student moodle id
+      - name: student_name
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: student FIO
+          title: Student Name
+        description: student FIO
+      - name: student_email
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: student email
+          title: Student Email
+        description: student email
+      - name: course_title
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: name of the course
+          title: Course Title
+        description: name of the course
+      - name: action_type
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: action type
+          title: Action Type
+        description: action type
+      - name: event_type
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: event type
+          title: Event Type
+        description: event type
+      - name: element_type
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: element type
+          title: Element Type
+        description: element type
+      - name: element_name
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: element name
+          title: Element Name
+        description: element name
+      responses:
+        '200':
+          description: Get statistics
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SessionData'
+                title: Response Get All Sessions Api Statistics  Get
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+    post:
+      tags:
+      - api
+      - statistics
+      summary: Create Session
+      operationId: create_session_api_statistics__post
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateSessionData'
+      responses:
+        '201':
+          description: Add new session
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionData'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/statistics/{session_id}:
+    get:
+      tags:
+      - api
+      - statistics
+      summary: Get Session By Id
+      operationId: get_session_by_id_api_statistics__session_id__get
+      parameters:
+      - name: session_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Session Id
+      responses:
+        '200':
+          description: Get session statistic
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SessionData'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+    delete:
+      tags:
+      - api
+      - statistics
+      summary: Delete Session
+      operationId: delete_session_api_statistics__session_id__delete
+      parameters:
+      - name: session_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Session Id
+      responses:
+        '204':
+          description: Delete a session statistic
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/statistics/page:
+    post:
+      tags:
+      - api
+      - statistics
+      summary: Create Page
+      operationId: create_page_api_statistics_page_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreatePageData'
+        required: true
+      responses:
+        '201':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: string
+                title: Response Create Page Api Statistics Page Post
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/user/:
+    get:
+      tags:
+      - api
+      - user
+      summary: Get All Users
+      operationId: get_all_users_api_user__get
+      responses:
+        '200':
+          description: List all users
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/User'
+                type: array
+                title: Response Get All Users Api User  Get
+    post:
+      tags:
+      - api
+      - user
+      summary: Create User
+      operationId: create_user_api_user__post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateUser'
+        required: true
+      responses:
+        '201':
+          description: Add new user
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/user/{user_id}:
+    get:
+      tags:
+      - api
+      - user
+      summary: Get User
+      operationId: get_user_api_user__user_id__get
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: User Id
+      responses:
+        '200':
+          description: Retrieve a user
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+    put:
+      tags:
+      - api
+      - user
+      summary: Update User
+      operationId: update_user_api_user__user_id__put
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: User Id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateUser'
+      responses:
+        '200':
+          description: Update user
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+    delete:
+      tags:
+      - api
+      - user
+      summary: Delete User
+      operationId: delete_user_api_user__user_id__delete
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: User Id
+      responses:
+        '204':
+          description: Delete a user
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/auth/sign-in:
+    post:
+      tags:
+      - api
+      - authorization
+      summary: Signin
+      operationId: signin_api_auth_sign_in_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SignInData'
+        required: true
+      responses:
+        '200':
+          description: User authorization
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/healthcheck/:
+    get:
+      tags:
+      - api
+      - healthcheck
+      summary: Healthcheck
+      operationId: healthcheck_api_healthcheck__get
+      responses:
+        '200':
+          description: Healthcheck ping
+          content:
+            application/json:
+              schema: {}
+  /api/download/statistics:
+    get:
+      tags:
+      - api
+      - download
+      summary: Download Data
+      operationId: download_data_api_download_statistics_get
+      parameters:
+      - name: begin_timestamp
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+            format: date-time
+          - type: 'null'
+          description: start date
+          title: Begin Timestamp
+        description: start date
+      - name: end_timestamp
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+            format: date-time
+          - type: 'null'
+          description: stop date
+          title: End Timestamp
+        description: stop date
+      - name: student_id
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          description: student moodle id
+          title: Student Id
+        description: student moodle id
+      - name: student_name
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: student FIO
+          title: Student Name
+        description: student FIO
+      - name: student_email
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: student email
+          title: Student Email
+        description: student email
+      - name: course_title
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: name of the course
+          title: Course Title
+        description: name of the course
+      - name: action_type
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: action type
+          title: Action Type
+        description: action type
+      - name: event_type
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: event type
+          title: Event Type
+        description: event type
+      - name: element_type
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: element type
+          title: Element Type
+        description: element type
+      - name: element_name
+        in: query
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          description: element name
+          title: Element Name
+        description: element name
+      responses:
+        '200':
+          description: Download statistics
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /api/download/sessions:
+    get:
+      tags:
+      - api
+      - download
+      summary: Download Sessions
+      operationId: download_sessions_api_download_sessions_get
+      responses:
+        '200':
+          description: Download sessions
+          content:
+            application/json:
+              schema: {}
+components:
+  schemas:
+    CreatePageData:
+      properties:
+        page:
+          type: string
+          maxLength: 2083
+          minLength: 1
+          format: uri
+          title: Page
+        browser:
+          type: string
+          title: Browser
+        title:
+          type: string
+          title: Title
+        page_html:
+          type: string
+          title: Page Html
+        window:
+          $ref: '#/components/schemas/Window'
+      type: object
+      required:
+      - page
+      - browser
+      - title
+      - page_html
+      - window
+      title: CreatePageData
+      example:
+        browser: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit
+        page: http://e.moevm.info
+        page_html: <html></html>
+        title: kakoy-to title
+        window:
+          height: 800
+          width: 1200
+    CreateSessionData:
+      properties:
+        student_id:
+          type: integer
+          title: Student Id
+        session_id:
+          type: string
+          title: Session Id
+        student:
+          type: string
+          title: Student
+        email:
+          type: string
+          format: email
+          title: Email
+        course:
+          type: string
+          title: Course
+        actions:
+          items:
+            $ref: '#/components/schemas/Payload'
+          type: array
+          title: Actions
+      type: object
+      required:
+      - student_id
+      - session_id
+      - student
+      - email
+      - course
+      title: CreateSessionData
+      examples:
+      - actions:
+        - action_type: conversation
+          element_html: <input/>
+          element_name: "\u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C"
+          element_type: button
+          event_type: mousedown
+          timestamp: '2024-05-15T20:25:43.654699'
+        course: "\u041A\u0443\u0440\u0441 \u043C\u043E\u043B\u043E\u0434\u043E\u0433\
+          \u043E \u0431\u043E\u0439\u0446\u0430"
+        email: iiivanov@edu.ru
+        session_id: 00155b7d-0f9a-44f6-93d4-8a97834460f5
+        student: "\u0418\u0432\u0430\u043D\u043E\u0432 \u0418\u0432\u0430\u043D"
+        student_id: 1
+      - actions:
+        - action_type: hidden
+          element_html: <input/>
+          element_name: "\u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C"
+          element_type: page
+          event_type: visibilitychange
+          timestamp: '2024-05-15T20:25:43.654699'
+        course: "\u041A\u0443\u0440\u0441 \u043C\u043E\u043B\u043E\u0434\u043E\u0433\
+          \u043E \u0431\u043E\u0439\u0446\u0430"
+        email: iiivanov@edu.ru
+        session_id: 2f09173e-01dd-49e6-8c74-cb195de13fbe
+        student: "\u0418\u0432\u0430\u043D\u043E\u0432 \u0418\u0432\u0430\u043D"
+        student_id: 1
+      - actions:
+        - action_type: visible
+          element_html: <input/>
+          element_name: "\u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C"
+          element_type: page
+          event_type: visibilitychange
+          timestamp: '2024-05-15T20:25:43.654699'
+        course: "\u041A\u0443\u0440\u0441 \u043C\u043E\u043B\u043E\u0434\u043E\u0433\
+          \u043E \u0431\u043E\u0439\u0446\u0430"
+        email: iiivanov@edu.ru
+        session_id: c3244ef1-d270-4217-8feb-7760b4fbfda1
+        student: "\u0418\u0432\u0430\u043D\u043E\u0432 \u0418\u0432\u0430\u043D"
+        student_id: 1
+    CreateUser:
+      properties:
+        name:
+          type: string
+          title: Name
+        surname:
+          type: string
+          title: Surname
+        lastname:
+          type: string
+          title: Lastname
+        email:
+          type: string
+          format: email
+          title: Email
+        password:
+          type: string
+          title: Password
+      type: object
+      required:
+      - name
+      - surname
+      - lastname
+      - email
+      - password
+      title: CreateUser
+      example:
+        email: iiivanov@edu.ru
+        lastname: "\u0418\u0432\u0430\u043D\u043E\u0432\u0438\u0447"
+        name: "\u0418\u0432\u0430\u043D"
+        password: sdfsdfwgesdgcx
+        surname: "\u0418\u0432\u0430\u043D\u043E\u0432"
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    Payload:
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+          title: Timestamp
+        element_type:
+          type: string
+          title: Element Type
+        element_name:
+          type: string
+          title: Element Name
+        action_type:
+          type: string
+          title: Action Type
+        event_type:
+          type: string
+          title: Event Type
+        element_html:
+          type: string
+          title: Element Html
+          description: The HTML content of the element
+      type: object
+      required:
+      - element_type
+      - element_name
+      - action_type
+      - event_type
+      - element_html
+      title: Payload
+      examples:
+      - action_type: conversation
+        element_html: <input/>
+        element_name: "\u043E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C"
+        element_type: button
+        event_type: mousedown
+        timestamp: '2024-05-15T20:25:43.650178'
+      - action_type: hidden
+        element_html: <input/>
+        element_name: "\u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C"
+        element_type: page
+        event_type: visibilitychange
+        timestamp: '2024-05-15T20:25:43.650178'
+      - action_type: visible
+        element_html: <input/>
+        element_name: "\u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C"
+        element_type: page
+        event_type: visibilitychange
+        timestamp: '2024-05-15T20:25:43.650178'
+    Role:
+      type: string
+      enum:
+      - admin
+      - regular
+      title: Role
+    SessionData:
+      properties:
+        _id:
+          type: string
+          title: ' Id'
+        student_id:
+          type: integer
+          title: Student Id
+        session_id:
+          type: string
+          title: Session Id
+        student:
+          type: string
+          title: Student
+        email:
+          type: string
+          format: email
+          title: Email
+        course:
+          type: string
+          title: Course
+        actions:
+          items:
+            $ref: '#/components/schemas/Payload'
+          type: array
+          title: Actions
+      type: object
+      required:
+      - student_id
+      - session_id
+      - student
+      - email
+      - course
+      title: SessionData
+      examples:
+      - actions:
+        - action_type: conversation
+          element_html: <input/>
+          element_name: "\u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C"
+          element_type: button
+          event_type: mousedown
+          timestamp: '2024-05-15T20:25:43.652179'
+        course: "\u041A\u0443\u0440\u0441 \u043C\u043E\u043B\u043E\u0434\u043E\u0433\
+          \u043E \u0431\u043E\u0439\u0446\u0430"
+        email: iiivanov@edu.ru
+        id: 6a1d086b-31b2-4b5e-94c7-0e8def042374
+        session_id: 643893a9-f996-4955-beed-d81084148976
+        student: "\u0418\u0432\u0430\u043D\u043E\u0432 \u0418\u0432\u0430\u043D"
+        student_id: 1
+      - actions:
+        - action_type: hidden
+          element_html: <input/>
+          element_name: "\u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C"
+          element_type: button
+          event_type: visibilitychange
+          timestamp: '2024-05-15T20:25:43.652179'
+        course: "\u041A\u0443\u0440\u0441 \u043C\u043E\u043B\u043E\u0434\u043E\u0433\
+          \u043E \u0431\u043E\u0439\u0446\u0430"
+        email: iiivanov@edu.ru
+        id: 1ac86753-1ba2-45bf-af19-9f6d6a91a082
+        session_id: 17f99931-19f9-4a7f-a8c6-a55b15d9438a
+        student: "\u0418\u0432\u0430\u043D\u043E\u0432 \u0418\u0432\u0430\u043D"
+        student_id: 1
+      - actions:
+        - action_type: visible
+          element_html: <input/>
+          element_name: "\u0441\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C"
+          element_type: page
+          event_type: visibilitychange
+          timestamp: '2024-05-15T20:25:43.652179'
+        course: "\u041A\u0443\u0440\u0441 \u043C\u043E\u043B\u043E\u0434\u043E\u0433\
+          \u043E \u0431\u043E\u0439\u0446\u0430"
+        email: iiivanov@edu.ru
+        id: 8e548bb3-b0ab-42f7-8010-97ee0cff09b1
+        session_id: 48f97b9d-b035-4578-b1fb-eaa3f5600868
+        student: "\u0418\u0432\u0430\u043D\u043E\u0432 \u0418\u0432\u0430\u043D"
+        student_id: 1
+    SignInData:
+      properties:
+        email:
+          type: string
+          format: email
+          title: Email
+        password:
+          type: string
+          title: Password
+      type: object
+      required:
+      - email
+      - password
+      title: SignInData
+      example:
+        email: iiivanov@edu.ru
+        password: sdfsdfwgesdgcx
+    UpdateUser:
+      properties:
+        name:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Name
+        surname:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Surname
+        lastname:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Lastname
+        email:
+          anyOf:
+          - type: string
+            format: email
+          - type: 'null'
+          title: Email
+        position:
+          anyOf:
+          - $ref: '#/components/schemas/Role'
+          - type: 'null'
+        password:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Password
+      type: object
+      required:
+      - name
+      - surname
+      - lastname
+      - email
+      - position
+      - password
+      title: UpdateUser
+      example:
+        email: iiivanov@edu.ru
+        lastname: "\u0418\u0432\u0430\u043D\u043E\u0432\u0438\u0447"
+        name: "\u0418\u0432\u0430\u043D"
+        password: sdfsdfwgesdgcx
+        position: regular
+        surname: "\u0418\u0432\u0430\u043D\u043E\u0432"
+    User:
+      properties:
+        _id:
+          type: string
+          title: ' Id'
+        name:
+          type: string
+          title: Name
+        surname:
+          type: string
+          title: Surname
+        lastname:
+          type: string
+          title: Lastname
+        email:
+          type: string
+          format: email
+          title: Email
+        position:
+          $ref: '#/components/schemas/Role'
+        password:
+          type: string
+          title: Password
+      type: object
+      required:
+      - name
+      - surname
+      - lastname
+      - email
+      - position
+      - password
+      title: User
+      example:
+        email: iiivanov@edu.ru
+        id: 42ea02b5-0e50-430f-bc68-aa6017122fde
+        lastname: "\u0418\u0432\u0430\u043D\u043E\u0432\u0438\u0447"
+        name: "\u0418\u0432\u0430\u043D"
+        password: sdfsdfwgesdgcx
+        position: regular
+        surname: "\u0418\u0432\u0430\u043D\u043E\u0432"
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
+    Window:
+      properties:
+        width:
+          type: integer
+          title: Width
+        height:
+          type: integer
+          title: Height
+      type: object
+      required:
+      - width
+      - height
+      title: Window

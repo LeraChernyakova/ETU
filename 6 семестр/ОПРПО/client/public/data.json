@@ -1,0 +1,242 @@
+[
+  {
+    "student": "Диана Романенко",
+    "email": "diana@mail.ru",
+    "student_id": "2071",
+    "course": "Курс молодого бойца",
+    "actions": [
+      {
+        "timestamp": "2024-02-02T15:00:00.010",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "сохранить",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-02-02T17:00:00.500",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "сохранить",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-02-02T17:00:00.505",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "сохранить",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-02-02T17:00:00.200",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "сохранить",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-02-02T17:00:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "сохранить",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-02-02T17:00:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "сохранить",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      }
+    ]
+  },
+  {
+    "student": "Беззубов Даниил",
+    "email": "daniil@mail.ru",
+    "student_id": "824",
+    "course": "Курс молодого бойца",
+    "actions": [
+      {
+        "timestamp": "2024-02-02T13:00:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "сохранить",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-02-02T16:00:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-02-02T13:00:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-02-02T16:00:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-02-02T16:00:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-02-02T18:01:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-02-02T19:00:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-01-02T17:00:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-01-02T17:00:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-01-02T17:01:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-01-02T20:05:01.010",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-01-10T17:01:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-01-11T17:01:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-01-12T17:01:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-01-15T17:10:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-01-15T17:10:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-01-15T17:10:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-01-15T17:10:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-01-15T17:10:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-01-15T17:10:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-01-15T17:10:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      },
+      {
+        "timestamp": "2024-01-15T17:10:00",
+        "page": "http://e.moevm.info/some_course",
+        "element_type": "button",
+        "element_name": "следующая страница",
+        "action_type": "conversation",
+        "event_type": "mousedown"
+      }
+    ]
+  }
+]
