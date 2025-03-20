@@ -1,0 +1,136 @@
+<resources>
+    <string name="app_name">PrintHubApp</string>
+
+    <!--    Auth    -->
+    <string name="placeholder_mail">Почта</string>
+    <string name="placeholder_password">Пароль</string>
+    <string name="logint_button_text">Войти</string>
+    <string name="registration_button_text">Зарегистрироваться</string>
+    <string name="no_profile_text">Нет профиля?</string>
+    <!--    END     -->
+
+    <!--    Registration    -->
+    <string name="placeholder_nameCompany">Название компании пользователя</string>
+    <string name="placeholder_address">Адрес</string>
+    <string name="select_role">Выберите роль</string>
+    <string name="client_role">Клиент</string>
+    <string name="printhub_role">Владелец принтера</string>
+    <!--    END     -->
+
+    <!--    About   -->
+    <string name="title_about">Разработчики</string>
+    <string name="subtitle_developers">Над приложением работали:</string>
+    <string name="developer_1">Чернякова Валерия 1304</string>
+    <string name="developer_2">Беззубов Даниил 1303</string>
+    <string name="developer_3">Ярусова Татьяна 1304</string>
+    <!--    END     -->
+
+    <!--    Order card  -->
+    <string name="status_create">Создан</string>
+    <string name="order_number">Заказ %s</string>
+    <string name="print_hub_name">Печатный центра: %s</string>
+    <string name="address_print_hub">Адрес: %s</string>
+    <string name="date_of_create">Дата создания: %s</string>
+    <string name="date_of_last_change">Дата обновления: %s</string>
+    <!--    END     -->
+
+    <!--    Main Client Screen  -->
+    <string name="main_title">PrintHub</string>
+    <string name="navigation_item_home">Главная</string>
+    <string name="navigation_item_profile">Профиль</string>
+    <!--    END     -->
+
+    <!--    Add Order Screen  -->
+    <string name="add_order_title">Создание заказа</string>
+    <string name="choose_printhub">Выберите владельца принтера</string>
+    <string name="placeholder_choose_address">Введите адрес центра</string>
+    <!--    END     -->
+
+    <!--    Add Order Parameters Screen  -->
+    <string name="A1">A1</string>
+    <string name="A2">A2</string>
+    <string name="A3">A3</string>
+    <string name="A4">A4</string>
+    <string name="A5">A5</string>
+    <string name="A6">A6</string>
+    <string name="show_price">Посмотреть прайс-лист</string>
+    <string name="select_format_print">Выберите формат печати</string>
+    <string name="count_list">Количество листов</string>
+    <string name="add_file">Прикрепить файл</string>
+    <string name="total_price">Итого: %s ₽</string>
+    <string name="placeholder_comment">Комментарий</string>
+    <string name="create_order_button_text">Далее</string>
+    <!--    END     -->
+
+    <!--    Price List Dialog    -->
+    <string name="price_list_dialog_title">Прайс-лист</string>
+    <!--    END     -->
+
+    <!--    Success Order Screen    -->
+    <string name="success">Заказ успешно оформлен!</string>
+    <!--    END     -->
+
+    <!--    Order Details Screen   -->
+    <string name="order_details_title">Заказ №%s</string>
+    <string name="format_print">Формат печати: </string>
+    <string name="count_list_with_param">Количество листов: </string>
+    <string name="file">Файл</string>
+    <string name="reason_reject">Причина отказа</string>
+    <!--    END     -->
+
+    <!--    Client Profile Screen   -->
+    <string name="client_profile_title">Профиль</string>
+    <string name="name_title">Имя: %s</string>
+    <string name="mail_title">Почта: %s</string>
+    <string name="logout">Выйти из аккаунта</string>
+    <!--    END     -->
+
+    <!--    Logout Dialog   -->
+    <string name="logout_dialog_title">Выйти?</string>
+    <string name="logout_button">Выйти</string>
+    <string name="reject_button">Отмена</string>
+    <!--    END     -->
+
+    <!--    Order printhub card  -->
+    <string name="status_new">Создан</string>
+    <string name="status_in_work">В работе</string>
+    <string name="status_reade">Выполнен</string>
+    <string name="status_reject">Отказ</string>
+    <string name="status_await">Ожидает получения</string>
+    <!--    END     -->
+
+    <!--    Main Printhub Screen    -->
+    <string name="placeholder_choose_order_number">Введите номер заказа</string>
+    <string name="placeholder_choose_order_number_printhub">Поиск</string>
+    <string name="no_order">У вас пока нет заказов</string>
+    <!--    END     -->
+
+    <!--    Profile Printhub Screen   -->
+    <string name="name_printhub_title">Печатный центр: %s</string>
+    <string name="address_title">Адрес: %s</string>
+    <string name="statistics_title">Статистика</string>
+    <!--    END     -->
+
+    <!--   Order Details Printhub Screen  -->
+    <string name="take_order_button_text">Взять в работу</string>
+    <string name="reject_order_button">Отказаться</string>
+    <string name="finish_button">Завершить</string>
+    <string name="finish_order_button">Завершить заказ</string>
+    <!--    END     -->
+
+    <!--    Reject Dialog   -->
+    <string name="reject_dialog_title">Причина отказа</string>
+    <string name="required_param">*Обзательный комментарий</string>
+    <!--    END     -->
+
+    <!--    Statistic Screen   -->
+    <string name="statistic_screen_title">Статистика</string>
+    <string name="list_title">Расход бумаги: %s шт</string>
+    <string name="toner_title">Расход тонера: %s мл</string>
+    <string name="profit_title">Доход: %s ₽</string>
+    <string name="price_printer_title">Цена принтера: 5000 ₽</string>
+    <!--    END     -->
+
+
+
+</resources>

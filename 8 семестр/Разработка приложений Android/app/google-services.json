@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "121415410259",
+    "project_id": "moevmprinthubapp",
+    "storage_bucket": "moevmprinthubapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:121415410259:android:0e8863429ea06968431ca6",
+        "android_client_info": {
+          "package_name": "ru.moevm.printhubapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAr7Ho38IPKKZ4B7r_906XyhKFP52lgJYc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
