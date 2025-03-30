@@ -1,0 +1,39 @@
+/*
+	Задание: создать правила для поиска родственных связей указанный в задании.
+    Привести примеры вызова этих правил. 
+    Создать правило возвращающее название типа родства для двух людей.
+    
+    Вариант 1 - дядя, невестка (жена сына или жена брата)
+	Бригада 1 группы 8382 - Кузина, Кулачкова, Мирончик
+*/
+%задаем родственные связи
+male(tom).
+male(bob).
+male(luk).
+male(son).
+female(kate).
+female(liza).
+female(mary).
+female(sam).
+parent(tom, bob).
+parent(ann, bob).
+parent(tom, liza).
+parent(bob, mary).
+parent(bob, luk).
+parent(luk, kate).
+parent(bob, son).
+parent(sam, kate).
+
+%определяем женитьбу, невестку, брата и дядю правилами
+married(X,Y):- parent(X,J), parent(Y,J), X\=Y.
+daughterinlaw(X,Y):- female(X), parent(Y,F), married(X,F).
+daughterinlaw(X,Y):- female(X), brother(F,Y), married(X,F).
+brother(X,Y):- male(X), parent(F,X), parent(F,Y), X\=Y.
+uncle(X, Y):- male(X), parent(F, Y), brother(X, F).
+
+%правило для вывода родственной связи между двумя людьми
+whois(X,Y):- uncle(X,Y), write('uncle').
+whois(X,Y):- brother(X,Y), write('brother').
+whois(X,Y):- daughterinlaw(X,Y), write('daughterinlaw').
+whois(X,Y):- married(X,Y), write('married').
+whois(X,Y):- parent(X,Y), write('parent').

@@ -1,0 +1,12 @@
+parent(tom, bob).
+parent(ann, bob).
+parent(tom, liza).
+parent(bob, mary).
+parent(bob, luk).
+parent(luk, kate).
+male(tom).
+male(bob).
+male(luk).
+female(kate).
+female(liza).
+female(mary).
